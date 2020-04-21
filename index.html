@@ -5,23 +5,138 @@
     <title>Git command</title>
     <style>
       body {
-        font-size: 64px;
+        font-size: 24px;
       }
-      p {
+      .command {
         font-weight: 600;
         font-size: 0.8em;
       }
-      span {
+      .description {
         font-style: italic;
         font-weight: 300;
+      }
+      table {
+        width: 100%;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      h1 {
+        text-align: center;
+      }
+      th {
+        background-color: blanchedalmond;
+      }
+      td {
+        background-color: aquamarine;
+        padding: 0 15px;
       }
     </style>
   </head>
   <body>
-    <h1>Git command</h1>
-    <p>
-      git config --global yulia.masechko@gmail.com
-      <span> - вводимо свій е-мейл</span>
-    </p>
+    <header>
+      <h1>Git command</h1>
+    </header>
+    <main>
+      <table>
+        <tr>
+          <th>Command</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>git config --global user.name Yulia</td>
+          <td>вводимо своє ім'я для логування</td>
+        </tr>
+        <tr>
+          <td class="command">
+            git config --global user.email yulia.masechko@gmail.com
+          </td>
+          <td class="description">вводимо свій е-мейл</td>
+        </tr>
+        <tr>
+          <td>git init</td>
+          <td>ініціалізуємо репозиторій</td>
+        </tr>
+        <tr>
+          <td>git status</td>
+          <td>перевіряємо, що є в нашому репозиторії</td>
+        </tr>
+        <tr>
+          <td>git add</td>
+          <td>додаємо файл в репозиторій</td>
+        </tr>
+        <tr>
+          <td>git commit</td>
+          <td>закомічуємо файл</td>
+        </tr>
+        <tr>
+          <td>git log</td>
+          <td>
+            показує історію, які є коміти,показує файли і які там відбулись
+            зміни
+          </td>
+        </tr>
+        <tr>
+          <td>git checkout</td>
+          <td>
+            вказуємо ще номер id, який копіюємо з попередньої команди git log,
+            можна повернутись в часі і отримати початкові файли та так само
+            повернутись назад до теперішньої версії файлів
+          </td>
+        </tr>
+        <tr>
+          <td>git branch</td>
+          <td>
+            створення нової гілки репозиторію, за замовчуванням вона називається
+            master
+          </td>
+        </tr>
+        <tr>
+          <td>git push</td>
+          <td>вигрузити всі локальні зміни у віддалений репозиторій</td>
+        </tr>
+        <tr>
+          <td>git pull</td>
+          <td>
+            стягнути всі зміни з віддаленого репозиторію собі на локальний
+          </td>
+        </tr>
+        <tr>
+          <td>git merge</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>git clone</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>.gitignore файл</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>git revert</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>git reset</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>git rebase</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>git cherry-pick</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>git stash</td>
+          <td></td>
+        </tr>
+      </table>
+    </main>
   </body>
 </html>
