@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Git-commands</title>
+  </head>
+  <body>
+    <header>
+      <h1>Git, Github, gh-pages, FTP</h1>
+      <h2>Git-commands</h2>
+    </header>
+    <main class="placement">
+      <table>
+        <tr>
+          <th>Commands</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <th colspan="2">Base</th>
+        </tr>
+        <tr>
+          <td class="command">git config --global user.name Yulia</td>
+          <td class="description">
+            вводимо своє ім'я для логування
+          </td>
+        </tr>
+        <tr>
+          <td class="command">git config --global user.email yulia.masechko@gmail.com</td>
+          <td class="description">
+            вводимо свій е-мейл для логування
+          </td>
+        </tr>
+        <tr>
+          <td class="command">git init</td>
+          <td class="description">
+            ініціалізуємо репозиторій
+          </td>
+        </tr>
+        <tr>
+          <td class="command">git status</td>
+          <td class="description">
+            перевіряємо, чи є зміни в локальній версії репозиторія
+          </td>
+        </tr>
+        <tr>
+          <td class="command">git add</td>
+          <td class="description">
+            додаємо файл в репозиторій
+          </td>
+        </tr>
+        <tr>
+          <td class="command">git commit</td>
+          <td class="description">
+            закомічуємо файл та зміни в ньому
+          </td>
+        </tr>
+        <tr>
+          <td class="command">git log</td>
+          <td class="description">
+            показує історію, які є коміти,показує файли і які там відбулись
+            зміни
+          </td>
+        </tr>
+        <tr>
+          <td class="command">git checkout</td>
+          <td class="description">
+            вказуємо ще номер id, який копіюємо з попередньої команди git log,
+            можна повернутись в часі і отримати початкові файли та так само
+            повернутись назад до теперішньої версії файлів, також дозволяє
+            переключатись по комітах та гілках
+          </td>
+        </tr>
+        <tr>
+          <td class="command">git branch</td>
+          <td class="description">
+            створення нової гілки репозиторію, за замовчуванням вона називається
+            master
+          </td>
+        </tr>
+        <tr>
+          <td class="command">git push</td>
+          <td class="description">
+            загрузити всі локальні зміни у віддалений репозиторій
+          </td>
+        </tr>
+        <tr>
+          <td class="command">git pull</td>
+          <td class="description">
+            стягнути всі зміни з віддаленого репозиторію собі на локальний
+          </td>
+        </tr>
+        <tr>
+          <td class="command">git merge</td>
+          <td class="description">
+            злиття гілок в одну
+          </td>
+        </tr>
+        <tr>
+          <td class="command">git clone</td>
+          <td class="description">
+            зклонувати репозиторій собі ,вставивши із github скопіювану url
+          </td>
+        </tr>
+        <tr>
+          <td class="command command_file">.gitignore файл</td>
+          <td class="description command_file">
+            файл , за допомогою якого ігноруються інші файли гітом
+          </td>
+        </tr>
+        <tr>
+          <th colspan="2">Advanced</th>
+        </tr>
+        <tr>
+          <td class="command">git revert</td>
+          <td class="description">
+            скасовуємо непотрібні чи помилкові коміти
+          </td>
+        </tr>
+        <tr>
+          <td class="command">git reset</td>
+          <td class="description">
+            для відміни змін
+          </td>
+        </tr>
+        <tr>
+          <td class="command">git rebase</td>
+          <td class="description">
+            для об'єднання змін зроблені в одній гілці з іншою гілкою зі
+            збереженням історії комітів
+          </td>
+        </tr>
+        <tr>
+          <td class="command">git cherry-pick</td>
+          <td class="description">
+            спроба накласти поточний коміт на іншу гілку, перенесення коміта по
+            гілках
+          </td>
+        </tr>
+        <tr>
+          <td class="command">git stash</td>
+          <td class="description">
+            ховає зміни в файлах і зберігає їх окремо, щоб потім можна було їх
+            повернути
+          </td>
+        </tr>
+      </table>
+    </main>
+    <footer class="placement">
+      <img src="../img/SSH_key.png" alt="PrintScreen github SSH-key" />
+    </footer>
+  </body>
+</html>
