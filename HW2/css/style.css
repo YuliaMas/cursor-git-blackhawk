@@ -1,0 +1,90 @@
+body {
+	max-width: 1000px;
+	margin: 10px 50px;
+	background-color: bisque;
+	font-family: 'Roboto', sans-serif;
+}
+h1, h2 {
+	text-align: center;
+}
+h1 {
+	color: darkred;
+}
+#form_table__container {
+	display: flex;
+	justify-content: space-around;
+}
+table {
+	width:100%;
+	margin-top: 30px;
+}
+table, th, td {
+	border: 1px solid black;
+}
+fieldset, table {
+	background-color: honeydew;
+}
+thead {
+	background-color: #fcba7a ;
+}
+td:nth-child(odd) {
+	background-color: aquamarine;
+}
+th, td {
+	padding: 5px;
+}
+fieldset {
+	max-width: 300px;
+	box-shadow: 4px 10px 10px grey;
+}
+legend {
+	font-size: 18px;
+	font-weight: 700;
+}
+.contact_form__container {
+	display: flex;
+	flex-direction: column;
+	padding-left: 30px;
+}
+
+.contact_form__container label, .form_text{
+	padding-top: 15px;
+	font-style: italic;
+	font-weight: 600;
+}
+.contact_form__container label span  {
+	font-style: normal ;
+	font-weight: 400;
+}
+#city, #comment, .contact_form__container input {
+	border: black solid 1px;
+	border-radius: 10px;
+	box-shadow: 2px 5px 5px grey;
+	margin: 20px 30px;
+	padding: 5px;
+}
+input[type="checkbox"] {
+	margin: 0 30px 30px 30px ;
+}
+#button_send {
+	border: black solid 2px;
+	border-radius: 10px	;
+	box-shadow: 2px 5px 5px grey;
+	margin: 20px  105px 50px ;
+	padding: 5px 20px;
+}
+.footer {
+	width: 100%;
+	border: beige solid 1px;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	margin: 0 auto;
+	background-color: #FFF;
+	color: #000;
+	text-align: center;
+	margin: 0;
+}
+.footer p, h2 {
+	color: darkblue;
+}

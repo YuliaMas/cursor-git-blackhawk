@@ -1,10 +1,174 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
 	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
 	<title>Table and Form in HTML</title>
+
 </head>
 <body>
+<header>
+	<nav>
+		<a href="../index.html" title="My homeworks">Return</a>
+	</nav>
+	<h1>Homework &#35;2 Front-end. HTML</h1>
+	<h2>FORM and TABLE</h2>
+</header>
+<section id="form_table__container">
+	<aside>
+		<form>
+			<fieldset>
+				<legend>Contact information</legend>
+				<div class="contact_form__container">
+					<div>
+						<label>Your name :
+							<input  placeholder="Input your name" type="text" required>
+						</label>
+					</div>
+					<div>
+						<label>Your surname :
+							<input   placeholder="Input your surname" type="text" required>
+						</label>
+					</div>
 
+					<div>
+						<label>Your E-mail :
+							<input   placeholder="Input your email" type="text" required>
+						</label>
+					</div>
+
+					<div>
+						<label><p>Please select your gender :</p>
+							<span>Male</span>
+							<input type="radio" id="male" name="gender"  value="male">
+							<span>Female</span>
+							<input type="radio"   id="female" name="gender" value="female">
+						</label>
+					</div>
+
+					<div>
+						<label for="city">City :</label>
+						<select name="city" id="city">
+							<option value="Choose your city" selected disabled>
+								Choose your city
+							</option>
+							<option value="Lviv">Lviv</option>
+							<option value="Kyiv">Kyiv</option>
+							<option value="Kharkiv">Kharkiv</option>
+							<option value="Odessa">Odessa</option>
+						</select>
+					</div>
+
+					<div>
+						<p class="form_text">Choose your language : </p>
+						<div>
+							<input type="checkbox" id="Ukrainian" name="language" value="Ukrainian">
+							<label  for="Ukrainian"><span>Ukrainian</span></label>
+						</div>
+						<div>
+							<input type="checkbox" id="English" name="language" value="English">
+							<label for="English"><span>English</span></label>
+						</div>
+						<div>
+							<input type="checkbox" id="Russian" name="language" value="Russian">
+							<label for="Russian"><span>Russian</span></label>
+						</div>
+					</div>
+
+					<div>
+						<label for="comment"> Ask your question :</label>
+						<textarea name="comment" id="comment" cols="25" rows="10" placeholder="Write your comment here"></textarea>
+					</div>
+				</div>
+
+			</fieldset>
+			<button id="button_send" value="Submit" type="submit">
+				Submit
+			</button>
+		</form>
+	</aside>
+
+	<main>
+	<table>
+		<thead>
+		<tr>
+			<th>First name</th>
+			<th>Last name</th>
+			<th>Phone number</th>
+			<th>Email</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<td>Mikle</td>
+			<td>Shon</td>
+			<td>987-656-43</td>
+			<td>Shon@gmail.com</td>
+		</tr>
+		<tr>
+			<td>Nataly</td>
+			<td>Khan</td>
+			<td>887-656-53</td>
+			<td>Khan@gmail.com</td>
+		</tr>
+		<tr>
+			<td>Oleksandr</td>
+			<td>Korostiy</td>
+			<td>987-656-24</td>
+			<td>KorostiyS@gmail.com</td>
+		</tr>
+		<tr>
+			<td>Eveline</td>
+			<td>Apple</td>
+			<td>987-123-43</td>
+			<td>Eveline_apple@gmail.com</td>
+		</tr>
+		<tr>
+			<td>Aline</td>
+			<td>Vodafone</td>
+			<td>988-656-45</td>
+			<td>Vodafone_Aline@gmail.com</td>
+		</tr>
+		<tr>
+			<td>Henry</td>
+			<td>Voitovych</td>
+			<td>789-656-43</td>
+			<td>Voitovych100@gmail.com</td>
+		</tr>
+		<tr>
+			<td>Iryna</td>
+			<td>Panteleimon</td>
+			<td>986-655-21</td>
+			<td>Panteleimon@gmail.com</td>
+		</tr>
+		<tr>
+			<td>Yuriy</td>
+			<td>Malehiv</td>
+			<td>988-666-78</td>
+			<td>Malehiv.yur@gmail.com</td>
+		</tr>
+		<tr>
+			<td>Anna</td>
+			<td>Club</td>
+			<td>987-656-56</td>
+			<td>Club99@gmail.com</td>
+		</tr>
+		<tr>
+			<td>Nastya</td>
+			<td>Miledy</td>
+			<td>987-687-87</td>
+			<td>Miledy100@gmail.com</td>
+		</tr>
+		</tbody>
+	</table>
+</main>
+</section>
+
+<footer>
+	<div class="footer">
+		<p>&copy; Copyright 2020  Yuliya Masechko</p>
+	</div>
+</footer>
 </body>
 </html>
