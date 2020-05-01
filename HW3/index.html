@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Css tables</title>
+</head>
+<body>
+<header>
+	<nav>
+		<a href="../index.html" title="My homeworks">
+			<i class="far fa-hand-point-left"></i>
+			Return
+		</a>
+	</nav>
+	<h1> Homework &#x23;3 - Table.CSS</h1>
+</header>
+
+	<table>
+		<thead>
+			<tr>
+				<th class="name">
+					Name <span class="triangle"></span>
+					<!--<i class="fa">&#xf0d7;</i> -->
+				</th>
+				<th>Date</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					<a href="files/LR5_form.pdf" target="_blank">
+					File.pdf
+				</a>
+				</td>
+				<td class="date">3 mins ago</td>
+				<td class="icon">
+					<div class="circle">
+						<i class="fa fa-circle" aria-hidden="true"></i>
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="files/LR5_form.pdf" target="_blank">
+						File.pdf
+					</a>
+				</td>
+				<td class="date">Yesterday</td>
+				<td class="icon">
+					<div class="circle">
+						<i class="fa fa-circle" aria-hidden="true"></i>
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="files/LR5_form.pdf" target="_blank">
+						File.pdf
+					</a>
+				</td>
+				<td class="date">June 1st, 2019</td>
+				<td class="icon">
+					<div class="circle">
+						<i class="fa fa-circle" aria-hidden="true"></i>
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<table>
+		<thead>
+		<tr>
+			<th class="name">
+				<input type="checkbox" class="custom" id="check-name" name="Name" value="yes">
+				<label for="check-name">
+					Name <span class="triangle"></span>
+					<!--<i class="fa fa-caret-down" aria-hidden="true"></i> -->
+				</label>
+			</th>
+			<th>Date</th>
+			<th></th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<td>
+				<input type="checkbox" class="custom-checkbox" id="check-file1" name="File.pdf" value="yes">
+				<label for="check-file1">
+					<a href="files/LR5_form.pdf" target="_blank">
+						File.pdf</a>
+				</label>
+			</td>
+			<td class="date">3 mins ago</td>
+			<td class="icon">
+				<div class="circle_container">
+					<i class="fa fa-circle" aria-hidden="true"></i>
+					<i class="fa fa-circle"></i>
+					<i class="fa fa-circle"></i>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="checkbox" class="custom-checkbox" id="check-file2" name="File.pdf" value="yes">
+				<label for="check-file2">
+					<a href="files/LR5_form.pdf" target="_blank">
+						File.pdf</a>
+				</label>
+			</td>
+			<td class="date">Yesterday</td>
+			<td class="icon">
+				<div class="circle_container">
+					<i class="fa fa-circle" aria-hidden="true"></i>
+					<i class="fa fa-circle"></i>
+					<i class="fa fa-circle"></i>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="checkbox" class="custom-checkbox" id="check-file3" name="File.pdf" value="yes">
+				<label for="check-file3">
+					<a href="files/LR5_form.pdf" target="_blank">
+					File.pdf</a>
+				</label>
+			</td>
+			<td class="date">June 1st, 2019</td>
+			<td class="icon">
+				<div class="circle_container">
+					<i class="fa fa-circle" aria-hidden="true"></i>
+					<i class="fa fa-circle"></i>
+					<i class="fa fa-circle"></i>
+				</div>
+			</td>
+		</tr>
+		</tbody>
+	</table>
+
+	<table>
+		<thead>
+		<tr>
+			<th class="name">
+				Name <span class="triangle"></span>
+			<!--	<i class="fa fa-caret-down" aria-hidden="true"></i> -->
+			</th>
+			<th>Date</th>
+			<th class="search">
+					<form action="">
+						<label><i class="fa fa-search" aria-hidden="true"></i>
+							<input type="text" placeholder="Search" name="search"></label>
+					</form>
+			</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<td>
+				<a href="files/LR5_form.pdf" target="_blank">
+					<img src="files/inbox.svg" alt="inbox">
+					<span class="text">File.pdf</span>
+				</a>
+			</td>
+			<td class="date">3 mins ago</td>
+			<td class="icon">
+				<div class="circle_container">
+					<i class="fa fa-circle" aria-hidden="true"></i>
+					<i class="fa fa-circle"></i>
+					<i class="fa fa-circle"></i>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="files/LR5_form.pdf" target="_blank">
+					<img src="files/inbox.svg" alt="inbox">
+					<span class="text">File.pdf</span>
+				</a>
+			</td>
+			<td class="date">Yesterday</td>
+			<td class="icon">
+				<div class="circle_container">
+					<i class="fa fa-circle" aria-hidden="true"></i>
+					<i class="fa fa-circle"></i>
+					<i class="fa fa-circle"></i>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="files/LR5_form.pdf" target="_blank">
+					<img src="files/inbox.svg" alt="inbox">
+					<span class="text">File.pdf</span>
+				</a>
+			</td>
+			<td class="date">June 1st, 2019</td>
+			<td class="icon">
+				<div class="circle_container">
+					<i class="fa fa-circle" aria-hidden="true"></i>
+					<i class="fa fa-circle"></i>
+					<i class="fa fa-circle"></i>
+				</div>
+			</td>
+		</tr>
+		</tbody>
+	</table>
+</body>
+</html>
