@@ -1,10 +1,18 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html {
+	margin: 0 auto;
+}
 body {
+	margin: 0 auto;
 	background: #2c2c2c;
 	max-width: 1000px;
-	margin: 60px 60px;
 	font-family: 'Roboto', sans-serif;
 	line-height: 1;
 	font-size: 14px;
+	padding: 30px 0 60px;
 }
 h1 {
 	color: white;
@@ -17,7 +25,10 @@ table {
 	border-radius: 5px;
   border-spacing: 0;
 	table-layout: fixed;
-	line-height: 20px;
+	line-height: 10px;
+}
+th.name {
+	width: 50%;
 }
 th {
 	color: #FFF;
@@ -27,13 +38,18 @@ td {
 	border-top: 1px solid #525252;
 	color: #5a5a5a;
 	padding: 15px;
-	text-align: left;
 	font-weight: 600 ;
 }
-.date {
-	padding-left: 150px;
+tbody tr:hover {
+	background-color: grey ;
 }
-.name, .date {
+.date-title {
+	text-align: left;
+}
+.date {
+	text-align: left;
+}
+.name, .date , td {
 	text-align: left;
 }
 
@@ -52,7 +68,7 @@ img {
 	padding-right: 5px;
 }
 .text {
-	margin-left: 5px;
+	margin: 5px 0 0 5px ;
 }
 
 /* Triangle icons*/
@@ -70,7 +86,11 @@ img {
 	border-top: 7px solid #FFF;
 }
 .triangle:hover {
-	border-color: #bebebe transparent transparent transparent;
+	border-color: #0b76ef transparent transparent transparent;
+}
+.test {
+	display: inline-flex;
+	justify-content: space-between;
 }
 
 /* Form Search */
@@ -80,18 +100,25 @@ th.search {
 	margin: 5px;
 }
 form {
+	display: inline-flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
 	border:  2px solid  #444 ;
 	background: #444444;
 	padding:  8px 5px;
 	border-radius: 5px;
-	margin-left: 80px;
-	margin-right: 5px;
-}
+	margin-left: 20px;
+	width: 200px;
+	}
 .fa.fa-search {
 	color: #5a5a5a;
 	cursor: pointer;
-	width: 30px;
-	height: 15px;
+	/*width: 30px;
+	height: 15px;*/
+}
+.fa.fa-search:hover {
+	color: #0b76ef;
 }
 input[type="text"] {
 	background: #444;
@@ -99,7 +126,7 @@ input[type="text"] {
 	padding-left: 10px;
 }
 input[placeholder="Search"] {
-	color: #5a5a5a;
+	color: #0b76ef;
 }
 /* End Form Search */
 

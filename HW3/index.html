@@ -18,7 +18,8 @@
 	</nav>
 	<h1>Homework &#x23;3 - Table.CSS</h1>
 </header>
-
+<div style="overflow-x:auto;">
+	<!--table 1-->
 	<table>
 		<thead>
 			<tr>
@@ -26,7 +27,7 @@
 					Name <span class="triangle"></span>
 					<!--<i class="fa">&#xf0d7;</i> -->
 				</th>
-				<th>Date</th>
+				<th class="date-title">Date</th>
 				<th></th>
 			</tr>
 		</thead>
@@ -79,6 +80,7 @@
 		</tbody>
 	</table>
 
+	<!--table 2-->
 	<table>
 		<thead>
 		<tr>
@@ -89,7 +91,7 @@
 					<!--<i class="fa fa-caret-down" aria-hidden="true"></i> -->
 				</label>
 			</th>
-			<th>Date</th>
+			<th class="date-title">Date</th>
 			<th></th>
 		</tr>
 		</thead>
@@ -148,20 +150,24 @@
 		</tbody>
 	</table>
 
+  <!--table 3-->
 	<table>
 		<thead>
 		<tr>
+			<section class="test">
 			<th class="name">
 				Name <span class="triangle"></span>
 			<!--	<i class="fa fa-caret-down" aria-hidden="true"></i> -->
 			</th>
-			<th>Date</th>
+			<th class="date-title">Date</th>
 			<th class="search">
 					<form>
-						<label><i class="fa fa-search" aria-hidden="true"></i>
-							<input type="text" placeholder="Search" name="search"></label>
+						<label class="search-input"><i class="fa fa-search" aria-hidden="true">
+							<input type="text" placeholder="Search" name="search"></i>
+						</label>
 					</form>
 			</th>
+			</section>
 		</tr>
 		</thead>
 		<tbody>
@@ -215,5 +221,6 @@
 		</tr>
 		</tbody>
 	</table>
+</div>
 </body>
 </html>
