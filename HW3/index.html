@@ -86,7 +86,7 @@
 		<thead>
 		<tr>
 			<th class="name">
-				<input type="checkbox" class="custom" id="check-name" name="Name" value="yes" checked>
+				<input type="checkbox" class="custom" id="check-name" name="Name" value="yes" checked onclick="checkAll(this)">
 				<label for="check-name">
 					Name <span class="triangle"></span>
 					<!--<i class="fa fa-caret-down" aria-hidden="true"></i> -->
@@ -133,7 +133,7 @@
 		</tr>
 		<tr>
 			<td>
-				<input type="checkbox" class="custom-checkbox" id="check-file3" name="File.pdf" value="yes">
+				<input type="checkbox" class="custom-checkbox cbx" id="check-file3" name="File.pdf" value="yes">
 				<label for="check-file3">
 					<a href="files/LR5_form.pdf" target="_blank">
 					File.pdf</a>
@@ -221,5 +221,16 @@
 		</tbody>
 	</table>
 </div>
+
+<script>
+function checkAll(box) {
+	let checkbox = document.getElementsByTagName('input');
+	for(let i=0; i < checkbox.length; i++) {
+		if (checkbox[i].type === 'checkbox') {
+			checkbox[i].checked = box.checked;
+			}
+		}
+}
+</script>
 </body>
 </html>
