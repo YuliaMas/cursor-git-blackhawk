@@ -226,11 +226,25 @@
 function checkAll(box) {
 	let checkbox = document.getElementsByTagName('input');
 	for(let i=0; i < checkbox.length; i++) {
-		if (checkbox[i].type === 'checkbox') {
+		if ( checkbox[i].type === 'checkbox' ) {
 			checkbox[i].checked = box.checked;
 			}
 		}
 }
+
+/*
+
+
+function changeColor(){
+	let checkbox = document.getElementsByTagName('tbody');
+
+	for(let i=0; i < checkbox.length; i++) {
+		if ( checkbox[i].tagName === 'td' ) {
+			document.tagName("tr").style.background = "#F2FEFF";
+			checkbox[i].tag.background = "#F2FEFF";
+		}
+	}
+}*/
 </script>
 </body>
 </html>
