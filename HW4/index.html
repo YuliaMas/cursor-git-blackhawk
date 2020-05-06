@@ -29,9 +29,17 @@
 			</ul>
 			<div class="header-options">
 					<div class="header-language">
-						<img class="header-language-img"  src="./images/flag-en.svg" alt=""/>
-						<span class="header-language-en">EN</span>
-						<img class="header-language-img"  src="./images/triangle.svg" alt=""/>
+						<form>
+							<label for="lang"><img class="header-language-img" id="EN" src="./images/flag-en.svg" alt=""/></label>
+						<!--<span class="header-language-en">EN</span>
+						<img class="header-language-img"  src="./images/triangle.svg" alt=""/> -->
+					<select  name="language" id="lang">
+						<option  value="Choose" disabled>Choose:</option>
+						<option value="UA" id="UA" onclick="myFunction()">UA</option>
+						<option class="header-language-en" selected value="EN">EN</option>
+						<option value="RUS">RUS</option>
+					</select>
+					</form>
 					</div>
 				<button class="btn btn-outlined">Login</button>
 			</div>
@@ -50,5 +58,11 @@
 			</div>
 	</main>
 </div>
+<script>
+	function myFunction() {
+		document.getElementById("EN").src = "./images/ua.png";
+	}
+</script>
+
 </body>
 </html>
