@@ -173,11 +173,15 @@ select#lang option {
 }
 
 @media screen and (max-width: 1110px) {
-	.container{
+	.container {
 		max-width: 1080px;
 	}
+.header {
+	margin: 17px auto;
+}
 	.nav-bar {
 		margin: 0;
+	}
 }
 @media screen and (max-width: 800px){
 	.container {
@@ -185,6 +189,9 @@ select#lang option {
 		min-width: 500px;
 		font-size: 12px;
 			}
+	.header {
+		margin: 17px auto;
+	}
 	.nav-bar {
 		display: flex;
 		align-self: baseline;
@@ -200,6 +207,9 @@ select#lang option {
 		max-width: 420px;
 		min-width: 200px;
 		font-size: 12px;
+	}
+	.header {
+		margin: 17px auto;
 	}
 	.header-wrapper {
 		display: flex;
@@ -224,6 +234,9 @@ select#lang option {
 		font-size: 1em;
 		padding: 15px;
 	}
+	.btn-outlined {
+		padding: 0;
+		width: 80px;
 	}
 }
 
