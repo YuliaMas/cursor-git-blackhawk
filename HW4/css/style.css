@@ -20,13 +20,13 @@ body {
 	position: absolute;
 	width: 100vw;
 	height: 100vh;
-	max-width: 1440px;
+	/*max-width: 1440px;*/
 	margin: 0 auto;
 }
 .header {
-	width: 90vw;
+	/*width: 90vw;*/
 	padding: 25px 0;
-	margin: 17px 64px;
+	margin: 17px auto;
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
@@ -75,7 +75,7 @@ form {
 #lang:hover {
 	color: #0b76ef;
 }
-select#lang   {
+select#lang {
 	font-weight: 400;
 	font-size: 14px;
 	line-height: 17px;
@@ -125,6 +125,7 @@ select#lang option {
 .main-info {
 	width: 100vw;
 	overflow: auto;
+	margin: auto;
 }
 .info-content {
 	margin: 50px auto;
@@ -138,9 +139,10 @@ select#lang option {
 	text-transform: uppercase;
 }
 .info-text {
-	max-width: 50vw;
+	/*max-width: 50vw;*/
+	width: 540px;
+	margin: 0 auto;
 	height: auto;
-	margin: auto;
 	font-weight: 600;
 	font-size: 1.7rem;
 	line-height: 150%; /* or 36px */
@@ -149,6 +151,7 @@ select#lang option {
 	padding: 40px 30px;
 	box-sizing: border-box;
 }
+
 .btn-filled {
 	font-weight: 600;
 	font-size: 1rem; /*14px;*/
@@ -186,7 +189,7 @@ select#lang option {
 @media screen and (max-width: 800px){
 	.container {
 		max-width: 800px;
-		min-width: 500px;
+		/*min-width: 500px;*/
 		font-size: 12px;
 			}
 	.header {
@@ -205,7 +208,7 @@ select#lang option {
 @media screen and (max-width: 450px) {
 	.container {
 		max-width: 420px;
-		min-width: 200px;
+		/*min-width: 200px;*/
 		font-size: 12px;
 	}
 	.header {
@@ -214,6 +217,14 @@ select#lang option {
 	.header-wrapper {
 		display: flex;
 		justify-content: center;
+	}
+	.header-logo-title {
+		font-size: 16px;
+		padding: 0;
+	}
+	select#lang {
+		font-size: 12px;
+		max-width: 40px;
 	}
 	.nav-bar {
 		display: block;
@@ -229,14 +240,17 @@ select#lang option {
 	.info-text {
 		font-size: 1.4em;
 		padding: 25px 10px;
+		width: 375px;
 	}
 	.btn {
 		font-size: 1em;
 		padding: 15px;
+		height: 40px;
 	}
 	.btn-outlined {
 		padding: 0;
-		width: 80px;
+		width: 60px;
+		height: 30px;
 	}
 }
 
