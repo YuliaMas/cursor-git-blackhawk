@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Title</title>
+	<title>Web design</title>
 	<link rel="stylesheet" href="./css/reset.css">
 	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="./css/style.css">
@@ -18,24 +18,24 @@
 				<img class="header-logo-img" src="./images/cloud.svg" alt=""/>
 				<span class="header-logo-title">Cloudbudget</span>
 			</a>
+			<div class="nav-bar-container">
 			<ul class="nav-bar">
 				<li class="nav-bar-item nav-bar-item--active">
 				<a href="../index.html">Overview</a>
 				</li>
-				<li class="nav-bar-item"><a href="../index.html" target="_blank">Features</a></li>
+				<li class="nav-bar-item"><a href="#" target="_blank">Features</a></li>
 				<li class="nav-bar-item"><a href="#">Technology</a></li>
 				<li class="nav-bar-item"><a href="#">Contact</a></li>
 				<li class="nav-bar-item"><a href="#">Sign up</a></li>
 			</ul>
+			</div>
 			<div class="header-options">
 					<div class="header-language">
 						<form>
-							<label for="lang"><img class="header-language-img" id="EN" src="./images/flag-en.svg" alt=""/></label>
-						<!--<span class="header-language-en">EN</span>
-						<img class="header-language-img"  src="./images/triangle.svg" alt=""/> -->
+							<label for="lang"><img class="header-language-img" id="EN" src="./images/flag-en.svg" alt="flag of USA"/></label>
 					<select  name="language" id="lang">
 						<option  value="Choose" disabled>Choose:</option>
-						<option value="UA" id="UA" onclick="myFunction()">UA</option>
+						<option value="UA">UA</option>
 						<option class="header-language-en" selected value="EN">EN</option>
 						<option value="RUS">RUS</option>
 					</select>
@@ -58,10 +58,22 @@
 			</div>
 	</main>
 </div>
+
+
 <script>
-	function myFunction() {
-		document.getElementById("EN").src = "./images/ua.png";
-	}
+		let img = document.querySelector('.header-language-img');
+		let selected_lang = document.querySelector('#lang');
+		selected_lang.addEventListener('click', function() {
+			if (selected_lang.value === 'EN') {
+				img.setAttribute('src', './images/flag-en.svg', 'alt', 'flag of USA');
+			} else {
+				if (selected_lang.value === 'UA') {
+					img.setAttribute('src', './images/ua.png', 'alt', 'flag of Ukraine');
+				} else {
+					img.setAttribute('src', './images/rus.png', 'alt', 'flag of Russia');
+				}
+			}
+	})
 </script>
 
 </body>
