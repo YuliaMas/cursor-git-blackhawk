@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Design of blocks</title>
+	<link rel="stylesheet" href="../HW4/css/reset.css">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./css/style.css">
+	<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+</head>
+<body>
+<div class="all-content">
+	<header>
+		<section class="header">
+			<div class="header_title">
+				<h1> Stay focused on saving money </h1>
+				<p>It is important to stay focused on saving money in any way you can. We help you monitor your spending habits so you can easily spot and cut any unnecessary expenses. Simply join today to get started!</p>
+					<img src="./images/AppDownloadLink.png" alt="Download link">
+			</div>
+			<img class="header_slider-image" src="./images/Slider.png" alt="Restaurant & man">
+		</section>
+	</header>
+
+	<main>
+		<section class="main">
+			<div class="main-contact">
+				<h1>Contact</h1>
+				<p>Questions or concerns? Just fill out the form below and our support team will get back to you within 24 hours </p>
+			</div>
+			<div>
+				<form class="main-form">
+					<div class="contact_form__container">
+						<label>
+							<input  placeholder="First Name" type="text" required />
+						</label>
+						<label>
+							<input   placeholder="Last Name" type="text" required />
+						</label>
+						<label>
+							<input  type="tel" class="phone"  placeholder="phone number"/>
+						</label>
+						<label>
+								<select   onchange="window.alert(this.value)">
+									<option value="" hidden>Select Service</option>
+									<optgroup label="Service «Overview»">
+										<option value="Overview-Service1">Service 1</option>
+										<option value="Overview-Service2">Service 2</option>
+										<option value="Overview-Service3">Service 3</option>
+										<option value="Overview-Service4">Service 4</option>
+									</optgroup>
+									<optgroup label="Service «Terms & Conditions»">
+										<option value="«Terms & Conditions»-Service1">Service 1</option>
+										<option value="«Terms & Conditions»-Service2">Service 2</option>
+										<option value="«Terms & Conditions»-Service3">Service 3</option>
+										<option value="«Terms & Conditions»-Service4">Service 4</option>
+									</optgroup>
+									<optgroup label="Service «Privecy»" disabled>
+										<option>Service 1</option>
+										<option>Service 2</option>
+									</optgroup>
+								</select>
+							</label>
+						<input type="submit" value="submit now"/>
+					</div>
+				</form>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<section class="footer">
+			<div class="footer-container">
+				<div class="footer-content">
+					<h3>Address</h3>
+					<p>Pipang Ltd, Griva Digeni, 81-83 Jacovides Tower, 1st Floor 1090 Picosia USA</p>
+				</div>
+				<div class="footer-content">
+					<h3>Services</h3>
+					<ul>
+						<li>overview</li>
+						<li>features</li>
+						<li>technology</li>
+						<li>terms & conditions</li>
+						<li>privecy</li>
+					</ul>
+				</div>
+				<div class="footer-content">
+					<h3>Get in Touch</h3>
+					<p>info@cloudbudget.com</p>
+					<p>+1 844-721-7120</p>
+					<i class="fa fa-facebook-f"></i>
+					<i class="fa fa-linkedin"></i>
+					<i class="fa fa-twitter"></i>
+				</div>
+				<div class="footer-content">
+					<h3>We Support</h3>
+					<img src="./images/secure-p.png" alt="secure cards">
+				</div>
+			</div>
+			<div class="footer-protect">Copyright 2018 CloudBudget</div>
+		</section>
+	</footer>
+</div>
+
+<script>
+	$(".phone").mask("+38 (999) 999-99-99");
+
+	function myFunction() {
+		let x = document.getElementsByClassName("mySelect").value;
+		alert("You selected: " + x);
+	}
+
+</script>
+
+</body>
+</html>
