@@ -3,11 +3,15 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title> Design of blocks</title>
+
+	<title>Design of blocks</title>
+
 	<link rel="stylesheet" href="../HW4/css/reset.css">
-	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="./css/style.css">
 	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+	<!--<link rel="stylesheet"
+					 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+			<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 	<link rel="stylesheet" href="./css/style.css">
 	<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
@@ -19,7 +23,14 @@
 			<div class="header_title">
 				<h1> Stay focused on saving money </h1>
 				<p>It is important to stay focused on saving money in any way you can. We help you monitor your spending habits so you can easily spot and cut any unnecessary expenses. Simply join today to get started!</p>
-					<img src="./images/AppDownloadLink.png" alt="Download link">
+				<div class="header-links">
+					<a href="https://play.google.com/store" target="_blank"> <img src="./images/ion-logo-google-playstore.svg" alt="Google Play">
+					</a>
+					<a href="https://www.apple.com/ios/app-store/" target="_blank"> <img src="./images/ion-logo-apple-appstore.svg" alt="Apple app store">
+					</a>
+					<a href="https://www.microsoft.com/en-us/windows/" target="_blank"> <img src="./images/simple-icons_windows.svg" alt="Microsoft Windows">
+					</a>
+				</div>
 			</div>
 			<img class="header_slider-image" src="./images/Slider.png" alt="Restaurant & man">
 		</section>
@@ -41,8 +52,9 @@
 							<input   placeholder="Last Name" type="text" required />
 						</label>
 						<label>
-							<input  type="tel" class="phone"  placeholder="phone number"/>
+							<input  type="tel" class="phone"  placeholder="Phone Number"/>
 						</label>
+
 						<label>
 								<select   onchange="window.alert(this.value)">
 									<option value="" hidden>Select Service</option>
@@ -58,7 +70,7 @@
 										<option value="«Terms & Conditions»-Service3">Service 3</option>
 										<option value="«Terms & Conditions»-Service4">Service 4</option>
 									</optgroup>
-									<optgroup label="Service «Privecy»" disabled>
+									<optgroup label="Service «Private»" disabled>
 										<option>Service 1</option>
 										<option>Service 2</option>
 									</optgroup>
@@ -74,40 +86,50 @@
 	<footer>
 		<section class="footer">
 			<div class="footer-container">
-				<div class="footer-content">
+				<div class="footer-content footer-address">
 					<h3>Address</h3>
-					<p>Pipang Ltd, Griva Digeni, 81-83 Jacovides Tower, 1st Floor 1090 Picosia USA</p>
-				</div>
-				<div class="footer-content">
-					<h3>Services</h3>
 					<ul>
-						<li>overview</li>
-						<li>features</li>
-						<li>technology</li>
-						<li>terms & conditions</li>
-						<li>privecy</li>
+						<li>Pipang Ltd, Griva Digeni,</li>
+						<li>81-83 Jacovides Tower,</li>
+						<li>1st Floor 1090 Picosia USA</li>
 					</ul>
 				</div>
-				<div class="footer-content">
+				<div class="footer-content footer-service">
+					<h3>Services</h3>
+					<ul>
+						<li><a href="#">overview</a></li>
+						<li><a href="#">features</a></li>
+						<li><a href="#">technology</a></li>
+						<li><a href="#">terms & conditions</a></li>
+						<li><a href="#">privecy</a></li>
+					</ul>
+				</div>
+				<div class="footer-content footer-social">
 					<h3>Get in Touch</h3>
-					<p>info@cloudbudget.com</p>
-					<p>+1 844-721-7120</p>
-					<i class="fa fa-facebook-f"></i>
-					<i class="fa fa-linkedin"></i>
-					<i class="fa fa-twitter"></i>
+					<p class="email">info@cloudbudget.com</p>
+					<p class="number">+1 844-721-7120</p>
+					<a href="https://www.facebook.com/yulia.masechko" target="_blank"
+					><img src="./images/feather-facebook.svg" alt="facebook" /></a>
+					<a href="https://www.linkedin.com/in/yulia-masechko-33463a12a/"
+						 target="_blank"><img src="./images/feather-linkedin.svg" alt="linkedin"/></a>
+					<a href="https://twitter.com/home" target="_blank"><img src="./images/feather-twitter.svg" alt="twitter"></a>
 				</div>
 				<div class="footer-content">
 					<h3>We Support</h3>
 					<img src="./images/secure-p.png" alt="secure cards">
 				</div>
+
+					<p class="footer-protect">Copyright 2018 CloudBudget</p>
+
 			</div>
-			<div class="footer-protect">Copyright 2018 CloudBudget</div>
 		</section>
 	</footer>
 </div>
 
 <script>
+
 	$(".phone").mask("+38 (999) 999-99-99");
+
 
 	function myFunction() {
 		let x = document.getElementsByClassName("mySelect").value;
