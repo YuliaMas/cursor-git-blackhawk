@@ -107,6 +107,10 @@ input[type="text"], input[type="tel"] , select {
 	box-sizing: border-box;
 	border-radius: 6px;
 	padding: 0 30px 0 30px;
+	cursor: pointer;
+}
+input[type="text"]:focus, input[type="tel"]:focus , select:hover {
+ background-color: #adb5bd;
 }
 input[type="text"] {
 	width: 255px;
