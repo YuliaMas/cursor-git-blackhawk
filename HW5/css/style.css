@@ -24,6 +24,7 @@ body {
 	justify-content: center ;
 	box-sizing: border-box;
 	background-color: #ED4C5C;
+	/*min-height: 500px;*/
 }
 .header-links {
 	display: flex;
@@ -64,7 +65,9 @@ body {
 	 width: 100%;
 	 display: flex;
 	 justify-content: center;
-	/* align-items: center;
+	 box-sizing: border-box ;
+	/* min-height: 540px;*/
+	/* align-items: center; */
 	 /*margin-top: 117px;
 	  padding-bottom: 78px;   */
  }
@@ -136,19 +139,21 @@ input[type="submit"] {
 
 /* Footer container */
 .footer {
+	width: 100%;
 	position: relative;
 	background-color: #FAFAFA;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	/*min-height: 500px;*/
 }
 .footer-container {
 	display: flex;
-
-	justify-content: space-between;
+	justify-content: center;
 	align-items: flex-start;
 	margin-left: 165px;
 	margin-right: 195px;
+	box-sizing: border-box;
 }
 .footer-content {
 	margin-top: 85px;
