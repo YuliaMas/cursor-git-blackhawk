@@ -1,12 +1,15 @@
-html, body {
+html {
 	font-family: 'Lato', sans-serif;
-	position: relative;
+	font-size: 12px;
+}
+body {
+	/*position: relative;
 	top: 0;
-	left: 0;
+	left: 0;*/
 	width: 100vw;
 	max-width: 1440px;
 	height: auto;
-	font-size: 12px;
+	margin: auto;
 }
 .all-content {
 	width: 100%;
@@ -15,10 +18,10 @@ html, body {
 }
 .header {
 	width: 100%;
-	background-color: #ED4C5C;
 	display: flex;
 	justify-content: center ;
 	box-sizing: border-box;
+	background-color: #ED4C5C;
 }
 .header-links {
 	display: flex;
@@ -32,10 +35,10 @@ html, body {
 	  min-height: 500px;
 }
 .header_title {
- margin: 120px 0 0 165px;
+ margin: 120px 80px 115px 165px;
 }
 .header_slider-image {
-	margin: 95px 215px 95px 80px;
+	margin: 95px 215px 95px 0;
 }
 .header_title>p {
 	padding: 25px 0 40px;
@@ -58,20 +61,31 @@ html, body {
 	 width: 100%;
 	 display: flex;
 	 justify-content: center;
-	 align-items: center;
+	/* align-items: center;
 	 /*margin-top: 117px;
 	  padding-bottom: 78px;   */
  }
 .main-contact>h1 {
 	color: #000;
-	margin-bottom: 40px ;
 }
 .main-contact {
-	margin: 120px 80px 220px 165px;
+	margin: 115px 0 225px 175px;
+	max-width: 445px;
+	height: 160px;
 }
+.main-contact>p {
+	width: 434px;
+	padding-top: 40px ;
+}
+.main-form {
+	margin: 115px  165px 125px  125px;display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
 
+}
 .contact_form__container {
-	margin: 115px  165px 125px  80px;
+
 }
 input::placeholder , select {
 	font-weight: normal;
@@ -88,6 +102,11 @@ input[type="text"], input[type="tel"] , select {
 input[type="text"] {
 	width: 255px;
 	height: 60px;
+	/*display: inline;
+	align-items: center;*/
+	vertical-align: baseline;
+}
+input[type="text"] :first-child{
 	margin-right: 28px;
 }
 input[type="tel"] {
@@ -104,6 +123,7 @@ input[type="submit"] {
 	font-size: 1.2rem;
 	line-height: 17px; /* identical to box height */
 	text-transform: uppercase;
+	margin-top: 25px;
 
 	background: #ED4C5C;
 	border: 1.5px solid #ED4C5C;
@@ -117,6 +137,7 @@ input[type="submit"] {
 
 
 .footer {
+	position: relative;
 	background-color: #FAFAFA;
 	display: flex;
 	flex-wrap: wrap;
@@ -174,9 +195,11 @@ p.number {
 }
 p.footer-protect {
 	position: absolute;
-	left: 161px;
+	/*left: 161px;
 	top: 1380px;
-	margin-bottom: 85px ;
+	margin-bottom: 85px ;*/
+	left: 161px;
+	top: 335px;
 	width: 155px;
 	color: #101010;
 	font-size: 1rem;
