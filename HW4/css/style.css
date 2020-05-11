@@ -78,8 +78,8 @@ form {
 }
 select#lang {
 	font-weight: 400;
-	font-size: 14px;
-	line-height: 17px;
+	font-size: 1rem;
+	line-height: 1rem;
 	text-transform: uppercase;
 	color: #FFFFFF;
 	background: transparent;
@@ -91,8 +91,8 @@ select#lang option {
 }
 .header-logo-title {
 	font-weight: bold;
-	font-size: 18px;
-	line-height: 22px;
+	font-size: 1.3rem;
+	line-height: 1.3rem;
 	padding-left: 10px;
 }
 .header-options {
@@ -103,6 +103,7 @@ select#lang option {
 	max-width: 96px;
 	height: 32px;
 	padding-left: 10px;
+	padding-right: 20px;
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
@@ -110,17 +111,22 @@ select#lang option {
 #lang, .btn  , li, a  {
 	cursor: pointer;
 }
-.btn-outlined {
-	width: 100px;
-	height: 40px;
-	border: 1px solid #FFFFFF;
-	box-sizing: border-box;
+.btn {
+	text-align: center;
 	border-radius: 6px;
+	box-sizing: border-box;
+	font-size: 1rem; /*14px;*/
+	line-height: 1rem; /*17px;*/
+	text-transform: uppercase;
+}
+.btn-outlined {
+	/*width: 100px;
+	height: 40px;*/
+	/*align-items: center;*/
+	padding: 15px 27px;
+	border: 1px solid #FFFFFF;
 	background: transparent;
 	font-weight: 400;
-	font-size: 14px;
-	line-height: 17px;
-	text-transform: uppercase;
 	color: #FFF;
 }
 .main-info {
@@ -138,6 +144,7 @@ select#lang option {
 	line-height:  120%; /* 86px*/
 	letter-spacing: 0.05em;
 	text-transform: uppercase;
+	text-align: center;
 }
 .info-text {
 	/*max-width: 50vw;*/
@@ -149,22 +156,20 @@ select#lang option {
 	line-height: 150%; /* or 36px */
 	text-align: center;
 	display: flex;
+	flex-wrap: wrap;
 	padding: 40px 30px;
 	box-sizing: border-box;
 }
 
 .btn-filled {
+	padding: 15px 50px;
 	font-weight: 600;
-	font-size: 1rem; /*14px;*/
-	line-height: 1rem; /*17px;*/
-	text-transform: uppercase;
 	color: #ED4C5C;
-	background: #FFFFFF;
+	background: #FFF;
 	border: 1px solid #ED4C5C;
-	border-radius: 6px;
-	max-width: 160px;
+	/*max-width: 160px;
 	height: 50px;
-	padding: 0 40px;
+	padding: 0 40px;*/
 }
 .btn-filled:hover {
 	color: #FFF ;
@@ -190,7 +195,7 @@ select#lang option {
 @media screen and (max-width: 800px){
 	.container {
 		max-width: 800px;
-		/*min-width: 500px;*/
+		min-width: 600px;
 		font-size: 12px;
 			}
 	.header {
@@ -205,26 +210,68 @@ select#lang option {
 	.info-title {
 		font-size: 3.5em;
 	}
+	.btn-outlined {
+		padding: 15px 15px;
+	}
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 740px){
 	.container {
-		max-width: 420px;
-		/*min-width: 200px;*/
+		max-width: 740px;
+		min-width: 450px;
 		font-size: 12px;
 	}
 	.header {
-		margin: 17px auto;
+		margin: 17px auto 0;
+		padding: 25px 0 0;
 	}
 	.header-wrapper {
+		width: 90vw;
+	}
+	.nav-bar {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0;
+	}
+	.header-logo-title {
+		font-size: 1.14rem;
+		padding: 0;
+	}
+	.main-info {
+		width: 90vw;
+	}
+	.info-title {
+		font-size: 3.5em;
+	}
+	.info-text {
+		font-size: 1.4em;
+		padding: 25px 10px;
+		max-width: 375px;
+	}
+	.btn-outlined {
+		padding: 15px 15px;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.container {
+		max-width: 420px;
+		min-width: 200px;
+		font-size: 0.86rem;
+	}
+	.header {
+		margin: 17px auto 0;
+	}
+	.header-wrapper {
+		width: 80vw;
 		display: flex;
 		justify-content: center;
 	}
 	.header-logo-title {
-		font-size: 16px;
+		font-size: 1.14rem;
 		padding: 0;
 	}
 	select#lang {
-		font-size: 12px;
+		font-size: 0.86rem;
 		max-width: 40px;
 	}
 	.nav-bar {
@@ -232,16 +279,17 @@ select#lang option {
 		margin: 0;
 		line-height: 100%;
 	}
-	.info-title {
-		font-size: 4em;
+	.main-info {
+		width: 90vw;
 	}
 	.info-title {
+		font-size: 3.5em;
 		padding: 15px 5px;
 	}
 	.info-text {
 		font-size: 1.4em;
 		padding: 25px 10px;
-		width: 375px;
+		max-width: 350px;
 	}
 	.btn {
 		font-size: 1em;
@@ -249,9 +297,16 @@ select#lang option {
 		height: 40px;
 	}
 	.btn-outlined {
-		padding: 0;
+		/*padding: 0;
 		width: 60px;
-		height: 30px;
+		height: 30px;*/
+		padding: 2% 3%;
+	}
+	.nav-bar {
+		padding: 0;
+	}
+  .header-language{
+		padding: 0;
 	}
 }
 
