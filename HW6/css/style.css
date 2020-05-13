@@ -1,0 +1,243 @@
+@font-face{font-family: 'Avenir'; src: url(../fonts/Avenir-Bold.woff);
+																		url(../fonts/Avenir-Medium.woff);
+																		url(../fonts/Avenir-Regular.woff);
+					}
+html, body {
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 160%;
+}
+body {
+	background: linear-gradient(180deg, #F6FAFD 0%, #FFFFFF 19.4%)  no-repeat;
+	max-width: 1600px;
+	/*width: 100vw;*/
+	/*font-family: 'Avenir', sans-serif;*/
+	font-family: 'Avenir-Regular', sans-serif;
+	width: 100%;
+	height: auto;
+	overflow-x:hidden;
+	/*margin-top: 50px;
+	margin-bottom: 90px;*/
+	margin: auto;
+	/* identical to box height, or 26px */
+	color: #4B5D68;
+	box-sizing: border-box;
+
+}
+.all-content {
+		/*width: 80%;*/
+		/*height: 100%;*/
+		/*max-width: 1280px;*/
+		/*margin: 0 auto;*/
+		margin: 50px auto  90px;
+}
+nav , .data-storage-container,
+/*.features-content, .Testimonials-slider {*/
+	main, footer {
+	width: 70%;
+	margin: 0 auto;
+}
+.header-section {
+
+	/*background: url(../images/image1.svg) no-repeat bottom right;*/
+}
+.wrapper-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	/*max-width: 1160px;*/
+	margin: 0 auto;
+}
+
+.nav-bar {
+	display: flex;
+	justify-content: center;
+	flex-grow: 1;
+	/*justify-items: center;*/
+}
+/*.nav-bar-item {
+	margin-left: 40px;
+}*/
+.nav-bar-item + .nav-bar-item {
+	margin-left: 40px;
+}
+.demo-content {
+	flex-grow: 1;
+	align-items: end;
+}
+.container {
+	display: flex;
+	justify-content: center;
+	background: url(../images/image1.svg) no-repeat bottom right;
+	margin-top: 100px;
+	margin-left: 220px;
+	width: 80%;
+}
+.btn {
+	background: #FFFFFF;
+	box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);
+	border-radius: 50px;
+	width: 210px;
+	height: 60px;
+	text-align:center;
+
+	letter-spacing: 0.005em;
+	padding-left: 24px;
+}
+.btn-demo {
+	/*display: flex;*/
+	/*align-self: center;*/
+	font-weight: 800;
+	font-size: 1rem;
+	line-height: 1rem;
+	/* identical to box height, or 26px */
+	letter-spacing: 0.005em;
+	color: #212353;
+}
+.header_content {
+	position: relative;
+	z-index: 5;
+	/*display: flex;*/
+	/*flex-direction: column;*/
+	/*justify-content: center;*/
+
+}
+h1 {
+	font-family: Helvetica;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 80px;
+	line-height: 110%;
+	/* or 88px */
+
+	display: flex;
+	align-items: center;
+	color: #212353;
+	width: 55%;
+	flex-wrap: wrap;
+	/*margin-top: 130px;*/
+}
+p {
+	font-style: normal;
+	font-weight: 500;
+	font-size: 1rem;
+	line-height: 160%;
+}
+.header-content p {
+	width: 30%;
+	display: flex;
+	flex-wrap: wrap;
+	/*width: 380px;*/
+	/*height: 120px;*/
+	margin: 50px 0;
+	align-items: center;
+	font-size: 1.125rem;
+
+}
+.header-img {
+	z-index: 1;
+	/*float: right;*/
+	justify-items: end;
+	border: none;
+}
+.btn-learn {
+	/*display: flex;*/
+	/*align-items: center;*/
+	text-align: center;
+	font-weight: 800;
+	font-size: 1.125rem;
+
+	color: #FFFFFF;
+	background: #9C69E2;
+	border-radius: 50px;
+	margin-bottom: 100px;
+}
+
+
+.data-storage-container {
+	background: rgba(240, 99, 184, 0.15);
+	border-radius: 50px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: 100px;
+}
+h2 {
+	font-family: Helvetica;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 40px;
+	line-height: 130%;
+	/* or 52px */
+
+	/*display: flex;*/
+	/*align-items: center;*/
+
+	color: #212353;
+	margin-bottom: 40px;
+
+}
+.data-storage p {
+	height: 170px;
+	width: 80%;
+	font-size: 1.125rem;
+}
+.data-storage {
+	width: 50%;
+	margin: 0 auto;
+	/*left: auto;*/
+}
+
+/*main section*/
+
+.features-block {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 150px;
+}
+.features-block div {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-basis: 50%;
+}
+.features-content {
+	margin-top:  150px;
+}
+.features-title>h2, .features-title>p {
+	text-align: center;
+}
+.features-title p{
+	font-weight: 500;
+	font-size: 1.125rem;
+	line-height: 160%;
+}
+h3	{
+	font-family: Helvetica;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 130%;
+	/* or 31px */
+	align-items: center;
+	color: #212353;
+}
+.features-block>p {
+	font-weight: normal;
+	font-size: 1rem;
+}
+
+/*footer section*/
+hr {
+	background: #9C69E2;
+	opacity: 0.2;
+	margin: 150px 0 100px 0;
+}
+.demo-learn, .footer-rights, .menu  {
+	display: flex;
+	justify-content: space-between;
+}
+.footer-rights {
+	margin-top: 90px;
+}

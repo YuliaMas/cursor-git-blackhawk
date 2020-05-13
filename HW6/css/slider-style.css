@@ -1,22 +1,17 @@
-body {
-	margin-top: 30px;
-	width: 100vw;
-}
-img {
+.sim-slider-element>img {
 	width: 25%;
 }
 
 /* General styles */
 .sim-slider {
 	position: relative;
-	width: 1118px;
+	/*max-width: 1118px;*/
 	height: 709px;
-	left: 242px;
+	/*left: 242px;*/
 	background: #9C69E2;
 	border-radius: 50px;
-
-
-
+	text-align: left;
+	margin-top: 150px;
 }
 
 .sim-slider-list {
@@ -24,11 +19,12 @@ img {
 	padding: 0;
 	list-style-type: none;
 	position: relative;
-	top: 250px;
-	width: 949px;
+	top: 160px;
+	width: 85%;
+	/*max-width: 949px;*/
 	height: 330px;
 	background: #FFFFFF;
-	box-shadow: 0px 20px 0px rgba(156, 105, 226, 0.3);
+	box-shadow: 0 20px 0 rgba(90, 65, 132, 0.3);
 	border-radius: 20px;
 }
 
@@ -38,9 +34,18 @@ img {
 	opacity: 0;
 	position: absolute;
 	z-index: 2;
-	left: 30px;
-	top: 20px;
-	display: block;
+	left: 120px;
+	top: 70px;
+	/*display: block;*/
+	display: flex;
+	justify-content: center;
+}
+.slider-unit {
+	padding-left: 40px;
+	padding-top: 20px;
+}
+blockquote {
+	padding-top: 20px;
 }
 
 /* Navigation item styles */
@@ -82,8 +87,9 @@ div.sim-slider-dots {
 	position: absolute;
 	left: 7%;
 	bottom: 7%;
-	z-index: 3;
-
+  display: flex;
+  align-items: center;
+  z-index: 3;
 }
 
 span.sim-dot {
