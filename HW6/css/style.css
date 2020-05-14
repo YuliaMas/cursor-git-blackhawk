@@ -10,9 +10,8 @@ html, body {
 }
 body {
 	background: linear-gradient(180deg, #F6FAFD 0%, #FFFFFF 19.4%)  no-repeat;
-	/*max-width: 1600px;*/
+	max-width: 1600px;
 	/*width: 100vw;*/
-	/*font-family: 'Avenir', sans-serif;*/
 	font-family: 'Avenir-Regular', sans-serif;
 	/*width: 100%;*/
 	width: 100vw;
@@ -35,6 +34,8 @@ h1, h2, h3, h4 {
 	color: #212353;
 }
 .all-content {
+	width: 100%;
+	height: 100%;
 		/*width: 80%;*/
 		/*height: 100%;*/
 		/*max-width: 1280px;*/
@@ -48,7 +49,6 @@ nav , .data-storage-container,
 	margin: 0 auto;
 }
 .header-section {
-
 	/*background: url(../images/image1.svg) no-repeat bottom right;*/
 }
 .wrapper-content {
@@ -63,15 +63,21 @@ nav , .data-storage-container,
 	display: flex;
 	justify-content: space-around;
 	align-self: center;
-	padding-left: 20%;
+	/*padding-left: 20%;*/
 	/*flex-grow: 1;*/
 	/*justify-items: center;*/
 }
 .nav-bar-item {
-	display: flex;
-	justify-content: space-between ;
+	/*display: flex;*/
+	/*justify-content: space-between ;*/
 	padding-left: 5% ;
 	padding-right: 5% ;
+}
+.nav-bar-item--active{
+	font-weight: 700;
+}
+li, a {
+	text-decoration: none;
 }
 /*}*/
 /*.nav-bar-item + .nav-bar-item {*/
@@ -83,7 +89,7 @@ nav , .data-storage-container,
 }
 .demo-content {
 	/*flex-grow: 1;*/
-	align-items: end;
+	/*align-items: end;*/
 }
 .container {
 	display: flex;
@@ -316,10 +322,17 @@ hr {
 	display: flex;
 }
 .logo-content {
-	display: flex;
+		display: flex;
+	margin-right: 20%;
 }
 .footer-rights {
 	margin-top: 90px;
+}
+.footer-chat {
+	position: fixed;
+	top: 85%;
+	left: 83%;
+	z-index: 10;
 }
 .footer-rights p {
 	display: flex;
