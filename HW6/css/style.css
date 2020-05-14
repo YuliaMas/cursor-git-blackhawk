@@ -23,17 +23,25 @@ body {
 	/* identical to box height, or 26px */
 	color: #4B5D68;
 	box-sizing: border-box;
-
+}
+h1, h2, h3, h4 {
+	font-family:  Helvetica, Verdana, Arial, sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	line-height: 130%;
+	/*display: flex;*/
+	/*align-items: center;*/
+	color: #212353;
 }
 .all-content {
 		/*width: 80%;*/
 		/*height: 100%;*/
 		/*max-width: 1280px;*/
 		/*margin: 0 auto;*/
-		margin: 50px auto  90px;
+		margin: 50px auto 90px;
 }
 nav , .data-storage-container,
-/*.features-content, .Testimonials-slider {*/
+/*.features-content, .Testimonials-slider*/
 	main, footer {
 	width: 70%;
 	margin: 0 auto;
@@ -70,13 +78,13 @@ nav , .data-storage-container,
 	display: flex;
 	justify-content: center;
 	background: url(../images/image1.svg) no-repeat bottom right;
-	margin-top: 100px;
-	margin-left: 220px;
+	margin-top: 8%;
+	margin-left:  14%; /* 220px;*/
 	width: 80%;
 }
 .btn {
 	background: #FFFFFF;
-	box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);
+	box-shadow: 0 5px 5px rgba(75, 93, 104, 0.1);
 	border-radius: 50px;
 	width: 210px;
 	height: 60px;
@@ -97,23 +105,15 @@ nav , .data-storage-container,
 }
 .header_content {
 	position: relative;
-	z-index: 5;
+	z-index: 2;
 	/*display: flex;*/
 	/*flex-direction: column;*/
 	/*justify-content: center;*/
-
 }
 h1 {
-	font-family: Helvetica;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 80px;
+	font-size: 5rem;
 	line-height: 110%;
 	/* or 88px */
-
-	display: flex;
-	align-items: center;
-	color: #212353;
 	width: 55%;
 	flex-wrap: wrap;
 	/*margin-top: 130px;*/
@@ -161,7 +161,7 @@ p {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	margin-top: 100px;
+	margin-top: 6.25%;
 }
 h2 {
 	font-family: Helvetica;
@@ -180,21 +180,24 @@ h2 {
 }
 .data-storage p {
 	height: 170px;
-	width: 80%;
 	font-size: 1.125rem;
 }
 .data-storage {
-	width: 50%;
+	width: 42%;
 	margin: 0 auto;
 	/*left: auto;*/
 }
+.data-storage h2 {
+	margin: 0 auto 10%;
+}
+
 
 /*main section*/
 
 .features-block {
 	display: flex;
 	flex-wrap: wrap;
-	margin-top: 150px;
+	margin-top: 9.24%;
 }
 .features-block div {
 	display: flex;
@@ -203,7 +206,7 @@ h2 {
 	flex-basis: 50%;
 }
 .features-content {
-	margin-top:  150px;
+	margin-top: 9.4%;
 }
 .features-title>h2, .features-title>p {
 	text-align: center;
@@ -213,11 +216,14 @@ h2 {
 	font-size: 1.125rem;
 	line-height: 160%;
 }
+.Testimonials-slider {
+	margin-bottom: 15%;
+}
 h3	{
 	font-family: Helvetica;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 24px;
+	font-size: 1.5rem;
 	line-height: 130%;
 	/* or 31px */
 	align-items: center;
@@ -232,7 +238,7 @@ h3	{
 hr {
 	background: #9C69E2;
 	opacity: 0.2;
-	margin: 150px 0 100px 0;
+	margin: 9.4% 0 6.25% 0;
 }
 .demo-learn, .footer-rights, .menu  {
 	display: flex;
@@ -240,4 +246,19 @@ hr {
 }
 .footer-rights {
 	margin-top: 90px;
+}
+.footer-rights p {
+	display: flex;
+	align-items: center;
+	color: #212353;
+	letter-spacing: 0.01em;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 0.75rem;
+	line-height: 180%;
+	/* or 22px */
+	width: 55%;
+}
+.footer-chat {
+
 }

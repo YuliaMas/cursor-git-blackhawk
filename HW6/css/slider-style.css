@@ -3,6 +3,7 @@
 }
 
 /* General styles */
+
 .sim-slider {
 	position: relative;
 	/*max-width: 1118px;*/
@@ -11,15 +12,24 @@
 	background: #9C69E2;
 	border-radius: 50px;
 	text-align: left;
-	margin-top: 150px;
+	margin-top: 12%;
+	/*padding-bottom: 12%;*/
+	/*padding-top: 10%;*/
 }
+.sim-slider-title {
+	padding-top: 8%;
+}
+h2 {
+	text-align: left;
+	margin-left: 8% ;
 
+}
 .sim-slider-list {
-	margin: auto ;
+	margin:7% auto auto	;
 	padding: 0;
 	list-style-type: none;
 	position: relative;
-	top: 160px;
+	/*top: 160px;*/
 	width: 85%;
 	/*max-width: 949px;*/
 	height: 330px;
