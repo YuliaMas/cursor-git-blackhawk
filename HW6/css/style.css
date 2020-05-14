@@ -12,9 +12,9 @@ body {
 	background: linear-gradient(180deg, #F6FAFD 0%, #FFFFFF 19.4%)  no-repeat;
 	max-width: 1600px;
 	/*width: 100vw;*/
-	font-family: 'Avenir-Regular', sans-serif;
+	font-family: 'Avenir', sans-serif;
 	/*width: 100%;*/
-	width: 100vw;
+	/*width: 100vw;*/
 	height: auto;
 	overflow-x:hidden;
 	/*margin-top: 50px;
@@ -34,7 +34,7 @@ h1, h2, h3, h4 {
 	color: #212353;
 }
 .all-content {
-	width: 100%;
+	width: 100vw;
 	height: 100%;
 		/*width: 80%;*/
 		/*height: 100%;*/
@@ -193,7 +193,6 @@ h2 {
 	/*align-items: center;*/
 	color: #212353;
 	margin-bottom: 40px;
-
 }
 .data-storage p {
 	height: 170px;
@@ -220,7 +219,7 @@ h2 {
 	display: flex;
 	justify-content: space-between;
 	/*flex-basis: 45%;*/
-	width: 45%;
+	max-width: 45%;
 	align-items: stretch;
 	margin-bottom: 8%;
 }
@@ -238,8 +237,9 @@ h2 {
 .features-content {
 	margin-top: 9.4%;
 }
-.features-title>h2, .features-title>p {
+.features-title>h2 {
 	text-align: center;
+	margin-left: auto;
 }
 .features-title p{
 	font-weight: 500;
@@ -346,6 +346,52 @@ hr {
 	/* or 22px */
 	width: 55%;
 }
+@media screen and (max-width: 1080px){
+	body {
+		font-size: 10px;
+	}
+	.header-content p {
+		font-size: 14px;
+	}
+	.data-storage p {
+		font-size: 14px;
+	}
+	.features-block div {
+		min-width: 45%;
+	}
+	img {
+		max-width: 50%;
+	}
+	.container {
+	background-size: 90%;
+	}
+	.header-content {
+		max-width: 70%;
+		max-height: 70%;
+	}
+	h1 {
+		font-size: 40px;
+	}
+	.header-content p {
+		max-width: 40%;
+		margin: 25px;
+	}
+	.data-storage h2 {
+		margin: 2%;
+	}
+	.data-storage {
+		width: 46%;
+	}
 
+	h2 {
+		font-size: 26px;
+	}
+	.footer-chat img {
+		max-width: 200%
+	}
+	.footer-chat {
+		top: 92%;
+	}
+}
 
 

@@ -19,7 +19,7 @@
 .sim-slider-title {
 	padding-top: 8%;
 }
-h2 {
+ .sim-slider-title>h2 {
 	text-align: left;
 	margin-left: 8% ;
 
@@ -46,7 +46,6 @@ h2 {
 	z-index: 2;
 	left: 7.5% ; /*120px;*/
 	top: 70px;
-
 	/*display: block;*/
 	display: flex;
 	justify-content: center;
