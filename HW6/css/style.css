@@ -113,6 +113,31 @@ h1, h2, h3, h4 {
 	margin-left:  16%; /* 220px;*/
 	width: 80%;
 }
+a:link, a:visited {
+	text-decoration: none;
+}
+a:hover, a:active {
+	background-color: #F063B8;
+}
+#logo:hover {
+	background-color: #FFFFFF;
+}
+.footer-chat a:hover .social a:hover {
+	background-color: #FFFFFF;
+	zoom: 200%;
+}
+#face img:hover {
+	background-color: #9C69E2;
+	border-radius: 50%;
+}
+#twit img:hover {
+	background-color: #9C69E2;
+	border-radius: 50%;
+}
+#inst img:hover {
+	background-color: #9C69E2;
+	border-radius: 50%;
+}
 .btn {
 	background: #FFFFFF;
 	box-shadow: 0 5px 5px rgba(75, 93, 104, 0.1);
@@ -121,6 +146,7 @@ h1, h2, h3, h4 {
 	letter-spacing: 0.005em;
 	/*padding-left: 24px;*/
 	height: 60px;
+	cursor: pointer;
 }
 .btn-demo {
 	/*display: flex;*/
@@ -135,6 +161,9 @@ h1, h2, h3, h4 {
 	display: flex;
 	justify-content: space-between;
 }
+.btn-demo:hover {
+	background-color: #F063B8 ;
+	}
 .btn-demo img {
 	padding-left: 20px;
 }
@@ -148,6 +177,9 @@ h1, h2, h3, h4 {
 	padding: 0 37px;
 	/*width: 160px;*/
 	color: #FFFFFF;
+}
+.btn-learn:hover {
+	background-color: #FFF ;
 }
 .btn-learn-head {
 	background: #9C69E2;
@@ -355,9 +387,12 @@ hr {
 .footer-about, .footer-help, .footer-media {
 	margin-top: 5px;
 }
-.footer-media img:nth-child(3) {
-	margin-right: 15px;
-	margin-left: 15px;
+/*.footer-media img:nth-child(3) {*/
+/*	margin-right: 15px;*/
+/*	margin-left: 15px;*/
+/*}*/
+#twit {
+	padding: 0 15px;
 }
 .footer-rights {
 	margin-top: 90px;
