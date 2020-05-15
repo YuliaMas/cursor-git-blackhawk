@@ -99,7 +99,7 @@ h1, h2, h3, h4 {
 	align-self: center;
 }
 .demo-content {
-	margin-left: 25%;
+	margin-left: 18%;
 }
 .nav-bar-item + .nav-bar-item {
 	margin-left: 40px;
@@ -122,7 +122,7 @@ a:link, a:visited {
 	text-decoration: none;
 }
 a:hover, a:active {
-	background-color: #F063B8;
+	color: #F063B8;
 }
 #logo:hover {
 	background-color: #FFFFFF;
@@ -169,6 +169,9 @@ a:hover, a:active {
 .btn-demo:hover {
 	background-color: #F063B8 ;
 	}
+.btn-demo a:hover {
+	color: #9C69E2;
+}
 .btn-demo img {
 	padding-left: 20px;
 }
@@ -392,10 +395,6 @@ hr {
 .footer-about, .footer-help, .footer-media {
 	margin-top: 5px;
 }
-/*.footer-media img:nth-child(3) {*/
-/*	margin-right: 15px;*/
-/*	margin-left: 15px;*/
-/*}*/
 #twit {
 	padding: 0 15px;
 }
@@ -422,8 +421,8 @@ hr {
 }
 
 /* Menu*/
-.dropbtn {
-	background-color: #FFF;
+.drop-btn {
+	/*background-color: #FFF;*/
 	/*padding: 16px;*/
 	font-size: 1rem;
 	border: none;
@@ -449,7 +448,7 @@ hr {
 .dropdown-content a:hover {background-color: #ddd;}
 .dropdown:hover .dropdown-content {display: block;}
 
-.dropdown:hover .dropbtn {background-color: #F063B8;}
+/*.dropdown:hover .drop-btn {background-color: #F063B8;}*/
 
 
 @media screen and (max-width: 1080px){
