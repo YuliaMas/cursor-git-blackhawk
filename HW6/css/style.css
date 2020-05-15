@@ -2,9 +2,15 @@
 																		url(../fonts/Avenir-Medium.woff);
 																		url(../fonts/Avenir-Regular.woff);
 					}
+* {
+	box-sizing: border-box;
+}
+li, a {
+	text-decoration: none;
+}
 html, body {
 	font-style: normal;
-	font-weight: 500;
+	font-weight: 400;
 	font-size: 16px;
 	line-height: 160%;
 }
@@ -16,10 +22,10 @@ body {
 	/*width: 100%;*/
 	/*width: 100vw;*/
 	height: auto;
-	overflow-x:hidden;
+	overflow-x: hidden;
 	/*margin-top: 50px;
 	margin-bottom: 90px;*/
-	margin: auto;
+	margin: 0 auto;
 	/* identical to box height, or 26px */
 	color: #4B5D68;
 	box-sizing: border-box;
@@ -27,70 +33,61 @@ body {
 h1, h2, h3, h4 {
 	font-family:  Helvetica, Verdana, Arial, sans-serif;
 	font-style: normal;
-	font-weight: bold;
+	font-weight: 900;
 	line-height: 130%;
 	/*display: flex;*/
 	/*align-items: center;*/
 	color: #212353;
 }
 .all-content {
-	width: 100vw;
-	height: 100%;
+	/*width: 100vw;*/
+	/*height: 100%;*/
 		/*width: 80%;*/
 		/*height: 100%;*/
 		/*max-width: 1280px;*/
 		/*margin: 0 auto;*/
 	margin: 3.2% auto 5.6%
 }
-nav , .data-storage-container,
+.wrapper-content , .data-storage-container,
 /*.features-content, .Testimonials-slider*/
 	main, footer {
 	width: 70%;
 	margin: 0 auto;
 }
-.header-section {
-	/*background: url(../images/image1.svg) no-repeat bottom right;*/
-}
 .wrapper-content {
+/*	!*max-width: 1160px;*!*/
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	/*max-width: 1160px;*/
-	margin: 0 auto;
 }
-
+.nav-bar-logo {
+	margin-right: 12%;
+}
+.header-nav-bar {
+	display: inline-flex;
+	align-items: center;
+}
 .nav-bar {
+	display: flex;
+	/*margin-right: 40px;*/
+	/*margin-left: 40px;*/
+}
+.nav-bar-item--active li {
+	font-weight: 700;
+}
+.header-navigation {
+	flex-grow: 1;
 	display: flex;
 	justify-content: space-around;
 	align-self: center;
-	/*padding-left: 20%;*/
-	/*flex-grow: 1;*/
-	/*justify-items: center;*/
-}
-.nav-bar-item {
-	/*display: flex;*/
-	/*justify-content: space-between ;*/
-	padding-left: 5% ;
-	padding-right: 5% ;
-}
-.nav-bar-item--active{
-	font-weight: 700;
-}
-li, a {
-	text-decoration: none;
-}
-/*}*/
-/*.nav-bar-item + .nav-bar-item {*/
-/*	margin-left: 40px;*/
-/*}*/
-.nav-bar-logo {
-	display: flex;
-	justify-content: space-between;
 }
 .demo-content {
-	/*flex-grow: 1;*/
-	/*align-items: end;*/
+	margin-left: 25%;
 }
+.nav-bar-item + .nav-bar-item {
+	margin-left: 40px;
+}
+
 .container {
 	display: flex;
 	/*justify-content: center;*/
@@ -103,24 +100,40 @@ li, a {
 	background: #FFFFFF;
 	box-shadow: 0 5px 5px rgba(75, 93, 104, 0.1);
 	border-radius: 50px;
-	width: 210px;
-	height: 60px;
-	text-align:center;
-
+	text-align: center;
 	letter-spacing: 0.005em;
-	padding-left: 24px;
+	/*padding-left: 24px;*/
+	height: 60px;
 }
 .btn-demo {
 	/*display: flex;*/
 	/*align-self: center;*/
+	padding: 0 30px;
+	/*width: 210px;*/
 	font-weight: 800;
 	font-size: 1rem;
 	line-height: 1rem;
 	/* identical to box height, or 26px */
-	letter-spacing: 0.005em;
 	color: #212353;
 	display: flex;
 	justify-content: space-between;
+}
+.btn-demo img {
+	padding-left: 20px;
+}
+.btn-learn {
+	/*display: flex;*/
+	/*align-items: center;*/
+	text-align: center;
+	font-weight: 800;
+	font-size: 1.125rem;
+	margin-bottom: 100px;
+	padding: 0 37px;
+	/*width: 160px;*/
+	color: #FFFFFF;
+}
+.btn-learn-head {
+	background: #9C69E2;
 }
 .header_content {
 	position: relative;
@@ -160,18 +173,6 @@ p {
 	justify-items: end;
 	border: none;
 }
-.btn-learn {
-	/*display: flex;*/
-	/*align-items: center;*/
-	text-align: center;
-	font-weight: 800;
-	font-size: 1.125rem;
-
-	color: #FFFFFF;
-	background: #9C69E2;
-	border-radius: 50px;
-	margin-bottom: 100px;
-}
 
 
 .data-storage-container {
@@ -183,7 +184,6 @@ p {
 	margin-top: 6.25%;
 }
 h2 {
-	font-family: Helvetica;
 	font-style: normal;
 	font-weight: bold;
 	font-size: 40px;
@@ -192,7 +192,7 @@ h2 {
 	/*display: flex;*/
 	/*align-items: center;*/
 	color: #212353;
-	margin-bottom: 40px;
+	/*margin-bottom: 40px;*/
 }
 .data-storage p {
 	height: 170px;
@@ -206,7 +206,6 @@ h2 {
 .data-storage h2 {
 	margin: 0 auto 10%;
 }
-
 
 /*main section*/
 
@@ -233,13 +232,13 @@ h2 {
 .first-block , .third-block, .second-block, .fourth-block  {
 	padding-right:  3.2%;
 }
-
 .features-content {
 	margin-top: 9.4%;
 }
 .features-title>h2 {
 	text-align: center;
 	margin-left: auto;
+	margin-bottom: 50px;
 }
 .features-title p{
 	font-weight: 500;
@@ -252,9 +251,8 @@ h2 {
 	margin: auto;
 }
 h3	{
-	font-family: Helvetica;
 	font-style: normal;
-	font-weight: normal;
+	font-weight: 400;
 	font-size: 1.5rem;
 	line-height: 130%;
 	/* or 31px */
@@ -262,7 +260,7 @@ h3	{
 	color: #212353;
 }
 .features-block>p {
-	font-weight: normal;
+	font-weight: 400;
 	font-size: 1rem;
 }
 .Testimonials-slider {
@@ -284,34 +282,32 @@ hr {
 }
 .demo-learn h2 {
 	margin-left: 0;
+	margin-bottom: 20px;
 }
 .menu li {
-	font-size: 16px;
+	font-size: 1rem;
 	line-height: 250%;
 	/* or 40px */
 }
 .footer-address ul {
-	padding-top: 10px;
+	padding-top: 20px;
+}
+.menu h5, .menu h6 {
+	font-weight: 900;
+	line-height: 160%; /* or 26px */
+	color: #212353;
 }
 .menu h5 {
-	font-weight: 900;
-	font-size: 20px;
-	line-height: 160%;
-	color: #212353;
+	font-size: 1.25rem;
 	margin-left: 20px;
 }
 .menu h6 {
-	font-weight: 900;
-	font-size: 16px;
-	line-height: 160%;
-	/* or 26px */
-	color: #212353;
+	font-size: 1rem;
 	padding-bottom: 30px ;
 }
 .footer-address ul li {
-	font-size: 16px;
-	line-height: 180%;
-	/* or 29px */
+	font-size: 1rem;
+	line-height: 180%; /* or 29px */
 	letter-spacing: 0.01em;
 }
 .footer-address ul:first-child {
@@ -321,9 +317,20 @@ hr {
 .footer-button {
 	display: flex;
 }
-.logo-content {
-		display: flex;
+.btn-learn-foo {
+	margin-right: 30px;
+	background: #F063B8;
+}
+.menu .logo-content {
+	display: flex;
 	margin-right: 20%;
+}
+.footer-about, .footer-help, .footer-media {
+	margin-top: 5px;
+}
+.footer-media img:nth-child(3) {
+	margin-right: 15px;
+	margin-left: 15px;
 }
 .footer-rights {
 	margin-top: 90px;
@@ -340,15 +347,18 @@ hr {
 	color: #212353;
 	letter-spacing: 0.01em;
 	font-style: normal;
-	font-weight: normal;
+	font-weight: 400;
 	font-size: 0.75rem;
 	line-height: 180%;
 	/* or 22px */
-	width: 55%;
+	max-width: 55%;
 }
+
+
 @media screen and (max-width: 1080px){
 	body {
 		font-size: 10px;
+		overflow-x: hidden;
 	}
 	.header-content p {
 		font-size: 14px;
@@ -382,7 +392,6 @@ hr {
 	.data-storage {
 		width: 46%;
 	}
-
 	h2 {
 		font-size: 26px;
 	}
