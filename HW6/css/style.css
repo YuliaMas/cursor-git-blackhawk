@@ -77,7 +77,7 @@ h1, h2, h3, h4 {
 	align-items: center;
 }
 .nav-bar-logo {
-	margin-right: 12%;
+	margin-right: 8%;
 }
 .logo-img.lg {
 	padding-left: 20px;
@@ -99,13 +99,13 @@ h1, h2, h3, h4 {
 	align-self: center;
 }
 .demo-content {
-	margin-left: 18%;
+	margin-left: 15%;
 }
 .nav-bar-item + .nav-bar-item {
 	margin-left: 40px;
 }
 .nav-bar-item a:hover {
-	padding: 16px;
+	/*padding: 16px;*/
 	transition-duration: 0.7s;
 	transition-property: background-color;
 }
@@ -424,7 +424,7 @@ hr {
 /* Menu*/
 .drop-btn {
 	/*background-color: #FFF;*/
-	/*padding: 16px;*/
+	padding: 16px;
 	font-size: 1rem;
 	border: none;
 }
@@ -446,10 +446,15 @@ hr {
 	text-decoration: none;
 	display: block;
 }
-.dropdown-content a:hover {background-color: #ddd;}
-.dropdown:hover .dropdown-content {display: block;}
-
-/*.dropdown:hover .drop-btn {background-color: #F063B8;}*/
+.dropdown-content a:hover {
+	background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+.dropdown:hover .drop-btn {
+	transform: scale(1);
+}
 
 
 @media screen and (max-width: 1080px){
