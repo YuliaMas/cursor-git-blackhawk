@@ -129,7 +129,7 @@ a:hover, a:active {
 }
 .footer-chat a:hover {
 	background-color: #FFFFFF;
-	zoom: 200%;
+	zoom: 150%;
 }
 #face img:hover {
 	background-color: #9C69E2;
@@ -152,6 +152,7 @@ a:hover, a:active {
 	/*padding-left: 24px;*/
 	height: 60px;
 	cursor: pointer;
+	border: none;
 }
 .btn-demo {
 	/*display: flex;*/

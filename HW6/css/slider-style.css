@@ -87,6 +87,8 @@ div.sim-slider-arrow-right {
 }
 div.sim-slider-arrow-right:hover {
 	zoom: 175%;
+	transform: scale(1.2);
+	right: 6% ;
 }
 
 div.sim-slider-arrow-left:hover {
