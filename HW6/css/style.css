@@ -29,6 +29,7 @@ html, body {
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 160%;
+	scroll-behavior: smooth;
 }
 body {
 	background: linear-gradient(180deg, #F6FAFD 0%, #FFFFFF 19.4%)  no-repeat;
@@ -102,7 +103,10 @@ h1, h2, h3, h4 {
 	margin-left: 15%;
 }
 .nav-bar-item + .nav-bar-item {
-	margin-left: 40px;
+	/*margin-left: 40px;*/
+}
+.nav-bar {
+	flex-basis: 450px;
 }
 .nav-bar-item a:hover {
 	/*padding: 16px;*/
@@ -457,13 +461,19 @@ hr {
 }
 
 
-@media screen and (max-width: 1080px){
+@media (max-width: 1080px){
 	body {
 		font-size: 10px;
 		overflow-x: hidden;
 	}
 	.header-content p {
 		font-size: 14px;
+	}
+	.nav-bar-logo {
+		margin-right: 2%;
+	}
+	.demo-content {
+		margin-left: 5%;
 	}
 	.data-storage p {
 		font-size: 14px;
@@ -475,7 +485,10 @@ hr {
 		max-width: 50%;
 	}
 	.logo-img img {
-		max-width: 100%;
+		width: 100%;
+	}
+	.lg img {
+		width: 100%;
 	}
 	.container {
 	background-size: 90%;
