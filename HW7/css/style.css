@@ -84,7 +84,6 @@ p {
 	/*background-color: #9C69E2;*/
 	margin-left: -60px;
 	box-sizing: border-box;
-	background: #9C69E2;
 	}
 .main-container {
 	/*position: relative;*/
@@ -135,19 +134,21 @@ p {
 	transform: rotate(-180deg);
 	}
 .arrow-right {
-	padding-left: 16px;
+	padding-left: 12px;
 	}
 .my_course {
 	margin-top: 24px;
 	display: flex;
-	/*display: inline-block;*/
 	justify-content: space-between;
-	height: 80px;
+	flex-wrap: wrap;
+	/*height: 80px;*/
 	}
-.my_course-spanish {
+.my_course-container {
 	width: 80%;
+	/*padding: 8px 0;*/
+	padding: 8px 0 8px 8px;
 	display: flex;
-	justify-content: space-around;
+	justify-content: flex-start;
 	/*margin-right: 24px;*/
 	background: #F5F5F7;
 	border-radius: 14px;
@@ -157,12 +158,16 @@ h4 {
 	font-size: 1rem;
 	line-height: 26px;
 	}
-.my_course-title p {
+.my_course-title {
+	margin-right: 46px;
+	margin-left: 24px;
+	}
+.my_course-title p , .courses-info-title p {
 	font-size: 0.81rem;
 	line-height: 15px;
 	}
 button {
-	font-size: 13px;
+	font-size: 0.81rem;
 	line-height: 15px;
 	color: #FFFFFF;
 	padding: 13px 34px;
@@ -171,4 +176,78 @@ button {
 	}
 .arrows {
 	margin-top: inherit;
+	}
+.icon {
+	background: #FFFFFF;
+	border-radius: 12px;
+	min-width: 64px;
+	min-height: 64px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.chart {
+	position: relative;
+	margin-right: 38px;
+	}
+span {
+	font-size: 0.81rem;
+	position: absolute;
+	top: 30%;
+	left: 25%;
+	text-align: center;
+	}
+.btn {
+	border: none;
+	}
+h3 {
+	font-size: 1.5rem;
+	line-height: 38px;
+	}
+.courses-container {
+	margin-top: 40px;
+	}
+.courses-title {
+	display: flex;
+	margin-top: 18px;
+	}
+.courses-info-title {
+	align-self: center;
+	/*margin-right: 15px;*/
+	min-width: 152px;
+	flex-basis: 87px;
+	}
+.courses-title-menu {
+	padding-left: 31px;
+	color: #000000;
+	opacity: 0.3;
+	}
+.courses-info {
+	width: inherit;
+	/*height: 80px;*/
+	background: #F5F5F7;
+	border-radius: 14px;
+	margin-top: 13px;
+	display: flex;
+	justify-content: space-between;
+	/*justify-content: space-around;*/
+	justify-items: center;
+	/*padding-top: 20px;*/
+	padding: 8px 23px 8px 8px;
+	}
+.btn-view {
+	padding: 13px 22px;
+	align-self: center;
+	}
+.time, .rating {
+	display: flex;
+	align-self: center;
+	}
+.time img, .rating img {
+	padding: 8px;
+	}
+.time p , .rating p {
+	font-size: 0.81rem;
+	align-self: center;
+	padding-left: 3px;
 	}
