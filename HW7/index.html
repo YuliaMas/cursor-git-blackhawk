@@ -6,7 +6,8 @@
 	<title>Title</title>
 	<link rel="stylesheet" href="./../css/reset.css">
 	<link rel="stylesheet" href="./css/style.css">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 	<div	class="all-content">
@@ -161,7 +162,6 @@
 					</div>
 					<button class="btn btn-view">View courses</button>
 				</div>
-
 				<div class="courses-info">
 					<div class="icon">
 						<img src="./images/pencil.png" alt="pencil">
@@ -180,7 +180,6 @@
 					</div>
 					<button class="btn btn-view">View courses</button>
 				</div>
-
 				<div class="courses-info">
 					<div class="icon">
 						<img src="./images/photoshop.png" alt="photoshop">
@@ -201,51 +200,69 @@
 				</div>
 			</section>
 		</main>
+								<!--		<right-side>-->
+			<section class="statistics-container">
 
-		<section class="statistics-container">
-			<div>
-<!--				<input type="search">-->
-				<img src="./images/bell.png" alt="bell">
-				<span>1</span>
-				<img src="./images/photo.png" alt="my photo">
-			</div>
-			<div class="statistics-menu progress">
-				<div class="progress-courses">
-					<h1> 11 </h1>
-					<p>Courses  completed</p>
-				</div>
-				<div class="progress-courses">
-					<h1> 4 </h1>
-					<p>Courses in progress</p>
-				</div>
-			</div>
+				<div class="search-content">
+					<form>
+						<label class="search-input">
+							<i class="fa fa-search" aria-hidden="true"></i>
+							<input type="text" placeholder="" name="search">
+						</label>
+					</form>
+					<div class="bell">
+						<img src="./images/bell.png" alt="bell">
+						<div class="circle">1</div>
+					</div>
+					<div>
+						<img src="./images/photo.png" alt="my photo">
 
-			<div class="your_statistics">
-				<h3>Your statistics</h3>
-				<div class="statistics-menu">
-					<ul>
-						<li>
-							<h4>Learning Hours</h4>
-						</li>
-						<li>
-							<h4>My Courses </h4>
-						</li>
-					</ul>
-<!--					<input type="text" name="Weekly"/>-->
+					</div>
 				</div>
-
-					<img src="./images/schedule.png" alt="schedule">
-			</div>
-
-			<div class="commercial">
-				<div>
-					<h3> Learn even more!</h3>
-					<p class="main-text"> Unlock premium features only for $9.99 per month.</p>
-					<button class="btn-go"> Go Premium </button>
+				<div class="statistics-menu progress">
+					<div class="progress-courses">
+						<h1> 11 </h1>
+						<p>Courses  completed</p>
+					</div>
+					<div class="progress-courses">
+						<h1> 4 </h1>
+						<p>Courses <br/> in progress</p>
+					</div>
 				</div>
-					<img src="./images/book.png" alt="book">
-			</div>
-		</section>
+				<div class="your_statistics">
+					<h3>Your statistics</h3>
+					<div class="statistics-menu">
+						<ul>
+							<li>
+								<h4>Learning Hours</h4>
+							</li>
+							<li>
+								<h4>My Courses </h4>
+							</li>
+						</ul>
+						<form>
+							<select  name="schedule" id="schedule">
+								<option  value="Choose" disabled>Choose:</option>
+								<option value="daily">daily</option>
+								<option  selected value="weekly">weekly</option>
+								<option value="Monthly">monthly</option>
+							</select>
+						</form>
+					</div>
+					<label for="schedule">
+						<img src="./images/schedule.png" alt="schedule">
+					</label>
+				</div>
+				<div class="commercial">
+					<div>
+						<h3> Learn even more!</h3>
+						<p class="main-text"> Unlock premium features only for $9.99 per month.</p>
+						<button class="btn-go"> Go Premium </button>
+					</div>
+						<img src="./images/book.png" alt="book">
+				</div>
+			</section>
+<!--		</aside>-->
 	</div>
 </body>
 </html>
