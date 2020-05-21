@@ -27,6 +27,7 @@ body {
 	height: auto;
 	margin-top: 24px;
 	display: inline-flex;
+	flex-wrap: wrap;
 	}
 h1 , h2, h3, h4 {
 	font-family: 'Baloo Bhai 2', cursive;
@@ -289,8 +290,31 @@ h3 {
 	font-size: 10px;
 	line-height: 22px;
 	color: #FFFFFF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	/*align-self: center;*/
 	/*padding: 4px;*/
+	}
+.photo img {
+	border-radius: 8px;
+	border: 1px solid green;
+	width: 40px;
+	height: 40px;
+	background: #F5F5F7;
+	}
+.photo::after {
+	content: " ";
+	display: inline-block;
+	width: 5px;
+	height: 5px;
+	border: 2px solid black;
+	border-bottom-width: 0;
+	border-right-width: 0;
+	transform: rotate(-135deg);
+	position: relative;
+	top: -20px;
+	margin-left: 5px;
 	}
 .your_statistics {
 	margin-top: 40px;
@@ -426,3 +450,20 @@ select#schedule option {
 	padding-top: 15px;
 	}
 /* End Schedule form*/
+
+@media (max-width: 1100px) {
+	/*.my_course-container {*/
+	/*	width: 100%;*/
+	/*	}*/
+	.main {
+		width: 60%;
+		}
+	}
+@media (max-width: 1280px) {
+	/*.my_course-container {*/
+	/*	width: 100%;*/
+	/*	}*/
+	.your_statistics img {
+		width: 106%;
+		}
+	}
