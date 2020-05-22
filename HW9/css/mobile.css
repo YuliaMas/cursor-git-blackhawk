@@ -1,0 +1,30 @@
+@media (min-width: 768px) and (max-width: 1024px) {
+	.nav-bar__menu li {
+		padding-left: 25px;
+		}
+	.nav-bar__wrapper {
+		margin: 40px;
+		padding: 40px 0;
+		}
+	}
+
+@media (max-width: 720px) {
+	.nav-bar__menu {
+		order: 1;
+		}
+	.nav-bar__wrapper{
+		margin: 0  0  0 20px;
+		padding-top: 40px ;
+		flex-direction: column;
+		align-items: flex-start;
+		}
+	.nav-bar__menu li {
+		padding-right: 19px;
+		padding-left: 0;
+		padding-top: 34px;
+		}
+	.nav-bar__icons {
+		padding-top: 18px;
+		align-self: flex-start;
+		}
+	}
