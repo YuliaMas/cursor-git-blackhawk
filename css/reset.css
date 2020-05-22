@@ -60,6 +60,15 @@ input{
 	outline: none;
 }
 
+a {
+	color: inherit;
+	text-decoration: none;
+	}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+	}
+
 /* Change Autocomplete styles in Chrome*/
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
