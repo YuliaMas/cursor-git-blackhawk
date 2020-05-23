@@ -1,4 +1,27 @@
 @media (min-width: 768px) and (max-width: 1024px) {
+	/* Header */
+	.header-content {
+		background-size: 78% 100%;
+		background-position-x: right;
+		}
+	.header__sports-container {
+		width: 42%;
+		margin-left: 5%;
+		}
+	#logo {
+		padding-top: 28px;
+		}
+	.header__sports-title {
+		margin-top: 5%;
+		}
+	.header__sports-button {
+		display: block;
+		}
+	button {
+		margin-top: 30px;
+		}
+
+	/* Footer*/
 	.footer__team-title {
 		margin-left: 33px;
 		margin-right: 5%;
@@ -9,7 +32,7 @@
 		}
 	button {
 		width: 146px;
-		max-height: 44px;
+		height: 44px;
 		margin-right: 0;
 		}
 	.btn-text-app span {
@@ -47,23 +70,34 @@
 	h2 {
 		text-align: center;
 		}
+	/* Header */
+	.header-content {
+		background: #F4F6F9;
+		}
+	.header__sports-container {
+		width: 94%;
+		margin: 0 auto;
+		text-align: center;
+		}
+	.header__sports-button {
+		display: flex;
+		justify-content: space-around;
+		}
+
+	/* Footer */
 	.footer__team {
 		flex-wrap: wrap;
 		justify-items: center;
 		justify-content: center;
 		height: auto;
 		}
-	/*.btn-text>img {*/
-	/*	width: 145px;*/
-	/*	height: 44px;*/
-	/*	}*/
 	.footer__team-button {
 		display: flex;
 		justify-content: space-between;
 		}
 	button {
 		width: 146px;
-		max-height: 44px;
+		height: 44px;
 		margin-right: 0;
 		}
 	.btn-text-app span {
@@ -115,5 +149,17 @@
 	.nav-bar__icons {
 		padding-top: 18px;
 		align-self: flex-start;
+		}
+	}
+
+@media (max-width: 320px) {
+	.nav-bar__icons {
+		align-self: normal;
+		}
+	.nav-bar__wrapper {
+		align-items: center;
+		}
+	.nav-bar__menu li {
+		padding-right: 9px;
 		}
 	}

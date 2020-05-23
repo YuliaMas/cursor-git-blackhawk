@@ -8,7 +8,7 @@ html, body {
 	}
 .wrapper {
 	margin: auto;
-	max-width: 1440px;
+	/*max-width: 1440px;*/
 	border: 2px solid	#E5E5E5;
 	height: auto;
 	background-color: white;
@@ -16,27 +16,70 @@ html, body {
 nav , header, main , footer {
 	width: inherit;
 	}
-h2 {
+h1 , h2 {
 	font-family: 'Lato', sans-serif ;
 	font-style: normal;
 	font-weight: bold;
+	color: #333333;
+	}
+h1 {
+	font-size: 36px;
+	line-height: 48px;
+	letter-spacing: 0.03em;
+	}
+h2 {
 	font-size: 28px;
 	line-height: 37px;
-	color: #333333;
 	}
 p {
 	font-family: 'Lato', sans-serif;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 16px;
-	line-height: 25px;
 	color: #4F4F4F;
 	}
+.header__sports-title p {
+	font-size: 18px;
+	line-height: 26px;
+	}
+.footer__team-title p {
+	font-size: 16px;
+	line-height: 25px;
+	}
+
+/*  Header */
+.header-content {
+	width: inherit;
+	height: 665px;
+	background: url("./../images/mobile-background.jpg") 100% 100% no-repeat;
+	}
+.header__sports-container {
+	width: 45%;
+	margin-left: 11%;
+	margin-right: 70px;
+	}
+.header__sports-title {
+	margin-top: 21%;
+	}
+.header__sports-button {
+	display: flex;
+	margin-top: 50px;
+	}
+#logo {
+	padding-top: 50px;
+	}
+.header__sports-title p {
+	max-width: 453px;
+	min-height: 52px;
+	margin-top: 30px;
+	}
+.header__sports-button {
+	margin-top: 50px;
+	}
+
 
 /* Footer */
 .footer__team {
 	display: flex;
-	/*flex-wrap: wrap;*/
 	justify-items: center;
 	justify-content: flex-start;
 	box-sizing: border-box;
@@ -79,15 +122,6 @@ p {
 	 align-items: center;
 	 margin-right: 38px;
 	}
-	/*.btn-google {*/
-	/*	margin-left: 36px;*/
-	/*	max-width: 156px;*/
-	/*	min-height: 47px;*/
-	/*	background: #000000;*/
-	/*	border-radius: 7px;*/
-	/*	outline: none;*/
-	/*	border: none;*/
-	/*	}*/
 .btn-text-app span {
 	color: white;
 	font-family: 'Roboto' , sans-serif;
