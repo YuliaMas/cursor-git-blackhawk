@@ -4,24 +4,32 @@
 		background-size: 78% 100%;
 		background-position-x: right;
 		}
+
 	.header__sports-container {
 		width: 42%;
 		margin-left: 5%;
 		}
+
 	#logo {
 		padding-top: 28px;
 		}
+
 	.header__sports-title {
 		margin-top: 5%;
 		}
+
 	.header__sports-button {
 		display: block;
 		}
+
 	button {
 		margin-top: 30px;
 		}
 
 	/* Footer*/
+	.footer__logotypes-container {
+	justify-content: space-evenly ;
+	}
 	.footer__team-title {
 		margin-left: 33px;
 		margin-right: 5%;
@@ -67,7 +75,19 @@
 	}
 
 @media (max-width: 720px) {
+	h1 {
+		font-size: 30px;
+		line-height: 40px;
+		display: flex;
+		align-items: flex-end;
+		text-align: center;
+		}
 	h2 {
+		text-align: center;
+		}
+	p {
+		font-size: 16px;
+		line-height: 23px;
 		text-align: center;
 		}
 	/* Header */
@@ -75,7 +95,7 @@
 		background: #F4F6F9;
 		}
 	.header__sports-container {
-		width: 94%;
+		width: 90%;
 		margin: 0 auto;
 		text-align: center;
 		}
@@ -85,6 +105,22 @@
 		}
 
 	/* Footer */
+	.footer__logotypes {
+		height: 409px;
+		padding: 57px 20px;
+		}
+	.footer__logotypes h2 {
+		padding-top: 0;
+		}
+	.footer__logotypes-container {
+		margin-top: 47px;
+		/*margin-left: 20px;*/
+		/*margin-right: 20px;*/
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		}
 	.footer__team {
 		flex-wrap: wrap;
 		justify-items: center;
@@ -122,6 +158,8 @@
 	.footer__team-title p {
 		text-align: center;
 		margin-top: 15px;
+		font-size: 16px;
+		line-height: 25px;
 		}
 	.footer__team-img {
 		width: 100%;
@@ -161,5 +199,7 @@
 		}
 	.nav-bar__menu li {
 		padding-right: 9px;
+		font-size: 16px;
+		line-height: 21px;
 		}
 	}
