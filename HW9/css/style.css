@@ -90,7 +90,9 @@ p {
 .main__wrapper {
 	flex-basis: 592px;
 	height: 592px;
-	background: url("./../images/football.png") no-repeat left ;
+	background-image: url("./../images/football.png") ;
+	background-position: left;
+	background-repeat: no-repeat;
 	}
 .main__what-it-does {
 	display: flex;
@@ -173,6 +175,10 @@ transform: translateX(18px);
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
+	}
+.picture__logotype-checkbox p {
+	font-size: 19px;
+	line-height: 25px;
 	}
 
 

@@ -26,6 +26,56 @@
 		margin-top: 30px;
 		}
 
+	/* Main container */
+	.main__wrapper {
+		background-size: 56% 100%;
+		height: 472px;
+		}
+	.main__football-experience, .main__what-it-does__picture {
+		width: 40%;
+		}
+	.main__what-it-does {
+		justify-content: space-evenly;
+		background-size: 57%;
+		}
+	.picture__logotype p {
+		font-weight: bold;
+		font-size: 11px;
+		line-height: 14px;
+		}
+	.picture__logotype p:nth-child(2) {
+		width: 53px;
+		font-size: 12px;
+		line-height: 16px;
+		color: #000000;
+		padding: 9px 0;
+		text-align: start;
+		}
+	.picture__logotype p:first-child {
+		text-align: start;
+		}
+	.picture__logotype, .picture__video {
+		width: 247px;
+		height: 150px;
+		}
+	.picture__logotype-img {
+		display: flex;
+		}
+	.picture__logotype-img img:first-child {
+		height: 57px;
+		width: auto;
+		transform: translateX(9px);
+		}
+	.picture__logotype-img img:last-child {
+		width: 57px;
+		height: auto;
+		}
+	.picture__logotype-checkbox p {
+		font-size: 13px;
+		line-height: 17px;
+		}
+
+
 	/* Footer*/
 	.footer__logotypes-container {
 	justify-content: space-evenly ;
@@ -107,6 +157,59 @@
 		}
 
 	/* Main container */
+	.main__wrapper {
+		height: 828px;
+		background-position:  bottom;
+		background-size: 144% 42%;
+		}
+	.picture__logotype p {
+		font-weight: bold;
+		font-size: 11px;
+		line-height: 14px;
+		}
+	.picture__logotype p:nth-child(2) {
+		width: 53px;
+		font-size: 12px;
+		line-height: 16px;
+		color: #000000;
+		padding: 9px 0;
+		text-align: start;
+		}
+	.picture__logotype p:first-child {
+		text-align: start;
+		}
+	.main__what-it-does {
+		flex-direction: column-reverse;
+		background-size: 100%;
+		}
+	.main__football-experience {
+		width: 90%;
+		text-align: center;
+		}
+	.main__what-it-does__picture	{
+		width: 70%;
+		padding-top: 65px;
+		}
+	.picture__logotype, .picture__video {
+		width: 247px;
+		height: 150px;
+		}
+	.picture__logotype-img {
+		display: flex;
+		}
+	.picture__logotype-img img:first-child {
+		height: 57px;
+		width: auto;
+		transform: translateX(9px);
+		}
+	.picture__logotype-img img:last-child {
+		width: 57px;
+		height: auto;
+		}
+	.picture__logotype-checkbox p {
+		font-size: 13px;
+		line-height: 17px;
+		}
 
 
 
