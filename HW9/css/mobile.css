@@ -4,24 +4,19 @@
 		background-size: 78% 100%;
 		background-position-x: right;
 		}
-
 	.header__sports-container {
 		width: 42%;
 		margin-left: 5%;
 		}
-
 	#logo {
 		padding-top: 28px;
 		}
-
 	.header__sports-title {
 		margin-top: 5%;
 		}
-
 	.header__sports-button {
 		display: block;
 		}
-
 	button {
 		margin-top: 30px;
 		}
@@ -83,8 +78,9 @@
 	.features-item {
 		padding-top: 30px;
 		}
-
-
+	.main__users-interface__container {
+		justify-content: center;
+		}
 
 	/* Footer*/
 	.footer__logotypes-container {
@@ -249,6 +245,24 @@
 		}
 	.color-svg {
 		fill: #00ADEE;
+		}
+	.main__users-interface__container {
+		text-align: center;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		}
+	.main__user-interface {
+		width: 85%;
+		margin-top: 62px;
+		}
+	.main__mobile-liverpool {
+		width: 100%;
+		padding-top: 90px;
+		padding-bottom: 32px;
+		}
+	.main__mobile-liverpool img {
+		width: 80%;
 		}
 
 	/* Footer */

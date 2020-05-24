@@ -108,13 +108,15 @@ width: 40%;
 .main__football-experience {
 	width: 30%;
 	}
-.main__football-experience p:first-of-type , h2 {
+.main__football-experience p:first-of-type ,
+ .main__user-interface p:first-of-type , h2 {
 	padding-top: 27px;
 	}
-.main__football-experience p {
+.main__football-experience p, .main__user-interface p {
 	padding-right: 3%;
 	}
-.main__football-experience p:last-of-type, h3:last-of-type {
+.main__football-experience p:last-of-type, h3:last-of-type ,
+.main__user-interface p:last-of-type {
 	padding-top: 22px;
 	}
 .picture__logotype , .picture__video {
@@ -180,7 +182,6 @@ transform: translateX(18px);
 	font-size: 19px;
 	line-height: 25px;
 	}
-
  .main__features {
 	 width: inherit;
 	 height:  735px;
@@ -209,7 +210,18 @@ transform: translateX(18px);
 	 color: #FFFFFF;
 	 flex-basis: 311px;
 	 }
-
+	.main__users-interface__container {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		}
+	.main__user-interface {
+		width: 34%;
+		}
+	.main__mobile-liverpool {
+		width: 32%;
+		padding: 51px 0;
+		}
 
 /* Footer */
 .footer__logotypes {
