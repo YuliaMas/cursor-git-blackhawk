@@ -106,6 +106,10 @@
 		justify-content: space-around;
 		}
 
+	/* Main container */
+
+
+
 	/* Footer */
 	.footer__logotypes {
 		height: 409px;
@@ -116,8 +120,7 @@
 		}
 	.footer__logotypes-container {
 		margin-top: 47px;
-		/*margin-left: 20px;*/
-		/*margin-right: 20px;*/
+		max-width: 318px;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;

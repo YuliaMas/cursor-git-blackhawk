@@ -16,7 +16,7 @@ html, body {
 nav , header, main , footer {
 	width: inherit;
 	}
-h1 , h2 {
+h1 , h2 , h3 {
 	font-family: 'Lato', sans-serif ;
 	font-style: normal;
 	font-weight: bold;
@@ -33,10 +33,17 @@ h2 {
 	font-size: 28px;
 	line-height: 37px;
 	}
+h3 {
+	font-size: 16px;
+	line-height: 21px;
+	color: #00ADEE;
+	}
 p {
 	font-family: 'Lato', sans-serif;
 	font-style: normal;
 	font-weight: normal;
+	font-size: 16px;
+	line-height: 23px;
 	color: #4F4F4F;
 	}
 .header__sports-title p {
@@ -78,6 +85,55 @@ p {
 	margin-top: 50px;
 	}
 
+/* Main container */
+.main__wrapper {
+	flex-basis: 592px;
+	height: 592px;
+	background: url("./../images/football.png") no-repeat left ;
+	}
+.main__what-it-does {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: inherit;
+	background: linear-gradient(270deg, #FFFFFF 5.16%, rgba(255, 255, 255, 0) 67.14%), rgba(255, 255, 255, 0.5);
+	background-size: 60%;
+	}
+.main__what-it-does__picture	{
+width: 40%;
+	}
+.main__football-experience {
+	width: 30%;
+	}
+.main__football-experience p:first-of-type , h2 {
+	padding-top: 27px;
+	}
+.main__football-experience p {
+	padding-right: 3%;
+	}
+.main__football-experience p:last-of-type, h3:last-of-type {
+	padding-top: 22px;
+	}
+.picture__logotype , .picture__video {
+	width: 360px;
+	height: 218px;
+	}
+.picture__logotype {
+	background: #FFFFFF;
+	box-shadow: -22px 24px 49px rgba(0, 0, 0, 0.5);
+	border-radius: 4px;
+	padding: 15px;
+	transform: translate(-14%, 14%);
+	position: relative;
+	z-index: 5;
+	}
+.picture__video {
+	background: url(./../images/video.jpg);
+	border-radius: 4px;
+	transform: translateX(15%);
+	position: relative;
+	z-index: 1;
+	}
 
 /* Footer */
 .footer__logotypes {
