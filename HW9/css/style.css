@@ -181,6 +181,35 @@ transform: translateX(18px);
 	line-height: 25px;
 	}
 
+ .main__features {
+	 width: inherit;
+	 height:  735px;
+	 background-image: url("./../images/experience.png") ;
+	 background-size: 100% 100% ;
+	 background-repeat: no-repeat;
+	 }
+ .main__features-wrapper h2 {
+	 text-align: center;
+	 color: #FFFFFF;
+	 padding-top: 76px;
+	 }
+ .main__features-items {
+	display: flex;
+	max-width: 1100px;
+	margin: 0 auto;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: space-between;
+	}
+	.features-item {
+	width: 30%;
+	padding-top: 57px;
+	}
+ .features-item p {
+	 color: #FFFFFF;
+	 flex-basis: 311px;
+	 }
+
 
 /* Footer */
 .footer__logotypes {
@@ -241,6 +270,7 @@ transform: translateX(18px);
 	 display: flex;
 	 align-items: center;
 	 margin-right: 38px;
+	 cursor: pointer;
 	}
 .btn-text-app span {
 	color: white;
