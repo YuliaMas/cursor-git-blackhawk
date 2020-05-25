@@ -9,10 +9,13 @@ html, body {
 	}
 .wrapper {
 	margin: auto;
-	/*max-width: 1440px;*/
 	border: 2px solid	#E5E5E5;
 	height: auto;
 	background-color: white;
+	}
+.all-wrapper {
+	margin: auto;
+	max-width: 1440px;
 	}
 nav , header, main , footer {
 	width: inherit;
@@ -214,8 +217,11 @@ transform: translateX(18px);
 		display: flex;
 		justify-content: space-evenly;
 		align-items: center;
-		background: url("./../images/group-circle.png") no-repeat right;
+		background: url("./../images/all-circles.png") no-repeat right;
 		}
+.main__mobile-container {
+	margin-right: 5%;
+	}
 	.main__user-interface {
 		width: 34%;
 		}
@@ -251,6 +257,7 @@ transform: translateX(18px);
 	transform: translate(26px, 25px);
 	}
 .home_screen__user-interface {
+	display: block;
 	position: relative;
 	transform: translate(278px, -283px);
 	border-radius: 50%;
@@ -263,9 +270,9 @@ transform: translateX(18px);
 	position: relative;
 	transform: translate(23px, 24px);
 	}
-
-
-
+.home_screen__user-interface2 {
+	display: none;
+	}
 
 
 /* Footer */
@@ -294,6 +301,8 @@ transform: translateX(18px);
 	height: 483px;
 	border: none;
 	outline: none;
+	/*max-width: 1440px;*/
+	/*margin: auto;*/
 	}
 .footer__team-img>img{
 	max-width: 100%;
@@ -400,10 +409,12 @@ transform: translateX(18px);
 	min-height: 127px;
 	}
 .nav-bar__wrapper {
-	margin-right: 162px;
-	margin-left: 163px;
+	/*margin-right: 162px;*/
+	/*margin-left: 163px;*/
+	/*max-width: 1440px;*/
+	/*margin: auto;*/
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
 	align-content: center;
 	vertical-align: center;

@@ -26,6 +26,12 @@
 		background-size: 56% 100%;
 		height: 472px;
 		}
+	.main__users-interface__container {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		background: url("./../images/group-circle.png") no-repeat;
+		}
 	.main__football-experience, .main__what-it-does__picture {
 		width: 40%;
 		}
@@ -81,6 +87,9 @@
 	.main__users-interface__container {
 		justify-content: center;
 		}
+	.main__mobile-liverpool {
+		 padding:  0;
+		}
 
 	/* Footer*/
 	.footer__logotypes-container {
@@ -118,14 +127,14 @@
 		font-size: 19px;
 		line-height: 23px;
 		}
-	.nav-bar {
-		margin-top: -40px;
-		}
+	/*.nav-bar {*/
+	/*	margin-top: -40px;*/
+	/*	}*/
 	.nav-bar__menu li {
 		padding-left: 25px;
 		}
 	.nav-bar__wrapper {
-		margin: 40px;
+		/*margin: 40px;*/
 		padding: 40px 0;
 		}
 	}
@@ -251,18 +260,92 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
+		align-items: center;
+		background: url("./../images/group-circle.png") no-repeat;
+		background-position-y: bottom;
+		background-position-x: center;
+		margin-bottom: 60px;
 		}
 	.main__user-interface {
 		width: 85%;
 		margin-top: 62px;
 		}
+	.main__mobile-container {
+		max-height: 565px;
+		margin-right: 0;
+		}
 	.main__mobile-liverpool {
-		width: 100%;
-		padding-top: 90px;
-		padding-bottom: 32px;
+		width: 83%;
+		margin: 15px 25px;
+		/*padding-top: 90px;*/
+		/*padding-bottom: 32px;*/
+		padding: 0;
 		}
 	.main__mobile-liverpool img {
-		width: 80%;
+		width: 100%;
+		}
+	.bell__user-interface {
+		position: relative;
+		transform: translate(51px, 109px);
+		border-radius: 50%;
+		width: 72px;
+		height: 72px;
+		background: #FFFFFF;
+		box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25), 0 2px 5px rgba(51, 51, 51, 0.1);
+		}
+	.bell__user-interface::after {
+		content: "7";
+		width: 18px;
+		height: 18px;
+		border-radius: 50%;
+		position: absolute;
+		color: #fff;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		top: 18px;
+		left: 39px;
+		background: #00adee;
+		}
+	.bell__user-interface img {
+		position: relative;
+		transform: translate(0px, 20px);
+		width: 30px;
+		}
+	.home_screen__user-interface2 {
+		display: block;
+		position: relative;
+		transform:  translate(264px, -203px);
+		border-radius: 50%;
+		width: 72px;
+		height: 72px;
+		background: #FFFFFF;
+		box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25), 0 2px 5px rgba(51, 51, 51, 0.1);
+		}
+	.home_screen__user-interface2 img {
+		position: relative;
+		transform: translate(0px, 21px);
+		}
+	.home_screen__user-interface {
+		display: none;
+		}
+	.home_screen__user-interface2::after {
+		content: "7";
+		width: 18px;
+		height: 18px;
+		border-radius: 50%;
+		position: absolute;
+		color: #fff;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		top: 15px;
+		left: 40px;
+		background: #40B756;
+		border: 1px solid #3DB657;
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 14px;
 		}
 
 	/* Footer */
