@@ -229,6 +229,27 @@ transform: translateX(18px);
 		width: 32%;
 		padding: 51px 0;
 		}
+	.round-circle	{
+		position: relative;
+		border-radius: 50%;
+		background-color: #FFFFFF;
+		width: 30px;
+		height: 30px;
+		box-shadow: 0 3px 16px rgba(0, 0, 0, 0.25), 0 3px 6px rgba(51, 51, 51, 0.1);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transform: translate(-90px, 580px);
+		}
+	.round-circle::after {
+		content: "";
+		width: 14px;
+		height: 14px;
+		background: #00ADEE;
+		transform: matrix(-1, 0, 0, 1, 0, 0);
+		border-radius: 50%;
+		position: absolute;
+		}
   .bell__user-interface {
 		position: relative;
 		transform: translate(27px, 205px);

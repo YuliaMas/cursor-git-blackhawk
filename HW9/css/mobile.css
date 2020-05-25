@@ -30,7 +30,7 @@
 		display: flex;
 		justify-content: space-evenly;
 		align-items: center;
-		background: url("./../images/group-circle.png") no-repeat;
+		background-position: right;
 		}
 	.main__football-experience, .main__what-it-does__picture {
 		width: 40%;
@@ -90,6 +90,15 @@
 	.main__mobile-liverpool {
 		 padding:  0;
 		}
+	.bell__user-interface {
+		transform: translate(27px, 145px);
+		}
+	.home_screen__user-interface {
+		transform: translate(289px, -220px);
+		}
+	.round-circle {
+		display: none;
+		}
 
 	/* Footer*/
 	.footer__logotypes-container {
@@ -137,6 +146,20 @@
 		/*margin: 40px;*/
 		padding: 40px 0;
 		}
+	}
+
+@media (max-width: 800px) and (min-width: 768px) {
+	.main__users-interface__container {
+		background-position: center;
+		background-position-y: 34px;
+		background-position-x: -512px;
+		}
+	/*.bell__user-interface {*/
+	/*	transform: translate(27px, 145px);*/
+	/*	}*/
+	/*.home_screen__user-interface {*/
+	/*	transform: translate(289px, -220px);*/
+	/*	}*/
 	}
 
 @media (max-width: 720px) {
@@ -283,6 +306,9 @@
 		}
 	.main__mobile-liverpool img {
 		width: 100%;
+		}
+	.round-circle {
+		display: none;
 		}
 	.bell__user-interface {
 		position: relative;
