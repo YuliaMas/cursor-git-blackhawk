@@ -297,6 +297,9 @@ transform: translateX(18px);
 
 
 /* Footer */
+.footer__users-say {
+	text-align: center;
+	}
 .footer__logotypes {
 	height: 278px;
 	background: #FAFAFA;
