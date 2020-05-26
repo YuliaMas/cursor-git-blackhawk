@@ -9,9 +9,10 @@ html, body {
 	}
 .wrapper {
 	margin: auto;
-	border: 2px solid	#E5E5E5;
+	/*border: 2px solid	#E5E5E5;*/
 	height: auto;
 	background-color: white;
+	overflow-x: hidden;
 	}
 .all-wrapper {
 	margin: auto;
@@ -300,6 +301,8 @@ transform: translateX(18px);
 .footer__users-say {
 	text-align: center;
 	padding-top: 32px;
+	max-width: 1440px;
+	margin: auto;
 	}
 .footer__logotypes {
 	height: 278px;
