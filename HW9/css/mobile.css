@@ -154,12 +154,6 @@
 		background-position-y: 34px;
 		background-position-x: -512px;
 		}
-	/*.bell__user-interface {*/
-	/*	transform: translate(27px, 145px);*/
-	/*	}*/
-	/*.home_screen__user-interface {*/
-	/*	transform: translate(289px, -220px);*/
-	/*	}*/
 	}
 
 @media (max-width: 720px) {
@@ -181,8 +175,12 @@
 		text-align: center;
 		}
 	/* Header */
+	#logo {
+		padding-top: 34px;
+		}
 	.header-content {
 		background: #F4F6F9;
+		height: 554px;
 		}
 	.header__sports-container {
 		width: 90%;
@@ -300,8 +298,6 @@
 	.main__mobile-liverpool {
 		width: 83%;
 		margin: 15px 25px;
-		/*padding-top: 90px;*/
-		/*padding-bottom: 32px;*/
 		padding: 0;
 		}
 	.main__mobile-liverpool img {
@@ -436,6 +432,18 @@
 		font-size: 19px;
 		line-height: 23px;
 		}
+	.btn-text span:last-child {
+		font-size: 16px;
+		line-height: 19px;
+		}
+	.btn-text span {
+		font-size: 10px;
+		line-height: 11px;
+		}
+	.btn-text img {
+		 padding-top: 1px;
+		}
+
 	.footer__team-title p {
 		text-align: center;
 		margin-top: 15px;
@@ -491,9 +499,11 @@
 	.nav-bar__icons {
 		align-self: normal;
 		}
+
 	.nav-bar__wrapper {
 		align-items: center;
 		}
+
 	.nav-bar__menu li {
 		padding-right: 9px;
 		font-size: 16px;
