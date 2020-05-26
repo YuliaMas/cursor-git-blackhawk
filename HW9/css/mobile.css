@@ -375,6 +375,10 @@
 		}
 
 	/* Footer */
+	.slider__control {
+	width: 65px;
+	background-color: rgba(255, 255, 255, 0.9);
+	}
 	.footer__logotypes {
 		height: 409px;
 		padding: 57px 20px;

@@ -299,6 +299,7 @@ transform: translateX(18px);
 /* Footer */
 .footer__users-say {
 	text-align: center;
+	padding-top: 32px;
 	}
 .footer__logotypes {
 	height: 278px;
