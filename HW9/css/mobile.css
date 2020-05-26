@@ -157,6 +157,9 @@
 	}
 
 @media (max-width: 720px) {
+	.dot {
+		display: none;
+		}
 	h1 {
 		font-size: 30px;
 		line-height: 40px;
