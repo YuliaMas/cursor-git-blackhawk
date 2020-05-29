@@ -1,0 +1,20 @@
+.nav-link.active {
+	border-top: 1px solid  #262626;
+	font-weight: bold;
+	color: #262626;
+	}
+.nav-link:focus {
+	border-top: 1px solid  #262626;
+	}
+footer .nav-link {
+	color: #8F8F8F;
+	padding-right: 0 ;
+	padding-left:  0 ;
+	}
+.container {
+	max-width: 971px;
+	/*margin: 0 auto;*/
+	}
+/*.form-control-plaintext {*/
+/*	padding: 6px 10px;*/
+/*	}*/
