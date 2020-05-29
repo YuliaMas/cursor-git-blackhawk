@@ -13,8 +13,19 @@ footer .nav-link {
 	}
 .container {
 	max-width: 971px;
-	/*margin: 0 auto;*/
 	}
-/*.form-control-plaintext {*/
-/*	padding: 6px 10px;*/
-/*	}*/
+.nav-tabs {
+	border: none;
+	}
+input[placeholder="Search"] {
+	color: #8F8F8F;
+	text-align: center;
+	}
+p {
+	margin-bottom: 0;
+	flex-basis: 531px;
+	max-width: 531px;
+	}
+.nav-item {
+	margin-right: -12px;
+	}
