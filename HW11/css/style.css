@@ -1,0 +1,229 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 24px;
+	font-weight: bold;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	}
+.circles h2 {
+	margin-bottom: 100px;
+	}
+h2 {
+	margin-bottom: 50px;
+	text-align: center;
+	}
+ .newton{
+	 width: 100%;
+	 height: 50vh;
+	background: linear-gradient(15deg,
+			rgba(163, 167, 163, 0.99),
+			rgba(255, 204, 204, 0.16));
+	display: flex;
+	 flex-wrap: wrap;
+	justify-content: space-around;
+	 align-items: center;
+	}
+
+/* Circles */
+.circles {
+	position: relative;
+	}
+.circle{
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+	border-radius: 50%;
+	margin: -4px;
+	padding:0;
+	position: relative;
+	opacity: 1;
+	}
+.c1{
+	background-color: rgba(25, 57, 111, 0.94);
+	animation: moving  1s cubic-bezier(0.38, 0.37, 1, 1)  infinite 2s;
+	}
+.c2 {
+	background-color: rgba(25, 57, 111, 0.94);
+	}
+.c3 {
+	background: linear-gradient( 90deg, rgba(16, 56, 118, 0.94), rgba(73, 22, 28, 0.94));
+	}
+.c4 {
+	background: linear-gradient( 90deg, rgba(83, 7, 24, 0.94), rgba(146, 0, 37, 0.94));
+	}
+.c5{
+	background: linear-gradient( 90deg, rgba(113, 6, 32, 0.94), rgb(199, 0, 50));
+	}
+.c6 {
+	background-color: #b82820;
+	}
+.c7{
+	background-color: #c62a23;
+	animation: moving2  1s cubic-bezier(0.38, 0.37, 1, 1)   infinite 2s;
+	}
+.shadows {
+	margin-top: 60px;
+	display: flex;
+	}
+.shadow {
+	width: 30px;
+	height: 4px;
+	background-color: #5e243b;
+	border-radius: 50%;
+	filter: blur(2px);
+	opacity: 0.3;
+	margin-right: 4px;
+	margin-left: 4px;
+	}
+.shadow.sh1 {
+	animation: shadow-c1  1s ease-in-out  infinite 2s;
+	}
+.shadow.sh7 {
+	animation: shadow-c7  1s ease-in-out  infinite 2s;
+	}
+@keyframes shadow-c1 {
+	0% { transform: translate(0, 0);}
+	25% { transform: translate(0, 0);}
+	50% { transform: translate(0, 0);}
+	90% { transform: translateX(-60px) scale(0.6);}
+	100% { transform: translate(0, 0);}
+	}
+@keyframes shadow-c7 {
+	0% { transform: translate(0, 0);}
+	45% { transform: translateX(60px) scale(0.6);}
+	50% { transform: translate(0, 0);}
+	75% { transform: translate(0, 0);}
+	90% { transform: translate(0, 0);}
+	100% { transform: translate(0, 0) ;}
+	}
+@keyframes moving {
+	0% { transform: translate(0, 0);}
+	25% { transform: translate(0, 0);}
+	45% { transform: translate(0, 0);}
+	50% { transform: translate(0, 0);}
+	75% { transform: translate(-29px, -24px) scale(1.1);}
+	90% { transform: translate(-59px, -75px) scale(1.1);}
+	100% { transform: translate(0, 0) ;}
+	}
+@keyframes moving2 {
+	0% { transform: translate(0, 0);}
+	25% { transform: translate(29px, -24px) scale(1.1);}
+	45% { transform: translate(59px, -75px) scale(1.1);}
+	50% { transform: translate(0, 0);}
+	75% { transform: translate(0, 0);}
+	90% { transform: translate(0, 0); }
+	100% { transform: translate(0, 0);}
+	}
+
+/*Newton's cradle balance balls*/
+ul {
+	position: relative;
+	border-top:  5px solid #2f2323;
+	display: flex;
+	justify-content: center;
+	}
+li::before {
+	position: absolute;
+	display: block;
+	content: " ";
+	width: 1px;
+	height: 90px;
+	left: 21px;
+	top: -80px;
+	background-color: rgba(85, 71, 71, 0.8);
+	}
+li {
+	position: relative;
+	list-style-type: none;
+	width: 41px;
+	height: 41px;
+	margin-top: 80px;
+	border-radius: 50%;
+	background-color: rgba(99, 85, 85, 0.97);
+	box-shadow: inset -15px -15px 30px rgba(0,0,0,.5);
+	}
+li::after {
+	position: absolute;
+	display: block;
+	content: " ";
+	width: 90%;
+	margin: 0 2%;
+	height: 10px;
+	left: 0;
+	bottom: -40px;
+	border-radius: 50%;
+	opacity: 0.2;
+	background: radial-gradient(ellipse at center, rgba(50, 36, 36, 0.88) 0%,rgba(0,0,0,0) 100%);
+	}
+li:first-child, li:last-child {
+	transform-origin: 21px -80px;
+	}
+li:first-child {
+	animation: bounce-left 1.2s ease-out infinite;
+	}
+li:first-child::after {
+	animation: shadow-left 1.2s ease-out infinite;
+	}
+li:last-child {
+	animation: bounce-right 1.2s ease-out infinite 1.2s;
+	}
+li:last-child::after {
+	animation: shadow-right 1.2s ease-out infinite 1.2s;
+	}
+@keyframes bounce-left {
+	0%   { transform: rotate(0deg); }
+	25%   { transform: rotate(55deg); }
+	50% { transform: rotate(0deg); }
+	100% { transform: rotate(0deg); }
+	}
+@keyframes bounce-right {
+	0%   { transform: rotate(0deg); }
+	50%   { transform: rotate(0deg); }
+	75%   { transform: rotate(-55deg); }
+	100% { transform: rotate(0deg); }
+	}
+@keyframes shadow-left {
+	0% {transform: rotate(0deg) scale(1) translate(0,0);}
+	25% {transform: rotate(-45deg)  scale(0.8) translate(25px, 40px);
+		transition-property: opacity ;}
+	50% {transform: rotate(0deg) scale(1) translate(0,0);}
+	100% {transform: rotate(0deg) scale(1) translate(0,0);}
+	}
+@keyframes shadow-right {
+	0% {transform: rotate(0deg) scale(1) translate(0,0);}
+	50% {transform: rotate(0deg) scale(1) translate(0,0);}
+	75% {transform: rotate(45deg) scale(0.8) translate(-25px, 40px);
+		transition-property: opacity ;}
+	100% {transform: rotate(0deg) scale(1) translate(0,0);}
+	}
+
+/* Jedi swords */
+.swords {
+	padding-top: 30px;
+	width: 100%;
+	height: 50vh;
+	background: linear-gradient(180deg,
+	rgba(34, 36, 34, 0.91),
+	rgb(28, 15, 15));
+	}
+.swords h2 {
+	color: #ff11e3;
+	}
+
+@media (max-width: 550px){
+	body {
+		height: auto;
+		}
+	.newton , .swords {
+		height: auto;
+		}
+	.balls {
+		margin-top: 80px;
+		margin-bottom: 80px;
+		}
+	.circles h2 {
+		padding-top: 20px;
+		margin-bottom: 90px;
+		}
+	}
