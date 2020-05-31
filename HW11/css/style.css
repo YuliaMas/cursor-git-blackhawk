@@ -10,6 +10,7 @@ body {
 	margin-bottom: 100px;
 	}
 h2 {
+	color: #ff11e3;
 	margin-bottom: 50px;
 	text-align: center;
 	}
@@ -160,16 +161,16 @@ li:first-child, li:last-child {
 	transform-origin: 21px -80px;
 	}
 li:first-child {
-	animation: bounce-left 1.2s ease-out infinite;
+	animation: bounce-left 2s ease-out infinite;
 	}
 li:first-child::after {
-	animation: shadow-left 1.2s ease-out infinite;
+	animation: shadow-left 2s ease-out infinite;
 	}
 li:last-child {
-	animation: bounce-right 1.2s ease-out infinite 1.2s;
+	animation: bounce-right 2s ease-out infinite 2s;
 	}
 li:last-child::after {
-	animation: shadow-right 1.2s ease-out infinite 1.2s;
+	animation: shadow-right 2s ease-out infinite 2s;
 	}
 @keyframes bounce-left {
 	0%   { transform: rotate(0deg); }
@@ -200,6 +201,7 @@ li:last-child::after {
 
 /* Jedi swords */
 .swords {
+	margin:  0 auto;
 	padding-top: 30px;
 	width: 100%;
 	height: 50vh;
@@ -207,9 +209,88 @@ li:last-child::after {
 	rgba(34, 36, 34, 0.91),
 	rgb(28, 15, 15));
 	}
-.swords h2 {
-	color: #ff11e3;
+.swords_container {
+	margin: 0 auto;
+	max-width: 250px;
+	min-height: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
 	}
+.swords h2 {
+	margin-bottom: 0;
+	}
+.jedi_sword {
+	position: relative;
+	height: 10px;
+	width: 200px;
+	border: 1px solid #FAFAFA ;
+	background: linear-gradient( to left,
+	rgb(121, 120, 120) 0% ,
+	rgb(189, 184, 184) 15%,
+	rgba(255, 255, 255, 0) 15%,
+	rgba(255, 255, 255, 0) 25%,
+	rgb(215, 208, 208) 25%,
+	rgb(255, 249, 249) 100%);
+	transition: all .5s ease-out;
+	}
+.jedi_sword_up {
+	top: 50px;
+	}
+.jedi_sword_down {
+	bottom: 50px;
+	transform-origin: bottom right;
+	}
+.jedi_sword_up , .jedi_sword_down {
+	position: absolute;
+	border: 1px solid #FAFAFA ;
+	height: 10px;
+	width: 200px;
+	background: linear-gradient( to right,
+	rgb(121, 120, 120) 0% ,
+	rgb(189, 184, 184) 15%,
+	rgba(255, 255, 255, 0) 15%,
+	rgba(255, 255, 255, 0) 25%,
+	rgb(215, 208, 208) 25%,
+	rgb(255, 249, 249) 100%);
+	transition: all .5s ease-out;
+	}
+input[type="checkbox"] {
+	width: 250px;
+	height: 200px;
+	display: flex;
+	position: absolute;
+	cursor: pointer;
+	opacity: 0;
+	z-index: 3;
+	}
+input:checked ~ .jedi_sword_up {
+	top: -45px;
+	right: -25px;
+	opacity: 0;
+	transition-duration: 0.3s;
+	}
+input:checked ~ .jedi_sword {
+	transform: rotate(45deg) translate(0 , 0);
+	transition-duration: 0.5s;
+	box-shadow: 0 0 17px 7px #ff4a2f;
+	}
+input:hover ~ .jedi_sword {
+	transition-duration: 0.5s;
+	box-shadow: 0 0 17px 7px #ff4a2f;
+	}
+input:hover ~ .jedi_sword_down {
+	transition-duration: 0.5s;
+	box-shadow: 0 0 17px 7px rgb(125,248,63);
+	}
+input:checked ~ .jedi_sword_down {
+	transform: rotate(-45deg) translate(60px, -107px);
+	transition-duration: 0.5s;
+	box-shadow: 0 0 17px 7px rgb(125,248,63);
+	}
+
+
 
 @media (max-width: 550px){
 	body {
