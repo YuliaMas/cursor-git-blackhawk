@@ -179,7 +179,19 @@ footer {
 	flex-grow: 0;
 	}
 
-
+@media (max-width: 800px) and (min-width: 500px) {
+	div.row.d-flex.flex-wrap.block, div.row.d-flex.flex-wrap.block2 {
+		justify-content: center;
+		}
+	.block div, .block2 div {
+		margin-right: 15px;
+		margin-left: 15px;
+		}
+	.album , .album2 {
+		margin-right: 0;
+		margin-left: 0;
+		}
+	}
  @media (max-width: 750px) {
 	 header ul {
 		 padding-top: 20px;
