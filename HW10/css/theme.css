@@ -29,3 +29,19 @@ p {
 .nav-item {
 	margin-right: -12px;
 	}
+.navbar-collapse  {
+	flex-basis: 27%;
+	flex-grow: 0;
+	}
+@media (max-width: 800px) {
+	.navbar-collapse {
+		flex-basis: 36%;
+		flex-grow: 0;
+		}
+	}
+@media (max-width: 500px) {
+	.navbar-collapse {
+		flex-basis: 100%;
+		flex-grow: 1;
+		}
+	}

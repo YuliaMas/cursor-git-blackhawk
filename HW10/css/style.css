@@ -174,11 +174,18 @@ footer {
 .direct  {
 	position: relative;
 	}
+.navbar-collapse>form  {
+	flex-basis: 25%;
+	flex-grow: 0;
+	}
 
 
  @media (max-width: 750px) {
 	 header ul {
 		 padding-top: 20px;
+		 }
+	 form {
+		 flex-basis: 100%;
 		 }
 	 }
 @media (max-width: 500px) {
@@ -187,5 +194,14 @@ footer {
 		}
 	.user-profile {
 		margin: 0 auto;
+		}
+	.logo {
+		margin-left: auto;
+		margin-right: auto;
+		}
+	}
+@media (max-width: 375px) {
+	.main-content {
+		padding-left: 0px;
 		}
 	}
