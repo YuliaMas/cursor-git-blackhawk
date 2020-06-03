@@ -1,0 +1,38 @@
+.navbar-brand {
+  margin-right: 0 ;
+}
+.btn-block {
+  display: inline-block;
+  width: 45%;
+  padding: 3px;
+}
+.btn-dark {
+  background: #111B47;
+}
+.btn-outline-dark {
+  border: 2px solid #091133;
+  box-sizing: border-box;
+  border-radius: 2px;
+  outline: none;
+}
+hr {
+  height: 1px;
+  color: #CDD1D4;
+  margin-bottom: 0;
+}
+.card {
+  border: none;
+}
+@media (max-width: 500px){
+  .btn-block {
+    display: block;
+    width: 45%;
+    padding: 3px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+//@media (max-width: 800px) and (min-width: 500px) {
+//
+//
+//}

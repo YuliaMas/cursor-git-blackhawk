@@ -1,0 +1,261 @@
+
+body {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",'Roboto',"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 16px;
+  line-height: 26px;
+  color: #6F7CB2;
+  overflow-x: hidden;
+  height: auto;
+
+  h1 {
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 66px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #091133;
+  }
+  .footer h1 {
+    color: #222F65;
+  }
+  h2 {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 48px;
+    color: #091133;
+  }
+  h3 {
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 38px;
+    color: #37447E;
+  }
+  h4 {
+    font-size: 16px;
+    line-height: 26px;
+    color: #091133;
+  }
+  .col-sm-4:last-child {
+    padding-right: 0;
+  }
+  img {
+    width: 100%;
+  }
+}
+.nav-link {
+  font-size: 14px;
+  line-height: 24px;
+  color: #505F98;
+}
+.nav-link:first-child {
+  padding-left: 0;
+}
+.icons {
+  justify-content: flex-end;
+}
+.icons {
+  .nav-link:nth-child(2) {
+   padding: .5rem 1rem;
+  }
+}
+  .nav-link:nth-child(2) {
+    padding-left: 43px;
+    padding-right: 43px;
+  }
+  .footer.nav-menu:last-child {
+    justify-content: end;
+  }
+  .header {
+    background-image: url("./../images/designer_1.svg");
+    background-position: right;
+    background-repeat: no-repeat;
+    min-height: 1112px;
+    .btn {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 18px;
+      text-align: center;
+      color: #FFFFFF;
+      border-radius: 2px ;
+      border: 2px solid #091133;
+    }
+
+    .header-title {
+      display: grid;
+      max-width: 50%;
+      margin-top: 20%;
+       p {
+         font-size: 18px;
+         line-height: 30px;
+         color: #505F98;
+       }
+      .header-btn {
+        margin-top: 60px;
+
+        .btn-sm {
+          padding: 4px 38px;
+          //padding: 7px 46px;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 26px;
+        }
+        .btn-head {
+          color: #091133;
+          margin-left: 30px;
+          padding: 4px 51px;
+        }
+      }
+      h1 {
+        text-align: start;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .main {
+    min-height: 742px;
+  .main-title {
+    display: grid;
+    max-width: 100%;
+    //max-width: 50%;
+    padding-top: 10%;
+    }
+  }
+
+section.price.container-fluid {
+  min-height: 950px;
+  background-image: url("./../images/bg-foot.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  text-align: center;
+  margin-bottom: -130px;
+  display: flex;
+  align-items: center;
+  //margin-top: 80px;
+
+   .container {
+      p {
+        padding: 0 23%;
+      }
+      h1 {
+        margin: 0;
+      }
+      .see {
+       font-size: 14px;
+       line-height: 24px;
+       text-align: center;
+       color: #5D6970;
+       margin-top: 60px;
+        margin-bottom: 10px;
+     }
+     .btn-price {
+       font-size: 14px;
+       padding: 5px 48px;
+     }
+   }
+}
+.footer.container-fluid {
+    background: #E7ECFF;
+    min-height: 216px;
+    position: sticky;
+    margin-top: auto;
+
+    .container {
+      .nav:first-child {
+        padding-top: 40px;
+      }
+
+      p {
+        margin: 0;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        color: #939EA4;
+      }
+      .btn-foo {
+        display: inline-block;
+        max-width: 109px;
+        //width: 31%;
+        padding: 2px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    h2 {
+      text-align: center;
+    }
+    .header {
+      background: none;
+    }
+    .header .header-title {
+      max-width: 95%;
+      text-align: justify;
+    }
+    .header .header-title h1 {
+      text-align: center;
+    }
+    .header-btn {
+      text-align: center;
+    }
+    .header .header-title .header-btn {
+    .btn-head {
+      margin-left: 0;
+      margin-top: 20px;
+      }
+    }
+    .nav-menu {
+      justify-content: center;
+    }
+    .main .main-title {
+      max-width: 100%;
+    }
+    section.price.container-fluid {
+      .container p {
+            padding: 0;
+          }
+      }
+  }
+@media (max-width: 1100px) {
+  .header {
+    background-position: top right;
+    background-size: 85%;
+  }
+}
+  @media (max-width: 800px) and (min-width: 500px) {
+    section.price.container-fluid {
+      min-height: 680px;
+      margin-top: 0;
+    }
+    .header {
+      background-position: top right;
+      background-size: 85%;
+      min-height: 700px;
+    }
+    .header .header-title {
+      margin-top: 0;
+    }
+    .header .header-title .header-btn {
+      margin-top: 20px;
+
+        .btn-head {
+        margin-left: 0;
+        margin-top: 30px;
+        }
+    }
+    h2 {
+      text-align: center;
+    }
+    .nav-link:nth-child(2) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .main .main-title {
+      max-width: 100%;
+    }
+  }
+
+
