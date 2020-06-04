@@ -42,14 +42,22 @@ body {
     width: 100%;
   }
 }
-.nav-link {
+
+.nav-link  {
   font-size: 14px;
   line-height: 24px;
   color: #505F98;
 }
+.nav-link a {
+  font-size: 14px;
+  line-height: 24px;
+  color: #505F98;
+}
+
 .nav-link:first-child {
   padding-left: 0;
 }
+
 .icons {
   justify-content: flex-end;
 }
@@ -126,7 +134,7 @@ section.price.container-fluid {
   background-image: url("./../images/bg-foot.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100%;
+  background-size: cover;
   text-align: center;
   margin-bottom: -130px;
   display: flex;
@@ -253,8 +261,10 @@ section.price.container-fluid {
       padding-left: 0;
       padding-right: 0;
     }
-    .main .main-title {
-      max-width: 100%;
+    .main {
+      &-title {
+        max-width: 100%;
+      }
     }
   }
 

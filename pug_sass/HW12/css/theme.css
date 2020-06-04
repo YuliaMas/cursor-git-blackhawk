@@ -29,6 +29,15 @@ hr {
   border: none;
 }
 
+.card-body {
+  padding: 3.5rem 2px 3.5rem 0;
+}
+
+.card-title {
+  margin-bottom: 0.5rem;
+  margin-top: 26px;
+}
+
 @media (max-width: 500px) {
   .btn-block {
     display: block;
