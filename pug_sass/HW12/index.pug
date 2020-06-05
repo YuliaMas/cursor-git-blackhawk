@@ -1,6 +1,7 @@
 -
    var img = "./images/main.png"
-   var images = ["./images/happy.svg", "./images/heard.svg", "./images/cube.svg"]
+   var images = ["./images/happy.svg", "./images/heard.svg"]
+    // "./images/cube.svg"]
    var links = ["Home", "About", "Contact"]
    var titleBlock = "Light, Fast & Powerful"
    var textBlock1 = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. " +
@@ -76,7 +77,13 @@ body
                     .col-md-6
                         img(src=image).desc-img
                     +pictureDescription()
-                //button.btn.btn-dark.btn-desk Purchase Now
+                .col-md-6
+                    img(src="./images/cube.svg").desc-img
+                .col-md-6.desc-text
+                    h2 #{titleBlock}
+                    p #{textBlock1}
+                    p #{textBlock2}
+                    button.btn.btn-dark.btn-desk Purchase Now
 
     section.price.container-fluid
         .container
