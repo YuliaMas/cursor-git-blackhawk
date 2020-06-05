@@ -46,13 +46,11 @@ body img {
   line-height: 24px;
   color: #505F98;
 }
-
 .nav-link a {
   font-size: 14px;
   line-height: 24px;
   color: #505F98;
 }
-
 .nav-link:first-child {
   padding-left: 0;
 }
@@ -127,6 +125,20 @@ body img {
   padding-top: 10%;
 }
 
+.col-md-6 {
+  min-height: 569px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.col-md-6 .desc-img {
+  width: auto;
+}
+.col-md-6.desc-text {
+  padding-left: 75px;
+  padding-right: 55px;
+}
+
 section.price.container-fluid {
   min-height: 950px;
   background-image: url("./../images/bg-foot.png");
@@ -192,7 +204,7 @@ section.price.container-fluid .container .btn-price {
   }
 
   .header .header-title {
-    max-width: 95%;
+    max-width: 100%;
     text-align: justify;
   }
 
@@ -209,6 +221,31 @@ section.price.container-fluid .container .btn-price {
     margin-top: 20px;
   }
 
+  .footer nav div:first-child {
+    justify-content: center;
+  }
+
+  .nav-write {
+    justify-content: center;
+    order: 2;
+    padding-bottom: 20px;
+  }
+
+  .icons {
+    justify-content: center;
+  }
+
+  body .col-md-6 {
+    min-height: 350px;
+  }
+  body .col-md-6 .desc-img {
+    width: inherit;
+  }
+  body .col-md-6.desc-text {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
   .nav-menu {
     justify-content: center;
   }
@@ -216,7 +253,14 @@ section.price.container-fluid .container .btn-price {
   .main .main-title {
     max-width: 100%;
   }
+  .main .main-title .col-lg-6 {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
 
+  section.price.container-fluid {
+    margin-bottom: -73px;
+  }
   section.price.container-fluid .container p {
     padding: 0;
   }
@@ -231,6 +275,7 @@ section.price.container-fluid .container .btn-price {
   section.price.container-fluid {
     min-height: 680px;
     margin-top: 0;
+    margin-bottom: -57px;
   }
 
   .header {

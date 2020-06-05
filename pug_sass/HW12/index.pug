@@ -23,7 +23,7 @@ mixin card-blank()
                 p.card-text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
 
 mixin pictureDescription()
-    .col-lg-6
+    .col-md-6.desc-text
         h2 #{titleBlock}
         p #{textBlock1}
         p #{textBlock2}
@@ -73,9 +73,10 @@ body
         section.description.main-title
             .row
                 each image in images
-                    .col-lg-6
-                        img(src=image)
+                    .col-md-6
+                        img(src=image).desc-img
                     +pictureDescription()
+                //button.btn.btn-dark.btn-desk Purchase Now
 
     section.price.container-fluid
         .container
@@ -89,7 +90,7 @@ body
     footer.footer.container-fluid
         .container
             nav.nav.row.d-flex.navbar.flex-wrap.justify-content-between.align-items-center
-                .col-sm-4.row.d-flex.flex-nowrap
+                .col-sm-4.nav-write.row.d-flex.flex-nowrap
                     p ©2020 Your_company
                 .col-sm-4.text-center.navbar-brand.logo
                     h3 Landie

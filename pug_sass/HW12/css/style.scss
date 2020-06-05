@@ -7,6 +7,15 @@ body {
   overflow-x: hidden;
   height: auto;
 
+  //.btn-desk {
+  //  //transform: translate(647px, -140px);
+  //  font-size: 14px;
+  //  padding: 1px 30px;
+  //  position: absolute;
+  //  top: 163%;
+  //  left: 55%;
+  //  margin-top: 30px;
+  //}
   h1 {
     font-weight: 500;
     font-size: 50px;
@@ -43,21 +52,21 @@ body {
   }
 }
 
-.nav-link  {
+.nav-link {
   font-size: 14px;
   line-height: 24px;
   color: #505F98;
-}
-.nav-link a {
-  font-size: 14px;
-  line-height: 24px;
-  color: #505F98;
-}
 
-.nav-link:first-child {
-  padding-left: 0;
-}
+  & a {
+    font-size: 14px;
+    line-height: 24px;
+    color: #505F98;
+  }
 
+  &:first-child {
+    padding-left: 0;
+  }
+}
 .icons {
   justify-content: flex-end;
 }
@@ -119,15 +128,30 @@ body {
       }
     }
   }
+
   .main {
     min-height: 742px;
-  .main-title {
-    display: grid;
-    max-width: 100%;
-    //max-width: 50%;
-    padding-top: 10%;
+    .main-title {
+      display: grid;
+      max-width: 100%;
+      //max-width: 50%;
+      padding-top: 10%;
     }
   }
+.col-md-6 {
+  min-height: 569px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .desc-img {
+    width: auto;
+  }
+  &.desc-text {
+    padding-left: 75px;
+    padding-right: 55px;
+  }
+}
 
 section.price.container-fluid {
   min-height: 950px;
@@ -141,26 +165,29 @@ section.price.container-fluid {
   align-items: center;
   //margin-top: 80px;
 
-   .container {
-      p {
-        padding: 0 23%;
-      }
-      h1 {
-        margin: 0;
-      }
-      .see {
-       font-size: 14px;
-       line-height: 24px;
-       text-align: center;
-       color: #5D6970;
-       margin-top: 60px;
-        margin-bottom: 10px;
-     }
-     .btn-price {
-       font-size: 14px;
-       padding: 5px 48px;
-     }
-   }
+  .container {
+    p {
+      padding: 0 23%;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .see {
+      font-size: 14px;
+      line-height: 24px;
+      text-align: center;
+      color: #5D6970;
+      margin-top: 60px;
+      margin-bottom: 10px;
+    }
+
+    .btn-price {
+      font-size: 14px;
+      padding: 5px 48px;
+    }
+  }
 }
 .footer.container-fluid {
     background: #E7ECFF;
@@ -200,7 +227,7 @@ section.price.container-fluid {
       background: none;
     }
     .header .header-title {
-      max-width: 95%;
+      max-width: 100%;
       text-align: justify;
     }
     .header .header-title h1 {
@@ -210,18 +237,44 @@ section.price.container-fluid {
       text-align: center;
     }
     .header .header-title .header-btn {
-    .btn-head {
-      margin-left: 0;
-      margin-top: 20px;
+      .btn-head {
+        margin-left: 0;
+        margin-top: 20px;
       }
+    }
+    .footer nav div:first-child {
+      justify-content: center;
+    }
+    .nav-write {
+      justify-content: center;
+      order: 2;
+      padding-bottom: 20px;
+    }
+    .icons {
+      justify-content: center;
+    }
+   body .col-md-6 {
+      min-height: 350px;
+       & .desc-img {
+        width: inherit;
+       }
+       &.desc-text {
+       padding-left: 25px;
+       padding-right: 25px;
+     }
     }
     .nav-menu {
       justify-content: center;
     }
     .main .main-title {
       max-width: 100%;
+      .col-lg-6 {
+        padding-left: 25px;
+        padding-right: 25px;
+      }
     }
     section.price.container-fluid {
+       margin-bottom: -73px;
       .container p {
             padding: 0;
           }
@@ -237,6 +290,7 @@ section.price.container-fluid {
     section.price.container-fluid {
       min-height: 680px;
       margin-top: 0;
+      margin-bottom: -57px;
     }
     .header {
       background-position: top right;

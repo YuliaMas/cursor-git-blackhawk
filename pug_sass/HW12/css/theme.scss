@@ -31,13 +31,22 @@ hr {
   margin-top: 26px;
 }
 
-@media (max-width: 500px){
+@media (max-width: 500px) {
   .btn-block {
     display: block;
     width: 45%;
     padding: 3px;
     margin-right: auto;
     margin-left: auto;
+  }
+  .justify-content-between {
+    -ms-flex-pack: justify !important;
+    /* justify-content: space-between!important; */
+    justify-content: space-around!important;
+  }
+  .text-right {
+    text-align: center!important;
+    order: 3;
   }
 }
 //@media (max-width: 800px) and (min-width: 500px) {

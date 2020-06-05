@@ -46,6 +46,17 @@ hr {
     margin-right: auto;
     margin-left: auto;
   }
+
+  .justify-content-between {
+    -ms-flex-pack: justify !important;
+    /* justify-content: space-between!important; */
+    justify-content: space-around !important;
+  }
+
+  .text-right {
+    text-align: center !important;
+    order: 3;
+  }
 }
 
 /*# sourceMappingURL=theme.css.map */
