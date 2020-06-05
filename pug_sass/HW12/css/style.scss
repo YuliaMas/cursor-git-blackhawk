@@ -8,7 +8,6 @@ body {
   height: auto;
 
   .btn-desk {
-    //transform: translate(647px, -140px);
     font-size: 14px;
     padding: 1px 30px;
     width: 41%;
@@ -287,12 +286,14 @@ section.price.container-fluid {
           }
       }
   }
-@media (max-width: 1100px) {
-  .header {
-    background-position: top right;
-    background-size: 85%;
+
+  @media (max-width: 1100px) {
+    .header {
+      background-position: top right;
+      background-size: 85%;
+    }
   }
-}
+
   @media (max-width: 800px) and (min-width: 500px) {
     section.price.container-fluid {
       min-height: 680px;
@@ -328,5 +329,52 @@ section.price.container-fluid {
       }
     }
   }
+
+@media (max-width: 760px) and (min-width: 500px) {
+  h2 {
+    text-align: center;
+  }
+  .header {
+    background: none;
+  }
+  .header .header-title {
+    max-width: 100%;
+    text-align: justify;
+  }
+  .header .header-title h1 {
+    text-align: center;
+  }
+  .header-btn {
+    text-align: center;
+  }
+  .header .header-title .header-btn {
+    .btn-head {
+      margin-left: 30px;
+      margin-top: 0;
+      margin-right: 30px;
+    }
+  }
+}
+@media (width: 500px) {
+  .header .header-title .header-btn .btn-head {
+    margin-left: 25px;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 490px) and (min-width: 440px) {
+  .header {
+    min-height: 700px;
+  }
+  .container .header-title .header-btn {
+    margin-top: 20px;
+    .btn-head {
+      margin-left: 30px;
+      margin-top: 20px;
+      margin-right: 30px;
+    }
+  }
+}
+
 
 
