@@ -1,0 +1,41 @@
+-   var title1= "Buttons Big"
+-   var title2= "Buttons Small"
+
+include #source/mixins/svg_1(download)
+include #source/mixins/svg_2(download-big)
+include #source/mixins/svg_tag1(small)
+include #source/mixins/download_big_buttons
+include #source/mixins/download_small_buttons
+include #source/mixins/svg_loop
+include #source/mixins/svg_archive
+include #source/mixins/btn-group_Tab_3
+include #source/mixins/btn-group_Tab_1
+
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title HW13 - BEM
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap")
+        link(rel="stylesheet", href="css/nullstyle.css")
+        link(rel="stylesheet", href="css/main.css")
+    body
+        .wrapper
+            header.header
+                h1.title  #{title1}
+                .header-wrapper
+                    include #source/modules/header-buttons__top-block
+                    include #source/modules/header-button__block
+
+            footer.footer
+                h1.title #{title2}
+                .footer-wrapper
+                    .footer-container
+                        include #source/modules/footer-buttons__top-block
+                    include #source/modules/footer-button__block
+                    include #source/modules/footer-button__circle-block
+                .tag--small
+                    include #source/modules/tag_small_buttons
+
