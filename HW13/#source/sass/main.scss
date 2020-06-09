@@ -2,12 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap');
 @import "constants";
 @import "icon-styles";
+@import "./btn";
 @import "./header/big-buttons";
 @import "./header/header-button__block";
 @import "./footer/footer-button__block";
 @import "./footer/circle-block";
 @import "./footer/small-buttons";
-
 
 //----
 html,
@@ -62,13 +62,3 @@ body{
     }
   }
 }
-
-
-
-
-
-
-
-
-
-

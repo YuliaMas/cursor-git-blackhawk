@@ -1,5 +1,5 @@
 $color_1:#18A0FB;
-$color_2:rgba(224, 224, 224, 0.3);
+$color_2: rgba(224, 224, 224, 0.3);
 $color_3:#FF3E1D;
 $color_4:#2C2C2C;
 $color_5:#878787;
@@ -42,21 +42,3 @@ $color_6:#FFFFFF;
   }
 }
 
-.btn__primary {
-  color: $color_6;
-  background-color: $color_1;
-}
-.btn__disabled {
-  color: $color_5;
-  background-color: $color_2;
-}
-.btn__secondary {
-  color: $color_4;
-  background-color: $color_6;
-  border: 1px solid #E0E0E0;
-}
-.btn__secondary_focused {
-  border: 1px solid $color_1;
-  color: $color_1;
-  background-color: $color_6;
-}
