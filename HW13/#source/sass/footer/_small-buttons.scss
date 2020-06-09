@@ -25,4 +25,8 @@
   &.button.btn:nth-child(2) {
     width: 51px;
   }
+  @media (max-width: 1200px) {
+    margin: auto;
+    max-width: 150px;
+  }
 }

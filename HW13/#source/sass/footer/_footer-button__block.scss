@@ -1,6 +1,9 @@
 //@import "../constants";
 
 .footer-button__block {
+  @media (max-width: 400px){
+    margin-bottom: 20px;
+  }
   .btn-group_big-icon {
     @extend .btn-group_Tab_3;
     .btn__big-icon {

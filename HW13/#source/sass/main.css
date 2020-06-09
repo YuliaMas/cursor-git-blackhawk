@@ -237,6 +237,11 @@ span.right {
   width: 106px;
 }
 
+@media (max-width: 400px) {
+  .footer-button__block {
+    margin-bottom: 20px;
+  }
+}
 .footer-button__block .btn-group_big-icon .btn__big-icon {
   width: 48px;
 }
@@ -313,6 +318,12 @@ span.right {
 .tag--small.button.btn:nth-child(2) {
   width: 51px;
 }
+@media (max-width: 1200px) {
+  .tag--small {
+    margin: auto;
+    max-width: 150px;
+  }
+}
 
 html,
 body {
@@ -328,6 +339,12 @@ body {
   min-height: 776px;
 }
 
+@media (max-width: 1120px) {
+  .title {
+    text-align: center;
+  }
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -336,6 +353,12 @@ body {
 .header-wrapper {
   display: flex;
   margin-top: 26px;
+}
+@media (max-width: 1200px) {
+  .header-wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .header-container {
@@ -346,6 +369,23 @@ body {
   row-gap: 24px;
   margin-right: 131px;
 }
+@media (max-width: 1200px) {
+  .header-container {
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 1200px) and (max-width: 800px) {
+  .header-container {
+    grid-template-columns: 146px 146px;
+    grid-template-rows: 46px 46px 46px 46px 46px 46px;
+    margin-right: 115px;
+  }
+}
+@media (max-width: 1200px) and (max-width: 800px) and (max-width: 500px) {
+  .header-container {
+    margin-right: 10px;
+  }
+}
 
 .footer {
   margin-top: 73px;
@@ -354,6 +394,12 @@ body {
   display: flex;
   margin-top: 35px;
   padding-bottom: 50px;
+}
+@media (max-width: 1200px) {
+  .footer .footer-wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 .footer .footer-container {
   display: grid;
@@ -365,6 +411,23 @@ body {
 }
 .footer .footer-container.download_sm {
   margin-left: 14px;
+}
+@media (max-width: 1200px) {
+  .footer .footer-container {
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 1200px) and (max-width: 800px) {
+  .footer .footer-container {
+    grid-template-columns: 116px 116px;
+    grid-template-rows: 36px 36px 36px 36px 36px 36px;
+    margin-right: 115px;
+  }
+}
+@media (max-width: 1200px) and (max-width: 800px) and (max-width: 500px) {
+  .footer .footer-container {
+    margin-right: 55px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
