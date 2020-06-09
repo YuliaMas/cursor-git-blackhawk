@@ -30,6 +30,7 @@ mixin pictureDescription()
         p #{textBlock2}
 
 doctype html
+html(lang="en")
 head
     meta(charset="utf-8")
     meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
@@ -70,15 +71,15 @@ body
                         +card-blank()
                         +card-blank()
                 .col-lg-6
-                    img(src=img)
+                    img(src=img alt="main image")
         section.description.main-title
             .row
                 each image in images
                     .col-md-6
-                        img(src=image).desc-img
+                        img(src=image alt="girl with flower").desc-img
                     +pictureDescription()
                 .col-md-6
-                    img(src="./images/cube.svg").desc-img
+                    img(src="./images/cube.svg" alt="girl with cube").desc-img
                 .col-md-6.desc-text
                     h2 #{titleBlock}
                     p #{textBlock1}
