@@ -1,0 +1,21 @@
+.footer-button__circle-block {
+  margin-left: 66px;
+}
+.footer-button__circle-block .btn__circle-small {
+  width: 36px;
+  height: 36px;
+  background: #FF3E1D;
+  border-radius: 100px;
+  vertical-align: top;
+}
+.footer-button__circle-block .btn__circle-big {
+  width: 48px;
+  height: 48px;
+  background: #00D200;
+  border-radius: 29px;
+  margin-left: 20px;
+}
+.footer-button__circle-block .size {
+  width: 12.5px;
+  height: 12.5px;
+}

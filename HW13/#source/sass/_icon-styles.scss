@@ -1,0 +1,32 @@
+@import "constants";
+
+svg {
+  vertical-align: middle;
+}
+.icon , .icon_small {
+  vertical-align: middle;
+}
+.white {
+  stroke: $color_6;
+}
+.grey{
+  stroke: $color_5;
+}
+.blue{
+  stroke: $color_1;
+}
+.black{
+  stroke: $color_4;
+}
+.black-loop {
+  fill: $color_4;
+}
+span {
+  vertical-align: middle;
+  &.left {
+    margin-left: 10px;
+  }
+  &.right {
+    margin-right: 10px;
+  }
+}

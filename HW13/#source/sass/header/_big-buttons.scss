@@ -1,0 +1,18 @@
+@import "../constants";
+
+.btn {
+  color: $color_4;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+.btn-download--lg {
+  @extend %btn-txt_big;
+  &:nth-child(-n+4) {
+    width: 144px;
+    justify-self: center;
+    padding: 14px 36px;
+  }
+}

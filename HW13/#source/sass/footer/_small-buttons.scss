@@ -1,0 +1,28 @@
+@import "../constants";
+.btn-download--sm {
+  @extend %btn-txt_small;
+  &:nth-child(-n+4) {
+    width: 114px;
+    justify-self: center;
+  }
+  &:nth-child(9){
+    background-color: $color_3;
+  }
+}
+.btn-tag--sm {
+  @extend %btn-txt_small;
+  &:nth-last-child(-n+2) {
+    width: 51px;
+    justify-self: start;
+  }
+}
+.tag--small{
+  display: grid;
+  grid-template-columns: 65px 65px;
+  grid-template-rows: 28px 28px;
+  column-gap: 12px;
+  row-gap: 20px;
+  &.button.btn:nth-child(2) {
+    width: 51px;
+  }
+}

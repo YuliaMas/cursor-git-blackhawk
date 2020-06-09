@@ -1,48 +1,13 @@
 @import "nullstyle";
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap');
-%size{
-  max-width: 1139px;
-  width: 100%;
-  margin: 0 auto;
-}
-%btn-txt_big{
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 18px;
-  text-align: center;
-}
-%btn-txt_small{
-  font-weight: 500;
-  font-size: 13px;
-  line-height: 16px;
-  text-align: center;
-}
-%con-title{
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 25px;
-  line-height: 30px;
-  color: #2C2C2C;
-}
-@mixin btn-border {
-          &:first-child {
-            border-radius: 5px 0 0 5px;
-          }
-          &:nth-child(2) {
-            border-radius: 0;
-          }
-          &:last-child {
-            border-radius: 0 5px 5px 0;
-          }
-        }
+@import "constants";
+@import "icon-styles";
+@import "./header/big-buttons";
+@import "./header/header-button__block";
+@import "./footer/footer-button__block";
+@import "./footer/circle-block";
+@import "./footer/small-buttons";
 
-$color_1:#18A0FB;
-$color_2:rgba(224, 224, 224, 0.3);
-$color_3:#FF3E1D;
-$color_4:#2C2C2C;
-$color_5:#878787;
-$color_6:#FFFFFF;
 
 //----
 html,
@@ -98,178 +63,12 @@ body{
   }
 }
 
-.btn {
-  color: $color_4;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-  display: inline-block;
-  cursor: pointer;
-}
-.btn-download--lg {
-  @extend %btn-txt_big;
-  &:nth-child(-n+4) {
-    width: 144px;
-    justify-self: center;
-    padding: 14px 36px;
-  }
-}
-.btn-download--sm {
-  @extend %btn-txt_small;
-  &:nth-child(-n+4) {
-    width: 114px;
-    justify-self: center;
-  }
-  &:nth-child(9){
-    background-color: $color_3;
-  }
-}
-.btn-tag--sm {
-  @extend %btn-txt_small;
-  &:nth-last-child(-n+2) {
-    width: 51px;
-    justify-self: start;
-  }
-}
-.tag--small{
-  display: grid;
-  grid-template-columns: 65px 65px;
-  grid-template-rows: 28px 28px;
-  column-gap: 12px;
-  row-gap: 20px;
-  &.button.btn:nth-child(2) {
-    width: 51px;
-  }
-}
-.btn__primary {
-  color: $color_6;
-  background-color: $color_1;
-}
-.btn__disabled {
-  color: $color_5;
-  background-color: $color_2;
-}
-.btn__secondary {
-  color: $color_4;
-  background-color: $color_6;
-  border: 1px solid #E0E0E0;
-}
-.btn__secondary_focused {
-  border: 1px solid $color_1;
-  color: $color_1;
-  background-color: $color_6;
-}
-.white {
-  stroke: $color_6;
-}
-.grey{
-  stroke: $color_5;
-}
-.blue{
-  stroke: $color_1;
-}
-.black{
-  stroke: $color_4;
-}
-.black-loop {
-  fill: $color_4;
-}
-svg {
-  vertical-align: middle;
-}
-.icon , .icon_small {
-  vertical-align: middle;
-}
-span {
-  vertical-align: middle;
-  &.left {
-    margin-left: 10px;
-  }
-  &.right {
-    margin-right: 10px;
-  }
-}
 
-.header-button__block {
-  .btn-group_big-icon {
-    display: flex;
-    .btn__big-icon {
-      width: 56px;
-      height: 48px;
-      @include btn-border;
-    }
-  }
-  .btn-group_Tab_1 {
-    display: flex;
-    margin-top: 24px;
-    .btn__Tab_1 {
-      width: 134px;
-      height: 46px;
-      @include btn-border;
-      @extend %btn-txt_big;
-    }
-  }
-  .btn-group_Tab_3 {
-    display: flex;
-    margin-top: 24px;
-    .btn__Tab_3 {
-      width: 106px;
-      height: 46px;
-      @include btn-border;
-      @extend %btn-txt_big;
-    }
-  }
-}
 
-.footer-button__block {
-  .btn-group_big-icon {
-    display: flex;
-    margin-top: 20px;
-    .btn__big-icon {
-      width: 48px;
-      height: 36px;
-      @include btn-border;
-    }
-  }
-  .btn-group_Tab_1 {
-    display: flex;
-    .btn__Tab_1 {
-      width: 86px;
-      height: 36px;
-      @include btn-border;
-      @extend %btn-txt_big;
-    }
-  }
-  .btn-group_Tab_3 {
-    display: flex;
-    margin-top: 20px;
-    .btn__Tab_3 {
-      width: 58px;
-      height: 36px;
-      @include btn-border;
-      @extend %btn-txt_big;
-    }
-  }
-}
 
-.footer-button__circle-block {
-  margin-left: 66px;
-  .btn__circle-small {
-    width: 36px;
-    height: 36px;
-    background: #FF3E1D;
-    border-radius: 100px;
-    vertical-align: top;
-  }
-  .btn__circle-big {
-    width: 48px;
-    height: 48px;
-    background: #00D200;
-    border-radius: 29px;
-    margin-left: 20px;
-  }
-  .size {
-    width: 12.5px;
-    height: 12.5px;
-  }
-}
+
+
+
+
+
+

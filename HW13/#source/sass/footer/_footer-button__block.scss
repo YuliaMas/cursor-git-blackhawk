@@ -1,0 +1,30 @@
+@import "../constants";
+
+.footer-button__block {
+  .btn-group_big-icon {
+    @extend .btn-group_Tab_3;
+    .btn__big-icon {
+      width: 48px;
+      @extend %btn-border;
+    }
+  }
+  .btn-group_Tab_1 {
+    display: flex;
+    height: 36px;
+    .btn__Tab_1 {
+      width: 86px;
+      @extend %btn-border;
+      @extend %btn-txt_big;
+    }
+  }
+  .btn-group_Tab_3 {
+    display: flex;
+    margin-top: 20px;
+    height: 36px;
+    .btn__Tab_3 {
+      width: 58px;
+      @extend %btn-border;
+      @extend %btn-txt_big;
+    }
+  }
+}
