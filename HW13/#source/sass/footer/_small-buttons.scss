@@ -1,5 +1,5 @@
 //@import "../constants";
-.btn-download--sm {
+.btn-download_sm {
   @extend %btn-txt_small;
   &:nth-child(-n+4) {
     width: 114px;
@@ -9,14 +9,14 @@
     background-color: $color_3;
   }
 }
-.btn-tag--sm {
+.btn-tag_sm {
   @extend %btn-txt_small;
   &:nth-last-child(-n+2) {
     width: 51px;
     justify-self: start;
   }
 }
-.tag--small{
+.tag_small{
   display: grid;
   grid-template-columns: 65px 65px;
   grid-template-rows: 28px 28px;

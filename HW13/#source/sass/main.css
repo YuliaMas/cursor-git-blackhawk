@@ -79,14 +79,14 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
 }
 
-.footer-button__block .btn-group_Tab_3 .btn__Tab_3, .footer-button__block .btn-group_big-icon .btn__Tab_3, .footer-button__block .btn-group_Tab_1 .btn__Tab_1, .header-button__block .btn-group_Tab_3 .btn__Tab_3, .header-button__block .btn-group_Tab_1 .btn__Tab_1, .header-button__block .btn-group_Tab_3 .btn__Tab_1, .header-button__block .footer-button__block .btn-group_big-icon .btn__Tab_1, .footer-button__block .header-button__block .btn-group_big-icon .btn__Tab_1, .btn-download--lg {
+.footer-button__block .btn-group_Tab_3 .btn__Tab_3, .footer-button__block .btn-group_big-icon .btn__Tab_3, .footer-button__block .btn-group_Tab_1 .btn__Tab_1, .header-button__block .btn-group_Tab_3 .btn__Tab_3, .header-button__block .btn-group_Tab_1 .btn__Tab_1, .header-button__block .btn-group_Tab_3 .btn__Tab_1, .header-button__block .footer-button__block .btn-group_big-icon .btn__Tab_1, .footer-button__block .header-button__block .btn-group_big-icon .btn__Tab_1, .btn-download_lg {
   font-weight: 500;
   font-size: 15px;
   line-height: 18px;
   text-align: center;
 }
 
-.btn-tag--sm, .btn-download--sm {
+.btn-tag_sm, .btn-download_sm {
   font-weight: 500;
   font-size: 13px;
   line-height: 16px;
@@ -212,7 +212,7 @@ span.right {
   cursor: pointer;
 }
 
-.btn-download--lg:nth-child(-n+4) {
+.btn-download_lg:nth-child(-n+4) {
   width: 144px;
   justify-self: center;
   padding: 14px 36px;
@@ -295,31 +295,31 @@ span.right {
   height: 12.5px;
 }
 
-.btn-download--sm:nth-child(-n+4) {
+.btn-download_sm:nth-child(-n+4) {
   width: 114px;
   justify-self: center;
 }
-.btn-download--sm:nth-child(9) {
+.btn-download_sm:nth-child(9) {
   background-color: #FF3E1D;
 }
 
-.btn-tag--sm:nth-last-child(-n+2) {
+.btn-tag_sm:nth-last-child(-n+2) {
   width: 51px;
   justify-self: start;
 }
 
-.tag--small {
+.tag_small {
   display: grid;
   grid-template-columns: 65px 65px;
   grid-template-rows: 28px 28px;
   column-gap: 12px;
   row-gap: 20px;
 }
-.tag--small.button.btn:nth-child(2) {
+.tag_small.button.btn:nth-child(2) {
   width: 51px;
 }
 @media (max-width: 1200px) {
-  .tag--small {
+  .tag_small {
     margin: auto;
     max-width: 150px;
   }

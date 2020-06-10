@@ -6,7 +6,7 @@
   display: inline-block;
   cursor: pointer;
 }
-.btn-download--lg {
+.btn-download_lg {
   @extend %btn-txt_big;
   &:nth-child(-n+4) {
     width: 144px;
