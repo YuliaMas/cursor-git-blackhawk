@@ -593,3 +593,48 @@ footer {
     background-color: #333;
     height: 50px;
 }
+
+
+.bg-adv1 {
+    width: 55px; height: 60px;
+    margin: auto;
+    background: url('../img/css_sprites.png') -20px -458px;
+    }
+.bg-adv2 {
+    width: 55px; height: 60px;
+    margin: auto;
+    background: url('../img/css_sprites.png') -20px -558px;
+    }
+.bg-adv3 {
+    width: 60px; height: 54px;
+        margin: auto;
+    background: url('../img/css_sprites.png') -20px -267px;
+    }
+.bg-arrow_left {
+    width: 23px; height: 62px;
+    background: url('../img/css_sprites.png') -20px -658px;
+    }
+.bg-arrow_right {
+    width: 23px; height: 62px;
+    background: url('../img/css_sprites.png') -20px -760px;
+    }
+.bg-reason1 {
+    width: 55px; height: 34px;
+    margin: 0 auto;
+    background: url('../img/css_sprites.png') -16px 1px;
+    }
+.bg-reason2 {
+    width: 45px; height: 45px;
+    margin: 0 auto;
+    background: url('../img/css_sprites.png') -20px -85px;
+    }
+.bg-reason3 {
+    width: 39px; height: 57px;
+    margin: 0 auto;
+    background: url('../img/css_sprites.png') -20px -361px;
+    }
+.bg-reason4 {
+    width: 48px; height: 48px;
+    margin: 0 auto;
+    background: url('../img/css_sprites.png') -20px -171px;
+    }
