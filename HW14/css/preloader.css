@@ -1,3 +1,4 @@
+
 .preloader {
 	position: fixed;
 	left: 0;
@@ -8,10 +9,6 @@
 	/* фоновый цвет */
 	background: #e0e0e0;
 	z-index: 1001;
-	}
-.preloader>img {
-	background-color: lightyellow;
-	padding: 100px 50% 100px 45%;
 	}
 
 .preloader__image {
