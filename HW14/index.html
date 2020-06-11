@@ -3,11 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="css/preloader.css">
     <link rel="stylesheet" href="css/screen.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+<div class="preloader">
+    <img src="img/logo.png" alt="">
+    <svg class="preloader__image" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <path fill="currentColor"
+              d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z">
+        </path>
+    </svg>
+</div>
 <header>
     <div class="wrapper">
         <img src="img/logo.png" alt="Logo Avtoparktronik" class="logo">
@@ -141,7 +150,8 @@
 <section class="video">
     <div class="wrapper">
         <h2 class="h2">как работает <span class="yellow">видеопарктроник?</span></h2>
-        <div id="video"></div>
+        <div id="video">
+        </div>
     </div>
 </section>
 <section class="how">
@@ -205,15 +215,12 @@
         <p>Мы заботимся о своей репутации, клиенты для нас на первом месте!</p>
         <div class="advantages">
             <div class="adv"><div class="bg-adv1"></div>
-<!--                <img src="img/adv1.png" alt="">-->
                 <div class="adv-title yellow">Оплата при получении</div>
             </div>
             <div class="adv"><div class="bg-adv2"></div>
-<!--                <img src="img/adv2.png" alt="">-->
                 <div class="adv-title yellow">365 дней гарантии</div>
             </div>
             <div class="adv"><div class="bg-adv3"></div>
-<!--                <img src="img/adv3.png" alt="">-->
                 <div class="adv-title yellow">Возврат денег в течение 14 дней</div>
             </div>
         </div>
@@ -271,48 +278,17 @@
 
     </div>
 </footer>
-<script src="lib/plugins.js"></script>
 <script>
-    // 2. This code loads the IFrame Player API code asynchronously.
-    var tag = document.createElement('script');
-
-    tag.src = "https://www.youtube.com/iframe_api";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-    // 3. This function creates an <iframe> (and YouTube player)
-    //    after the API code downloads.
-    var player;
-    function onYouTubeIframeAPIReady() {
-        player = new YT.Player('video', {
-            height: '390',
-            width: '640',
-            videoId: 'M7lc1UVf-VE',
-            events: {
-                'onReady': onPlayerReady,
-                'onStateChange': onPlayerStateChange
-            }
-        });
-    }
-
-    // 4. The API will call this function when the video player is ready.
-    function onPlayerReady(event) {
-        event.target.playVideo();
-    }
-
-    // 5. The API calls this function when the player's state changes.
-    //    The function indicates that when playing a video (state=1),
-    //    the player should play for six seconds and then stop.
-    var done = false;
-    function onPlayerStateChange(event) {
-        if (event.data == YT.PlayerState.PLAYING && !done) {
-            setTimeout(stopVideo, 6000);
-            done = true;
-        }
-    }
-    function stopVideo() {
-        player.stopVideo();
+    window.onload = function () {
+        document.body.classList.add('loaded_hiding');
+        window.setTimeout(function () {
+            document.body.classList.add('loaded');
+            document.body.classList.remove('loaded_hiding');
+        }, 500);
     }
 </script>
+<script src="lib/plugins.js" async defer></script>
+<script src="lib/player.js" async defer></script>
+
 </body>
 </html>
