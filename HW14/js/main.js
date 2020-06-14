@@ -10,6 +10,7 @@ $(window).on("load", () => {
     nextArrow: $(".arrow-right"),
   });
 });
+
 function videoLoader(block, video) {
   block.click(function () {
     if (block.hasClass("video_load")) {
