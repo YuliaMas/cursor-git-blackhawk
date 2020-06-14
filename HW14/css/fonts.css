@@ -3,37 +3,43 @@
   font-family: 'HelveticaNeueBlack';
   src: local("☺"), url("../fonts/HelveticaNeueCyr-Black.woff") format("woff"), url("../fonts/HelveticaNeueCyr-Black.ttf") format("truetype");
   font-weight: normal;
-  font-style: normal; }
+  font-style: normal;
+  font-display: swap;}
 
 @font-face {
   font-family: 'HelveticaNeueBold';
   src: local("☺"), url("../fonts/HelveticaNeueCyr-Bold.woff") format("woff"), url("../fonts/HelveticaNeueCyr-Bold.ttf") format("truetype");
   font-weight: normal;
-  font-style: normal; }
+  font-style: normal;
+  font-display: swap;}
 
 @font-face {
   font-family: 'HelveticaNeueItalic';
   src: local("☺"), url("../fonts/HelveticaNeueCyr-Italic.woff") format("woff"), url("../fonts/HelveticaNeueCyr-Italic.ttf") format("truetype");
   font-weight: normal;
-  font-style: normal; }
+  font-style: normal;
+  font-display: swap;}
 
 @font-face {
   font-family: 'HelveticaNeueLight';
   src: local("☺"), url("../fonts/HelveticaNeueCyr-Light.woff") format("woff"), url("../fonts/HelveticaNeueCyr-Light.ttf") format("truetype");
   font-weight: normal;
-  font-style: normal; }
+  font-style: normal;
+  font-display: swap;}
 
 @font-face {
   font-family: 'HelveticaNeueMedium';
   src: local("☺"), url("../fonts/HelveticaNeueCyr-Medium.woff") format("woff"), url("../fonts/HelveticaNeueCyr-Medium.ttf") format("truetype");
   font-weight: normal;
-  font-style: normal; }
+  font-style: normal;
+  font-display: swap;}
 
 @font-face {
 font-family: 'HelveticaNeueThin';
 src: local('☺'), url('../fonts/HelveticaNeueCyr-Thin.woff') format('woff'), url('../fonts/HelveticaNeueCyr-Thin.ttf') format('truetype');
 font-weight: normal;
 font-style: normal;
+  font-display: swap;
 }
 /*@font-face {*/
 /*font-family: 'HelveticaNeueBoldItalic';*/
@@ -45,7 +51,8 @@ font-style: normal;
   font-family: 'HelveticaNeueLightItalic';
   src: local("☺"), url("../fonts/HelveticaNeueCyr-LightItalic.woff") format("woff"), url("../fonts/HelveticaNeueCyr-LightItalic.ttf") format("truetype");
   font-weight: normal;
-  font-style: normal; }
+  font-style: normal;
+  font-display: swap}
 
 /*@font-face {*/
 /*font-family: 'HelveticaNeueThinItalic';*/
