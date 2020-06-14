@@ -39,7 +39,7 @@ font-family: 'HelveticaNeueThin';
 src: local('☺'), url('../fonts/HelveticaNeueCyr-Thin.woff') format('woff'), url('../fonts/HelveticaNeueCyr-Thin.ttf') format('truetype');
 font-weight: normal;
 font-style: normal;
-  font-display: swap;
+font-display: swap;
 }
 /*@font-face {*/
 /*font-family: 'HelveticaNeueBoldItalic';*/
