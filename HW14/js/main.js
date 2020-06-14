@@ -19,7 +19,6 @@ function videoLoader(block, video) {
     block.addClass("video_load");
   });
 }
-
 videoLoader(
   $("#video"),
   '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/M7lc1UVf-VE" frameborder="0"' +
