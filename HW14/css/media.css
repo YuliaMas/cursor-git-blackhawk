@@ -1,0 +1,96 @@
+@media (max-width: 800px) {
+	.main-screen .wrapper{
+			padding: 0 10px;
+			overflow: hidden;
+			}
+	header .wrapper {
+		display: flex;
+		padding: 0 8px;
+		}
+	header .logo {
+		margin-right: 5px;
+		}
+	header .phone {
+		margin-top: 11px;
+		}
+	.main-screen .left-block>.h1 {
+		font-size: 28px;
+		line-height: 50px;
+		}
+	.main-screen .wrapper>.left-block, .main-screen .wrapper>.right-block {
+		min-width: 320px;
+		height: auto;
+		}
+	.main-screen .left-block>.description {
+		margin-top: 25px;
+		}
+	.main-screen .right-block>.price {
+		position: absolute;
+		right: 0;
+		top: 0;
+		}
+	.main-screen .right-block {
+		text-align: center;
+		padding-top: 50px;
+		}
+	.about .wrapper>.column-block {
+		width: auto;
+		display: flex;
+		flex-wrap: wrap;
+		}
+	.about .description:first-child {
+		width: 39%;
+		}
+	.about .wrapper>.column-block::after {
+		margin: 200px 0 27px;
+		}
+	.about .wrapper .description:last-child>img {
+		max-width: 300px;
+		max-height: 150px;
+		}
+	.about .wrapper .description.double {
+		width: 80%;
+		}
+	.about .wrapper .description:nth-child(2)>img {
+		margin-left: -34px;
+		margin-bottom: 40px;
+		}
+	.reasons .wrapper>.reason {
+		width: calc(45% - 20px);
+		margin: 15px 9px;
+		}
+	.delivery .wrapper>.advantages .adv-title {
+		font-size: 15px;
+		}
+	.delivery .wrapper>.left-block {
+		margin-right: 50px;
+		margin-left: 20px;
+		}
+	.how .wrapper>.left-block, .how .wrapper>.right-block {
+		width: calc(100% - 100px);
+		}
+	.how .wrapper .left-block .half-width {
+			width: 100%;
+		}
+	.how .wrapper .right-block>.small-height-fix{
+		height: 110px;
+		width: 100%;
+		}
+	.slick-slide {
+
+		}
+	.reviews .review-text {
+		display: inline-block;
+		width: calc(90% - 15px);
+		margin-left: 15px;
+		line-height: 24px;
+		vertical-align: top;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		height: 300px;
+		}
+	.reviews .review-text:hover {
+		overflow: visible;
+		}
+	}

@@ -12,6 +12,10 @@ body {
     font-family: "HelveticaNeueLight";
     font-size: 14px;
     letter-spacing: 0.05em;
+    /*------*/
+    overflow-x: hidden;
+    width: 100vw;
+    /*------*/
 }
 
 * {
@@ -24,6 +28,9 @@ body {
     margin: 0 auto;
     padding: 0 15px;
     max-width: 1126px;
+    /*-----*/
+    overflow: hidden;
+    /*-----*/
 }
 
 a {
@@ -622,7 +629,11 @@ button {
 .last-screen form {
     margin-top: 50px;
 }
-
+/*-----*/
+.last-screen .wrapper{
+    height: 550px;
+    }
+/*------*/
 form input {
     border-radius: 5px;
     outline: none;
