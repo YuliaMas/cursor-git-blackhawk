@@ -598,7 +598,7 @@ button {
 }
 
 .last-screen .wrapper {
-    height: auto;
+    height: 600px;
     min-height: 1px !important;
 }
 
@@ -629,11 +629,6 @@ button {
 .last-screen form {
     margin-top: 50px;
 }
-/*-----*/
-.last-screen .wrapper{
-    height: 550px;
-    }
-/*------*/
 form input {
     border-radius: 5px;
     outline: none;

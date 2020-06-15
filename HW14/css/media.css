@@ -1,10 +1,18 @@
-@media (max-width: 800px) {
+@media (max-width: 500px) {
+	 .last-screen .wrapper>.h2 , .delivery .wrapper>h2 {
+		font-size: 21px;
+		}
 	.main-screen .wrapper{
 			padding: 0 10px;
 			overflow: hidden;
 			}
+	header {
+		min-height: 140px;
+		}
 	header .wrapper {
 		display: flex;
+		flex-wrap: wrap;
+		height: 140px;
 		padding: 0 8px;
 		}
 	header .logo {
@@ -13,9 +21,15 @@
 	header .phone {
 		margin-top: 11px;
 		}
+	header .right-block {
+		margin-left: auto;
+		}
 	.main-screen .left-block>.h1 {
-		font-size: 28px;
+		font-size: 24px;
 		line-height: 50px;
+		}
+	.main-screen .wrapper .description {
+		font-size: 20px;
 		}
 	.main-screen .wrapper>.left-block, .main-screen .wrapper>.right-block {
 		min-width: 320px;
@@ -76,8 +90,8 @@
 		height: 110px;
 		width: 100%;
 		}
-	.slick-slide {
-
+	.reviews .wrapper .arrow-left{
+		visibility: hidden;
 		}
 	.reviews .review-text {
 		display: inline-block;
@@ -85,12 +99,34 @@
 		margin-left: 15px;
 		line-height: 24px;
 		vertical-align: top;
-		text-overflow: ellipsis;
 		overflow: hidden;
 		text-overflow: ellipsis;
 		height: 300px;
 		}
+  .reviews .wrapper .review-slider .slick-slide {
+		display: flex;
+		flex-direction: column;
+		}
+	.slick-slide {
+		float: right;
+		}
+	.reviews .wrapper .review-author {
+		flex-wrap: wrap;
+		justify-content: center;
+		}
+	.reviews .review-text {
+		display: block;
+		}
 	.reviews .review-text:hover {
 		overflow: visible;
+		}
+	section.last-screen>.wrapper {
+		height: 870px;
+		}
+	.last-screen .wrapper .left-block {
+		height: 285px;
+		}
+	.last-screen .wrapper .left-block img {
+		width: 100%;
 		}
 	}
