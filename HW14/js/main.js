@@ -11,17 +11,17 @@ $(window).on("load", () => {
   });
 });
 
-// function videoLoader(block, video) {
-//   block.click(function () {
-//     if (block.hasClass("video_load")) {
-//       return false;
-//     }
-//     block.html(video);
-//     block.addClass("video_load");
-//   });
-// }
-// videoLoader(
-//   $("#video"),
-//   '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/M7lc1UVf-VE" frameborder="0"' +
-//     ' allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
-// );
+function videoLoader(block, video) {
+  block.click(function () {
+    if (block.hasClass("video_load")) {
+      return false;
+    }
+    block.html(video);
+    block.addClass("video_load");
+  });
+}
+videoLoader(
+  $("#video"),
+  '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/M7lc1UVf-VE" frameborder="0"' +
+    ' allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+);
