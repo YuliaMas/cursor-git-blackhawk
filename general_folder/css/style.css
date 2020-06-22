@@ -28,7 +28,10 @@ body {
 .header {
 	/*width: 100vw;*/
 	height: 60px;
-	background-color: #efa1dc;
+	background-color:  #d6a4a4;
+	background: -webkit-linear-gradient(to left, #dae2f8, #d6a4a4);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to bottom, #dae2f8, #d6a4a4);
+	/*background-color: #efa1dc;*/
 	box-shadow: 0 0 20px 0 black;
 	position: fixed;
 	top: 0;
@@ -38,6 +41,7 @@ body {
 	}
 .header-logo {
 	width: 20%;
+	opacity:	0.8;
 	}
 .header-menu {
 	width: 50%;
@@ -232,10 +236,13 @@ h3 {
 #about, #works2, #further-info {
 	/*background-color: #e1b0e2;*/
 	/*background-color: #d04e75;*/
-	background: #d9a7c7;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to top, #fffcdc, #d9a7c7);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to top, #fffcdc, #d9a7c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	opacity: 0.9;
+	/*background: #d9a7c7;  !* fallback for old browsers *!*/
+	/*background: -webkit-linear-gradient(to top, #fffcdc, #d9a7c7);  !* Chrome 10-25, Safari 5.1-6 *!*/
+	/*background: linear-gradient(to top, #fffcdc, #d9a7c7); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
+	background-color:  #d6a4a4b3;
+	background: -webkit-linear-gradient(to left, #dae2f8, #d6a4a4b3);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #dae2f8, #d6a4a4b3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+opacity: 0.9;
 	}
 .col {
 	display: flex;
@@ -257,16 +264,20 @@ h3 {
 	height: 45vh;
 	}
 .contact-data p:first-child span {
-	margin-left: 25%;
+	margin-left: 33%;
+	}
+.contact-data p:last-child span {
+	padding-left: 45px;
 	}
 .contact-data span {
 	color: #afabab;
+	font-size: 24px;
 	}
 iframe {
 	border-radius: 10px;
 	}
 .contact-data{
-	font-size: 24px;
+	font-size: 18px;
 	color: #FAFAFA;
 	}
 .contact-data p{
@@ -283,7 +294,7 @@ iframe {
 .form-group input {
 	width: 50%;
 	height: 35px;
-	border: 2px solid black;
+	border: 2px solid #574b4b;
 	border-radius: 10px;
 	padding: 10px;
 	}
@@ -291,7 +302,7 @@ iframe {
 	width: 50%;
 	height: 150px;
 	resize: none;
-	border: 2px solid black;
+	border: 2px solid #574b4b;
 	border-radius: 10px;
 	padding: 10px;
 	}
@@ -311,12 +322,19 @@ button{
 	width: 160px;
 	height: 35px;
 	font-family: 'Russo One', sans-serif;
-	border: 2px solid black;
+	border: 2px solid #574b4b;
 	border-radius: 10px;
 	background-color: #fefefe;
 	}
  button[type="submit"] {
 	 margin-left: 50%;
+	 color: black;
+	 text-transform: uppercase;
+	 background: linear-gradient(#eee, #333);
+	 /*background: -webkit-linear-gradient(#eee, #333);*/
+	 /*-webkit-background-clip: text;*/
+	 /*-webkit-text-fill-color: transparent;*/
+	 background: -webkit-linear-gradient(#eee, #333);
 	}
  #further-info .d-flex {
 	 align-items: flex-start;
@@ -326,12 +344,12 @@ button{
  .col .info {
 	 margin-top: 20px;
 	 }
-.info, button[type="submit"] {
+.info {
 	/*padding: 10px 30px;*/
 	color: black;
 	background: #1D2B64; /* fallback for old browsers */
-	background: -webkit-linear-gradient(to top, #F8CDDA, #1D2B64); /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to top, #F8CDDA, #1D2B64); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background: -webkit-linear-gradient(to bottom, #F8CDDA, #1D2B64); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to bottom, #F8CDDA, #1D2B64); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	/*background: #C6FFDD;  !* fallback for old browsers *!*/
 	/*background: -webkit-linear-gradient(to bottom, #f7797d, #FBD786, #C6FFDD);  !* Chrome 10-25, Safari 5.1-6 *!*/
 	/*background: linear-gradient(to bottom, #f7797d, #FBD786, #C6FFDD); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
