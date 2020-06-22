@@ -161,7 +161,7 @@ a:hover, a:active {
 .btn-demo {
 	/*display: flex;*/
 	/*align-self: center;*/
-	padding: 0 30px;
+	padding: 20px 30px;
 	/*width: 210px;*/
 	font-weight: 800;
 	font-size: 1rem;
