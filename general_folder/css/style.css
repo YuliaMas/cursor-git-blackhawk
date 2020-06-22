@@ -1,0 +1,355 @@
+
+/*Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>*/
+@import url(../../css/reset.css);
+@import url(fonts.css);
+body {
+	overflow-x: hidden;
+	font-family: 'Russo One', sans-serif;
+	margin: 0 auto;
+	}
+.section {
+	width: 100vw;
+	height: 100vh;
+	padding-top: 60px;
+	}
+.container {
+	width: 90%;
+	max-width: 1800px;
+	min-height: 100%;
+	margin: 0 auto;
+	/*position: relative;*/
+	}
+.d-flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	}
+.header {
+	/*width: 100vw;*/
+	height: 60px;
+	background-color: #efa1dc;
+	box-shadow: 0 0 20px 0 black;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 999;
+	}
+.header-logo {
+	width: 20%;
+	}
+.header-menu {
+	width: 50%;
+	}
+.logo-link {
+	text-decoration: none;
+	color: black;
+	font-size: 30px;
+	}
+.menu-link {
+	text-decoration: none;
+	color: black;
+	font-size: 20px;
+	text-transform: uppercase;
+	}
+
+#home {
+	background-image: url("../img/two-computer-flat-screen-monitors-turned-on-777001.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	opacity: 0.7;
+	background-attachment: fixed;
+	background-position: center top;
+	}
+	/*@media (max-width: 1440px) {*/
+	/*	#home {*/
+	/*	background-position: center;*/
+	/*	}*/
+	/*}*/
+#home .container {
+	display: flex;
+	flex-direction: column;
+	}
+h1{
+	/*position: absolute;*/
+	/*top: 100px;*/
+	/*right: 20px;*/
+	font-size: 70px;
+	margin-top: 5px;
+	/*color: #fefefe;*/
+	text-align: center;
+	/*position: fixed;*/
+	left: calc(50% - 272px);
+	background: rgb(238,174,202);
+	background: -webkit-linear-gradient(rgba(238,174,202,1) 1%, rgba(148,187,233,1) 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	}
+	@media (max-width: 750px) {
+		h1 {
+			font-size: 44px;
+			left: calc(50% - 173px);
+			}
+		}
+h2 {
+	font-size: 50px;
+	color: #fefefe;
+	text-align: center;
+	margin-top: 20px;
+	position: sticky;
+	background: -webkit-linear-gradient(#eee, #333);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	}
+@media (max-width: 750px) {
+	h2 {
+		font-size: 30px;
+		}
+	}
+ .arrow-link i {
+	font-size: 80px;
+	/* position: absolute;*/
+	/*margin-top: 50%;*/
+	/* top: 75%;*/
+	/* margin-left: calc(50% - 100px);*/
+	}
+.arrow-link {
+	margin: 25% auto 0;
+	}
+.fa-arrow-alt-circle-down {
+	margin-top: 50px;
+	color: white;
+	border-radius: 50%;
+	animation-name: pulse;
+	animation-duration: 1.2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	}
+@keyframes pulse {
+	0% {
+		box-shadow: 0 0 0 0 rgba(255, 255, 255, 1);
+		margin-top: 50px;
+		}
+	50% {
+		margin-top: 35px;
+		}
+	100% {
+		box-shadow: 0 0 0 30px rgba(255, 255, 255, 0);
+		margin-top: 50px;
+		}
+	}
+/*#about {*/
+/*	!*background-color: #e1b0e2;*!*/
+/*	background-color: #d04e75;*/
+/*	opacity: 0.9;*/
+/*	}*/
+#about .photo {
+	margin-top: 50px;
+	position: relative;
+	z-index: 100;
+	width:	300px;
+	border: 5px solid #574b4b;
+	border-radius:  50%;
+	/*-webkit-box-shadow: 2px 2px 19px rgba(43, 0, 0, 0.69);*/
+	/*-moz-box-shadow:    2px 2px 19px rgba(43, 0, 0, 0.69);*/
+	/*box-shadow:         2px 2px 19px rgba(43, 0, 0, 0.69);*/
+	-webkit-box-shadow: -1px 3px 30px rgba(87, 73, 0, 0.69);
+	-moz-box-shadow:    -1px 3px 30px rgba(87, 73, 0, 0.69);
+	box-shadow:         -1px 3px 30px rgba(87, 73, 0, 0.69);
+	}
+#about .container{
+	justify-content: space-around;
+	align-items: flex-start;
+	}
+.about__info{
+	width: 50%;
+	font-size: 24px;
+	color: #574b4b;
+	/*text-align: center;*/
+	}
+.about__info h2 {
+	margin-top: 50px;
+	padding-bottom: 30px;
+	text-align: start;
+	}
+.about__icons i {
+	width: 30px	;
+	margin-right: 10px;
+	}
+h3 {
+	font-size: 35px;
+	color: #fefefe;
+	text-align: center;
+	margin-top: -30px;
+	position: sticky;
+	background: rgb(238,174,202);
+	background: -webkit-linear-gradient(rgba(238,174,202,1) 1%, rgba(148,187,233,1) 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	}
+#works {
+	background-image: url("../img/blur-close-up-code-computer-546819.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	opacity: 0.5;
+	background-attachment: fixed;
+	background-position: center top;
+	}
+.works-box{
+	width: 20vw;
+	height: 20vh;
+	border: 2px solid #000;
+	background-color: #fefefe;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 30px;
+	}
+.works-box img {
+	width: calc(20vw - 4px);
+	height: calc(20vh - 4px );
+	vertical-align: middle;
+	}
+/*@media (max-width: 1440px) {*/
+/*	#home {*/
+/*		background-position: center;*/
+/*		}*/
+/*	}*/
+/*#works2 {*/
+/*	!*background-color: #e1b0e2;*!*/
+/*	background-color: #d04e75;*/
+/*	opacity: 0.9;*/
+/*	}*/
+#works3 {
+	background-image: url("../img/office-working-app-computer-97077.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	opacity: 0.5;
+	background-attachment: fixed;
+	background-position: center top;
+	}
+#about, #works2, #further-info {
+	/*background-color: #e1b0e2;*/
+	/*background-color: #d04e75;*/
+	background: #d9a7c7;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #fffcdc, #d9a7c7);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to top, #fffcdc, #d9a7c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	opacity: 0.9;
+	}
+.col {
+	display: flex;
+	flex-direction: column;
+	}
+#contact {
+	background-image: url("../img/white-wooden-door-1475234.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	opacity: 0.7;
+	background-attachment: fixed;
+	}
+.contact-info h2 {
+	vertical-align: top;
+	}
+.contact-map {
+	width: 25%;
+	height: 45vh;
+	}
+.contact-data p:first-child span {
+	margin-left: 25%;
+	}
+.contact-data span {
+	color: #afabab;
+	}
+iframe {
+	border-radius: 10px;
+	}
+.contact-data{
+	font-size: 24px;
+	color: #FAFAFA;
+	}
+.contact-data p{
+	margin: 20px 0;
+	}
+.contact-form{
+	width: 100%;
+	}
+.form-group{
+	display: flex;
+	justify-content: space-between;
+	margin: 10px 0;
+	}
+.form-group input {
+	width: 50%;
+	height: 35px;
+	border: 2px solid black;
+	border-radius: 10px;
+	padding: 10px;
+	}
+.form-group textarea{
+	width: 50%;
+	height: 150px;
+	resize: none;
+	border: 2px solid black;
+	border-radius: 10px;
+	padding: 10px;
+	}
+.form-group input::placeholder,
+.form-group textarea::placeholder{
+	font-family: 'Russo One', sans-serif;
+	color: rgba(0, 0, 0, 0.5);
+	}
+.form-group input:focus,
+.form-group textarea:focus{
+	box-shadow: 0 0 10px 0 black;
+	}
+label {
+	color: #FAFAFA;
+	}
+button{
+	width: 160px;
+	height: 35px;
+	font-family: 'Russo One', sans-serif;
+	border: 2px solid black;
+	border-radius: 10px;
+	background-color: #fefefe;
+	}
+ button[type="submit"] {
+	 margin-left: 50%;
+	}
+ #further-info .d-flex {
+	 align-items: flex-start;
+	 justify-content: space-around;
+	 margin-top: 80px;
+	 }
+ .col .info {
+	 margin-top: 20px;
+	 }
+.info, button[type="submit"] {
+	/*padding: 10px 30px;*/
+	color: black;
+	background: #1D2B64; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #F8CDDA, #1D2B64); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to top, #F8CDDA, #1D2B64); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	/*background: #C6FFDD;  !* fallback for old browsers *!*/
+	/*background: -webkit-linear-gradient(to bottom, #f7797d, #FBD786, #C6FFDD);  !* Chrome 10-25, Safari 5.1-6 *!*/
+	/*background: linear-gradient(to bottom, #f7797d, #FBD786, #C6FFDD); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
+	}
+#footer {
+	width: 100vw;
+	height: 80px;
+	background-color: #574b4b;
+	opacity: 0.8;
+	}
+.footer__writer {
+	color: #FAFAFA;
+	}
+.logo {
+	width: 15%;
+	}
+.footer__icons {
+	width: 15%;
+	display: flex;
+	justify-content: space-between;
+	}
