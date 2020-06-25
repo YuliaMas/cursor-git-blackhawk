@@ -330,11 +330,41 @@ button{
 	 margin-left: 50%;
 	 color: black;
 	 text-transform: uppercase;
-	 background: linear-gradient(#eee, #333);
-	 /*background: -webkit-linear-gradient(#eee, #333);*/
-	 /*-webkit-background-clip: text;*/
-	 /*-webkit-text-fill-color: transparent;*/
 	 background: -webkit-linear-gradient(#eee, #333);
+	 -webkit-background-clip: text;
+	 -webkit-text-fill-color: transparent;
+	 box-shadow:
+			 0 6px rgba(54, 50, 50,.9),
+			 0 3px 15px rgba(0,0,0,.4),
+			 inset 0 1px rgba(255,255,255,.3),
+			 inset 0 0 3px rgba(255,255,255,.5);
+	 transition: 0.2s;
+	}
+button[type="submit"]:hover {
+	opacity: 0.9;
+	color: black;
+	-webkit-background-clip: text;
+	background: linear-gradient(#eee, #333);
+	background: -webkit-linear-gradient(#eee, #333);
+	/*-webkit-background-clip: text;*/
+	-webkit-text-fill-color: white;
+	}
+button[type="submit"]:active {
+	color: black;
+	opacity: 1;
+	-webkit-background-clip: text;
+	background: linear-gradient(#eee, #333);
+	background: -webkit-linear-gradient(#eee, #333);
+	/*-webkit-background-clip: text;*/
+	-webkit-text-fill-color: white;
+	padding: calc(.25em + 1px) .5em calc(.25em - 1px);
+	box-shadow:
+			0 2px rgba(54, 50, 50,.9),
+			0 1px 6px rgba(0,0,0,.4),
+			inset 0 1px rgba(255,255,255,.3),
+			inset 0 0 3px rgba(255,255,255,.5);
+	-webkit-transform: translate(0, 4px);
+	transform: translate(0, 4px);
 	}
  #further-info .d-flex {
 	 align-items: flex-start;
@@ -373,4 +403,7 @@ button{
 	width: 15%;
 	display: flex;
 	justify-content: space-between;
+	}
+.svg-color:hover {
+	fill: #ffff00;
 	}
