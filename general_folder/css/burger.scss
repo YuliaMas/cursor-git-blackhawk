@@ -1,0 +1,193 @@
+/* imports */
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+@media (max-width: 850px) {
+
+  /* colors */
+  $colors: (
+          primary: #5634d1,
+          accent: #28dde0,
+          black: #2b3742,
+          white: white,
+  );
+
+  @function color($key) {
+    @return map-get($colors, $key);
+  }
+  @function contrast-color($color,
+	$dark: color(black), $light: color(white)) {
+    @if (lightness($color) > 75) {
+      @return $dark;
+    } @else {
+      @return $light;
+    }
+  }
+
+  $colors: map-merge($colors, (
+          text-dark: rgba(color(black), .75),
+          text-light: rgba(color(white), .75),
+  ));
+
+  /* variables */
+  $html-background: color(primary);
+  $html-font: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  $nav-background: color(accent);
+  $nav-width: 10rem;
+  $nav-z-index: 1;
+  $nav-toggle-bar-height: 0.2rem;
+  $nav-toggle-bar-width: 1.6rem;
+  $nav-toggle-z-index: 2;
+
+  /* mixins */
+  @mixin center-vertically($position: absolute) {
+    position: $position;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  @mixin transform($transform) {
+    -ms-transform: $transform;
+    -webkit-transform: $transform;
+    transform: $transform;
+  }
+
+  /* resets and base styles */
+  * {
+    box-sizing: border-box;
+  }
+
+  nav {
+    background: none;
+    //background: linear-gradient(145deg, #ee82ee, slateblue, #ffd86a, purple);
+    color: inherit;
+    //display: flex;
+    //flex-direction: column;
+    //justify-content: flex-start;
+    font: inherit;
+    font-size: 1.2rem;
+    min-height: 100vh;
+  }
+
+  a {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  /* nav toggle */
+  .nav-toggle {
+    cursor: pointer;
+    //height: 5 * $nav-toggle-bar-height;
+    position: fixed;
+    top: 2rem;
+    right: 1.5rem;
+    width: $nav-toggle-bar-width;
+    z-index: $nav-toggle-z-index;
+    max-width: 20%;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    .nav-toggle-bar,
+    .nav-toggle-bar::after,
+    .nav-toggle-bar::before {
+      @include center-vertically;
+      background: contrast-color($nav-background);
+      background: linear-gradient(145deg, #ee82ee, slateblue, #ffd86a, purple);
+      content: '';
+      height: $nav-toggle-bar-height;
+      transition: all .5s;
+      width: 100%;
+    }
+
+    .nav-toggle-bar {
+      margin-top: 0;
+    }
+
+    .nav-toggle-bar::after {
+      margin-top: 2 * $nav-toggle-bar-height;
+    }
+
+    .nav-toggle-bar::before {
+      margin-top: -2 * $nav-toggle-bar-height;
+    }
+
+    &.expanded .nav-toggle-bar {
+      background: transparent;
+    }
+
+    &.expanded .nav-toggle-bar::after,
+    &.expanded .nav-toggle-bar::before {
+      background: contrast-color($nav-background);
+      margin-top: 0;
+    }
+
+    &.expanded .nav-toggle-bar::after {
+      @include transform(rotate(45deg));
+    }
+
+    &.expanded .nav-toggle-bar::before {
+      @include transform(rotate(-45deg));
+    }
+  }
+
+  /* nav */
+  .nav {
+    background: $nav-background;
+    background: linear-gradient(145deg, #ee82ee, slateblue, #ffd86a, purple);
+    color: contrast-color($nav-background);
+    cursor: pointer;
+    //display: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 2rem;
+    height: 100vh;
+    right: -$nav-width;
+    padding: 6rem 0 2rem;
+    position: fixed;
+    top: 60px;
+    transition: right 1s;
+    width: $nav-width;
+    z-index: $nav-z-index;
+
+    &.expanded {
+      right: 0;
+      //display: flex;
+    }
+
+    //a {
+    //  //@include center-vertically;
+    //  //list-style: none;
+    //  margin: auto 0;
+    //  padding: 0;
+    //}
+  }
+
+  //#main {
+  //  $-background-top: rgba(color(accent), .5);
+  //  $-background-bottom: rgba(color(primary), .5);
+  //  $-background-gradient: linear-gradient(to bottom,
+  //          $-background-top, $-background-bottom);
+  //  $-background-url: url('https://source.unsplash.com/r9eIL7jtenc');
+  //
+  //  background-image: $-background-gradient, $-background-url;
+  //  background-position: center;
+  //  background-repeat: no-repeat;
+  //  background-size: cover;
+  //  color: contrast-color($-background-top,
+  //          color(text-dark), color(text-light));
+  //  flex-grow: 1;
+  //  flex-shrink: 0;
+  //  padding: 2rem;
+  //  position: relative;
+  //}
+}
