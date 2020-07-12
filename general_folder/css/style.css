@@ -184,15 +184,22 @@ html,body {
 	background-color: #ddd;
 	color: black;
 	}
-
+.dropdown .dropdown-content {
+	overflow: hidden;
+	}
 .dropdown:hover .dropdown-content {
 	display: block;
 	transition: all	2s;
 	}
-
-.dropdown:active .dropdown-content {
+.dropbtn:focus .dropdown-content , .dropbtn:active .dropdown-content {
 	display: block;
 	transition: all	2s;
+	overflow: visible;
+	}
+.dropdown:active .dropdown-content, .dropdown:focus .dropdown-content {
+	display: block;
+	transition: all	2s;
+	overflow: visible;
 	}
 
 #home {

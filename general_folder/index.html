@@ -201,23 +201,25 @@
 		<div class="contact-info">
 			<div class="contact-data">
 				<p>Address:<span> Ukraine, Lviv</span></p>
-				<p>Email:<span> julia.masechko.web@gmail.com</span></p>
+				<p>Email:<span> <a href="mailto:julia.masechko.web@gmail.com">julia.masechko.web@gmail.com</a></span></p>
 			</div>
 			<div class="contact-form">
-				<form>
+				<form action="https://github.com/YuliaMas/cursor-git-blackhawk/general_folder/contact.php" method="POST"
+							name="f1"
+							target="_blank">
 					<div class="form-group">
 						<label for="name">Name:</label>
-						<input type="text" id="name" placeholder="name here ..." required pattern="[a-zA-Z]{2,}">
+						<input type="text" name="name1" id="name" placeholder="name here ..." required pattern="[a-zA-Z]{2,}">
 					</div>
 					<div class="form-group">
 						<label for="email">Email:</label>
-						<input type="email" id="email" placeholder="email here ..." required>
+						<input type="email" id="email"  name="email" placeholder="email here ..." required>
 					</div>
 					<div class="form-group">
 						<label for="description">Description:</label>
-						<textarea id="description" placeholder="description here ..." required></textarea>
+						<textarea id="description" name="text" placeholder="description here ..." required></textarea>
 					</div>
-					<button type="submit">send</button>
+					<button name="sab" type="submit">send</button>
 				</form>
 			</div>
 		</div>
