@@ -1,6 +1,6 @@
 /*Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>*/
-@import url(../../css/reset.css);
 @import url(fonts.css);
+@import url(../../css/reset.css);
 
 html,body {
 	overflow-x: hidden;
@@ -56,9 +56,9 @@ html,body {
 	position: relative;
 	width: 50%;
 	}
-	@media (max-width: 1200px) and  (min-width: 850px){
+	@media (max-width: 1200px) and  (min-width: 950px){
 		.header-menu {
-			width: 60%;
+			width: 65%;
 			}
 		}
 
@@ -97,6 +97,9 @@ html,body {
 	color: white;
 	}
 
+@media (max-width: 1020px) and (min-width: 850px) {
+
+	}
 .dropdown .dropbtn {
 	font-size: 1rem;
 	height: 45px;
@@ -120,12 +123,12 @@ html,body {
 .dropdown .dropbtn2 {
 	max-width: 110px;
 	}
-@media (max-width: 500px) {
-	.dropdown .dropbtn2 {
-		max-width: 70px;
-		height: 40px;
+	@media (max-width: 500px) {
+		.dropdown .dropbtn2 {
+			max-width: 70px;
+			height: 40px;
+			}
 		}
-	}
 
 .dropdown-content {
 	display: none;
@@ -137,7 +140,7 @@ html,body {
 	margin-top: 3px;
 	z-index: 1;
 	}
-	@media (max-width: 850px) {
+	@media (max-width: 950px) {
 		.dropdown-content {
 			width: 130px;
 			position: absolute;
@@ -162,7 +165,7 @@ html,body {
 	font-size: 12px;
 	padding: 12px 18px;
 	}
-	@media (max-width: 850px) {
+	@media (max-width: 950px) {
 		.dropdown-content a {
 			padding: 10px 8px;
 			font-size: 12px;
@@ -245,12 +248,13 @@ h2 {
 		}
 	}
 
- .arrow-link i {
+
+.arrow-link i {
 	font-size: 4.44rem;
-	/* position: absolute;*/
-	/*margin-top: 50%;*/
-	/* top: 75%;*/
-	/* margin-left: calc(50% - 100px);*/
+	position: absolute;
+	/* margin-top: 50%; */
+	top: 50%;
+	left: calc(50% - 1.8rem);
 	}
 
 .arrow-link {
@@ -292,17 +296,26 @@ h2 {
 	-moz-box-shadow: -1px 3px 30px rgba(87, 73, 0, 0.69);
 	box-shadow: -1px 3px 30px rgba(87, 73, 0, 0.69);
 	}
-		@media (max-width: 800px) {
+		@media (max-width: 1200px) {
 			#about .photo {
 				width: 250px;
 				}
 		}
-		@media (max-width: 500px) {
+	@media (max-width: 800px) and (min-width: 750px){
+		#about .about__info {
+			font-size: 1rem;
+			}
+		}
+		@media (max-width: 750px) {
+			#about {
+				padding-top: 0;
+				}
+			#about .about__photo {
+				align-self: flex-end;
+				}
 			#about .photo {
 				width: 109px;
-			}
-			#about .photo {
-				margin-top: 0;
+				/*margin-top: 0;*/
 			}
 			#about .about__info {
 				width: 100%;
@@ -318,7 +331,7 @@ h2 {
 	align-items: flex-start;
 	}
 
-.about__info{
+ .about__info{
 	width: 50%;
 	font-size: 1.33rem;
 	color: #574b4b;
@@ -471,7 +484,7 @@ h3 {
 	height: 45vh;
 	}
 	@media (max-width: 800px) {
-		.contact-map {
+		.contact-map , iframe {
 			display: none;
 			}
 		}

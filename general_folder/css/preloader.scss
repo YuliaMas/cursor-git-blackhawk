@@ -1,5 +1,5 @@
-$size: 150px;
-$dif: $size/14;
+$size: 100px;
+$dif: $size/10;
 body {
   background-color:  #d6a4a4;
   background: -webkit-linear-gradient(to left, #c4d1f5, #d6a4a4);  /* Chrome 10-25, Safari 5.1-6 */
@@ -11,8 +11,8 @@ body {
   height: $size;
   width: $size;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 52%;
+  left: calc(50% - 50px);
   -webkit-transform: translate(-50%, -50%, 0);
   -moz-transform: translate(-50%, -50%, 0);
   -ms-transform: translate(-50%, -50%, 0);
@@ -54,10 +54,10 @@ body {
     left: $i*$dif/2;
     background-color: rgba($red, $green, $blue, 1);
 
-    -webkit-animation: rotate#{$i} 8s infinite linear;
-    -moz-animation: rotate#{$i} 8s infinite linear;
-    -o-animation: rotate#{$i} 8s infinite linear;
-    animation: rotate#{$i} 8s infinite linear;
+    -webkit-animation: rotate#{$i} 5s infinite linear;
+    -moz-animation: rotate#{$i} 5s infinite linear;
+    -o-animation: rotate#{$i} 5s infinite linear;
+    animation: rotate#{$i} 5s infinite linear;
   }
 }
 
