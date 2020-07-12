@@ -196,11 +196,11 @@ html,body {
 	transition: all	2s;
 	overflow: visible;
 	}
-.dropdown:active .dropdown-content, .dropdown:focus .dropdown-content {
-	display: block;
-	transition: all	2s;
-	overflow: visible;
-	}
+/*.dropdown:active .dropdown-content, .dropdown:focus .dropdown-content {*/
+/*	display: block;*/
+/*	transition: all	2s;*/
+/*	overflow: visible;*/
+/*	}*/
 
 #home {
 	background-image: url("../img/two-computer-flat-screen-monitors-turned-on-777001.jpg");
@@ -288,9 +288,6 @@ h2 {
 	width: 300px;
 	border: 5px solid #574b4b;
 	border-radius: 50%;
-	/*-webkit-box-shadow: 2px 2px 19px rgba(43, 0, 0, 0.69);*/
-	/*-moz-box-shadow:    2px 2px 19px rgba(43, 0, 0, 0.69);*/
-	/*box-shadow:         2px 2px 19px rgba(43, 0, 0, 0.69);*/
 	-webkit-box-shadow: -1px 3px 30px rgba(87, 73, 0, 0.69);
 	-moz-box-shadow: -1px 3px 30px rgba(87, 73, 0, 0.69);
 	box-shadow: -1px 3px 30px rgba(87, 73, 0, 0.69);
@@ -325,7 +322,6 @@ h2 {
 	width: 50%;
 	font-size: 1.33rem;
 	color: #574b4b;
-	/*text-align: center;*/
 	}
 
 .about__info h2 {
