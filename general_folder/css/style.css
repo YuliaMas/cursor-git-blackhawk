@@ -421,10 +421,11 @@ h3 {
 
 .works-box img:hover {
 	width: calc(20vw - 5px);
-	height: calc(20vh - 3px );
+	height: calc(20vh - 3px);
 	cursor: pointer;
 	transition: transform .5s,filter 1.5s ease-in-out;
 	}
+
 
 #works3 {
 	background-image: url("../img/office-working-app-computer-97077.jpg");
