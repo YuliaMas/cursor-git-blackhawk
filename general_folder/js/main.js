@@ -95,16 +95,26 @@ function randomF() {
 }
 
 function prevSize(image) {
-  image.style.width = " calc(15vw - 4px) ";
-  image.style.height = " calc(15vh - 4px ) ";
+  // image.style.width = " calc(15vw - 4px) ";
+  // image.style.height = " calc(15vh - 4px ) ";
+  image.style.zoom = "1";
+  image.onmouseout = function () {
+    this.zoom = "1";
+  };
+  image.style.transition = "0.3s ease-to-in";
 
   setTimeout(changeSize, 1000);
 }
 
 function changeSize() {
   let image = randomF();
-  image.style.width = "calc(20vw - 5px)";
-  image.style.height = "calc(20vh - 3px)";
+  // image.style.width = "calc(20vw - 5px)";
+  // image.style.height = "calc(20vh - 3px)";
+  image.style.zoom = "1.2";
+  image.onmouseover = function () {
+    this.zoom = "1.2";
+  };
+  image.style.transition = "0.3s ease-to-in";
 
   setTimeout(prevSize, 1000, image);
 }

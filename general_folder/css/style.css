@@ -137,7 +137,8 @@ html,body {
 	width: 140px;
 	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 	border-radius: 10px;
-	margin-top: 3px;
+	/*transform: translateY(3px);*/
+	/*margin-top: 3px;*/
 	z-index: 1;
 	}
 	@media (max-width: 950px) {
@@ -423,7 +424,7 @@ h3 {
 	width: calc(20vw - 5px);
 	height: calc(20vh - 3px);
 	cursor: pointer;
-	transition: transform .5s,filter 1.5s ease-in-out;
+	transition: transform .5s, filter 1.5s ease-in-out;
 	}
 
 
