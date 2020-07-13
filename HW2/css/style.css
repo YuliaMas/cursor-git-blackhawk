@@ -1,6 +1,9 @@
+* {
+	margin: 0;
+	}
 body {
 	max-width: 1000px;
-	margin: 10px 50px;
+	margin: 10px auto;
 	background-color: bisque;
 	font-family: 'Roboto', sans-serif;
 }
@@ -10,13 +13,19 @@ h1, h2 {
 h1 {
 	color: darkred;
 }
+nav a {
+	margin-left: 40px ;
+	}
 #form_table__container {
 	display: flex;
 	justify-content: space-around;
+	flex-wrap: wrap;
+	max-width: 800px;
+	margin: 30px auto;
 }
 table {
 	width:100%;
-	margin-top: 30px;
+	margin: 30px 0 70px;
 }
 table, th, td {
 	border: 1px solid black;
@@ -83,8 +92,32 @@ input[type="checkbox"] {
 	background-color: #FFF;
 	color: #000;
 	text-align: center;
-	margin: 0;
+	padding: 20px;
 }
 .footer p, h2 {
 	color: darkblue;
 }
+
+@media (max-width: 1200px) and ( min-width: 550px) {
+	nav a {
+		margin-left: 140px;
+		}
+	h1, h2 {
+		margin-left: 30px;
+		}
+	}
+@media (max-width: 550px) {
+	nav a {
+		margin-left: 140px;
+		}
+	aside {
+		margin-left: 70px;
+		}
+	h1, h2 {
+		margin-left: 50px;
+		}
+	table {
+		transform: rotateY(45deg);
+		margin-left: 30px;
+		}
+	}
