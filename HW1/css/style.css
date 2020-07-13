@@ -42,3 +42,8 @@ td {
 img {
 	width: 100%;
 }
+img:hover {
+	transition: transform 0.3s ease;
+	transform: scale(1.2);
+	cursor: pointer;
+	}
