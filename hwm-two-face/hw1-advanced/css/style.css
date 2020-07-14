@@ -1,0 +1,120 @@
+html, body {
+	width: 100vw;
+	height: auto;
+	margin: auto;
+	background: #E5E5E5;
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+	font-size: 16px;
+	}
+.wrapper {
+	width: 100%;
+	margin: auto;
+	border: 2px solid rgba(160, 12, 12, 0.94);
+	height: 100vh;
+	background: #E5E5E5;
+	overflow-x: hidden;
+	}
+.all-wrapper {
+	margin: auto;
+	max-width: 1440px;
+	}
+main {
+	display: flex;
+	justify-content: center;
+	padding-top: 30px;
+	}
+input {
+	-webkit-appearance: button;
+	}
+nav , header, main , footer {
+	width: inherit;
+	}
+nav {
+	margin-left: 50px;
+	}
+h1 , h2 , h3 {
+	font-family: 'Lato', sans-serif ;
+	font-style: normal;
+	font-weight: bold;
+	color: #333333;
+	}
+h1 {
+	font-size: 2rem;
+	line-height: 48px;
+	letter-spacing: 0.03em;
+	}
+h2 {
+	font-size: 1.5rem;
+	line-height: 37px;
+	}
+h3 {
+	font-size: 1rem;
+	line-height: 21px;
+	color: #00ADEE;
+	}
+p {
+	font-family: 'Lato', sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 1rem;
+	line-height: 23px;
+	color: #4F4F4F;
+	}
+fieldset {
+	max-width: 300px;
+	box-shadow: 4px 10px 10px grey;
+	border: 2px solid dodgerblue;
+	padding-block-start: 0.35em;
+	padding-inline-start: 0.75em;
+	padding-inline-end: 0.75em;
+	padding-block-end: 0.625em;
+	}
+legend {
+	font-size: 1.2rem;
+	font-weight: 700;
+	}
+.contact_form__container {
+	display: flex;
+	flex-direction: column;
+	padding-left: 30px;
+	padding-top: 20px;
+	}
+.contact_form__container label, .form_text {
+	padding-top: 15px;
+	font-style: italic;
+	font-weight: 600;
+	}
+#city, #comment, .contact_form__container input {
+	border: black solid 1px;
+	border-radius: 10px;
+	box-shadow: 2px 5px 5px grey;
+	margin: 20px 30px;
+	padding: 5px;
+	}
+button {
+	border: black solid 2px;
+	border-radius: 10px;
+	box-shadow: 2px 5px 5px grey;
+	margin: 20px 90px 50px;
+	padding: 5px 20px;
+	}
+h1, h2, footer {
+	text-align: center;
+	}
+.shop span:first-child {
+	width: 30%;
+	margin-right: 20px;
+	}
+span:nth-child(2) {
+	margin-right: 20%;
+	}
+.shop {
+	display: flex;
+	justify-content: stretch;
+	}
+label {
+	display: flex;
+	justify-content: space-around;
+	width: 80%;
+	}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<title>Змінні та типи данних</title>
+	<link rel="stylesheet" href="./../../css/reset.css">
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<div class="wrapper">
+	<header>
+		<nav>
+			<a href="../index.html" title="My homeworks Advanced">
+				<i class="far fa-hand-point-left"></i>
+				Return
+			</a>
+		</nav>
+		<h1 id="title">Homework &#35;1 MY SHOP</h1>
+		<h2>BASIC</h2>
+	</header>
+	<main>
+		<form>
+			<fieldset>
+				<legend>Магазин</legend>
+				<div>
+					<p class="form_text">Вибери потрібний продукт: </p>
+					<div class="shop">
+						<input type="checkbox" id="Pillow" name="product" value="pillow" >
+						<label  for="Pillow"><span>Подушка</span><span id="Pillow1"></span></label>
+					</div>
+					<div class="shop">
+						<input type="checkbox" id="Blanket" name="product" value="Blanket" >
+						<label for="Blanket"><span>Одіяло</span><span id="Blanket1"></span></label>
+					</div>
+					<div class="shop">
+						<input type="checkbox" id="Towel" name="product" value="Towel" >
+						<label for="Towel"><span>Рушник</span><span id="Towel1"></span></label>
+					</div>
+				</div>
+
+<!--				<div class="contact_form__container">-->
+<!--					<div>-->
+<!--						<label>Your name :-->
+<!--							<input  placeholder="Input your name" type="text" required>-->
+<!--						</label>-->
+<!--					</div>-->
+<!--					<div>-->
+<!--						<label>Your surname :-->
+<!--							<input   placeholder="Input your surname" type="text" required>-->
+<!--						</label>-->
+<!--					</div>-->
+
+<!--					<div>-->
+<!--						<label>Your E-mail :-->
+<!--							<input   placeholder="Input your email" type="text" required>-->
+<!--						</label>-->
+<!--					</div>-->
+
+<!--					<div>-->
+<!--						<p class="form_text">Please select your gender :</p>-->
+<!--						<label  for="male"><span>Male</span></label>-->
+<!--						<input type="radio" id="male" name="gender"  value="male" checked>-->
+<!--						<label  for="female"><span>Female</span></label>-->
+<!--						<input type="radio"   id="female" name="gender" value="female">-->
+<!--					</div>-->
+
+<!--					<div>-->
+<!--						<label for="city">City :</label>-->
+<!--						<select name="city" id="city">-->
+<!--							<option value="Choose your city" selected disabled>-->
+<!--								Choose your city-->
+<!--							</option>-->
+<!--							<option value="Lviv">Lviv</option>-->
+<!--							<option value="Kyiv">Kyiv</option>-->
+<!--							<option value="Kharkiv">Kharkiv</option>-->
+<!--							<option value="Odessa">Odessa</option>-->
+<!--						</select>-->
+<!--					</div>-->
+
+
+<!--				</div>-->
+
+				<div class="contact_form__container">
+				<p>Максимальна ціна: <span id="max"></span></p>
+				<p>Мінімальна ціна: <span id="min"></span></p>
+				<p>Заокруглена сума товарів:  <span id="sumRound">0</span></p>
+				<p>Заокруглена сума товарів: <span id="isEven"></span></p>
+				<p>Заокруглена сума товарів до сотень: <span id="sumRound100">0</span></p>
+				<p>Середня вартість товарів: <span id="average">0</span></p>
+				<p>Вартість всіх товарів: <span id="sum">0</span></p>
+				<button onclick="sum();return false;">Порахувати</button>
+				<div>
+					<label>Номінал:
+						<input  id="currency" value="500" type="text" required>
+					</label>
+				</div>
+					<p>Решта: <span id="remainder">0</span></p>
+					<p>Решта зі знижкою: <span id="remainderDiscount">0</span></p>
+					<button onclick="remainderF();return false;">Порахувати решту</button>
+
+					<p>Знижка клієнта: <span id="discount">0%</span></p>
+					<p>Сума до оплати зі знижкою: <span id="sumPaid">0</span></p>
+					<button onclick="randomF();return false;">До оплати</button>
+			</div>
+
+			</fieldset>
+
+		</form>
+	</main>
+	<footer>
+		<div class="footer">
+			<p>&copy; Copyright 2020  Yuliya Masechko</p>
+		</div>
+	</footer>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>
