@@ -24,10 +24,10 @@ function sum() {
   average();
 }
 
-const arr = [towel, blanket, pillow];
-const maxNum = Math.max(...arr);
+const arrProduct = [towel, blanket, pillow];
+const maxNum = Math.max(...arrProduct);
 document.querySelector("#max").textContent = `${maxNum}`;
-const minNum = Math.min(...arr);
+const minNum = Math.min(...arrProduct);
 document.querySelector("#min").textContent = `${minNum}`;
 
 document.getElementById("Pillow1").textContent = `${pillow}`;
@@ -49,7 +49,7 @@ function sumRoundF() {
 
   document.querySelector("#sumRound").textContent = `${sumRound}`;
 
-  const isEven = sumRound % 2 === 0 ? "парнa" : "непарнa";
+  const isEven = sumRound % 2 === 0 ? "true" : "false";
   document.querySelector("#isEven").textContent = `${isEven}`;
 
   const sumRound100 = Math.round(sumRound / 100) * 100;
@@ -60,7 +60,7 @@ remainderF = () => {
   const currency = document.getElementById("currency").value;
   const remainder = (currency - summary).toFixed(4);
   document.getElementById("remainder").textContent = `${remainder}`;
-  const remainderDiscount = (currency - summaryRandom).toFixed(4);
+  const remainderDiscount = (currency - summaryDiscount).toFixed(2);
   document.getElementById(
     "remainderDiscount"
   ).textContent = `${remainderDiscount}`;
@@ -77,16 +77,27 @@ average = () => {
   if (chboxTowel.checked) {
     ++num;
   }
-  let average = 0;
-  average = (summary / num).toFixed(2);
+
+  const average = (summary / num).toFixed(2);
   document.querySelector("#average").textContent = `${average}`;
 };
 
-let summaryRandom = 0;
+let summaryDiscount = 0;
 randomF = () => {
   const discount = Math.floor(Math.random() * 100);
   document.getElementById("discount").textContent = `${discount} %`;
-  const sumRandom = ((summary * discount) / 100).toFixed(2);
-  document.querySelector("#sumPaid").textContent = `${sumRandom}`;
-  summaryRandom = sumRandom;
+
+  const discountFloat = (summary * discount) / 100;
+  const sumDiscount = (summary - discountFloat).toFixed(2);
+  document.querySelector("#sumPaid").textContent = `${sumDiscount}`;
+  summaryDiscount = sumDiscount;
+
+  const cost = Math.trunc(summary) / 2;
+
+  if (discount > 0) {
+    const proceeds = (cost - discountFloat).toFixed(2);
+    document.querySelector("#clearProc").textContent = `${proceeds}`;
+  } else {
+    document.querySelector("#clearProc").textContent = `${cost}`;
+  }
 };
