@@ -26,6 +26,7 @@ main {
 	}
 input {
 	-webkit-appearance: button;
+	cursor: pointer;
 	}
 nav , header, main , footer {
 	width: inherit;
@@ -98,6 +99,7 @@ button {
 	box-shadow: 2px 5px 5px grey;
 	margin: 20px 90px 50px;
 	padding: 5px 20px;
+	cursor: pointer;
 	}
 h1, h2, footer {
 	text-align: center;
@@ -117,6 +119,7 @@ label {
 	display: flex;
 	justify-content: space-around;
 	width: 80%;
+	cursor: pointer;
 	}
  .discount-block p:first-child {
 	margin-bottom: 20px;
