@@ -1,6 +1,10 @@
-const towel = 15.678;
-const blanket = 123.965;
-const pillow = 90.2345;
+// const towel = 15.678;
+// const blanket = 123.965;
+// const pillow = 90.2345;
+
+const pillow = +prompt("Введіть ціну подушки:", "15.678");
+const blanket = +prompt("Введіть ціну одіяла:", "123.965");
+const towel = +prompt("Введіть ціну рушника:", "90.2345");
 
 const chboxPillow = document.getElementById("Pillow");
 const chboxBlanket = document.getElementById("Blanket");
