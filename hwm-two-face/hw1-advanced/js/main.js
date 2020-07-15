@@ -11,15 +11,15 @@ let blanket = null;
 let pillow = null;
 
 while (pillow == null) {
-  pillow = prompt("Input value", "90.2345");
+  pillow = prompt("Введіть ціну подушки", "90.2345");
   pillow = isNaN(pillow) ? null : parseInt(pillow);
 }
 while (blanket == null) {
-  blanket = prompt("Input value", "123.965");
+  blanket = prompt("Введіть ціну одіяла", "123.965");
   blanket = isNaN(blanket) ? null : parseInt(blanket);
 }
 while (towel == null) {
-  towel = prompt("Input value", "15.678");
+  towel = prompt("Введіть ціну рушника", "15.678");
   towel = isNaN(towel) ? null : parseInt(towel);
 }
 
