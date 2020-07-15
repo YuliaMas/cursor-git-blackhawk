@@ -132,3 +132,14 @@ label {
 	 border-top: 1px solid white;
 	 padding: 15px 0 ;
 	 }
+ @media (max-width: 350px) {
+	 fieldset {
+		 padding-inline-start: 2.95em;
+		 }
+	 .discount-block label , .form_product-block{
+		 padding-left: 20px;
+		 }
+	.contact_form__container {
+			padding-left: 0;
+			}
+	 }
