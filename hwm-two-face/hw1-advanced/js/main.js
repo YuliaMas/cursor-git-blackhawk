@@ -2,9 +2,26 @@
 // const blanket = 123.965;
 // const pillow = 90.2345;
 
-const pillow = +prompt("Введіть ціну подушки:", "15.678");
-const blanket = +prompt("Введіть ціну одіяла:", "123.965");
-const towel = +prompt("Введіть ціну рушника:", "90.2345");
+// const pillow = prompt("Введіть ціну подушки:", "90.2345");
+// const blanket = prompt("Введіть ціну одіяла:", "123.965");
+// const towel = prompt("Введіть ціну рушника:", "15.678");
+
+let towel = null;
+let blanket = null;
+let pillow = null;
+
+while (pillow == null) {
+  pillow = prompt("Input value", "90.2345");
+  pillow = isNaN(pillow) ? null : parseInt(pillow);
+}
+while (blanket == null) {
+  blanket = prompt("Input value", "123.965");
+  blanket = isNaN(blanket) ? null : parseInt(blanket);
+}
+while (towel == null) {
+  towel = prompt("Input value", "15.678");
+  towel = isNaN(towel) ? null : parseInt(towel);
+}
 
 const chboxPillow = document.getElementById("Pillow");
 const chboxBlanket = document.getElementById("Blanket");
@@ -31,6 +48,7 @@ function sum() {
 const arrProduct = [towel, blanket, pillow];
 const maxNum = Math.max(...arrProduct);
 document.querySelector("#max").textContent = `${maxNum}`;
+
 const minNum = Math.min(...arrProduct);
 document.querySelector("#min").textContent = `${minNum}`;
 
@@ -64,6 +82,7 @@ remainderF = () => {
   const currency = document.getElementById("currency").value;
   const remainder = (currency - summary).toFixed(4);
   document.getElementById("remainder").textContent = `${remainder}`;
+
   const remainderDiscount = (currency - summaryDiscount).toFixed(2);
   document.getElementById(
     "remainderDiscount"
