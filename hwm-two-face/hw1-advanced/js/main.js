@@ -2,26 +2,41 @@
 // const blanket = 123.965;
 // const pillow = 90.2345;
 
-// const pillow = prompt("Введіть ціну подушки:", "90.2345");
-// const blanket = prompt("Введіть ціну одіяла:", "123.965");
-// const towel = prompt("Введіть ціну рушника:", "15.678");
+// const pillow = +prompt("Введіть ціну подушки:", "90.2345");
+// const blanket = +prompt("Введіть ціну одіяла:", "123.965");
+// const towel = +prompt("Введіть ціну рушника:", "15.678");
 
-let towel = null;
-let blanket = null;
-let pillow = null;
+let pillow;
+let blanket;
+let towel;
 
-while (pillow == null) {
-  pillow = prompt("Введіть ціну подушки", "90.2345");
-  pillow = isNaN(pillow) ? null : parseInt(pillow);
-}
-while (blanket == null) {
-  blanket = prompt("Введіть ціну одіяла", "123.965");
-  blanket = isNaN(blanket) ? null : parseInt(blanket);
-}
-while (towel == null) {
-  towel = prompt("Введіть ціну рушника", "15.678");
-  towel = isNaN(towel) ? null : parseInt(towel);
-}
+priceVoid = (i) => {
+  let productPrice = null;
+  let arrName = ["подушки", "одіяла", "рушника"];
+  let arrPrice = ["90.2345", "123.965", "15.678"];
+
+  while (productPrice === null) {
+    productPrice = prompt(`Введіть ціну ${arrName[i]}`, `${arrPrice[i]}`);
+    productPrice =
+      isNaN(productPrice) || productPrice === "" || productPrice === null
+        ? null
+        : parseFloat(productPrice);
+  }
+  return productPrice;
+};
+
+pillow = priceVoid(0);
+blanket = priceVoid(1);
+towel = priceVoid(2);
+
+// while (blanket == null) {
+//   blanket = prompt("Введіть ціну одіяла", "123.965");
+//   blanket = isNaN(blanket) ? null : parseInt(blanket);
+// }
+// while (towel == null) {
+//   towel = prompt("Введіть ціну рушника", "15.678");
+//   towel = isNaN(towel) ? null : parseInt(towel);
+// }
 
 const chboxPillow = document.getElementById("Pillow");
 const chboxBlanket = document.getElementById("Blanket");

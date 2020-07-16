@@ -104,21 +104,37 @@ button {
 h1, h2, footer {
 	text-align: center;
 	}
-.shop span:first-child {
-	width: 30%;
+.shop span:nth-child(2) {
+	/*width: 30%;*/
+	/*padding-left: 40px;*/
+	/*!*margin-right: 20px;*!*/
+	width: 43%;
+	padding-left: 40px;
 	margin-right: 20px;
 	}
-span:nth-child(2) {
-	margin-right: 20%;
+.shop label:nth-child(2) {
+	margin-left: 5px;
 	}
+/*span:nth-child(2) {*/
+/*	margin-right: 20%;*/
+/*	}*/
 .shop {
 	display: flex;
-	justify-content: stretch;
+	display: -webkit-box;
+	/*justify-content: stretch;*/
 	}
-label {
+/*.discount-block label ,*/
+.form_product-block{
+	padding-left: 28px;
+	}
+ .shop input[type=number] {
+	width: 45px;
+	}
+.form_product-block label {
 	display: flex;
-	justify-content: space-around;
-	width: 80%;
+	margin-left: 30px;
+	justify-content: space-between;
+	width: 50%;
 	cursor: pointer;
 	}
  .discount-block p:first-child {
@@ -126,6 +142,7 @@ label {
 	}
  span {
 	 font-weight: 700;
+	 width: 25%;
 	 }
  .footer {
 	 margin-top: 20px;
@@ -136,9 +153,9 @@ label {
 	 fieldset {
 		 padding-inline-start: 2.95em;
 		 }
-	 .discount-block label , .form_product-block{
-		 padding-left: 20px;
-		 }
+	 /*.discount-block label , .form_product-block{*/
+		/* padding-left: 20px;*/
+		/* }*/
 	.contact_form__container {
 			padding-left: 0;
 			}
