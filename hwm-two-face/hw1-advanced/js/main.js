@@ -56,59 +56,43 @@ const chboxTowel = document.getElementById("Towel");
 // let num = 0;
 let summary = 0;
 function sum() {
-  sumRoundF();
-
   let num = 0;
-  // if (chboxPillow.checked) {
-  //   const number1 = document.getElementById("number1").value;
-  //   num += +number1;
-  //   // ++num;
-  // }
-  // if (chboxBlanket.checked) {
-  //   const number2 = document.getElementById("number2").value;
-  //   num += +number2;
-  //   // ++num;
-  // }
-  // if (chboxTowel.checked) {
-  //   const number3 = document.getElementById("number3").value;
-  //   num += +number3;
-  //   // ++num;
-  // }
-
   let sumProducts = 0;
+  const number1 = document.getElementById("number1").value;
+  const number2 = document.getElementById("number2").value;
+  const number3 = document.getElementById("number3").value;
   if (chboxPillow.checked) {
-    const number1 = document.getElementById("number1").value;
     num += +number1;
     sumProducts += pillow * +number1;
   }
   if (chboxBlanket.checked) {
-    const number2 = document.getElementById("number2").value;
     num += +number2;
     sumProducts += blanket * +number2;
   }
   if (chboxTowel.checked) {
-    const number3 = document.getElementById("number3").value;
     num += +number3;
     sumProducts += towel * +number3;
   }
   document.querySelector("#sum").textContent = `${sumProducts}`;
+
   summary = sumProducts;
   average(num);
+  sumRoundF(number1, number2, number3);
 }
 
-function sumRoundF() {
+function sumRoundF(number1, number2, number3) {
   let sumRound = 0; // = towel + blanket + pillow;
 
   if (chboxPillow.checked) {
-    // pillow = pillow * number1;
+    pillow = pillow * +number1;
     sumRound += Math.floor(pillow);
   }
   if (chboxBlanket.checked) {
-    // blanket = blanket * number2;
+    blanket = blanket * +number2;
     sumRound += Math.floor(blanket);
   }
   if (chboxTowel.checked) {
-    // towel = towel * number3;
+    towel = towel * +number3;
     sumRound += Math.floor(towel);
   }
 
