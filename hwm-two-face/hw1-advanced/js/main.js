@@ -29,6 +29,17 @@ pillow = priceVoid(0);
 blanket = priceVoid(1);
 towel = priceVoid(2);
 
+document.getElementById("Pillow1").textContent = `${pillow}`;
+document.getElementById("Blanket1").textContent = `${blanket}`;
+document.getElementById("Towel1").textContent = `${towel}`;
+
+const arrProduct = [towel, blanket, pillow];
+const maxNum = Math.max(...arrProduct);
+document.querySelector("#max").textContent = `${maxNum}`;
+
+const minNum = Math.min(...arrProduct);
+document.querySelector("#min").textContent = `${minNum}`;
+
 // while (blanket == null) {
 //   blanket = prompt("Введіть ціну одіяла", "123.965");
 //   blanket = isNaN(blanket) ? null : parseInt(blanket);
@@ -42,45 +53,62 @@ const chboxPillow = document.getElementById("Pillow");
 const chboxBlanket = document.getElementById("Blanket");
 const chboxTowel = document.getElementById("Towel");
 
+// let num = 0;
 let summary = 0;
 function sum() {
   sumRoundF();
+
+  let num = 0;
+  // if (chboxPillow.checked) {
+  //   const number1 = document.getElementById("number1").value;
+  //   num += +number1;
+  //   // ++num;
+  // }
+  // if (chboxBlanket.checked) {
+  //   const number2 = document.getElementById("number2").value;
+  //   num += +number2;
+  //   // ++num;
+  // }
+  // if (chboxTowel.checked) {
+  //   const number3 = document.getElementById("number3").value;
+  //   num += +number3;
+  //   // ++num;
+  // }
+
   let sumProducts = 0;
   if (chboxPillow.checked) {
-    sumProducts += pillow;
+    const number1 = document.getElementById("number1").value;
+    num += +number1;
+    sumProducts += pillow * +number1;
   }
   if (chboxBlanket.checked) {
-    sumProducts += blanket;
+    const number2 = document.getElementById("number2").value;
+    num += +number2;
+    sumProducts += blanket * +number2;
   }
   if (chboxTowel.checked) {
-    sumProducts += towel;
+    const number3 = document.getElementById("number3").value;
+    num += +number3;
+    sumProducts += towel * +number3;
   }
   document.querySelector("#sum").textContent = `${sumProducts}`;
   summary = sumProducts;
-  average();
+  average(num);
 }
-
-const arrProduct = [towel, blanket, pillow];
-const maxNum = Math.max(...arrProduct);
-document.querySelector("#max").textContent = `${maxNum}`;
-
-const minNum = Math.min(...arrProduct);
-document.querySelector("#min").textContent = `${minNum}`;
-
-document.getElementById("Pillow1").textContent = `${pillow}`;
-document.getElementById("Blanket1").textContent = `${blanket}`;
-document.getElementById("Towel1").textContent = `${towel}`;
 
 function sumRoundF() {
   let sumRound = 0; // = towel + blanket + pillow;
 
   if (chboxPillow.checked) {
+    // pillow = pillow * number1;
     sumRound += Math.floor(pillow);
   }
   if (chboxBlanket.checked) {
+    // blanket = blanket * number2;
     sumRound += Math.floor(blanket);
   }
   if (chboxTowel.checked) {
+    // towel = towel * number3;
     sumRound += Math.floor(towel);
   }
 
@@ -104,17 +132,23 @@ remainderF = () => {
   ).textContent = `${remainderDiscount}`;
 };
 
-average = () => {
-  let num = 0;
-  if (chboxPillow.checked) {
-    ++num;
-  }
-  if (chboxBlanket.checked) {
-    ++num;
-  }
-  if (chboxTowel.checked) {
-    ++num;
-  }
+average = (num) => {
+  // let num = 0;
+  // if (chboxPillow.checked) {
+  //   const number1 = document.getElementById("number1").value;
+  //   num += +number1;
+  //   // ++num;
+  // }
+  // if (chboxBlanket.checked) {
+  //   const number2 = document.getElementById("number2").value;
+  //   num += +number2;
+  //   // ++num;
+  // }
+  // if (chboxTowel.checked) {
+  //   const number3 = document.getElementById("number3").value;
+  //   num += +number3;
+  //   // ++num;
+  // }
 
   const average = (summary / num).toFixed(2);
   document.querySelector("#average").textContent = `${average}`;
