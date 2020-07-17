@@ -8,14 +8,40 @@ html, body {
 	font-size: 16px;
 	}
 .wrapper {
-	width: 100%;
+	width: 90%;
 	margin: auto;
 	/*border: 2px solid rgba(160, 12, 12, 0.94);*/
 	height: 100vh;
 	background: #d0b6b6;
 	overflow-x: hidden;
 	}
-.all-wrapper {
-	margin: auto;
-	max-width: 1440px;
+.main {
+	margin: 50px auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 2px solid black;
+	box-shadow: 12px 12px 2px 1px rgba(144, 133, 133, 0.9);
+	width: 50%;
+	height: auto;
+	padding: 20px 0;
+	}
+p:nth-child(2) {
+	padding: 20px 0;
+	}
+p {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	}
+span {
+	font-weight: 700;
+	}
+canvas {
+	padding: 20px ;
+	width: 90%;
+	height: 60%;
+	margin-left: 5%;
+	}
+.footer {
+	margin:  0 auto;
 	}

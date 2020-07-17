@@ -25,16 +25,14 @@ const minN = Math.min(M, N);
 const maxM = Math.max(M, N);
 
 let isEven = confirm("Пропускати парні числа чи ні?");
-alert(isEven);
-
-let sumNumbers;
+let sumNumbers = 0;
 
 if (!isEven) {
-  alert(sumTo(maxM));
-} else if (isEven && minN % 2 === 0) {
-  alert(sumNtoM(maxM));
-} else if (isEven && minN % 2 !== 0) {
-  alert(sumOdd(maxM));
+  sumNumbers = sumTo(maxM);
+  alert(sumNumbers);
+} else if (isEven) {
+  sumNumbers = sumOdd(maxM);
+  alert(sumNumbers);
 }
 
 function sumTo(maxM) {
@@ -42,28 +40,20 @@ function sumTo(maxM) {
   for (let i = minN; i <= maxM; i++) {
     sum += i;
   }
-  // return sum;
-  sumNumbers = sum;
-  return sumNumbers;
-}
-
-function sumNtoM(maxM) {
-  let sum = 0;
-  for (let i = minN + 1; i <= maxM; i += 2) {
-    sum += i;
-  }
-  // return sum;
-  sumNumbers = sum;
-  return sumNumbers;
+  return sum;
 }
 
 function sumOdd(maxM) {
   let sum = 0;
-  for (let i = minN; i <= maxM; i += 2) {
-    sum += i;
+  switch (minN % 2) {
+    case 0:
+      for (let i = minN + 1; i <= maxM; i += 2) sum += i;
+      break;
+    case 1:
+      for (let i = minN; i <= maxM; i += 2) sum += i;
+      break;
   }
-  sumNumbers = sum;
-  return sumNumbers;
+  return sum;
 }
 
 getSum.textContent = sumNumbers;
