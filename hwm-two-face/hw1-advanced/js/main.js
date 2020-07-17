@@ -53,7 +53,6 @@ const chboxPillow = document.getElementById("Pillow");
 const chboxBlanket = document.getElementById("Blanket");
 const chboxTowel = document.getElementById("Towel");
 
-// let num = 0;
 let summary = 0;
 function sum() {
   let num = 0;
@@ -61,6 +60,7 @@ function sum() {
   const number1 = document.getElementById("number1").value;
   const number2 = document.getElementById("number2").value;
   const number3 = document.getElementById("number3").value;
+
   if (chboxPillow.checked) {
     num += +number1;
     sumProducts += pillow * +number1;
@@ -77,6 +77,7 @@ function sum() {
 
   summary = sumProducts;
   average(num);
+
   sumRoundF(number1, number2, number3);
 }
 
