@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>"Шибениця"!</title>
+</head>
+
+<body>
+	<h1>"Шибениця"!</h1>
+
+	<canvas id="canvas" width="400" height="400"></canvas>
+
+	<script type="text/javascript">
+		var canvas = document.getElementById("canvas");  // canvas дяпчик
+		var ctx = canvas.getContext("2d");
+
+		//функції
+		var pickWord = function () {
+			var words = [
+			"javascript",
+			"monkey",
+			"amazing",
+			"pancake",
+			"sister",
+			"brother",
+			"daughter"
+		];
+			// Повертаємо випадкове слово
+			 return words[Math.floor(Math.random() * words.length)];
+		};
+
+		var setupAnswerArray = function (word){
+			// Повертаємо масив відповідей
+			var answerArray = [];
+			for (var i=0; i < word.length; i++) {
+			    answerArray[i] = "_";
+		    }
+		    return answerArray;
+		};
+
+		var showPlayerProgress = function (answerArray) {
+			// Показуємо гравцю його прогрес
+			alert(answerArray.join(" ")+ "  ,  attempt = " + attempt + " ,  remainingLetters = " 
+				+ remainingLetters);	
+		}; 
+
+		var getGuess = function() {
+			// Запит на введення, щоб отримати варіант відповіді
+			guess = prompt("Guess a letter , or click Cancel to stop playing.");
+			guess = guess.toLowerCase();
+			return guess;
+		};
+
+		var updateGameState = function( guess, word, answerArray) {
+			// Оновлюємо масив відповіді і повертаємо число , що показує
+			// скільки разів даний варіант відповіді фігурує у слові, щоб 
+			// масив remainingLetters міг оновитись 
+			var correctGuess = 0;
+			for (var j=0; j < word.length; j++) {
+					if (word[j] === guess && answerArray[j] === "_"){
+						answerArray[j] = guess;
+						drawWord(guess, j);		// слово на полотні
+						correctGuess++;
+					}
+			}
+			return correctGuess;
+		};
+
+		var showAnswerAndCongratulatePlayer = function(answerArray) {
+			// Показати відповідь і привітати гравця
+		alert(answerArray.join(" "));
+		alert("Good job! The answer was " + word);
+		};
+
+		//дяпчик
+
+		var drawHangman = function (incorrectGuesses) {
+			ctx.lineWidth = 4;
+
+			if (incorrectGuesses === 0) {
+				ctx.strokeRect(50, 10, 20, 20);  //head
+			} else if (incorrectGuesses === 1) {
+				ctx.beginPath();
+				ctx.moveTo(60, 30);				// body
+		    	ctx.lineTo(60, 65);
+		    	ctx.stroke();
+			} else if (incorrectGuesses === 2) {
+				ctx.beginPath();
+				ctx.moveTo(60, 50);				//left hand
+				ctx.lineTo(40, 35);
+				ctx.stroke();
+			} else if (incorrectGuesses === 3) {
+				ctx.beginPath();
+				ctx.moveTo(60, 50);				//right hand
+				ctx.lineTo(80, 35);
+				ctx.stroke();
+			}else if (incorrectGuesses === 4) {
+				ctx.beginPath();
+				ctx.moveTo(60, 65);			// left leg
+				ctx.lineTo(40, 90);
+				ctx.stroke();
+			} else if (incorrectGuesses === 5) {
+				ctx.beginPath();
+				ctx.moveTo(60, 65);				// right leg
+				ctx.lineTo(80, 90);
+				ctx.stroke();
+			}
+		};
+		// показуємо слово під дяпчиком
+		var drawWord = function (guess, index) {
+			ctx.font = "30px Comic Sans MS";
+			ctx.fillStyle = "DarkBlue";
+			ctx.textAlign = "left";
+			ctx.fillText(guess.toUpperCase(), (index * 30) + 10, 150);
+		};
+
+		// малюємо лінії підкреслення під словом
+		var drawUnderWord = function (howMany) {
+			ctx.lineWidth = 4;
+			ctx.beginPath();
+
+			for (var i = 0; i < howMany; i++ ) {
+			ctx.moveTo((i * 30) + 10, 160);
+			ctx.lineTo((i * 30) + 30, 160);
+			}
+			ctx.stroke();
+		};
+
+		// виводимо невгадані букви
+		var drawIncorrectGuess = function (guess, index) {
+			ctx.lineWidth = 4;
+			ctx.beginPath();
+
+			
+			ctx.font = "25px Comic Sans MS";
+			ctx.fillStyle = "Blue";
+			ctx.textAlign = "right";
+			ctx.fillText(guess.toUpperCase(), 380, (index * 30) + 40);
+
+			ctx.moveTo(360, (index * 30) + 30 );
+			ctx.lineTo(380, (index * 30) + 30 );
+			ctx.stroke();
+		};
+
+		var word = pickWord();
+		var answerArray = setupAnswerArray(word);
+		var remainingLetters = word.length;
+		var attempt = 15;
+		var incorrectGuesses = 0;
+
+		drawUnderWord(word.length);			//лінії під словом
+
+		while (remainingLetters > 0 && attempt > 0) {
+			showPlayerProgress(answerArray);
+			var guess = getGuess();
+			if (guess === null || attempt === 0) {
+				break;
+			} else if (guess.length !== 1){
+				alert("Please enter a single letter.");
+			} else {
+				var correctGuesses = updateGameState(guess, word, answerArray);
+
+				remainingLetters -= correctGuesses;
+				attempt--;
+
+				if (correctGuesses === 0) {
+					drawHangman(incorrectGuesses);
+					drawIncorrectGuess(guess, incorrectGuesses);
+					incorrectGuesses++;
+					
+				}
+			}
+		};
+
+		showAnswerAndCongratulatePlayer(answerArray);
+	</script>
+</body>
+</html>

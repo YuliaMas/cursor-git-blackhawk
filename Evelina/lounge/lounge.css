@@ -1,0 +1,117 @@
+body {
+	font-size: small;
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	background-color: rgb(195,195,195);
+	line-height: 1.6em;
+}
+img.head {
+	display: block;
+	margin-left: auto;
+	margin-right: auto; 
+}
+#allcontent {
+	width: 1200px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-left: auto;
+	margin-right: auto; 
+}
+
+h1, h2 {
+	color: #007e7e;
+	font-family: sans-serif;
+}
+
+h1 {
+	font-size: 200%;
+	!important;
+	
+}
+
+h2 {
+	font-size: 130%;
+}
+
+h3 {
+	color: red;
+}
+p {
+	color: maroon;
+}
+a:link { 
+color: green; 
+}
+a:visited {
+	color: red;
+}
+a:hover {
+	color: yellow;
+}
+
+.greentea {
+	color: green;
+}
+.raspberry {
+	color: blue ;
+}
+.blueberry {
+	color: purple;
+}
+#guarantee {
+	line-height: 1.9em;
+	font-style: italic;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #444444;
+	border: 2px dashed rgb(195,195,195);
+	background-color: #a7cece;
+	padding: 25px;
+	padding-left: 80px;
+	margin: 30px; 
+	margin-right: 250px;
+	background-image: url('images/light.png');
+	background-size: 50px;
+	background-repeat: no-repeat;
+	background-position: top-left;
+}
+#elixirs {
+	line-height: 1;
+	border: thin dashed rgb(195,195,195);
+	width: 200px;
+	padding: 30px 20px 30px 20px;
+	margin-left: 20px;
+	text-align: center;
+	background-color: white;
+	background-image: url('images/kiss.png'), url('images/martini.png');
+	background-size: 50px;
+	background-position: bottom, top;
+	background-repeat: repeat-x, repeat-x ;
+	float: right;
+}
+
+#elixirs h3 {
+	color: #d12c47;
+}
+#elixirs a:link { 
+color: green; 
+}
+#elixirs a:visited {
+	color: red;
+}
+#elixirs a:hover {
+	color: yellow;
+}
+#footer {
+	font-size: 90%;
+	background-color: grey;
+	text-align: center;
+	line-height: normal;
+	margin: 30px;
+	padding: 5px;
+	clear: right;
+}
+.cd {
+	font-style: italic;
+}
+.artist {
+	font-weight: bold;
+}
