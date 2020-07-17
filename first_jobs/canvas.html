@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Canvas </title>
+</head>
+<body>
+	<canvas id="canvas" width="400" height="400"></canvas>
+
+	<script type="text/javascript">
+		var canvas = document.getElementById("canvas");
+		var ctx = canvas.getContext("2d");
+
+		ctx.lineWidth  = 2;
+		ctx.strokeStyle = "Green";
+
+		ctx.beginPath();
+		ctx.arc(50, 50, 20, 0, Math.PI / 2, false);
+		ctx.stroke();
+
+		ctx.beginPath();
+		ctx.arc(100, 50, 20, 0, Math.PI , false);
+		ctx.stroke();
+
+		ctx.beginPath();
+		ctx.arc(150, 50, 20, 0, Math.PI * 2, false);
+		ctx.stroke();
+
+		/*ctx.lineWidth = 4;
+		ctx.strokeRect(50, 10, 20, 20);  //head
+		ctx.beginPath();
+		ctx.moveTo(60, 30);				// body
+		ctx.lineTo(60, 65);
+		ctx.moveTo(60, 50);				//left hand
+		ctx.lineTo(40, 35);
+		ctx.moveTo(60, 50);				//right hand
+		ctx.lineTo(80, 35);
+		ctx.moveTo(60, 65);			// left leg
+		ctx.lineTo(40, 90);
+		ctx.moveTo(60, 65);				// right leg
+		ctx.lineTo(80, 90);
+		ctx.stroke();*/
+
+		/*ctx.fillStyle = "SkyBlue";
+		ctx.beginPath();
+		ctx.moveTo(100, 100);
+		ctx.lineTo(100, 60);
+		ctx.lineTo(130, 30);
+		ctx.lineTo(160, 60);
+		ctx.lineTo(160, 100);
+		ctx.lineTo(100, 100);
+		ctx.fill();*/
+
+		/*for (var i = 0; i < 8; i++) {
+			ctx.fillRect(i * 10, i * 10 , 10 , 10);
+		};
+		ctx.fillStyle = "DeepPink"
+		ctx.fillRect(100, 100, 50, 50);
+		ctx.fillRect(120, 150, 10, 20);
+		ctx.fillRect(85, 170, 80, 80);
+		ctx.fillRect(55, 170, 140, 10);
+		//ctx.fillRect(165, 170, 30, 10);
+		ctx.fillRect(85, 250, 10, 50);
+		ctx.fillRect(155, 250, 10, 50);  
+		
+		
+		ctx.fillStyle = "LightPink";
+		ctx.fillRect(200, 0, 50, 100);
+		ctx.fillStyle = "Thistle";
+		ctx.fillRect(250, 0, 50, 100);
+		ctx.fillStyle = "LawnGreen";
+		ctx.fillRect(300, 0, 50, 100);
+
+		ctx.strokeStyle = "DarkViolet";
+		ctx.lineWidth = 4;
+		ctx.strokeRect(100, 350, 100, 20);
+
+		ctx.strokeStyle = "Turquoise";
+		ctx.lineWidth = 4;
+		ctx.beginPath();
+		ctx.moveTo(100, 10);
+		ctx.lineTo(150, 60);
+		ctx.moveTo(150, 10);
+		ctx.lineTo(100, 60);
+		ctx.stroke();*/
+	</script>
+</body>
+</html>
