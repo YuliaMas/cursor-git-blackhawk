@@ -82,3 +82,39 @@ for (let i = 0; i <= arr.length - 1; i++) {
   document.write(`Число: <b> ${arr[i]} </b>`);
   document.write("<br />");
 }
+
+// 3.	Сформувати для учня список складається з n елементів, кожен елемент якого - це оцінка від 2 до 5.
+const arrayPupil = [];
+arrayPupil.push(2, 4, 5, 3, 4, 4, 5, 2, 4, 3, 5, 5, 5);
+alert(arrayPupil.join(" , "));
+
+// 4.	Підрахувати середнє арифметичне і відповідно до цього дати визначення учневі: відмінник, хорошист,
+// трієчник, двієчник.
+const num = arrayPupil.length;
+
+let sumElem = 0;
+for (let i = 0; i < arrayPupil.length; i++) {
+  sumElem += arrayPupil[i];
+  alert(sumElem);
+}
+
+const rating = sumElem / num;
+let ratingRound = Math.round(rating);
+switch (ratingRound) {
+  case 5:
+    arrayPupil.push("відмінник");
+    alert("відмінник");
+    break;
+  case 4:
+    arrayPupil.push("хорошист");
+    alert("хорошист");
+    break;
+  case 3:
+    arrayPupil.push("трієчник");
+    alert("трієчник");
+    break;
+  case 2:
+    arrayPupil.push("двієчник");
+    alert("двієчник");
+    break;
+}
