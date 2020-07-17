@@ -131,3 +131,16 @@ changeSize();
 //   element.classList.remove("mystyle");
 // }
 //
+
+// $("form").submit(function () {
+//   return (
+//     $.ajax({
+//       type: "POST",
+//       url: "mail.php",
+//       data: $(this).serialize(),
+//     }).done(function () {
+//       // $(this).find("input").val(""), window.location.href = "thanks.html", $("form").trigger("reset")
+//     }),
+//     !1
+//   );
+// });
