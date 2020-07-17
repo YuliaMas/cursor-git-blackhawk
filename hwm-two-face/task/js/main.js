@@ -80,4 +80,5 @@ document.body.appendChild(container);
 const arr = [100, 80, 60, 50, 40, 20, 10, 0];
 for (let i = 0; i <= arr.length - 1; i++) {
   document.write(`Число: <b> ${arr[i]} </b>`);
+  document.write("<br />");
 }
