@@ -160,24 +160,24 @@ chessF();
 
 // 7. triangle
 
-// function triangleF() {
-//   const char = "#";
-//   let charSum = "#";
-//   let i = 0;
-//   do {
-//     document.write(charSum);
-//     document.write("<br />");
-//     charSum += char;
-//     i++;
-//   } while (i < 7);
-// }
-function triangleF() {
-  let char = "#";
+const triangleF = () => {
+  const char = "#";
   let charSum = "#";
-  for (let i = 0; i < 7; i++) {
+  let i = 0;
+  do {
     document.write(charSum);
     document.write("<br />");
     charSum += char;
-  }
-}
+    i++;
+  } while (i < 7);
+};
+// function triangleF() {
+//   let char = "#";
+//   let charSum = "#";
+//   for (let i = 0; i < 7; i++) {
+//     document.write(charSum);
+//     document.write("<br />");
+//     charSum += char;
+//   }
+// }
 triangleF();
