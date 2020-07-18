@@ -88,7 +88,8 @@ for (let i = 0; i <= arr.length - 1; i++) {
 // 3.	Сформувати для учня список складається з n елементів, кожен елемент якого - це оцінка від 2 до 5.
 const arrayPupil = [];
 arrayPupil.push(2, 4, 5, 3, 4, 4, 5, 2, 4, 3, 5, 5, 5);
-alert(arrayPupil.join(" , "));
+const mark = arrayPupil.join(" , ");
+alert(` Оцінки учня : ${mark}`);
 
 // 4.	Підрахувати середнє арифметичне і відповідно до цього дати визначення учневі: відмінник, хорошист,
 // трієчник, двієчник.
@@ -124,7 +125,7 @@ switch (ratingRound) {
 // 6. Chess
 let a = "#";
 let b = "0";
-chessF = () => {
+const chessF = () => {
   for (let j = 1; j < 10; j++) {
     switch (j % 2) {
       case 0:
@@ -156,3 +157,27 @@ chessF = () => {
   }
 };
 chessF();
+
+// 7. triangle
+
+// function triangleF() {
+//   const char = "#";
+//   let charSum = "#";
+//   let i = 0;
+//   do {
+//     document.write(charSum);
+//     document.write("<br />");
+//     charSum += char;
+//     i++;
+//   } while (i < 7);
+// }
+function triangleF() {
+  let char = "#";
+  let charSum = "#";
+  for (let i = 0; i < 7; i++) {
+    document.write(charSum);
+    document.write("<br />");
+    charSum += char;
+  }
+}
+triangleF();
