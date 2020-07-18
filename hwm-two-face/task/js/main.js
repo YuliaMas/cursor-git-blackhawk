@@ -51,9 +51,10 @@ for (let i = 0; i < n.length; i++) {
 
 const container = document.createDocumentFragment();
 for (let i = 1; i <= 10; i++) {
-  const div = document.createElement("div");
-  container.appendChild(div);
-  let img = div.appendChild(document.createElement("img"));
+  const img = document.createElement("img");
+  container.appendChild(img);
+  // let img = div.appendChild(document.createElement("img"));
+  img.style.width = "300";
   img.src = "img/berry.png";
   img.alt = "berries";
 }
@@ -77,6 +78,7 @@ document.body.appendChild(container);
 // document.write ( '<br />');
 // document.write ( 'Число: <b> 0 </ b>');
 // </ Script>
+document.write("<br />");
 const arr = [100, 80, 60, 50, 40, 20, 10, 0];
 for (let i = 0; i <= arr.length - 1; i++) {
   document.write(`Число: <b> ${arr[i]} </b>`);
@@ -95,8 +97,8 @@ const num = arrayPupil.length;
 let sumElem = 0;
 for (let i = 0; i < arrayPupil.length; i++) {
   sumElem += arrayPupil[i];
-  alert(sumElem);
 }
+alert(sumElem);
 
 const rating = sumElem / num;
 let ratingRound = Math.round(rating);
@@ -118,3 +120,29 @@ switch (ratingRound) {
     alert("двієчник");
     break;
 }
+
+// 6. Chess
+let a = "#";
+let b = "0";
+chessF = () => {
+  for (let j = 1; j < 10; j++) {
+    if (!(j % 2)) {
+      a = "0";
+      b = "#";
+    }
+    if (j % 2) {
+      a = "#";
+      b = "0";
+    }
+
+    for (let i = 0; i < 100; i++) {
+      if (i % 2) {
+        document.write(a);
+      } else {
+        document.write(b);
+      }
+    }
+    document.write("<br />");
+  }
+};
+chessF();
