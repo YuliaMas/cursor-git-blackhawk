@@ -123,18 +123,23 @@ switch (ratingRound) {
 }
 
 // 6. Chess
-let a = "#";
-let b = "0";
+let charFirst = "#";
+// let b = "0";
+let charSecond = "⠀";
 const chessF = () => {
   for (let j = 1; j < 10; j++) {
     switch (j % 2) {
       case 0:
-        a = "#";
-        b = "0";
+        // a = "#";
+        // b = "0";
+        charFirst = "#";
+        charSecond = "⠀";
         break;
       case 1:
-        a = "0";
-        b = "#";
+        // a = "0";
+        // b = "#";
+        charFirst = "⠀";
+        charSecond = "#";
         break;
     }
     // if (!(j % 2)) {
@@ -148,9 +153,9 @@ const chessF = () => {
 
     for (let i = 0; i < 100; i++) {
       if (i % 2) {
-        document.write(a);
+        document.write(charFirst);
       } else {
-        document.write(b);
+        document.write(charSecond);
       }
     }
     document.write("<br />");
