@@ -98,7 +98,7 @@ let sumElem = 0;
 for (let i = 0; i < arrayPupil.length; i++) {
   sumElem += arrayPupil[i];
 }
-alert(sumElem);
+alert(`Сума всіх оцінок: ${sumElem}`);
 
 const rating = sumElem / num;
 let ratingRound = Math.round(rating);
@@ -126,14 +126,24 @@ let a = "#";
 let b = "0";
 chessF = () => {
   for (let j = 1; j < 10; j++) {
-    if (!(j % 2)) {
-      a = "0";
-      b = "#";
+    switch (j % 2) {
+      case 0:
+        a = "#";
+        b = "0";
+        break;
+      case 1:
+        a = "0";
+        b = "#";
+        break;
     }
-    if (j % 2) {
-      a = "#";
-      b = "0";
-    }
+    // if (!(j % 2)) {
+    //   a = " ";
+    //   b = "#";
+    // }
+    // if (j % 2) {
+    //   a = "#";
+    //   b = " ";
+    // }
 
     for (let i = 0; i < 100; i++) {
       if (i % 2) {
