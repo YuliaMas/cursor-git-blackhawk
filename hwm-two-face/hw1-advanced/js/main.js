@@ -10,7 +10,7 @@ let pillow;
 let blanket;
 let towel;
 
-priceVoid = (i) => {
+const priceVoid = (i) => {
   let productPrice = null;
   let arrName = ["подушки", "одіяла", "рушника"];
   let arrPrice = ["90.2345", "123.965", "15.678"];
@@ -106,7 +106,7 @@ function sumRoundF(number1, number2, number3) {
   document.getElementById("sumRound100").innerHTML = `${sumRound100}`;
 }
 
-remainderF = () => {
+const remainderF = () => {
   const currency = document.getElementById("currency").value;
   const remainder = (currency - summary).toFixed(4);
   document.getElementById("remainder").textContent = `${remainder}`;
@@ -140,7 +140,7 @@ average = (num) => {
 };
 
 let summaryDiscount = 0;
-randomF = () => {
+const randomF = () => {
   const discount = Math.floor(Math.random() * 100);
   document.getElementById("discount").textContent = `${discount} %`;
 

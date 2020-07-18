@@ -11,20 +11,20 @@ const checkNum = (char) => {
   return num;
 };
 
-render = () => {
-  getNumN.textContent = N;
-  getNumM.textContent = M;
+const render = () => {
+  getNumN.textContent = firstNum;
+  getNumM.textContent = lastNum;
 };
 
-const N = checkNum("N");
-const M = checkNum("M");
+const firstNum = checkNum("N");
+const lastNum = checkNum("M");
 
 render();
 
-const minN = Math.min(M, N);
-const maxM = Math.max(M, N);
+const minN = Math.min(lastNum, firstNum);
+const maxM = Math.max(lastNum, firstNum);
 
-let isEven = confirm("Пропускати парні числа чи ні?");
+const isEven = confirm("Пропускати парні числа чи ні?");
 let sumNumbers = 0;
 
 if (!isEven) {

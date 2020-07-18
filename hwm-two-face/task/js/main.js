@@ -1,6 +1,6 @@
 //  1.	Змінна n зберігає ціле число від 0 до 9. Використовуючи оператор switch, написати скрипт, який в
 // залежності від числа буде виводити слово (Наприклад, якщо n дорівнює 3, то буде виводитися слово «три»)
-let n = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+const n = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 for (let i = 0; i < n.length; i++) {
   const randomNumber = Math.floor(Math.random() * n[i]);
@@ -102,7 +102,7 @@ for (let i = 0; i < arrayPupil.length; i++) {
 alert(`Сума всіх оцінок: ${sumElem}`);
 
 const rating = sumElem / num;
-let ratingRound = Math.round(rating);
+const ratingRound = Math.round(rating);
 switch (ratingRound) {
   case 5:
     arrayPupil.push("відмінник");

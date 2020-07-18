@@ -13,7 +13,7 @@ html, body {
 	/*border: 2px solid rgba(160, 12, 12, 0.94);*/
 	height: 100vh;
 	background: #d0b6b6;
-	overflow-x: hidden;
+	overflow: hidden;
 	}
 .main {
 	margin: 50px auto;

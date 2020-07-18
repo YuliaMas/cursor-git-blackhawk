@@ -45,7 +45,7 @@ const ctx = canvas.getContext("2d");
 const width = canvas.width;
 const height = canvas.height;
 
-let balls = [];
+const balls = [];
 for (let i = 0; i < 30; i++) {
   balls[i] = new Ball();
 }
