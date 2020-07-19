@@ -53,11 +53,16 @@ for (let i = 0; i < 30; i++) {
 setInterval(function () {
   ctx.clearRect(0, 0, width, height);
 
-  for (let i = 0; i < balls.length; i++) {
-    balls[i].draw();
-    balls[i].move();
-    balls[i].checkCollision();
-  }
+  // for (let i = 0; i < balls.length; i++) {
+  //   balls[i].draw();
+  //   balls[i].move();
+  //   balls[i].checkCollision();
+  // }
+  balls.forEach((ball) => {
+    ball.draw();
+    ball.move();
+    ball.checkCollision();
+  });
 
   ctx.strokeRect(0, 0, width, height);
 }, 30);
