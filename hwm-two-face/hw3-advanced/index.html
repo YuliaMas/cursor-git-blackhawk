@@ -43,18 +43,33 @@
 
 			<div class="function4">
 				<p> 4. Створити функцію, яка вираховує суму, що залишається після оплати податку від зарабітньої плати. (Податок = 18% + 1.5% -> 19.5%). Приклад: 1000 -> 805</p>
-				<p>Зарплата працівників:</p>
-				<p>До оплати:</p>
-				<label for="getResult">
-					<span>ЗП 1-го працівника</span><input id="1" type="text"  value="0" required><span></span>
-					<span>ЗП 2-го працівника</span><input id="2" type="text"  value="0" required><span></span>
-					<span>ЗП 3-го працівника</span><input id="3" type="text"  value="0" required><span></span>
-				</label>
+				<table>
+					<tr>
+						<th>Зарплата працівників:</th>
+						<th>До оплати:</th>
+					</tr>
+					<tr>
+						<td><label for="getResult"><input class="salary-1" type="number"  value="0" required></label></td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td><label for="getResult"><input class="salary-2" type="number"  value="0" required></label></td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td><label for="getResult"><input class="salary-3" type="number"  value="0" required></label></td>
+						<td>0</td>
+					</tr>
+				</table>
 			</div>
 
 			<div class="function5">
 				<p> 5. Створити функцію, яка повертає випадкове ціле число в діапазоні від N до M. Приклад: getRandomNumber(1, 10) -> 5</p>
-
+				<label for="getResult">
+					<input class="random1" type="number"  value="0" required />
+					<input class="random2" type="number"  value="0" required />
+				</label>
+				<p class="random3">Випадкове число з діапазону...</p>
 			</div>
 
 			<div class="function6">
@@ -76,8 +91,7 @@
 
 			<div class="function9">
 				<p> 9.Створіть функцію, яка видаляє всі букви з речення. Приклад: deleteLetters('a', "blablabla") -> "blblbl"</p>
-				<label
-						for="getResult"><input id="arr" type="text" placeholder="Введіть текст" value="" required>
+				<label for="getResult"><input id="arr" type="text" placeholder="Введіть текст" value="" required>
 						<input id="delete" type="text" placeholder="Введіть букву" value="" required>
 				</label>
 
@@ -93,7 +107,9 @@
 				<p> 11.Створіть функцію, яка видалить з речення букви, які зустрічаються більше 1 разу. Приклад: deleteDuplicateLetter("Бисквит был очень нежный") -> "сквтлчьжй"</p>
 
 			</div>
+
 			<button id="getResult" class="myButton" onclick="getResult(); return false;">Виконати...</button>
+
 		</main>
 		<footer>
 			<div class="footer">

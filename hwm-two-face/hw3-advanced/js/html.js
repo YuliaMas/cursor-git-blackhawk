@@ -30,3 +30,30 @@ function task3() {
   const paragraph = document.getElementById("paragraph");
   paragraph.textContent = `${getChangedStr(getStrManipulate)}`;
 }
+
+function task4() {
+  const sal1 = document.querySelector(".salary-1").value;
+  const sal2 = document.querySelector(".salary-2").value;
+  const sal3 = document.querySelector(".salary-3").value;
+  const tableTd = document.querySelectorAll("table tbody td");
+  tableTd[1].textContent = `${getSumWithoutTax(sal1)}`;
+  tableTd[3].textContent = `${getSumWithoutTax(sal2)}`;
+  tableTd[5].textContent = `${getSumWithoutTax(sal3)}`;
+}
+
+function task5() {
+  const numFrom = document.querySelector(".random1").value;
+  const numTo = document.querySelector(".random2").value;
+  const randomNumber = document.querySelector(".random3");
+  randomNumber.textContent = `  Випадкове число з діапазону ( ${numFrom} , ${numTo} ) буде  ${getRandomNumber(
+    numFrom,
+    numTo
+  )}`;
+}
+
+function task9() {
+  const getStrArr = document.getElementById("arr").value;
+  const getLetterDel = document.getElementById("delete").value;
+  const paragraph2 = document.getElementById("paragraph2");
+  paragraph2.textContent = `${deleteLetters(getStrArr, getLetterDel)} `;
+}

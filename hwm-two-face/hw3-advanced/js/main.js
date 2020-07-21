@@ -1,8 +1,10 @@
+// function 1
 function getMaxDigit(getNumber) {
   const number = getNumber.slice(``);
   return Math.max(...number);
 }
 
+// function 2
 function getNumPower(num, power) {
   let i = 1;
   let numToPower = 1;
@@ -13,24 +15,43 @@ function getNumPower(num, power) {
   return numToPower;
 }
 
+// function 3
 function getChangedStr(getStr) {
   return getStr[0].toUpperCase() + getStr.slice(1).toLowerCase();
 }
 
+// function 4
 function deleteLetters(array, letter) {
   let arr = array.toLowerCase();
   return arr.split(letter.toLowerCase()).join("");
 }
-function task9() {
-  const getStrArr = document.getElementById("arr").value;
-  const getLetterDel = document.getElementById("delete").value;
-  const paragraph2 = document.getElementById("paragraph2");
-  paragraph2.textContent = `${deleteLetters(getStrArr, getLetterDel)}`;
+
+// function 4
+function getSumWithoutTax(salary) {
+  const tax1 = 18;
+  const tax2 = 1.5;
+  const tax = tax1 + tax2;
+  return (salary - (salary * tax) / 100).toFixed(2);
 }
-function getSumWithoutTax() {}
+
+// function 5
+function getRandomNumber(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+//Result - button
 const getResult = () => {
   task1();
   task2();
   task3();
+  task4();
+  task5();
+  task6();
+  task7();
+  task8();
   task9();
+  task10();
+  task11();
 };

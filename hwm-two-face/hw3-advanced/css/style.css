@@ -41,10 +41,11 @@ h2	{
 .main p:first-child {
 	text-align: start;
 	}
+table {
+	margin: auto;
+	}
 .myButton {
 	box-shadow: 4px 5px 0 0 #3c3e40;
-	/*background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);*/
-	/*background:#79bbff;*/
 	background: #757F9A;  /* fallback for old browsers */
 	background: -webkit-linear-gradient(to left, #D7DDE8, #757F9A);  /* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(to left, #D7DDE8, #757F9A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -53,7 +54,7 @@ h2	{
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
-	font-family:Verdana;
+	font-family: 'Verdana' ,  sans-serif;
 	font-size:17px;
 	font-weight:bold;
 	padding:8px 34px;
