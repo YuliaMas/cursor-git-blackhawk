@@ -3,11 +3,97 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>$Title$</title>
-	<link rel="stylesheet" href="./../css/reset.css">
+	<title>Title</title>
+	<link rel="stylesheet" href="./../../css/reset.css">
 	<link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-$END$
+	<div class="wrapper">
+		<header class="header">
+			<h1 class="title">Homework &#35;3</h1>
+			<h2 class="title">Function</h2>
+		</header>
+		<main class="main">
+			<div class="function1">
+				<p> 1 . Створити функцію getMaxDigit(number) – яка отримує будь-яке число та виводить найбільшу цифру в цьому
+						числі. Приклади: 1236 -> 6, 987 -> 9, 385 -> 8</p>
+				<label for="getResult">
+					<span>Введіть число:</span>
+					<input id="number" type="number" name="number" value="0" pattern="[0-9]" required />
+				</label>
+					<p>Найбільша цифра в цьому числі:
+						<span id="maxNum">0</span>
+					</p>
+			</div>
+
+			<div class="function2">
+				<p> 2. Створити функцію, яка визначає ступінь числа. Не використовуючи Math.pow та **. Використовуйте цикл.</p>
+				<label for="getResult"> <span>Введіть число: </span> <input id="numToPower" type="number" name="number" value="0" pattern="[0-9]" required/></label>
+					<label for="getResult">	<span> Введіть степінь числа:</span> <input id="power" type="number" name="number" value="1" pattern="[0-9]" required /></label>
+				<p id="setNum">Число підняте до степеня буде дорівнювати </p>
+			</div>
+
+			<div class="function3">
+				<p> 3. Створити функцію, яка форматує ім'я, роблячи першу букву великою. ("влад" -> "Влад", "вЛАД" -> "Влад" і так далі).</p>
+				<label
+						for="getResult"><input id="strManipulate" type="text" placeholder="Введіть текст" value="" required></label>
+			</div>
+			<p id="paragraph">Ваш текст...</p>
+
+			<div class="function4">
+				<p> 4. Створити функцію, яка вираховує суму, що залишається після оплати податку від зарабітньої плати. (Податок = 18% + 1.5% -> 19.5%). Приклад: 1000 -> 805</p>
+
+			</div>
+
+			<div class="function5">
+				<p> 5. Створити функцію, яка повертає випадкове ціле число в діапазоні від N до M. Приклад: getRandomNumber(1, 10) -> 5</p>
+
+			</div>
+
+			<div class="function6">
+				<p> 6. Створити функцію, яка рахує скільки разів певна буква повторюється в слові. Приклад: countLetter("а", "Асталавіста") -> 4</p>
+
+			</div>
+
+			<div class="function7">
+				<p> 7. Створіть функцію, яка конвертує долари в гривні та навпаки в залежності від наявності символа $ або UAH в рядку. Приклад: convertCurrency("100$") -> 2500 грн. або convertCurrency("2500UAH") -> 100$.
+						Врахуйте, інші валюти не конвертуються, потрібно виводити помилку, і також регістр uah не має значення.</p>
+
+			</div>
+
+			<div class="function8">
+				<p> 8. Створіть функцію генерації випадкового паролю (тільки числа), довжина встановлюється користувачем або по замовчуванню = 8 символам.
+						Приклад: getRandomPassword(4) -> 1875, getRandomPassword() -> 87240124</p>
+
+			</div>
+
+			<div class="function9">
+				<p> 9.Створіть функцію, яка видаляє всі букви з речення. Приклад: deleteLetters('a', "blablabla") -> "blblbl"</p>
+				<label
+						for="getResult"><input id="arr" type="text" placeholder="Введіть текст" value="" required>
+						<input id="delete" type="text" placeholder="Введіть букву" value="" required>
+				</label>
+
+			<p id="paragraph2">Ваш текст...</p>
+			</div>
+
+			<div class="function10">
+				<p> 10. Створіть функцію, яка перевіряє, чи є слово паліндромом. Приклад: isPalyndrom("мадам") -> true, isPalyndrom("кокос") -> false, isPalyndrom("Аргентина манит негра") -> true</p>
+
+			</div>
+
+			<div class="function11">
+				<p> 11.Створіть функцію, яка видалить з речення букви, які зустрічаються більше 1 разу. Приклад: deleteDuplicateLetter("Бисквит был очень нежный") -> "сквтлчьжй"</p>
+
+			</div>
+			<button id="getResult" class="myButton" onclick="getResult(); return false;">Виконати...</button>
+		</main>
+		<footer>
+			<div class="footer">
+				<p>&copy; Copyright 2020  Yuliya Masechko</p>
+			</div>
+		</footer>
+	</div>
+<script	src="js/main.js"></script>
 </body>
 </html>
