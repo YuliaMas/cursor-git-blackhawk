@@ -37,12 +37,19 @@
 				<p> 3. Створити функцію, яка форматує ім'я, роблячи першу букву великою. ("влад" -> "Влад", "вЛАД" -> "Влад" і так далі).</p>
 				<label
 						for="getResult"><input id="strManipulate" type="text" placeholder="Введіть текст" value="" required></label>
+				<p id="paragraph">Ваш текст...</p>
 			</div>
-			<p id="paragraph">Ваш текст...</p>
+
 
 			<div class="function4">
 				<p> 4. Створити функцію, яка вираховує суму, що залишається після оплати податку від зарабітньої плати. (Податок = 18% + 1.5% -> 19.5%). Приклад: 1000 -> 805</p>
-
+				<p>Зарплата працівників:</p>
+				<p>До оплати:</p>
+				<label for="getResult">
+					<span>ЗП 1-го працівника</span><input id="1" type="text"  value="0" required><span></span>
+					<span>ЗП 2-го працівника</span><input id="2" type="text"  value="0" required><span></span>
+					<span>ЗП 3-го працівника</span><input id="3" type="text"  value="0" required><span></span>
+				</label>
 			</div>
 
 			<div class="function5">
@@ -94,6 +101,7 @@
 			</div>
 		</footer>
 	</div>
-<script	src="js/main.js"></script>
+	<script	src="js/main.js"></script>
+	<script	src="js/html.js"></script>
 </body>
 </html>
