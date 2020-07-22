@@ -21,12 +21,6 @@ function getChangedStr(getStr) {
 }
 
 // function 4
-function deleteLetters(array, letter) {
-  let arr = array.toLowerCase();
-  return arr.split(letter.toLowerCase()).join("");
-}
-
-// function 4
 function getSumWithoutTax(salary) {
   const tax1 = 18;
   const tax2 = 1.5;
@@ -39,6 +33,82 @@ function getRandomNumber(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+// function 6
+function countLetter(str, item) {
+  str = str.toLowerCase();
+  const char = item.toLowerCase();
+  const arr = str.split("");
+
+  let count = 0;
+  arr.sort().reduce((accumulator, current) => {
+    // let arrCharLength = accumulator.length;
+    if (current === char) {
+      accumulator.push(current);
+      count++;
+    }
+    return accumulator;
+  }, []);
+  return count;
+}
+
+// function 7
+function convertCurrency(str) {
+  let current = Number(str.replace(/\D+/g, ""));
+  const regexUSA = /[$]/g;
+  const regexUA = /[UAH]/g;
+  if (str.match(regexUSA)) {
+    let current = Number(str.replace(/\D+/g, ""));
+    let sum = current * 25;
+    return sum + "UAH";
+  } else if (str.toUpperCase().match(regexUA)) {
+    let sum = current / 25;
+    return sum + "$";
+  } else {
+    return "error";
+  }
+}
+
+// function 8
+function randomPassword(pLength) {
+  let arr = [];
+  if (pLength <= 0) return 0;
+  do {
+    const password = Math.floor(Math.random() * 10);
+    arr.push(password);
+  } while (arr.length < pLength);
+  return arr.join("");
+}
+
+// function 9
+function deleteLetters(array, letter) {
+  const arr = array.toLowerCase();
+  return arr.split(letter.toLowerCase()).join("");
+}
+
+// function 10
+function isPalyndrom(str) {
+  str = str.toLowerCase().replace(/\s/g, "");
+  return str === str.split("").reverse().join("");
+}
+
+// function 11
+function deleteDuplicateLetter(senten) {
+  senten = senten.toLowerCase();
+  // const arr = senten.trim().toLowerCase();
+  // let arr = senten.split("");
+  // arr = arr.trim();
+
+  // const result = senten.reduce((accumulator, current) => {
+  //   const length = accumulator.length;
+  //   if (length === 0 || accumulator[length - 1] !== current) {
+  //     accumulator.push(current);
+  //   }
+  //   return accumulator;
+  // }, []);
+  // console.log(result);
+  // return result.join("");
 }
 
 //Result - button

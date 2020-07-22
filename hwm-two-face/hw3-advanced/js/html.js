@@ -28,7 +28,7 @@ function task2() {
 function task3() {
   const getStrManipulate = document.getElementById("strManipulate").value;
   const paragraph = document.getElementById("paragraph");
-  paragraph.textContent = `${getChangedStr(getStrManipulate)}`;
+  paragraph.textContent = ` Ім'я:  ${getChangedStr(getStrManipulate)}`;
 }
 
 function task4() {
@@ -51,9 +51,50 @@ function task5() {
   )}`;
 }
 
+function task6() {
+  const getStr = document.getElementById("str").value;
+  const getLetter = document.getElementById("letter").value;
+  const count = document.getElementById("count");
+  count.textContent = `${countLetter(
+    getStr,
+    getLetter
+  )}  рази(ів)  буква "${getLetter}"  повторюється у слові `;
+}
+
+function task7() {
+  const getCurrency = document.getElementById("currency").value;
+  const setConvertCur = document.getElementById("convert");
+  setConvertCur.textContent = ` => ${convertCurrency(getCurrency)}`;
+}
+
+function task8() {
+  const getPassLength = document.querySelector(".random4").value;
+  const setPass = document.getElementById("password");
+  setPass.textContent = ` Ваш пароль: ${randomPassword(getPassLength)}`;
+}
+
 function task9() {
   const getStrArr = document.getElementById("arr").value;
   const getLetterDel = document.getElementById("delete").value;
   const paragraph2 = document.getElementById("paragraph2");
-  paragraph2.textContent = `${deleteLetters(getStrArr, getLetterDel)} `;
+  paragraph2.textContent = `Ваш текст... ${deleteLetters(
+    getStrArr,
+    getLetterDel
+  )} `;
+}
+
+function task10() {
+  const getSentence = document.querySelector("#palyndrom").value;
+  const setBoolean = document.getElementById("boolean");
+  setBoolean.textContent = `Чи є це паліндромом ?   ${isPalyndrom(
+    getSentence
+  )}`;
+}
+
+function task11() {
+  const getSentences = document.getElementById("sentences").value;
+  const setDelDuplicate = document.getElementById("delDouble");
+  setDelDuplicate.textContent = ` Модифікований текст... ${deleteDuplicateLetter(
+    getSentences
+  )} `;
 }

@@ -37,9 +37,8 @@
 				<p> 3. Створити функцію, яка форматує ім'я, роблячи першу букву великою. ("влад" -> "Влад", "вЛАД" -> "Влад" і так далі).</p>
 				<label
 						for="getResult"><input id="strManipulate" type="text" placeholder="Введіть текст" value="" required></label>
-				<p id="paragraph">Ваш текст...</p>
+				<p id="paragraph">Введіть ім'я...</p>
 			</div>
-
 
 			<div class="function4">
 				<p> 4. Створити функцію, яка вираховує суму, що залишається після оплати податку від зарабітньої плати. (Податок = 18% + 1.5% -> 19.5%). Приклад: 1000 -> 805</p>
@@ -74,19 +73,30 @@
 
 			<div class="function6">
 				<p> 6. Створити функцію, яка рахує скільки разів певна буква повторюється в слові. Приклад: countLetter("а", "Асталавіста") -> 4</p>
+				<label for="getResult"><input id="str" type="text" placeholder="Введіть текст" value="" required>
+					<input id="letter" type="text" placeholder="Введіть букву" value="" required>
+				</label>
 
+				<p id="count">Ваш текст...</p>
 			</div>
 
 			<div class="function7">
 				<p> 7. Створіть функцію, яка конвертує долари в гривні та навпаки в залежності від наявності символа $ або UAH в рядку. Приклад: convertCurrency("100$") -> 2500 грн. або convertCurrency("2500UAH") -> 100$.
 						Врахуйте, інші валюти не конвертуються, потрібно виводити помилку, і також регістр uah не має значення.</p>
-
+				<label for="getResult">
+					<span>Введіть суму для конвертації валюти:</span>
+					<input id="currency" type="text" placeholder="100$ / 2500UAH" value="" required>
+					<span	 id="convert">конвертую...</span>
+				</label>
 			</div>
 
 			<div class="function8">
 				<p> 8. Створіть функцію генерації випадкового паролю (тільки числа), довжина встановлюється користувачем або по замовчуванню = 8 символам.
 						Приклад: getRandomPassword(4) -> 1875, getRandomPassword() -> 87240124</p>
-
+				<label for="getResult">
+					<span>Введіть довжину вашого паролю: </span> <input class="random4" type="number"  value="8" required />
+				</label>
+				<p id="password">Ваш пароль...</p>
 			</div>
 
 			<div class="function9">
@@ -94,18 +104,25 @@
 				<label for="getResult"><input id="arr" type="text" placeholder="Введіть текст" value="" required>
 						<input id="delete" type="text" placeholder="Введіть букву" value="" required>
 				</label>
-
-			<p id="paragraph2">Ваш текст...</p>
+				<p id="paragraph2">Ваш текст...</p>
 			</div>
 
 			<div class="function10">
 				<p> 10. Створіть функцію, яка перевіряє, чи є слово паліндромом. Приклад: isPalyndrom("мадам") -> true, isPalyndrom("кокос") -> false, isPalyndrom("Аргентина манит негра") -> true</p>
+				<label for="getResult">
+					<input id="palyndrom" type="text" placeholder="Введіть слово..." value="" required>
+					<span id="boolean"></span>
+				</label>
 
 			</div>
 
 			<div class="function11">
 				<p> 11.Створіть функцію, яка видалить з речення букви, які зустрічаються більше 1 разу. Приклад: deleteDuplicateLetter("Бисквит был очень нежный") -> "сквтлчьжй"</p>
-
+				<label for="getResult">
+<!--					<input id="sentences" type="text" placeholder="Введіть речення..." value="" required>-->
+					<textarea id="sentences" name="text" placeholder="Введіть речення..." rows="3" cols="50" required></textarea>
+				</label>
+				<p id="delDouble">Модифікований текст...</p>
 			</div>
 
 			<button id="getResult" class="myButton" onclick="getResult(); return false;">Виконати...</button>
