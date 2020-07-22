@@ -63,8 +63,9 @@ function task6() {
 
 function task7() {
   const getCurrency = document.getElementById("currency").value;
+  const getVal = document.getElementById("val").value;
   const setConvertCur = document.getElementById("convert");
-  setConvertCur.textContent = ` => ${convertCurrency(getCurrency)}`;
+  setConvertCur.textContent = ` => ${convertCurrency(getCurrency, getVal)}`;
 }
 
 function task8() {

@@ -42,7 +42,11 @@ h2	{
 	text-align: start;
 	}
 table {
+	width: 40%;
 	margin: auto;
+	}
+th , td {
+	padding: 10px;
 	}
 .myButton {
 	box-shadow: 4px 5px 0 0 #3c3e40;

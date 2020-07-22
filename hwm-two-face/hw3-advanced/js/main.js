@@ -54,16 +54,16 @@ function countLetter(str, item) {
 }
 
 // function 7
-function convertCurrency(str) {
+function convertCurrency(str, val) {
   let current = Number(str.replace(/\D+/g, ""));
   const regexUSA = /[$]/g;
   const regexUA = /[UAH]/g;
   if (str.match(regexUSA)) {
     let current = Number(str.replace(/\D+/g, ""));
-    let sum = current * 25;
+    let sum = current * val;
     return sum + "UAH";
   } else if (str.toUpperCase().match(regexUA)) {
-    let sum = current / 25;
+    let sum = current / val;
     return sum + "$";
   } else {
     return "error";
