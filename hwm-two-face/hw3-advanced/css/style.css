@@ -7,7 +7,7 @@ html, body {
 	overflow-x: hidden;
 	font-size: 16px;
 	font-family: sans-serif;
-	line-height: 1.5;
+	line-height: 1.7;
 	}
 .wrapper {
 	width: 100%;
@@ -29,6 +29,13 @@ h1	{
 h2	{
 	font-size: 1.4rem;
 	}
+span , p {
+	font-weight: 700;
+	}
+/*.lesson {*/
+/*	font-weight: 400;*/
+/*	font-family: "Times New Roman", serif;*/
+/*	}*/
 .title {
 	font-family: cursive ;
 	font-weight: 700;
@@ -40,10 +47,24 @@ h2	{
 	}
 .main p:first-child {
 	text-align: start;
+	font-weight: 400;
+	font-family: "Times New Roman", serif;
+	}
+input, textarea {
+	font-size: 1rem;
+	}
+input[type='number'] {
+	width: 60px;
+	}
+#number , input.salary-1, input.salary-2, input.salary-3{
+	width: 140px;
 	}
 table {
 	width: 40%;
 	margin: auto;
+	}
+th {
+	font-weight: 600;
 	}
 th , td {
 	padding: 10px;
@@ -76,9 +97,6 @@ th , td {
 .myButton:active {
 	position:relative;
 	top:2px;
-	}
-span {
-	font-weight: 700;
 	}
 #maxNum {
 	font-size: 1.2rem;
