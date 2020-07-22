@@ -94,10 +94,10 @@ function isPalyndrom(str) {
 }
 
 // function 11
-function deleteDuplicateLetter(stri) {
-  let str = stri.split("");
-  let res = str.filter(function (val, i, str) {
-    return str.lastIndexOf(val) === str.indexOf(val);
+function deleteDuplicateLetter(str) {
+  let arr = str.split("");
+  let res = arr.filter(function (val, i, arr) {
+    return arr.lastIndexOf(val) === arr.indexOf(val);
   });
 
   console.log(res);
