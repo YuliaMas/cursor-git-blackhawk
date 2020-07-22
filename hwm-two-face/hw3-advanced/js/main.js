@@ -55,15 +55,15 @@ function countLetter(str, item) {
 
 // function 7
 function convertCurrency(str, val) {
-  let current = Number(str.replace(/\D+/g, ""));
+  const current = Number(str.replace(/\D+/g, ""));
   const regexUSA = /[$]/g;
   const regexUA = /[UAH]/g;
   if (str.match(regexUSA)) {
     let current = Number(str.replace(/\D+/g, ""));
-    let sum = current * val;
+    const sum = current * val;
     return sum + "UAH";
   } else if (str.toUpperCase().match(regexUA)) {
-    let sum = current / val;
+    const sum = current / val;
     return sum + "$";
   } else {
     return "error";
@@ -72,7 +72,7 @@ function convertCurrency(str, val) {
 
 // function 8
 function randomPassword(pLength) {
-  let arr = [];
+  const arr = [];
   if (pLength <= 0) return 0;
   do {
     const password = Math.floor(Math.random() * 10);
@@ -95,8 +95,8 @@ function isPalyndrom(str) {
 
 // function 11
 function deleteDuplicateLetter(string) {
-  let str = string.split("");
-  let res = str.filter(function (val, i, str) {
+  const str = string.split("");
+  const res = str.filter(function (val, i, str) {
     return str.lastIndexOf(val) === str.indexOf(val);
   });
 
