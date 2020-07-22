@@ -94,21 +94,14 @@ function isPalyndrom(str) {
 }
 
 // function 11
-function deleteDuplicateLetter(senten) {
-  senten = senten.toLowerCase();
-  // const arr = senten.trim().toLowerCase();
-  // let arr = senten.split("");
-  // arr = arr.trim();
+function deleteDuplicateLetter(stri) {
+  let str = stri.split("");
+  let res = str.filter(function (val, i, str) {
+    return str.lastIndexOf(val) === str.indexOf(val);
+  });
 
-  // const result = senten.reduce((accumulator, current) => {
-  //   const length = accumulator.length;
-  //   if (length === 0 || accumulator[length - 1] !== current) {
-  //     accumulator.push(current);
-  //   }
-  //   return accumulator;
-  // }, []);
-  // console.log(result);
-  // return result.join("");
+  console.log(res);
+  return res.join("");
 }
 
 //Result - button
