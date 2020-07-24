@@ -55,7 +55,7 @@ function getMark(arr, numArr) {
 // Рандомна оцінка від 1 до 5:
 function randomMark() {
   const min = 1;
-  const max = 5;
+  const max = 6;
   return Math.floor(Math.random() * (max - min) + min);
 }
 
