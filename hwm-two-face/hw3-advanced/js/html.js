@@ -93,6 +93,6 @@ function task11() {
   const getSentences = document.getElementById("sentences").value;
   const setDelDuplicate = document.getElementById("delDouble");
   setDelDuplicate.textContent = ` Модифікований текст... ${deleteDuplicateLetter(
-    getSentences
+    getSentences.toLowerCase()
   )} `;
 }
