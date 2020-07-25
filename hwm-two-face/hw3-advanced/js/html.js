@@ -16,12 +16,9 @@ function task2() {
   const getNumToPower = document.getElementById("numToPower").value;
   const getPower = document.getElementById("power").value;
   const setNumber = document.getElementById("setNum");
-  if (getPower <= 0) {
-    alert("Введіть іншу степінь");
-  }
   setNumber.textContent = ` Число ${getNumToPower} в степені ${getPower} дорівнює ${getNumPower(
-    getNumToPower,
-    getPower
+    +getNumToPower,
+    +getPower
   )} `;
 }
 

@@ -8,11 +8,25 @@ function getMaxDigit(getNumber) {
 function getNumPower(num, power) {
   let i = 1;
   let numToPower = 1;
-  while (i <= power) {
-    numToPower *= num; //3*3*3
-    i++;
+  if (power === 0) {
+    return 1;
   }
-  return numToPower;
+  if (power < 0) {
+    i = 0;
+    while (i > power) {
+      numToPower *= num;
+      i--;
+    }
+    numToPower = 1 / numToPower;
+    return numToPower;
+  }
+  if (power > 0) {
+    while (i <= power) {
+      numToPower *= num; //3*3*3
+      i++;
+    }
+    return numToPower;
+  }
 }
 
 // function 3
