@@ -45,29 +45,29 @@ window.addEventListener("DOMContentLoaded", () => {
     textarea.required = true;
     textarea.placeholder = text;
   }
+
   const getText = "Are you fucking kidding? It's bullshit! Holy shit!";
   const div3Let = "Commander , Live ";
+  const generateWord = "Map , island , ol";
   createInput(card1, 3, "number");
   createTextarea(card8, "badWord", getText);
   createTextarea(card9, "divWord", div3Let);
+  createTextarea(card10, "getWordTen", generateWord);
 
-  // const span = document.createElement("span");
-  // div.append(span);
-  // for (let i = 0; i < spans.length; i++) {
   const spans = document.getElementsByTagName("span");
-  const pTask = "Масив значень дивись в 1-му завданні:";
+  const pTask = "Масив значень дивись в 1-му завданні...";
   const pTask2 = document.querySelector(".task2");
   const pTask3 = document.querySelector(".task3");
   const pTask4 = document.querySelector(".task4");
   const pTask5 = document.querySelector(".task5");
   const pTask6 = document.querySelector(".task6");
   const pTask7 = document.querySelector(".task7");
-  const pTask8 = document.querySelector(".task8");
   spans[0].textContent = "Введіть min значенння:";
   spans[1].innerHTML = "Введіть max значення:";
   spans[2].innerHTML = "Введіть довжину масиву:";
   spans[3].innerHTML = "Введіть речення, яке містить слова 'shit' і/чи 'fuck':";
   spans[4].innerHTML = "Введіть слово:";
+  spans[5].innerHTML = "Введіть слово:";
   pTask2.textContent = pTask;
   pTask3.textContent = pTask;
   pTask4.textContent = pTask;
@@ -82,18 +82,16 @@ window.addEventListener("DOMContentLoaded", () => {
     const max = document.querySelector(".field2").value;
     const length = document.querySelector(".field3").value;
     const randomNumber = document.querySelector(".answer1");
-    const numbers = getRandomArray(length, +min, +max);
+    const numbers = getRandomArray(length, parseInt(min), parseInt(max));
     num = numbers;
-    if (max < min) {
+    if (+max < +min) {
       return (randomNumber.textContent = `Введіть більше число в полі max`);
     }
     if (length <= 0) {
       return (randomNumber.textContent =
         "Введіть  ціле додатне число в полі довжина масиву");
     }
-    // numbers.split(" ");
     randomNumber.textContent = `[ ${numbers.join(" , ")} ]`;
-    // numbers = `${numbers} `;
     return num;
   }
 
@@ -137,6 +135,12 @@ window.addEventListener("DOMContentLoaded", () => {
     const text = document.querySelector("#divWord").value;
     const setWord = document.querySelector(".answer9");
     setWord.textContent = `${divideByThree(text)}`;
+  }
+
+  function task10() {
+    const text = document.querySelector("#getWordTen").value;
+    const setWordTen = document.querySelector(".answer10");
+    setWordTen.textContent = `${generateCombinations(text).join(" , ")}`;
   }
 
   /* - - - - - - - - - - - - - - Buttons click - - - - - - - - - - - - - -*/
@@ -192,6 +196,12 @@ window.addEventListener("DOMContentLoaded", () => {
   document.body.addEventListener("click", (event) => {
     if (event.target.classList.contains("start9")) {
       `${task9()}`;
+    }
+  });
+
+  document.body.addEventListener("click", (event) => {
+    if (event.target.classList.contains("start10")) {
+      `${task10()}`;
     }
   });
 });

@@ -90,7 +90,6 @@ function countPositiveNumbers(numbers) {
 }
 
 // 7. Функція  відфільтровує усі елементи в масиві та залишає ті,що діляться на ціло на 5.
-// Приклад: getDividedByFive(6, 2, 55, 11, 50, 2, 55, 40, 57, 87, 23, 5, 56, 3, 2) -> [55, 55]
 function getDividedByFive(numbers) {
   const dividedByFive = numbers.filter((item) => {
     return !(item % 5);
@@ -114,15 +113,27 @@ function divideByThree(word) {
     const divWord = word.substr(i, 3);
     arrDivideW.push(divWord);
   }
-  return `Розбите слово:  ${arrDivideW}`;
+  return `Розбите слово:  ${arrDivideW.join(" , ")}`;
 }
 
-// 10. Створіть функцію generateCombinations(word), яка видасть всі можливі перестановки(унікальні, без повторень)
-// букв в слові. Для тестів не передавайте слова в яких більше 10 букв. Краще взагалі обмежити работу функції 10 буквами.
-// Приклад: generateCombinations("man") -> ["man", "mna", "amn", "anm", "nam", "nma"] Приклад: generateCombinations("ol")
-// -> ["ol", "lo"]
+// 10. Функція видає всі можливі перестановки(унікальні, без повторень) букв в слові.
 function generateCombinations(word) {
-  let str = word.toLowerCase();
-  if (word.length > 10) return "vveditb slovo menwoi dovgwunu";
+  const str = word.toLowerCase();
+  if (str.length > 10)
+    return `Введіть слово довжиною до 10 букв...${word} - це задовге слово`;
+  if (str.length < 2) return word;
+
+  const comb = [];
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i];
+
+    if (str.indexOf(char) !== i) continue; // порівняння на дублікати
+
+    const combString = str.slice(0, i) + str.slice(i + 1, str.length);
+
+    for (let someCombination of generateCombinations(combString)) {
+      comb.push(char + someCombination);
+    }
+  }
+  return comb;
 }
-generateCombinations("man");
