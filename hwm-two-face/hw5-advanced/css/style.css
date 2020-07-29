@@ -34,17 +34,30 @@ h2	{
 	/*height: 300px;*/
 	/*align-items: center;*/
 	align-content: center;
-	padding: 10px;
+	padding: 20px;
 	font-size: 20px;
+	border-radius: 4px;
+	/*border: 2px solid black;*/
+	box-shadow: inset 0 0 20px 0 rgba(0,0,0,0.7);
 	}
-.card:nth-child(odd) {
+.card:nth-child(odd) , #card4 {
 	background: #fd2577;
 	color: #ffffff;
-	margin: 25px;
+	margin-top: 25px;
 	}
-.card:nth-child(even) {
+.card:nth-child(even), #card5 {
 	background: #fdf925;
 	color: #3b0202;
+	margin-top: 25px;
+	}
+.card:nth-last-child(n+4){
+	width: 40%;
+	height: 250px;
+	align-items: center;
+	}
+.card:first-child {
+	width: 70%;
+	height: auto;
 	}
 .card div {
 	display: flex;
@@ -54,9 +67,20 @@ h2	{
 	align-self: center;
 	/*flex-direction: column;*/
 	}
-input , span, p {
+#card8 div , #card9 div  {
+	justify-content: space-around;
+	}
+#card8 textarea {
+	width: 100%;
+	height: 50px ;
+	}
+#card9 div {
+	margin-top: 5px;
+	}
+input , span, p , textarea {
 	font-size: 0.9rem;
 	padding-top: 5px;
+	margin-top: 5px;
 	}
 input {
 	width: 100px;
@@ -71,6 +95,7 @@ button {
 	margin-top: 10px;
 	padding: 10px;
 	align-self: center;
+	border-radius: 4px;
 	background: #bffff0;  /* fallback for old browsers */
 	background: -webkit-linear-gradient(to top, #FFAFBD, #bffff0);  /* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(to top, #FFAFBD, #bffff0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -88,14 +113,14 @@ p {
 	padding: 15px 0 ;
 	}
 
-@media (max-width: 500px) {
-	card {
+@media (max-width: 700px) {
+	card, .card:nth-last-child(n)  {
 		display: flex;
 		flex-direction: column;
 		text-align: center;
 		justify-content: space-around;
 		flex-wrap: wrap;
-		width: auto;
+		width: 95%;
 		height: auto;
 		/*align-items: center;*/
 		align-content: center;
@@ -109,5 +134,13 @@ p {
 		justify-content: space-between;
 		align-self: center;
 		flex-direction: column;
+		}
+	 #card5 {
+		background: #fd2577;
+		color: #ffffff;
+		}
+	 #card4 {
+		background: #fdf925;
+		color: #3b0202;
 		}
 	}
