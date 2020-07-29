@@ -30,8 +30,8 @@ h2	{
 	text-align: center;
 	justify-content: space-around;
 	flex-wrap: wrap;
-	width: 40%;
-	height: 300px;
+	width: 70%;
+	/*height: 300px;*/
 	/*align-items: center;*/
 	align-content: center;
 	padding: 10px;
@@ -44,7 +44,7 @@ h2	{
 	}
 .card:nth-child(even) {
 	background: #fdf925;
-	color: #ffffff;
+	color: #3b0202;
 	}
 .card div {
 	display: flex;
@@ -56,6 +56,7 @@ h2	{
 	}
 input , span, p {
 	font-size: 0.9rem;
+	padding-top: 5px;
 	}
 input {
 	width: 100px;
@@ -67,8 +68,15 @@ span {
 button {
 	order: 2;
 	width: 160px;
+	margin-top: 10px;
 	padding: 10px;
 	align-self: center;
+	background: #bffff0;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #FFAFBD, #bffff0);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to top, #FFAFBD, #bffff0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	/*background: #E0EAFC;  !* fallback for old browsers *!*/
+	/*background: -webkit-linear-gradient(to bottom, #CFDEF3, #E0EAFC);  !* Chrome 10-25, Safari 5.1-6 *!*/
+	/*background: linear-gradient(to bottom, #CFDEF3, #E0EAFC); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
 	}
 p {
 	order: 1;
@@ -78,4 +86,28 @@ p {
 	margin-top: 20px;
 	border-top: 1px solid white;
 	padding: 15px 0 ;
+	}
+
+@media (max-width: 500px) {
+	card {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		width: auto;
+		height: auto;
+		/*align-items: center;*/
+		align-content: center;
+		padding: 10px;
+		font-size: 20px;
+		}
+	.card div {
+		display: flex;
+		flex-wrap: wrap;
+		width: auto;
+		justify-content: space-between;
+		align-self: center;
+		flex-direction: column;
+		}
 	}
