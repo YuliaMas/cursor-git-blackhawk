@@ -102,6 +102,24 @@ function replaceBadWords(string) {
   const regex = /(shit|fuck)/gi;
   const newStr = string.replace(regex, "****");
   return `Модифіковане речення: ${newStr}`;
+  // const change = function ch() {
+  //   for (let i = 0; i<regex.length ;in regex) {
+  //     regex.length += '*';
+  //   }
+  // };
+
+  // const regex = /(shit|fuck)/gi;
+  // string = string.split(" ");
+  // const regex = [
+  //   ["shit", "****"],
+  //   ["fuck", "****"],
+  //   ["condom", "******"],
+  // ];
+  // let newStr = "";
+  // for (let i = 0; i < regex[i].length; i++) {
+  //   newStr = string.replace(regex[i][0], regex[i][1]);
+  // }
+  // return `Модифіковане речення: ${newStr.join(" ")}`;
 }
 
 // 9. Функція розбиває кожне слово на умовні склади по 3 букви.

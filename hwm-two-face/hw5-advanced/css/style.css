@@ -1,18 +1,20 @@
 body {
 	width: 100vw;
 	height: 100vh;
-	background: #789aff;
-	font-family: cursive;
+	background: #6a4162;
+	font-family: Arial, Helvetica, "Roboto", sans-serif;
 	font-size: 12px;
 	line-height: 1.5;
 	overflow-x: hidden ;
 	}
-h1{
+h1	{
+	color: #e4c0fd ;
 	margin-top: 30px ;
 	text-align: center;
 	font-size: 1.5rem;
 	}
 h2	{
+	color: #fff0f0 ;
 	text-align: center;
 	font-size: 1.4rem;
 	}
@@ -35,15 +37,16 @@ h2	{
 	padding: 20px;
 	font-size: 20px;
 	border-radius: 4px;
-	box-shadow: inset 0 0 20px 0 rgba(0,0,0,0.7);
+	box-shadow: inset 0 0 10px 0 rgba(0,0,0,0.5);
 	}
 .card:nth-child(odd) , #card4 {
-	background: #fd2577;
+	/*background: #d46a92;*/
+	background:  #d14e7f;
 	color: #ffffff;
 	margin-top: 25px;
 	}
 .card:nth-child(even), #card5 {
-	background: #fdf925;
+	background: #f6d2d6;
 	color: #3b0202;
 	margin-top: 25px;
 	}
@@ -87,14 +90,15 @@ span {
 	}
 button {
 	order: 2;
+	color: #ffdede;
 	width: 160px;
 	margin-top: 10px;
 	padding: 10px;
 	align-self: center;
 	border-radius: 4px;
-	background: #bffff0;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to top, #FFAFBD, #bffff0);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to top, #FFAFBD, #bffff0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background: #AA076B;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #61045F, #AA076B);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #61045F, #AA076B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	}
 p {
 	order: 1;
@@ -129,11 +133,11 @@ p {
 		flex-direction: column;
 		}
 	 #card5 {
-		background: #fd2577;
+		background:  #d14e7f;
 		color: #ffffff;
 		}
 	 #card4 {
-		background: #fdf925;
+		background: #f6d2d6;
 		color: #3b0202;
 		}
 	 button {
