@@ -97,44 +97,73 @@ window.addEventListener("DOMContentLoaded", () => {
 
   function task2() {
     const moda = document.querySelector(".answer2");
-    moda.textContent = `${getModa(num)}`;
+    if (isNaN(num) === true) {
+      moda.textContent = " В 1-му завданні помилка, виправте , будь ласка!";
+    }
+    moda.textContent = `Мода : ${getModa(num).join(" , ")}`;
   }
 
   function task3() {
     const number = document.querySelector(".answer3");
-    number.textContent = `${getAverage(num)}`;
+    if (isNaN(num) === true) {
+      number.textContent = " В 1-му завданні помилка, виправте , будь ласка!";
+    }
+    number.textContent = `Середнє арифметичне значення: ${getAverage(
+      num
+    ).toFixed(2)}`;
   }
 
   function task4() {
     const median = document.querySelector(".answer4");
-    median.textContent = `${getMedian(num)}`;
+    if (isNaN(num) === true) {
+      median.textContent = " В 1-му завданні помилка, виправте , будь ласка!";
+    }
+    median.textContent = ` Mедіана:  ${getMedian(num)}`;
   }
 
   function task5() {
     const filterEven = document.querySelector(".answer5");
-    filterEven.textContent = `${filterEvenNumbers(num)}`;
+    if (isNaN(num) === true) {
+      filterEven.textContent =
+        " В 1-му завданні помилка, виправте , будь ласка!";
+    }
+    filterEven.textContent = `Непарні числа: [ ${filterEvenNumbers(num)} ]`;
   }
 
   function task6() {
-    const filterEven = document.querySelector(".answer6");
-    filterEven.textContent = `${countPositiveNumbers(num)}`;
+    const positiveNumbers = document.querySelector(".answer6");
+    if (isNaN(num) === true) {
+      positiveNumbers.textContent =
+        " В 1-му завданні помилка, виправте , будь ласка!";
+    }
+    positiveNumbers.textContent = `Кількість додатних чисел:  ${countPositiveNumbers(
+      num
+    )}`;
   }
 
   function task7() {
-    const filterEven = document.querySelector(".answer7");
-    filterEven.textContent = `${getDividedByFive(num)}`;
+    const dividedByFive = document.querySelector(".answer7");
+    if (isNaN(num) === true) {
+      dividedByFive.textContent =
+        " В 1-му завданні помилка, виправте , будь ласка!";
+    }
+    dividedByFive.textContent = `Числа кратні 5: [ ${getDividedByFive(num)} ]`;
   }
 
   function task8() {
-    const text = document.querySelector("#badWord").value;
+    const getbadWordsText = document.querySelector("#badWord").value;
     const setBadWords = document.querySelector(".answer8");
-    setBadWords.textContent = `${replaceBadWords(text)}`;
+    setBadWords.textContent = `Модифіковане речення:  ${replaceBadWords(
+      getbadWordsText
+    )}`;
   }
 
   function task9() {
     const text = document.querySelector("#divWord").value;
     const setWord = document.querySelector(".answer9");
-    setWord.textContent = `${divideByThree(text)}`;
+    setWord.textContent = `Розбите слово:[ ${divideByThree(text).join(
+      " , "
+    )} ]`;
   }
 
   function task10() {

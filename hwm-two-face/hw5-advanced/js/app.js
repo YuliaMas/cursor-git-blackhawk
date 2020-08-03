@@ -10,9 +10,8 @@ function getRandomArray(length, min, max) {
 
 // 2. Функція обчислює моду всіх переданих в неї аргументів.
 function getModa(numbers) {
-  const arr = numbers;
   const result = {};
-  arr.forEach(function (acc) {
+  numbers.forEach(function (acc) {
     // рахує кількість повторень
     if (result[acc] !== undefined) ++result[acc];
     else result[acc] = 1;
@@ -35,20 +34,19 @@ function getModa(numbers) {
       moda.push(max[i][0]);
     }
   }
-  return ` moda: ${moda.join(" , ")}`;
+  return moda;
 }
 
 // 3.  Функція рахує середнє арифметичне всіх переданих в неї аргументів.
 function getAverage(numbers) {
-  const num = numbers;
-  const result = num.reduce(function (sum, current) {
+  const result = numbers.reduce(function (sum, current) {
     return sum + current;
   }, 0);
-  const average = result / num.length;
+  const average = result / numbers.length;
   if (isNaN(average)) {
-    return " В 1-му завданні помилка, виправте , будь ласка!";
+    throw new Error(" The mistake is in the first task, correct , please!");
   }
-  return `Середнє арифметичне значення: ${average.toFixed(2)}`;
+  return average;
   // const reducer = (accumulator, currentValue) => accumulator + currentValue;   // 1-ий варіант
   // for (let num of numArr) {
   // let num = 0;
@@ -71,55 +69,29 @@ function getMedian(numbers) {
     return a - b;
   });
   return numbers.length % 2 === 1
-    ? "Mедіана: " + numbers[medianOdd]
-    : "Mедіана: " + 0.5 * (numbers[medianEven] + numbers[medianEven + 1]);
+    ? numbers[medianOdd]
+    : 0.5 * (numbers[medianEven] + numbers[medianEven + 1]);
 }
 
 //5. Функцію  фільтрує парні числа
 function filterEvenNumbers(numbers) {
-  const numOdd = numbers.filter((item) => item % 2).join(" , ");
-  return `Непарні числа: ${numOdd}`;
+  return numbers.filter((item) => item % 2).join(" , ");
 }
 
 // 6. Функція рахує кількість чисел більших 0
 function countPositiveNumbers(numbers) {
-  const positiveNum = numbers.filter((item) => {
-    return item > 0;
-  });
-  return "Кількість додатних чисел: " + positiveNum.length;
+  return numbers.filter((item) => item > 0).length;
 }
 
 // 7. Функція  відфільтровує усі елементи в масиві та залишає ті,що діляться на ціло на 5.
 function getDividedByFive(numbers) {
-  const dividedByFive = numbers.filter((item) => {
-    return !(item % 5);
-  });
-  return `Числа кратні 5: [ ${dividedByFive.join(" , ")} ]`;
+  return numbers.filter((item) => !(item % 5));
 }
 
 // 8. Функція замінює погані слова на зірочки (*).
 function replaceBadWords(string) {
   const regex = /(shit|fuck)/gi;
-  const newStr = string.replace(regex, "****");
-  return `Модифіковане речення: ${newStr}`;
-  // const change = function ch() {
-  //   for (let i = 0; i<regex.length ;in regex) {
-  //     regex.length += '*';
-  //   }
-  // };
-
-  // const regex = /(shit|fuck)/gi;
-  // string = string.split(" ");
-  // const regex = [
-  //   ["shit", "****"],
-  //   ["fuck", "****"],
-  //   ["condom", "******"],
-  // ];
-  // let newStr = "";
-  // for (let i = 0; i < regex[i].length; i++) {
-  //   newStr = string.replace(regex[i][0], regex[i][1]);
-  // }
-  // return `Модифіковане речення: ${newStr.join(" ")}`;
+  return string.replace(regex, "****");
 }
 
 // 9. Функція розбиває кожне слово на умовні склади по 3 букви.
@@ -131,14 +103,16 @@ function divideByThree(word) {
     const divWord = word.substr(i, 3);
     arrDivideW.push(divWord);
   }
-  return `Розбите слово:  ${arrDivideW.join(" , ")}`;
+  return arrDivideW;
 }
 
 // 10. Функція видає всі можливі перестановки(унікальні, без повторень) букв в слові.
 function generateCombinations(word) {
   const str = word.toLowerCase();
   if (str.length > 10)
-    return `Введіть слово довжиною до 10 букв...${word} - це задовге слово`;
+    throw new Error(
+      `Введіть слово довжиною до 10 букв...${word} - це задовге слово`
+    );
   if (str.length < 2) return word;
 
   const comb = [];
