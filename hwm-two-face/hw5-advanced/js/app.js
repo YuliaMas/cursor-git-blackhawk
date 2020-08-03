@@ -109,10 +109,7 @@ function divideByThree(word) {
 // 10. Функція видає всі можливі перестановки(унікальні, без повторень) букв в слові.
 function generateCombinations(word) {
   const str = word.toLowerCase();
-  if (str.length > 10)
-    throw new Error(
-      `Введіть слово довжиною до 10 букв...${word} - це задовге слово`
-    );
+  if (str.length > 10) throw new Error(`Введіть слово довжиною до 10 букв`);
   if (str.length < 2) return word;
 
   const comb = [];

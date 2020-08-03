@@ -97,15 +97,12 @@ window.addEventListener("DOMContentLoaded", () => {
 
   function task2() {
     const moda = document.querySelector(".answer2");
-    if (isNaN(num) === true) {
-      moda.textContent = " В 1-му завданні помилка, виправте , будь ласка!";
-    }
     moda.textContent = `Мода : ${getModa(num).join(" , ")}`;
   }
 
   function task3() {
     const number = document.querySelector(".answer3");
-    if (isNaN(num) === true) {
+    if (isNaN(num)) {
       number.textContent = " В 1-му завданні помилка, виправте , будь ласка!";
     }
     number.textContent = `Середнє арифметичне значення: ${getAverage(
@@ -115,27 +112,16 @@ window.addEventListener("DOMContentLoaded", () => {
 
   function task4() {
     const median = document.querySelector(".answer4");
-    if (isNaN(num) === true) {
-      median.textContent = " В 1-му завданні помилка, виправте , будь ласка!";
-    }
     median.textContent = ` Mедіана:  ${getMedian(num)}`;
   }
 
   function task5() {
     const filterEven = document.querySelector(".answer5");
-    if (isNaN(num) === true) {
-      filterEven.textContent =
-        " В 1-му завданні помилка, виправте , будь ласка!";
-    }
     filterEven.textContent = `Непарні числа: [ ${filterEvenNumbers(num)} ]`;
   }
 
   function task6() {
     const positiveNumbers = document.querySelector(".answer6");
-    if (isNaN(num) === true) {
-      positiveNumbers.textContent =
-        " В 1-му завданні помилка, виправте , будь ласка!";
-    }
     positiveNumbers.textContent = `Кількість додатних чисел:  ${countPositiveNumbers(
       num
     )}`;
@@ -143,10 +129,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
   function task7() {
     const dividedByFive = document.querySelector(".answer7");
-    if (isNaN(num) === true) {
-      dividedByFive.textContent =
-        " В 1-му завданні помилка, виправте , будь ласка!";
-    }
     dividedByFive.textContent = `Числа кратні 5: [ ${getDividedByFive(num)} ]`;
   }
 
@@ -169,6 +151,9 @@ window.addEventListener("DOMContentLoaded", () => {
   function task10() {
     const text = document.querySelector("#getWordTen").value;
     const setWordTen = document.querySelector(".answer10");
+    if (text.length > 10) {
+      setWordTen.textContent = `Введіть слово довжиною до 10 букв ${text} - це задовге слово`;
+    }
     setWordTen.textContent = `${generateCombinations(text).join(" , ")}`;
   }
 
