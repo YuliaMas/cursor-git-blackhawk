@@ -1,0 +1,86 @@
+//1. повертає список предметів для конкретного студента
+function getSubjects(students) {
+  const subjects = Object.keys(students.subjects);
+  return subjects.map(
+    (subject) =>
+      subject.slice(0, 1).toUpperCase() + subject.slice(1).replace("_", " ")
+  );
+  //   for (let i = 0; i < subjects.length; i++) {
+  //     if (subjects[i].includes("_")) {
+  //       subjects[i] = subjects[i].replace("_", " ");
+  //     }
+  //     subjects[i] =
+  //       subjects[i][0].toUpperCase() + subjects[i].slice(1).toLowerCase();
+  //   }
+  //   return `${students.name} :   ${subjects.join(" , ")}`;
+  // }
+}
+
+// 2. поверне середню оцінку по усім предметам для переданого студента
+function getAverageMark(students) {
+  const marksObj = Object.values(students.subjects);
+  const marks = [];
+  let sumMarks = 0;
+  for (let mark in marksObj) {
+    marks.push(
+      marksObj[mark].reduce((acc, num) => {
+        sum = acc + num;
+        return sum;
+      }, 0)
+    );
+    sumMarks += marksObj[mark].length;
+  }
+  return marks.reduce((acc, num) => acc + num, 0) / sumMarks;
+}
+
+// 3.повертає інформацію загального виду по переданому студенту
+function getStudentInfo(student) {
+  const info = {};
+  info.name = student.name;
+  info.course = student.course;
+  info.average = getAverageMark(student);
+  return info;
+}
+
+// 4. повертає імена студентів у алфавітному порядку.
+function getStudentsNames(students) {
+  return students.map((student) => student.name).sort();
+  // let arr = [];
+  // for (let key in students) arr.push(students[key].name);
+  // return arr.sort();
+}
+
+// 5. повертає кращого студента зі списку по показнику середньої оцінки.
+function getBestStudent(students) {
+  let best;
+  let name;
+  for (let student in students) {
+    let aver = getAverageMark(students[student]);
+    best = Math.max(aver);
+    name = students[student].name;
+    // console.log(`${students[student].name} : ${best}`);
+  }
+  return `${name} : ${best.toFixed(2)} `;
+}
+
+// 6. повертає обє'кт, в якому ключі це букви у слові, а значення – кількість їх повторень.
+function calculateWordLetters(string) {
+  const word = string.split("");
+  const obj = {};
+  for (let i = 0; i < string.length; i++) {
+    const letter = word[i];
+    if (obj[letter]) {
+      obj[letter] += 1;
+    } else obj[letter] = 1;
+  }
+  return obj;
+}
+function getStringObject(obj) {
+  let list = "";
+  for (let key in obj) {
+    if (obj.hasOwnProperty(key)) {
+      list += `"${key}" :  ${obj[key]}, `;
+    }
+  }
+  return list;
+}
