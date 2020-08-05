@@ -52,15 +52,25 @@ function getStudentsNames(students) {
 
 // 5. повертає кращого студента зі списку по показнику середньої оцінки.
 function getBestStudent(students) {
-  let best;
-  let name;
+  let bestAverMark = 0;
+  let bestStudent = null;
+  const names = [];
+  const average = [];
+
   for (let student in students) {
-    let aver = getAverageMark(students[student]);
-    best = Math.max(aver);
-    name = students[student].name;
-    // console.log(`${students[student].name} : ${best}`);
+    average.push(getAverageMark(students[student]));
+    names.push(students[student].name);
   }
-  return `${name} : ${best.toFixed(2)} `;
+
+  bestAverMark = Math.max(...average);
+  const obj = Object.assign(...names.map((n, i) => ({ [n]: average[i] })));
+
+  for (const [key, value] of Object.entries(obj)) {
+    if (value === bestAverMark) {
+      bestStudent = `${key}`;
+    }
+  }
+  return bestStudent;
 }
 
 // 6. повертає обє'кт, в якому ключі це букви у слові, а значення – кількість їх повторень.
@@ -75,6 +85,7 @@ function calculateWordLetters(string) {
   }
   return obj;
 }
+
 function getStringObject(obj) {
   let list = "";
   for (let key in obj) {
