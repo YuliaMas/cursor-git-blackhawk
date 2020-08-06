@@ -33,7 +33,7 @@ window.addEventListener("DOMContentLoaded", () => {
         }
         timerId = setTimeout(run, 10000, country);
       },
-      10000,
+      1000,
       nameCountry
     );
   }
@@ -46,24 +46,32 @@ window.addEventListener("DOMContentLoaded", () => {
       }
     }
   });
-  document.body.addEventListener("click", (event) => {
-    if (event.target.classList.contains("click-6")) {
-      let i = 0;
-      for (const country of countryName) {
-        `${task2(country, name[i])}`;
-        i++;
+  document.getElementById("click6").addEventListener(
+    "click",
+    (event) => {
+      if (event.target.classList.contains("click-6")) {
+        let i = 0;
+        for (const country of countryName) {
+          `${task2(country, name[i])}`;
+          i++;
+        }
       }
-    }
-  });
-  document.body.addEventListener("click", (event) => {
-    if (event.target.classList.contains("click-7")) {
-      let i = 0;
-      for (const country of countryName) {
-        `${task3(country, name[i])}`;
-        i++;
+    },
+    { once: true }
+  );
+  document.getElementById("click7").addEventListener(
+    "click",
+    (event) => {
+      if (event.target.classList.contains("click-7")) {
+        let i = 0;
+        for (const country of countryName) {
+          `${task3(country, name[i])}`;
+          i++;
+        }
       }
-    }
-  });
+    },
+    { once: true }
+  );
   document.body.addEventListener("click", (event) => {
     if (event.target.classList.contains("click-1")) {
       `${task4(ukraine, "resA", "Ukraine")}`;
