@@ -14,6 +14,13 @@ const litva = {
   vacancies: 1114,
 };
 
+let timerId;
+const countryName = [ukraine, latvia, litva];
+const name = ["Ukraine", "Latvia", "Lytva"];
+
+function stopTimeout() {
+  clearTimeout(timerId);
+}
 // 1. Створіть функцію getMyTaxes.call(country, salary) -> number; –
 // яка рахує скільки податків ви заплатите як IT-спеціаліст в якійсь з країн.
 // Функція повинна викликатись через call та працювати з даними через this
@@ -23,7 +30,7 @@ function getMyTaxes(salary) {
 }
 
 // 2. Створіть функцію getMiddleTaxes.call(country) -> number; – яка рахує скільки
-// у середньому податків платятт IT-спеціалісти у кожній країні. (tax * middleSalary).
+// у середньому податків платять IT-спеціалісти у кожній країні. (tax * middleSalary).
 // Функція повинна викликатись через call та працювати з даними через this
 
 function getMiddleTaxes() {
@@ -56,24 +63,3 @@ function getMySalary() {
   };
   return countrySalary;
 }
-// console.log(getMyTaxes.call(ukraine, 2000));
-// console.log(getMyTaxes.call(latvia, 1500));
-// console.log(getMyTaxes.call(litva, 1800));
-// console.log(
-//   [ukraine, latvia, litva].forEach((country) => {
-//     getMyTaxes.call(2000);
-//   })
-// );
-// console.log(getMiddleTaxes.call(ukraine));
-// console.log(getMiddleTaxes.call(latvia));
-// console.log(getMiddleTaxes.call(litva));
-// function tax() {
-//   const countryName = [ukraine, latvia, litva];
-//   for (let i = 0; i <= countryName.length; i++) {
-//     console.log(getTotalTaxes.call(countryName[i]));
-//   }
-// }
-// tax();
-// console.log(getTotalTaxes.call(ukraine));
-// console.log(getTotalTaxes.call(latvia));
-// console.log(getTotalTaxes.call(litva));
