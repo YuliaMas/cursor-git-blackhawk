@@ -31,9 +31,9 @@ window.addEventListener("DOMContentLoaded", () => {
         for (const [key, value] of Object.entries(data)) {
           getSalary.textContent += `${key}:  ${value}   ||     `;
         }
-        timerId = setTimeout(run, 1000, country);
+        timerId = setTimeout(run, 10000, country);
       },
-      1000,
+      10000,
       nameCountry
     );
   }
