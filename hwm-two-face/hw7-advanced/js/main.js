@@ -26,7 +26,7 @@ function stopTimeout() {
 // Функція повинна викликатись через call та працювати з даними через this
 
 function getMyTaxes(salary) {
-  return (salary * this.tax).toFixed(2);
+  return parseFloat((salary * this.tax).toFixed(2));
 }
 
 // 2. Створіть функцію getMiddleTaxes.call(country) -> number; – яка рахує скільки
@@ -34,7 +34,7 @@ function getMyTaxes(salary) {
 // Функція повинна викликатись через call та працювати з даними через this
 
 function getMiddleTaxes() {
-  return (this.tax * this.middleSalary).toFixed(2);
+  return parseFloat((this.tax * this.middleSalary).toFixed(2));
 }
 
 // 3. Створіть функцію getTotalTaxes.call(country) -> number; – яка рахує,
@@ -42,7 +42,7 @@ function getMiddleTaxes() {
 // (tax * middleSalary * vacancies). Функція повинна викликатись через call та працювати з даними через this.
 
 function getTotalTaxes() {
-  return (this.tax * this.middleSalary * this.vacancies).toFixed(2);
+  return parseFloat((this.tax * this.middleSalary * this.vacancies).toFixed(2));
 }
 
 // 4. Створіть функцію getMySalary(country) – яка буде писати в консоль об'єкт виду:
@@ -54,8 +54,8 @@ function getMySalary() {
   const min = 1500;
   const max = 2000;
   const salary = Math.floor(Math.random() * (max - min + 1) + min);
-  const taxes = (salary * this.tax).toFixed(2);
-  const profit = (salary - taxes).toFixed(2);
+  const taxes = parseFloat((salary * this.tax).toFixed(2));
+  const profit = parseFloat((salary - taxes).toFixed(2));
   const countrySalary = {
     salary,
     taxes,

@@ -26,11 +26,12 @@ window.addEventListener("DOMContentLoaded", () => {
     const getSalary = document.querySelector(`.${field}`);
     timerId = setTimeout(
       function run(country) {
-        let data = getMySalary.call(country);
-        console.log(`Дані по рандомній зарплаті ${name} :`, data);
-        for (const [key, value] of Object.entries(data)) {
-          getSalary.textContent += `${key}:  ${value}   ||     `;
+        let countryObj = getMySalary.call(country);
+        console.log(`Дані по рандомній зарплаті ${name} :`, countryObj);
+        for (const [key, value] of Object.entries(countryObj)) {
+          getSalary.innerHTML += `${key}:  ${value}   ||  `;
         }
+        getSalary.innerHTML += `<br/>`;
         timerId = setTimeout(run, 10000, country);
       },
       1000,
