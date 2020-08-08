@@ -12,22 +12,16 @@ function getRandomArray(length, min, max) {
 function getModa(numbers) {
   const result = {};
   numbers.forEach(function (acc) {
-    // рахує кількість повторень
+    // counts repeats
     if (result[acc] !== undefined) ++result[acc];
     else result[acc] = 1;
   });
-  const res = Object.entries(result); // створює об'єкт і виводить пари значень
-  res.forEach((entry) => {
-    const key = entry[0];
-    const value = entry[1];
-    return `${key}: ${value}`;
-  });
-  // сортує в об'єкті value
+  const res = Object.entries(result);
   let max = res.sort((a, b) => {
     return a[1] - b[1];
   });
   let modaLast = max[max.length - 1][1];
-  // знаходить моду
+  // find moda
   let moda = [];
   for (let i = 0; i < max.length; i++) {
     if (max[i][1] === modaLast) {
@@ -75,7 +69,7 @@ function getMedian(numbers) {
 
 //5. Функцію  фільтрує парні числа
 function filterEvenNumbers(numbers) {
-  return numbers.filter((item) => item % 2).join(" , ");
+  return numbers.filter((item) => item % 2);
 }
 
 // 6. Функція рахує кількість чисел більших 0

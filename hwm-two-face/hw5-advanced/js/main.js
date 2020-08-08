@@ -117,7 +117,9 @@ window.addEventListener("DOMContentLoaded", () => {
 
   function task5() {
     const filterEven = document.querySelector(".answer5");
-    filterEven.textContent = `Непарні числа: [ ${filterEvenNumbers(num)} ]`;
+    filterEven.textContent = `Непарні числа: [ ${filterEvenNumbers(num).join(
+      " , "
+    )} ]`;
   }
 
   function task6() {
