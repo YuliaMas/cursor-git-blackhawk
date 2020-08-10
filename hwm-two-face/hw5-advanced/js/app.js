@@ -41,18 +41,6 @@ function getAverage(numbers) {
     throw new Error(" The mistake is in the first task, correct , please!");
   }
   return average;
-  // const reducer = (accumulator, currentValue) => accumulator + currentValue;   // 1-ий варіант
-  // for (let num of numArr) {
-  // let num = 0;
-  // let i = 0;
-  // while (i < numbers.length) {
-  //   num += num;
-  //   i++;
-  // }
-  // let num = numbers.reduce(
-  //   (accumulator, currentValue) => accumulator + currentValue,
-  //   0
-  // );
 }
 
 // 4. Функція рахує медіану.
