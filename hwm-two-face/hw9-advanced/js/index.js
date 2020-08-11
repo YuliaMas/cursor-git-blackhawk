@@ -1,15 +1,42 @@
 window.addEventListener("DOMContentLoaded", () => {
+  const container = document.getElementById("container");
+  const randomColorBlocks = document.querySelector(".colorBlocks");
+  const stopButton = document.querySelector(".stop");
+  const setBlocks = document.querySelector(".newBlocks");
+  let timerId;
+
   const setBg = (elem) => {
-    const randomColor = Math.floor(Math.random() * 16777215).toString(16);
-    elem.style.backgroundColor = "#" + randomColor;
+    elem.style.backgroundColor =
+      "#" + Math.floor(Math.random() * 16777215).toString(16);
   };
 
-  const container = document.getElementById("container");
-  for (let i = 1; i <= 25; i++) {
-    container.insertAdjacentHTML("afterbegin", `<div class="square"></div>`);
-    const divSquares = document.querySelector(" .square");
-    setInterval(() => {
-      setBg(divSquares);
-    }, 1000);
+  const setSquareContainer = () => {
+    for (let i = 0; i < 25; i++) {
+      container.insertAdjacentHTML("beforeend", `<div class="square"></div>`);
+    }
+  };
+
+  const setRandomColor = () => {
+    const divSquares = document.querySelectorAll(".square");
+    divSquares.forEach((square) => setBg(square));
+  };
+
+  function stop() {
+    clearInterval(timerId);
   }
+
+  setBlocks.addEventListener("click", () => {
+    setBlocks.setAttribute("disabled", "disabled");
+    setSquareContainer();
+  });
+
+  randomColorBlocks.addEventListener("click", () => {
+    randomColorBlocks.setAttribute("disabled", "disabled");
+    timerId = setInterval(setRandomColor, 1000);
+  });
+
+  stopButton.addEventListener("click", () => {
+    randomColorBlocks.removeAttribute("disabled");
+    `${stop()}`;
+  });
 });

@@ -9,7 +9,7 @@ html, body {
 	}
 h1	{
 	color: #1d37e0;
-	margin-top: 10px ;
+	margin-top: 5px ;
 	text-align: center;
 	font-size: 1.8rem;
 	}
@@ -19,7 +19,17 @@ h2	{
 	font-size: 1.6rem;
 	}
 main {
-	margin: 35px 0;
+	margin: 15px 0;
+	}
+.buttons {
+	padding-bottom: 10px;
+	display: grid;
+	grid-template-columns: 100px 100px 100px;
+	gap:  10px;
+	justify-content: center;
+	}
+button {
+	border-radius: 10px;
 	}
 #container {
 	display: grid;
@@ -30,8 +40,9 @@ main {
 	justify-content: center;
 	}
 .square {
-	/*border: 1px solid red;*/
+	border: 1px solid white;
 	border-radius: 6px;
+	background-color: #e8b0df;
 	}
 .footer {
 	margin-top: 20px;
