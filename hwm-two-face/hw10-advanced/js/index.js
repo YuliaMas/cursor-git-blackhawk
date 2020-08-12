@@ -9,6 +9,8 @@ window.addEventListener("DOMContentLoaded", () => {
   const setSound = (elem, elemId) => {
     document.getElementById(elemId).play();
   };
+
+  /*---------------------------------Colors style-----------------------------------*/
   const setColorBell = (elemId) => {
     elemId.style.backgroundColor = "pink";
   };
@@ -66,7 +68,7 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 
   document.addEventListener("keydown", (event) => {
-    if (event.key === "d") {
+    if (event.key === "b") {
       const bellSound = document.getElementById("bellSound");
       setSound(bellSound, "bellSound");
       setColorBell(getBell);
@@ -81,7 +83,7 @@ window.addEventListener("DOMContentLoaded", () => {
       setSound(carSound, "carSound");
       setLastColor(getCar);
     }
-    if (event.key === "b") {
+    if (event.key === "d") {
       const birdSound = document.getElementById("birdSound");
       setSound(birdSound, "birdSound");
       setColorButton(getBird);
@@ -102,13 +104,13 @@ window.addEventListener("DOMContentLoaded", () => {
     if (event.key === "k") {
       setLastColor(getKnock);
     }
-    if (event.key === "b") {
+    if (event.key === "d") {
       setLastColor(getBird);
     }
     if (event.key === "w") {
       setLastColor(getWashDishes);
     }
-    if (event.key === "d") {
+    if (event.key === "b") {
       colorBellDefault(getBell);
     }
     if (event.key === "c") {

@@ -2,6 +2,7 @@ html , body {
 	width: 100vw;
 	height: 100vh;
 	background-color: lightslategray;
+	font-size: 14px;
 	}
 #container {
 	margin: auto;
@@ -18,13 +19,19 @@ html , body {
 	justify-content: center;
 	cursor: pointer;
 	}
-span::first-letter, #knock[type= "content"]::first-letter {
+span::first-letter, #bird::after{
 	color: yellow;
 	font-size: 18px;
 	font-weight: 900;
 	}
+#bird>span::first-letter {
+	color: white;
+	font-size: 14px;
+	font-weight: 500;
+	}
 #door-bell span {
-	transform: translate(19px, 17px);
+	transform: translate(0px, 25px);
+	color: #b18870;
 	}
 #door-bell{
 	margin: 25% 51%;
@@ -32,13 +39,6 @@ span::first-letter, #knock[type= "content"]::first-letter {
 	background-color: #d0d0d0;
 	width: 15px;
 	height: 15px;
-	}
-#door-bell::before {
-	position: absolute;
-	content: "Bell";
-	color: white;
-	transform: translate(0px, 20px);
-	opacity: 0.5;
 	}
 #door-bell:hover {
 	background-color: pink;
@@ -65,15 +65,19 @@ span::first-letter, #knock[type= "content"]::first-letter {
 	width: 80px;
 	background-color: #968d877a;
 	margin: 44% 41%;
-	color: wheat;
+	color: #b65e23;
 	}
 #bird {
-	height: 30px;
-	width: 40px;
+	height: 35px;
+	width: 55px;
 	background-color: saddlebrown;
-	margin: 24% 8%;
+	margin: 26% 7%;
 	color: white;
 	opacity: 0.6;
+	}
+#bird::after {
+	content: "D";
+	transform: translate(1px,-2.5px);
 	}
 #washDish {
 	height: 40px;
@@ -92,9 +96,9 @@ span::first-letter, #knock[type= "content"]::first-letter {
 	}
 #light {
 	padding: 20px 20px;
-	height: 110px;
-	width: 60px;
-	margin: 25% 13%;
+	height: 101px;
+	width: 55px;
+	margin: 25.3% 13%;
 	border: none;
 	color: white;
 	opacity: 0.6;
@@ -105,4 +109,123 @@ span::first-letter, #knock[type= "content"]::first-letter {
 	background-color: #f8ed13;
 	box-shadow: 10px 10px 142px 37px rgba(237,237,14,1);
 	color: #f8ed13;
+	}
+
+@media (min-width: 800px) and (max-width: 1050px) {
+	span::first-letter, #bird::after , span{
+		font-size: 10px;
+		}
+	#light {
+		padding: 2px 18px;
+		height: 63px;
+		width: 15px;
+		}
+	#washDish {
+		margin: 25% 74%;
+		height: 30px;
+		width: 74px;
+		}
+	#bird::after {
+		content: "D";
+		transform: translate(1px,-2px);
+		font-size: 16px;
+		}
+	#bird {
+		margin: 25% 5%;
+		}
+	}
+
+@media (min-width: 1050px) and (max-width: 1200px) {
+	#light {
+		padding: 20px 22px;
+		height: 76px;
+		width: 50px;
+		font-size: 12px;
+		}
+	#washDish {
+		margin: 25% 74%;
+		}
+	#bird {
+		margin: 25% 6%;
+		}
+	}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+	#light {
+		padding: 20px 22px;
+		height: 88px;
+		width: 56px;
+		}
+	#washDish {
+		margin: 25% 75%;
+		}
+	}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+	#light {
+		padding: 20px 22px;
+		height: 88px;
+		width: 56px;
+		}
+	}
+
+@media (min-width: 1600px) and (max-width: 1750px) {
+	#light {
+		padding: 20px 22px;
+		height: 111px;
+		width: 62px;
+		}
+	}
+
+@media (min-width: 1750px)  {
+	span::first-letter, #bird::after , span{
+		 font-size: 20px;
+		}
+	#light {
+		padding: 20px 25px;
+		height: 130px;
+		width: 65px;
+		}
+	#bird {
+		height: 50px;
+		width: 84px;
+		}
+	#bird>span::first-letter {
+		font-size: 24px;
+		}
+	#bird::after {
+		content: "D";
+		transform: translate(1px,0px);
+		}
+	#washDish {
+		height: 50px;
+		width: 98px;
+		}
+	#car {
+		height: 35px;
+		width: 80px;
+		margin: 57% 41%;
+		}
+	#knock {
+		height: 40px;
+		width: 75px;
+		}
+	#door-bell{
+		width: 25px;
+		height: 25px;
+		}
+	}
+@media (min-width: 2100px) and (max-width: 2500px) {
+	#light {
+		padding: 20px 29px;
+		height: 156px;
+		width: 85px;
+		}
+	}
+@media (min-width: 2500px){
+	#light {
+		padding: 20px 38px;
+		height: 184px;
+		width: 104px;
+		}
 	}
