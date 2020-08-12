@@ -101,24 +101,26 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 
   document.addEventListener("keyup", (event) => {
-    if (event.key === "k") {
-      setLastColor(getKnock);
-    }
-    if (event.key === "d") {
-      setLastColor(getBird);
-    }
-    if (event.key === "w") {
-      setLastColor(getWashDishes);
-    }
-    if (event.key === "b") {
-      colorBellDefault(getBell);
-    }
-    if (event.key === "c") {
-      colorCarDefault(getCar);
-    }
-    if (event.key === "l") {
-      setLastColor(getLamp);
-      setLampDefault(getLamp);
+    switch (event.key) {
+      case "k":
+        setLastColor(getKnock);
+        break;
+      case "d":
+        setLastColor(getBird);
+        break;
+      case "w":
+        setLastColor(getWashDishes);
+        break;
+      case "b":
+        colorBellDefault(getBell);
+        break;
+      case "c":
+        colorCarDefault(getCar);
+        break;
+      case "l":
+        setLastColor(getLamp);
+        setLampDefault(getLamp);
+        break;
     }
   });
 });
