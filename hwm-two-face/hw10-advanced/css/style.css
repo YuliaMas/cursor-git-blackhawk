@@ -1,0 +1,108 @@
+html , body {
+	width: 100vw;
+	height: 100vh;
+	background-color: lightslategray;
+	}
+#container {
+	margin: auto;
+	width: 90vw;
+	height: 100vh;
+	background-image: url("../img/round-arch-466043_1280.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	}
+.fix {
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	}
+span::first-letter, #knock[type= "content"]::first-letter {
+	color: yellow;
+	font-size: 18px;
+	font-weight: 900;
+	}
+#door-bell span {
+	transform: translate(19px, 17px);
+	}
+#door-bell{
+	margin: 25% 51%;
+	border-radius: 60%;
+	background-color: #d0d0d0;
+	width: 15px;
+	height: 15px;
+	}
+#door-bell::before {
+	position: absolute;
+	content: "Bell";
+	color: white;
+	transform: translate(0px, 20px);
+	opacity: 0.5;
+	}
+#door-bell:hover {
+	background-color: pink;
+	}
+#door-bell::after{
+	position: absolute;
+	background-color: #282828;
+	width: 5px;
+	height: 5px;
+	content: "";
+	border-radius: 60%;
+	}
+#knock {
+	border-radius:6px;
+	height: 30px;
+	width: 50px;
+	opacity: 0.5;
+	background-color: saddlebrown;
+	color: white;
+	margin: 24% 41%;
+	}
+#car {
+	height: 25px;
+	width: 80px;
+	background-color: #968d877a;
+	margin: 44% 41%;
+	color: wheat;
+	}
+#bird {
+	height: 30px;
+	width: 40px;
+	background-color: saddlebrown;
+	margin: 24% 8%;
+	color: white;
+	opacity: 0.6;
+	}
+#washDish {
+	height: 40px;
+	width: 80px;
+	background-color: saddlebrown;
+	margin: 26% 75%;
+	color: white;
+	opacity: 0.6;
+	}
+#bird:hover,#knock:hover, #washDish:hover {
+	background-color: #8b1313;
+	}
+#car:hover {
+	background-color: saddlebrown;
+	opacity: 0.6 ;
+	}
+#light {
+	padding: 20px 20px;
+	height: 110px;
+	width: 60px;
+	margin: 25% 13%;
+	border: none;
+	color: white;
+	opacity: 0.6;
+	background-color: saddlebrown;
+	border-radius: 3px;
+	}
+#light:hover {
+	background-color: #f8ed13;
+	box-shadow: 10px 10px 142px 37px rgba(237,237,14,1);
+	color: #f8ed13;
+	}
