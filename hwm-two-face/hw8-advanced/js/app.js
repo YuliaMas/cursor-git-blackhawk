@@ -1,11 +1,11 @@
 window.addEventListener("DOMContentLoaded", () => {
   const getInfo = document.querySelector(".p1");
-  const getMarks = document.querySelector(".p2");
   const getAllMarks = document.querySelector(".p3");
+  const putNewMark = document.querySelector(".p2");
   const getAverage = document.querySelector(".p4");
   const getInfoBud = document.querySelector(".p5");
-  const getMarksBud = document.querySelector(".p6");
   const getAllMarksBud = document.querySelector(".p7");
+  const putNewMarkBud = document.querySelector(".p6");
   const getAverageBud = document.querySelector(".p8");
   const scholarship = document.querySelector(".p9");
   const checkBox = document.getElementById("dismiss");
@@ -25,39 +25,41 @@ window.addEventListener("DOMContentLoaded", () => {
 
   function getMarkPush() {
     const getMark = +document.querySelector("#getMark").value;
-    getAllMarks.innerHTML = `Ставимо оцінку ${(students.marks = getMark)} `;
-    getMarks.innerHTML = `Всі оцінки студента: ${students.marks}`;
+    putNewMark.innerHTML = `Ставимо оцінку ${(students.marks = getMark)} `;
+    getAllMarks.innerHTML = `Всі оцінки студента: ${students.marks}`;
     getAverage.innerHTML = `Середній бал студента : ${students.getAverageMark()}`;
   }
 
   function getMarkPushBudget() {
     const getMarkBud = +document.querySelector("#getMarkBud").value;
-    getAllMarksBud.innerHTML = `Ставимо оцінку ${(studentBudget.marks = getMarkBud)} `;
-    getMarksBud.innerHTML = `Всі оцінки студента: ${studentBudget.marks}`;
+    putNewMarkBud.innerHTML = `Ставимо оцінку ${(studentBudget.marks = getMarkBud)} `;
+    getAllMarksBud.innerHTML = `Всі оцінки студента: ${studentBudget.marks}`;
     getAverageBud.innerHTML = `Середній бал студента : ${studentBudget.getAverageMark()}`;
   }
 
   function getDismissF() {
     if (checkBox.checked === true) {
-      getAllMarks.style.display = "none";
+      putNewMark.style.display = "none";
       pItem.style.display = "block";
       text.style.display = "block";
       text.textContent = `Студент ${students.fullName} відрахований `;
     } else {
       pItem.style.display = "none";
       text.style.display = "none";
+      putNewMark.style.display = "block";
     }
   }
 
   function getDismissBudF() {
     if (checkBoxBud.checked) {
-      getAllMarksBud.style.display = "none";
+      putNewMarkBud.style.display = "none";
       pItemBud.style.display = "block";
       textBud.style.display = "block";
       textBud.textContent = `Студент ${studentBudget.fullName} відрахований `;
     } else {
       pItemBud.style.display = "none";
       textBud.style.display = "none";
+      putNewMarkBud.style.display = "block";
     }
   }
 
@@ -91,7 +93,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   document.getElementById("click-info").addEventListener("click", () => {
     if (students.dismiss) {
-      `${setInfoStudent(students, getInfo, getMarks, getAverage)}`;
+      `${setInfoStudent(students, getInfo, getAllMarks, getAverage)}`;
     }
   });
   document.getElementById("click-mark").addEventListener("click", () => {
@@ -115,7 +117,7 @@ window.addEventListener("DOMContentLoaded", () => {
       `${setInfoStudent(
         studentBudget,
         getInfoBud,
-        getMarksBud,
+        getAllMarksBud,
         getAverageBud
       )}`;
     }
@@ -148,6 +150,7 @@ window.addEventListener("DOMContentLoaded", () => {
     students.marks
   );
   console.log(`Середній бал студента : ${students.getAverageMark()}`);
+  console.log(`Відраховуємо студента `);
   students.dismiss();
   console.log(
     `Ставимо оцінку ${(students.marks = 5)}. Поточні оцінки студента: `,
@@ -155,6 +158,7 @@ window.addEventListener("DOMContentLoaded", () => {
   );
   console.log(`Середній бал студента : ${students.getAverageMark()}`);
   console.log(`Повна інформація по студенту: ${students.getInfo()}`);
+  console.log(`Зараховуємо студента `);
   students.recover();
   console.log(
     `Ставимо оцінку ${(students.marks = 5)}. Поточні оцінки студента: `,

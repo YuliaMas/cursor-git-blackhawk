@@ -56,7 +56,7 @@ p.p3 {
 .card-item {
 	background-color: #00D6FF ;
 	width:450px;
-	height:550px ;
+	min-height:550px ;
 	margin: auto;
 	}
 fieldset {
@@ -72,4 +72,14 @@ fieldset div {
 	}
 label {
 	padding: 10px;
+	}
+
+@media (max-width: 450px) {
+	.card {
+		max-width: 340px;
+		}
+	.card-item {
+		width: 300px;
+		height: auto;
+		}
 	}
