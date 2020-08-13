@@ -111,9 +111,56 @@ span::first-letter, #bird::after{
 	color: #f8ed13;
 	}
 
-@media (min-width: 800px) and (max-width: 1050px) {
-	span::first-letter, #bird::after , span{
+@media (min-width: 320px) and (max-width: 600px) {
+	span::first-letter, #bird::after, span {
+		font-size: 8px;
+		}
+	#light {
+		padding: 2px 11px;
+		height: 35px;
+		width: 15px;
+		}
+	#washDish, #knock, #car, #bird {
+		height: 21px;
+		width: 39px;
+		}
+	#washDish {
+		margin: 25% 74%;
+		}
+	#bird::after {
+		content: "D";
+		transform: translate(1px, -2px);
 		font-size: 10px;
+		}
+	#bird {
+		margin: 25% 4%;
+		}
+	#knock {
+		margin: 23% 39%;
+		}
+	#bird > span::first-letter {
+		font-size: 8px;
+		}
+	#car {
+		margin: 47% 41%;
+		}
+	#door-bell {
+		margin: 26% 50.5%;
+		width: 11px;
+		height: 12px;
+		}
+	#door-bell::after {
+		width: 3px;
+		height: 3px;
+		}
+	#door-bell span {
+		transform: translate(0px, 12px);
+		}
+	}
+
+@media (min-width:600px) and (max-width: 1050px) {
+	span::first-letter, #bird::after , span {
+		font-size: 8px;
 		}
 	#light {
 		padding: 2px 18px;
@@ -133,9 +180,41 @@ span::first-letter, #bird::after{
 	#bird {
 		margin: 25% 5%;
 		}
+	#knock {
+		margin: 24% 40%;
+		}
 	}
 
-@media (min-width: 1050px) and (max-width: 1200px) {
+@media (min-width:600px) and (max-width: 850px) {
+	#washDish, #car {
+		height: 25px;
+		width: 63px;
+		}
+	#light {
+		padding: 2px 14px;
+		height: 50px;
+		}
+	#bird {
+		height: 27px;
+		width: 46px;
+		}
+	#washDish {
+		margin: 25% 74%;
+		}
+	#bird::after {
+		content: "D";
+		transform: translate(1px,-2px);
+		font-size: 12px;
+		}
+	#bird > span::first-letter {
+		font-size: 10px;
+		}
+	}
+
+@media (min-width: 1050px) and (max-width: 1220px) {
+	#knock {
+		margin: 24% 40%;
+		}
 	#light {
 		padding: 20px 22px;
 		height: 76px;
@@ -150,7 +229,7 @@ span::first-letter, #bird::after{
 		}
 	}
 
-@media (min-width: 1200px) and (max-width: 1400px) {
+@media (min-width: 1220px) and (max-width: 1400px) {
 	#light {
 		padding: 20px 22px;
 		height: 88px;
@@ -158,14 +237,6 @@ span::first-letter, #bird::after{
 		}
 	#washDish {
 		margin: 25% 75%;
-		}
-	}
-
-@media (min-width: 1200px) and (max-width: 1400px) {
-	#light {
-		padding: 20px 22px;
-		height: 88px;
-		width: 56px;
 		}
 	}
 
@@ -215,6 +286,7 @@ span::first-letter, #bird::after{
 		height: 25px;
 		}
 	}
+
 @media (min-width: 2100px) and (max-width: 2500px) {
 	#light {
 		padding: 20px 29px;
@@ -222,6 +294,7 @@ span::first-letter, #bird::after{
 		width: 85px;
 		}
 	}
+
 @media (min-width: 2500px){
 	#light {
 		padding: 20px 38px;
