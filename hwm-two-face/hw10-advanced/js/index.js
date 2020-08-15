@@ -68,32 +68,32 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 
   document.addEventListener("keydown", (event) => {
-    if (event.key === "b") {
+    if (event.code === "KeyB") {
       const bellSound = document.getElementById("bellSound");
       setSound(bellSound, "bellSound");
       setColorBell(getBell);
     }
-    if (event.key === "k") {
+    if (event.code === "KeyK") {
       const knockSound = document.getElementById("knockSound");
       setSound(knockSound, "knockSound");
       setColorButton(getKnock);
     }
-    if (event.key === "c") {
+    if (event.code === "KeyC") {
       const carSound = document.getElementById("carSound");
       setSound(carSound, "carSound");
       setLastColor(getCar);
     }
-    if (event.key === "d") {
+    if (event.code === "KeyD") {
       const birdSound = document.getElementById("birdSound");
       setSound(birdSound, "birdSound");
       setColorButton(getBird);
     }
-    if (event.key === "w") {
+    if (event.code === "KeyW") {
       const washDishesSound = document.getElementById("washDishesSound");
       setSound(washDishesSound, "washDishesSound");
       setColorButton(getWashDishes);
     }
-    if (event.key === "l") {
+    if (event.code === "KeyL") {
       const lightLampSound = document.getElementById("lightLampSound");
       setSound(lightLampSound, "lightLampSound");
       setLightLamp(getLamp);
@@ -101,23 +101,23 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 
   document.addEventListener("keyup", (event) => {
-    switch (event.key) {
-      case "k":
+    switch (event.code) {
+      case "KeyK":
         setLastColor(getKnock);
         break;
-      case "d":
+      case "KeyD":
         setLastColor(getBird);
         break;
-      case "w":
+      case "KeyW":
         setLastColor(getWashDishes);
         break;
-      case "b":
+      case "KeyB":
         colorBellDefault(getBell);
         break;
-      case "c":
+      case "KeyC":
         colorCarDefault(getCar);
         break;
-      case "l":
+      case "KeyL":
         setLastColor(getLamp);
         setLampDefault(getLamp);
         break;

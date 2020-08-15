@@ -12,6 +12,9 @@ html , body {
 	background-size: 100%;
 	background-repeat: no-repeat;
 	}
+.button-wrapper {
+	position: relative;
+	}
 .fix {
 	position: fixed;
 	display: flex;
