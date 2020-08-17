@@ -59,8 +59,8 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   function task5() {
-    const setSortNames = document.querySelector(".res-5");
-    setSortNames.innerHTML = `
+    const setBestStudentName = document.querySelector(".res-5");
+    setBestStudentName.innerHTML = `
           <div class="card">
                <p class="card-item">
                  ${getBestStudent(students)}
@@ -70,8 +70,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
   function task6() {
     const getWord = document.querySelector("#word").value;
-    const setSortNames = document.querySelector(".res-6");
-    setSortNames.innerHTML = `
+    const setCountLetters = document.querySelector(".res-6");
+    setCountLetters.innerHTML = `
           <div class="card">
                <p class="card-item">
                  ${getStringObject(calculateWordLetters(getWord))}
@@ -85,33 +85,18 @@ window.addEventListener("DOMContentLoaded", () => {
     if (event.target.classList.contains("click-1")) {
       `${task1()}`;
     }
-  });
-
-  document.body.addEventListener("click", (event) => {
     if (event.target.classList.contains("click-2")) {
       `${task2()}`;
     }
-  });
-
-  document.body.addEventListener("click", (event) => {
     if (event.target.classList.contains("click-3")) {
       `${task3()}`;
     }
-  });
-
-  document.body.addEventListener("click", (event) => {
     if (event.target.classList.contains("click-4")) {
       `${task4()}`;
     }
-  });
-
-  document.body.addEventListener("click", (event) => {
     if (event.target.classList.contains("click-5")) {
       `${task5()}`;
     }
-  });
-
-  document.body.addEventListener("click", (event) => {
     if (event.target.classList.contains("click-6")) {
       `${task6()}`;
     }
