@@ -22,7 +22,13 @@ html , body {
 	justify-content: center;
 	cursor: pointer;
 	}
-span::first-letter, #bird::after{
+kbd	{
+	color: yellow;
+	font-size: 18px;
+	font-weight: 900;
+	text-transform: uppercase;
+	}
+span::first-letter{
 	color: yellow;
 	font-size: 18px;
 	font-weight: 900;
@@ -78,10 +84,6 @@ span::first-letter, #bird::after{
 	color: white;
 	opacity: 0.6;
 	}
-#bird::after {
-	content: "D";
-	transform: translate(1px,-2.5px);
-	}
 #washDish {
 	height: 40px;
 	width: 80px;
@@ -130,9 +132,7 @@ span::first-letter, #bird::after{
 	#washDish {
 		margin: 25% 74%;
 		}
-	#bird::after {
-		content: "D";
-		transform: translate(1px, -2px);
+	kbd {
 		font-size: 10px;
 		}
 	#bird {
@@ -175,9 +175,7 @@ span::first-letter, #bird::after{
 		height: 30px;
 		width: 74px;
 		}
-	#bird::after {
-		content: "D";
-		transform: translate(1px,-2px);
+	kbd {
 		font-size: 16px;
 		}
 	#bird {
@@ -204,9 +202,7 @@ span::first-letter, #bird::after{
 	#washDish {
 		margin: 25% 74%;
 		}
-	#bird::after {
-		content: "D";
-		transform: translate(1px,-2px);
+	kbd {
 		font-size: 12px;
 		}
 	#bird > span::first-letter {
@@ -267,10 +263,6 @@ span::first-letter, #bird::after{
 	#bird>span::first-letter {
 		font-size: 24px;
 		}
-	#bird::after {
-		content: "D";
-		transform: translate(1px,0px);
-		}
 	#washDish {
 		height: 50px;
 		width: 98px;
@@ -303,5 +295,8 @@ span::first-letter, #bird::after{
 		padding: 20px 38px;
 		height: 184px;
 		width: 104px;
+		}
+	kbd {
+		font-size: 24px;
 		}
 	}
