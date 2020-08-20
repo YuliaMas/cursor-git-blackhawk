@@ -1,6 +1,6 @@
 window.addEventListener("DOMContentLoaded", () => {
   function task1() {
-    const setSubject = document.querySelector(".res-1");
+    const setSubject = document.querySelector(".subjects");
     if (!setSubject.childNodes.length) {
       for (let student of students) {
         setSubject.innerHTML += `
@@ -15,7 +15,7 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   function task2() {
-    const setAverageMark = document.querySelector(".res-2");
+    const setAverageMark = document.querySelector(".averMarks");
     if (!setAverageMark.childNodes.length) {
       for (let student of students) {
         setAverageMark.innerHTML += `
@@ -30,7 +30,7 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   function task3() {
-    const setInfo = document.querySelector(".res-3");
+    const setInfo = document.querySelector(".info");
     if (!setInfo.childNodes.length) {
       for (let student of students) {
         getStudentInfo(student);
@@ -49,7 +49,7 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   function task4() {
-    const setSortNames = document.querySelector(".res-4");
+    const setSortNames = document.querySelector(".sortNames");
     setSortNames.innerHTML = `
           <div class="card">
                <p class="card-item">
@@ -59,7 +59,7 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   function task5() {
-    const setBestStudentName = document.querySelector(".res-5");
+    const setBestStudentName = document.querySelector(".bestStud");
     setBestStudentName.innerHTML = `
           <div class="card">
                <p class="card-item">
@@ -70,7 +70,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   function task6() {
     const getWord = document.querySelector("#word").value;
-    const setCountLetters = document.querySelector(".res-6");
+    const setCountLetters = document.querySelector(".letters");
     setCountLetters.innerHTML = `
           <div class="card">
                <p class="card-item">

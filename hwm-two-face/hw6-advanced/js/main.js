@@ -1,6 +1,6 @@
 //1. повертає список предметів для конкретного студента
-function getSubjects(students) {
-  const subjects = Object.keys(students.subjects);
+function getSubjects(student) {
+  const subjects = Object.keys(student.subjects);
   return subjects.map(
     (subject) =>
       subject.slice(0, 1).toUpperCase() + subject.slice(1).replace("_", " ")
@@ -17,8 +17,8 @@ function getSubjects(students) {
 }
 
 // 2. поверне середню оцінку по усім предметам для переданого студента
-function getAverageMark(students) {
-  const marksObj = Object.values(students.subjects);
+function getAverageMark(student) {
+  const marksObj = Object.values(student.subjects);
   const marks = [];
   let sumMarks = 0;
   for (let mark in marksObj) {
@@ -35,11 +35,11 @@ function getAverageMark(students) {
 
 // 3.повертає інформацію загального виду по переданому студенту
 function getStudentInfo(student) {
-  const info = {};
-  info.name = student.name;
-  info.course = student.course;
-  info.average = getAverageMark(student);
-  return info;
+  return {
+    name: student.name,
+    course: student.course,
+    average: getAverageMark(student),
+  };
 }
 
 // 4. повертає імена студентів у алфавітному порядку.
@@ -63,7 +63,9 @@ function getBestStudent(students) {
   }
 
   bestAverMark = Math.max(...average);
-  const obj = Object.assign(...names.map((n, i) => ({ [n]: average[i] })));
+  const obj = Object.assign(
+    ...names.map((name, i) => ({ [name]: average[i] }))
+  );
 
   for (const [key, value] of Object.entries(obj)) {
     if (value === bestAverMark) {
