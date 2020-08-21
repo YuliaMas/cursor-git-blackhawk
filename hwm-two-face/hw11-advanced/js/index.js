@@ -45,9 +45,9 @@ function setResult() {
       time.innerHTML = `Runtime: ${data}ms`;
     })
     .catch(() => {
-      text.innerHTML = "The number is small";
+      text.innerHTML = "The number is smaller";
     });
 }
 
-const numberBtn = document.getElementById("but");
+const numberBtn = document.getElementById("btn");
 numberBtn.addEventListener("click", setResult);
