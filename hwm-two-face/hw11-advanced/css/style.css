@@ -1,0 +1,68 @@
+html, body {
+	width: 100vw;
+	height: 100vh;
+	font-family: 'Balsamiq Sans', cursive;
+	}
+.wrapper {
+	background-image: url("../img/Autumn landscape with tree  Hieroglyphs autumn, truth Shower Curtain by decorum.png");
+	background-size: 100% 100% ;
+	background-repeat: no-repeat;
+	background-position-x: center;
+	background-position-y: center;
+	width: 80%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	}
+h1	{
+	color: white;
+	font-size: 32px;
+	font-weight: bold;
+	text-align: center;
+	}
+div {
+	margin: 0 auto;
+	font-size: 24px;
+	color: #000000;
+	width: 80%;
+	height: 200px;
+	border: 2px solid red;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	}
+div:first-child {
+	justify-content: space-evenly;
+	}
+p {
+	font-size: inherit;
+	text-align: center;
+	font-weight: bold;
+	}
+label {
+	display: flex;
+	justify-content: center;
+	}
+input {
+	width: 80px;
+	height: 60px;
+	margin-right: 50px;
+	font-size: 50px;
+	font-family: 'Balsamiq Sans', cursive;
+	border-radius: 4px;
+	}
+button {
+	width: 80px;
+	font-size: 30px;
+	font-family: 'Balsamiq Sans', cursive;
+	border-radius: 4px;
+	}
+p:first-child {
+	color: white;
+	}
+p:last-child {
+	color: #f94d40;
+	font-size: 28px;
+	font-weight: bold;
+	}
