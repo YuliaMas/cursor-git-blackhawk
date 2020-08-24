@@ -1,6 +1,5 @@
 const min = 10000;
 let data;
-let result = "";
 let signUp = "";
 const phrase = [
   "Before I finish - 在我结束",
@@ -16,7 +15,7 @@ function random(array) {
   return array[Math.floor(Math.random() * array.length) | 0];
 }
 
-async function doPromise(length) {
+async function getChars(length) {
   let res = "";
   let signArr = [];
   const start = Date.now();
@@ -39,8 +38,7 @@ async function doPromise(length) {
         const end = Date.now();
         data = end - start;
         signUp = signArr.join(" - ");
-        result = res;
-        resolve();
+        resolve(res);
       }
     }, 50);
   });
