@@ -68,7 +68,7 @@ function getPeople(numPage) {
 }
 
 function getFilmsPeople(filmNumber) {
-  const request = axios.get(BASE + "films/" + filmNumber + "/");
+  const request = axios.get(BASE + "films/" + filmNumber);
   return request.then((data) => {
     // return data.data["characters"];
     // characters = data.data["characters"];
