@@ -3,11 +3,52 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>$Title$</title>
-	<link rel="stylesheet" href="./../css/reset.css">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Ajax - API</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link href="https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap" rel="stylesheet">
+<!--	<link href="https://fonts.googleapis.com/css2?family=Vast+Shadow&display=swap" rel="stylesheet">-->
+	<link href="https://fonts.googleapis.com/css2?family=Unlock&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./css/preloader.css">
 	<link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-$END$
+<div class="starwars-demo preloader">
+	<img src="//cssanimation.rocks/demo/starwars/images/star.svg" alt="Star" class="star">
+	<img src="//cssanimation.rocks/demo/starwars/images/wars.svg" alt="Wars" class="wars">
+	<h2 class="byline" id="byline">The Force Awakens</h2>
+</div>
+
+	<div	class="wrapper">
+		<canvas id="stars"></canvas>
+
+		<div	class="info done">
+			<h1>STAR WARS</h1>
+			<div class="buttons">
+				<div>
+					<button id="btn" class="button" type="button">Get information</button>
+					<button id="btnTrans" class="button" type="button">Get information translate</button>
+					<button id="btnFilm" class="button" type="button">Get information film characters</button>
+				</div>
+				<label><input type="number" value="1" min="1" max="10" id="filmId"></label>
+				<div>
+					<button id="btnPlanet" class="button" type="button">Get information about planets</button>
+					<button id="prev" class="button" type="button">Prev</button>
+					<button id="next" class="button" type="button">Next</button>
+				</div>
+			</div>
+		</div>
+		<main class="main">
+			<div	class="people"></div>
+		</main>
+	</div>
+
+	<script async src="js/preloader.js"></script>
+	<script src="js/canvas.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<script src="js/Photo.js"></script>
+	<script src="js/Wookiee-Photo.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/app.js"></script>
 </body>
 </html>
