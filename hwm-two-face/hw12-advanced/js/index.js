@@ -55,7 +55,7 @@
 const BASE = "https://swapi.dev/api/";
 
 function getPeople(numPage) {
-  const request = axios.get(BASE + "people?page=" + numPage);
+  const request = axios.get(BASE + `people?page=${numPage}`);
   return request
     .then((res) => {
       console.log(res.data);
@@ -68,7 +68,7 @@ function getPeople(numPage) {
 }
 
 function getFilmsPeople(filmNumber) {
-  const request = axios.get(BASE + "films/" + filmNumber);
+  const request = axios.get(BASE + `films/${filmNumber}/`);
   return request.then((data) => {
     // return data.data["characters"];
     // characters = data.data["characters"];
@@ -87,9 +87,7 @@ const request = axios.get("https://swapi.dev/api/films/2/?format=wookiee");
 console.log(request);
 
 function getPeopleTranslate(numPage) {
-  const request = axios.get(
-    BASE + "people?page=" + numPage + "&format=wookiee"
-  );
+  const request = axios.get(BASE + `people?page=${numPage}&format=wookiee`);
   return request.then((res) => {
     console.log(res.data.rcwochuanaoc);
     return res.data.rcwochuanaoc;
@@ -99,7 +97,7 @@ function getPeopleTranslate(numPage) {
 }
 
 function getPlanets(numPage) {
-  const request = axios.get(BASE + "planets?page=" + numPage);
+  const request = axios.get(BASE + `planets?page=${numPage}`);
   return request.then((res) => {
     console.log(res.data.results);
     return res.data.results;
