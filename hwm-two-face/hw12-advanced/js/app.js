@@ -22,7 +22,7 @@ function displayPeople(people = []) {
   });
 }
 
-function display(characters = {}) {
+function display(characters = []) {
   const container = document.querySelector(".people");
   container.innerHTML = "";
 
@@ -114,7 +114,8 @@ function findImg(characters, personIcon) {
   const image = document.createElement("img");
   image.className = "iconCharacter";
   for (let i = 0; i < Object.keys(photoCharacters).length; i++) {
-    if (characters["url"] === Object.keys(photoCharacters)[i]) {
+    const httpsUrl = characters["url"].replace("http", "https");
+    if (httpsUrl === Object.keys(photoCharacters)[i]) {
       image.src = Object.values(photoCharacters)[i];
       personIcon.appendChild(image);
     }
