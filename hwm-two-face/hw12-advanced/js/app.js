@@ -117,13 +117,21 @@ function paginationInit() {
   let valuePage = 1;
   let currentPage = document.getElementById("filmId");
   document.getElementById("prev").addEventListener("click", () => {
-    if (+currentPage.value <= 1) return;
+    if (+currentPage.value <= 1 || +currentPage.value > 6) {
+      valuePage = +currentPage.value - 1;
+      currentPage.value = `${valuePage}`;
+      return;
+    }
     valuePage = +currentPage.value - 1;
     currentPage.value = `${valuePage}`;
     getPlanets(currentPage.value).then(displayPlanet);
   });
   document.getElementById("next").addEventListener("click", () => {
-    if (+currentPage.value >= 6) return;
+    if (+currentPage.value >= 6 || +currentPage.value < 1) {
+      valuePage = +currentPage.value + 1;
+      currentPage.value = `${valuePage}`;
+      return;
+    }
     valuePage = +currentPage.value + 1;
     currentPage.value = `${valuePage}`;
     getPlanets(currentPage.value).then(displayPlanet);
@@ -162,26 +170,32 @@ const info = document.querySelector(".container");
 
 btnInfo.addEventListener("click", () => {
   const peopleId = document.getElementById("filmId").value;
+  if (peopleId < 1 || peopleId > 9) return;
   getPeople(peopleId).then(displayPeople);
 });
 
 btnPlanet.addEventListener("click", () => {
   const planetId = document.getElementById("filmId").value;
+  if (planetId < 1 || planetId > 6) return;
   getPlanets(planetId).then(displayPlanet);
 });
 
 btnFilm.addEventListener("click", () => {
   const filmId = document.getElementById("filmId").value;
+  if (filmId < 1 || filmId > 6) return;
   getFilmsPeople(filmId).then(display);
 });
 
 btnTrans.addEventListener("click", () => {
   const pageId = document.getElementById("filmId").value;
+  if (pageId < 2 || pageId === 4 || pageId === 6 || pageId === 7 || pageId > 8)
+    return;
   getPeopleTranslate(pageId).then(displayPeopleTranslate);
 });
 
 btnPlanetTrans.addEventListener("click", () => {
   const pageId = document.getElementById("filmId").value;
+  if (pageId < 2 || pageId > 5) return;
   getPlanetsTranslate(pageId).then(displayPlanetsTranslate);
 });
 paginationInit();

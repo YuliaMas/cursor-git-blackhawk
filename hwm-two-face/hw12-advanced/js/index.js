@@ -48,7 +48,7 @@ function getPeopleTranslate(numPage) {
   });
 }
 
-function getPlanets(numPage = 1) {
+function getPlanets(numPage) {
   const request = axios.get(BASE + `planets/?page=${numPage}`);
   return request
     .then((res) => {
