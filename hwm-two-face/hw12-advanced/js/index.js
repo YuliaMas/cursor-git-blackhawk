@@ -65,9 +65,6 @@ function getPeople(numPage) {
   return request
     .then((res) => {
       console.log(res.data);
-      // const nextB = res.data.replace("http", "https");
-      // console.log(nextB);
-      console.log(res.data);
       console.log(res.data.results);
       return res.data.results;
     })
@@ -112,7 +109,7 @@ const request = axios.get("https://swapi.dev/api/films/2/?format=wookiee");
 console.log(request);
 
 function getPeopleTranslate(numPage) {
-  const request = axios.get(BASE + `people?page=${numPage}&format=wookiee`);
+  const request = axios.get(BASE + `people/?page=${numPage}&format=wookiee`);
   return request.then((res) => {
     console.log(res.data.rcwochuanaoc);
     return res.data.rcwochuanaoc;
