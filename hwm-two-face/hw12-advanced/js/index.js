@@ -61,17 +61,19 @@
 const BASE = "https://swapi.dev/api/";
 
 function getPeople(numPage) {
-  const request = axios.get(BASE + `people?page=${numPage}`);
+  const request = axios.get(BASE + `people/?page=${numPage}`);
   return request
     .then((res) => {
       console.log(res.data);
-      // const httpsUrl = res.data.next.replace("http", "https");
+      // const nextB = res.data.replace("http", "https");
+      // console.log(nextB);
+      console.log(res.data);
       console.log(res.data.results);
       return res.data.results;
     })
     .catch((err) => {
       console.log("something wrong", err);
-      return true;
+      return [];
     });
 }
 
@@ -81,15 +83,15 @@ function getFilmsPeople(filmNumber) {
     .then((data) => {
       // return data.data["characters"];
       // characters = data.data["characters"];
-      console.log("res:", data.data["characters"]);
-      console.log("res:", data.data);
+      // console.log("res:", data.data["characters"]);
+      // console.log("res:", data.data);
       console.log(data.data["url"].replace("http", "https"));
       let httpsUrl = [];
       for (let i = 0; i < data.data["characters"].length; i++) {
         httpsUrl[i] = data.data["characters"][i].replace("http", "https");
-        console.log(httpsUrl[i]);
+        // console.log(httpsUrl[i]);
       }
-      console.log(httpsUrl);
+      // console.log(httpsUrl);
       // const chars = char.forEach((char) => {
       //   char.replace("http", "https");
       // });
@@ -120,7 +122,7 @@ function getPeopleTranslate(numPage) {
 }
 
 function getPlanets(numPage = 1) {
-  const request = axios.get(BASE + `planets?page=${numPage}`);
+  const request = axios.get(BASE + `planets/?page=${numPage}`);
   return request
     .then((res) => {
       console.log(res.data.results);
