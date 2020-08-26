@@ -54,6 +54,7 @@ div  {
 
 .buttons>div:last-child {
 	margin-top: 20px;
+	order: -1;
 	}
 
 .people {
@@ -93,7 +94,7 @@ text-align: start;
 	width: 60%;
 }
 
-main{
+main {
 /*position: absolute;*/
 	z-index: 100;
 	/*top: 50px;*/
@@ -127,6 +128,7 @@ main{
 input {
 	width: 100px;
 	color: white;
+	padding-top: 11px;
 	}
 
 input[title]:hover {
