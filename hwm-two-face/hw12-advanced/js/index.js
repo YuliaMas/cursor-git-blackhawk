@@ -64,26 +64,37 @@ function getPeople(numPage) {
   const request = axios.get(BASE + `people?page=${numPage}`);
   return request
     .then((res) => {
-      // console.log(res.data);
+      console.log(res.data);
       // const httpsUrl = res.data.next.replace("http", "https");
       console.log(res.data.results);
       return res.data.results;
     })
     .catch((err) => {
       console.log("something wrong", err);
-      // return [];
+      return true;
     });
 }
 
 function getFilmsPeople(filmNumber) {
-  const request = axios.get(`${BASE}films/${filmNumber}`);
+  const request = axios.get(`${BASE}films/${filmNumber}/`);
   return request
     .then((data) => {
       // return data.data["characters"];
       // characters = data.data["characters"];
+      console.log("res:", data.data["characters"]);
       console.log("res:", data.data);
-      console.log(data.data["url"]);
-      return data.data["characters"];
+      console.log(data.data["url"].replace("http", "https"));
+      let httpsUrl = [];
+      for (let i = 0; i < data.data["characters"].length; i++) {
+        httpsUrl[i] = data.data["characters"][i].replace("http", "https");
+        console.log(httpsUrl[i]);
+      }
+      console.log(httpsUrl);
+      // const chars = char.forEach((char) => {
+      //   char.replace("http", "https");
+      // });
+      return httpsUrl;
+      // return data.data["characters"];
 
       // characters.map((char, i) =>
       //      axios.get(char).then((data) => {
@@ -108,7 +119,7 @@ function getPeopleTranslate(numPage) {
   });
 }
 
-function getPlanets(numPage) {
+function getPlanets(numPage = 1) {
   const request = axios.get(BASE + `planets?page=${numPage}`);
   return request
     .then((res) => {

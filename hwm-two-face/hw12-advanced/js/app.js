@@ -22,11 +22,12 @@ function displayPeople(people = []) {
   });
 }
 
-function display(characters = []) {
+function display(characters = {}) {
   const container = document.querySelector(".people");
   container.innerHTML = "";
 
-  characters.map((char) =>
+  characters.map((char) => {
+    // char = char.replace("http", "https");
     axios.get(char).then((char) => {
       console.log(char.data);
       characters = char.data;
@@ -46,8 +47,8 @@ function display(characters = []) {
       container.append(personElement);
       personElement.appendChild(personIcon);
       findImg(characters, personIcon);
-    })
-  );
+    });
+  });
 }
 
 function displayPlanet(planets = []) {
@@ -93,16 +94,16 @@ function displayPeopleTranslate(people = []) {
 }
 
 function paginationInit() {
-  let valuePage;
+  let valuePage = 1;
   let currentPage = document.getElementById("filmId");
   document.getElementById("prev").addEventListener("click", () => {
-    if (currentPage.value < 1) return;
+    if (+currentPage.value <= 1) return;
     valuePage = +currentPage.value - 1;
     currentPage.value = `${valuePage}`;
     getPlanets(currentPage.value).then(displayPlanet);
   });
   document.getElementById("next").addEventListener("click", () => {
-    if (currentPage.value > 6) return;
+    if (+currentPage.value >= 6) return;
     valuePage = +currentPage.value + 1;
     currentPage.value = `${valuePage}`;
     getPlanets(currentPage.value).then(displayPlanet);
