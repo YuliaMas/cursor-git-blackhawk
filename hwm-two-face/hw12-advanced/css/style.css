@@ -199,4 +199,13 @@ audio {
 	background-color: gray;
 	height: 25px;
 	border: 2px solid black;
+	outline: none;
+	border-radius: 20px;
+	margin-right: calc(50% - 50px);
+	margin-left: calc(50% - 50px);
+	}
+
+audio:hover {
+	opacity: 0.8;
+	outline: none;
 	}
