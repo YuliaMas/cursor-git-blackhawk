@@ -1,6 +1,8 @@
 function displayPeople(people = []) {
   const container = document.querySelector(".people");
   container.innerHTML = "";
+  const title = document.querySelector(".title");
+  title.innerText = "Characters";
 
   people.map((person) => {
     const personElement = document.createElement("div");
@@ -23,6 +25,8 @@ function displayPeople(people = []) {
 function display(characters = {}) {
   const container = document.querySelector(".people");
   container.innerHTML = "";
+  const title = document.querySelector(".title");
+  title.innerText = "Characters";
 
   characters.map((char) => {
     axios.get(char).then((char) => {
@@ -50,6 +54,8 @@ function display(characters = {}) {
 function displayPlanet(planets = []) {
   const container = document.querySelector(".people");
   container.innerHTML = "";
+  const title = document.querySelector(".title");
+  title.innerText = "Planets";
 
   planets.map((planet) => {
     const personElement = document.createElement("div");
@@ -69,6 +75,8 @@ function displayPlanet(planets = []) {
 function displayPeopleTranslate(people = []) {
   const container = document.querySelector(".people");
   container.innerHTML = "";
+  const title = document.querySelector(".title");
+  title.innerText = "Characters";
 
   people.map((person) => {
     const personElement = document.createElement("div");
@@ -92,6 +100,8 @@ function displayPeopleTranslate(people = []) {
 function displayPlanetsTranslate(planets = []) {
   const container = document.querySelector(".people");
   container.innerHTML = "";
+  const title = document.querySelector(".title");
+  title.innerText = "Planets";
 
   planets.map((planet) => {
     const personElement = document.createElement("div");

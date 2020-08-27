@@ -16,6 +16,12 @@ h1 {
 	color: yellow;
 	}
 
+h2	{
+	color: #e4e3e3;
+	font-size: 2rem;
+	text-align: center;
+	}
+
  h3>span , h4>span {
 	font-family: "Lucida Sans", sans-serif;
 	padding-right: 5px;

@@ -1,9 +1,9 @@
 window.onload = function () {
   document.body.classList.add("loaded_hiding");
-  let music = document.getElementById("music");
-  if (music.canPlayType)
-    // проверка поддержки audio. Делается дабы Safari не останавливал JS на ошибке
-    music.play();
+  // let music = document.getElementById("music");
+  // if (music.canPlayType)
+  //   // проверка поддержки audio. Делается дабы Safari не останавливал JS на ошибке
+  //   music.play();
   window.setTimeout(function () {
     document.body.classList.add("loaded");
     document.body.classList.remove("loaded_hiding");
