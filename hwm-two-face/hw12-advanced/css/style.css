@@ -3,7 +3,6 @@ html,	 body {
 	height: 100vh;
 	overflow-x: hidden;
 	font-size: 18px;
-	/*font-family: 'Vast Shadow', cursive;*/
 	font-family: 'Unlock', cursive;
 	color: black;
 	}
@@ -25,7 +24,7 @@ h2	{
  h3>span , h4>span {
 	font-family: "Lucida Sans", sans-serif;
 	padding-right: 5px;
-	 color: white;
+	color: white;
 	}
 
 .wrapper {
@@ -76,10 +75,7 @@ div  {
 	flex-basis: 400px;
 	margin: 10px;
 	display: flex;
-	/*flex-direction: column;*/
-	/*justify-content: space-around; !*for image*!*/
 	align-items: center;
-	/*background-color: #c1b0b0;*/
 	background-color: #d4d4d49e;
 	text-align: center;
 	padding: 0 5px;

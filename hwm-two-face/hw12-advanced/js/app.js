@@ -1,62 +1,58 @@
-function displayPeople(people = []) {
-  const container = document.querySelector(".people");
-  container.innerHTML = "";
-  const title = document.querySelector(".title");
-  title.innerText = "Characters";
+const btnInfo = document.getElementById("btn");
+const btnFilm = document.getElementById("btnFilm");
+const btnPlanet = document.getElementById("btnPlanet");
+const btnTrans = document.getElementById("btnTrans");
+const btnPlanetTrans = document.getElementById("btnPlanetTrans");
+const container = document.querySelector(".people");
+const title = document.querySelector(".title");
+const data = {
+  name: "whrascwo",
+  birthday: "rhahrcaoac_roworarc",
+  gender: "rrwowhwaworc",
+  climate: "oaanahscraaowo",
+  terrain: "aoworcrcraahwh",
+  population: "akooakhuanraaoahoowh",
+};
 
-  people.map((person) => {
-    const personElement = document.createElement("div");
-    const personIcon = document.createElement("div");
-    personElement.className = "person around";
-    personElement.innerHTML = `
+function displayCharacterInfo(person) {
+  const personElement = document.createElement("div");
+  const personIcon = document.createElement("div");
+  personElement.className = "person around";
+  personIcon.className = "icon";
+  personElement.innerHTML = `
     <div>
-      <h3> <span> Name:</span> ${person.name}</h3>
-      <h4> <span> Birthday:</span> ${person["birth_year"]}</h4>
-      <h4> <span> Gender:</span> ${person["gender"]}</h4>
+      <h3> <span> Name: </span> ${person.name} </h3>
+      <h4> <span> Birthday: </span> ${person["birth_year"]} </h4>
+      <h4> <span> Gender: </span> ${person["gender"]} </h4>
      </div>
     `;
-    personIcon.className = "icon";
-    container.append(personElement);
-    personElement.appendChild(personIcon);
-    findImg(person, personIcon);
+  container.append(personElement);
+  personElement.appendChild(personIcon);
+  findImg(person, personIcon);
+}
+
+function displayPeople(people = []) {
+  container.innerHTML = "";
+  title.innerText = "Characters";
+  people.map((person) => {
+    displayCharacterInfo(person);
   });
 }
 
-function display(characters = {}) {
-  const container = document.querySelector(".people");
+function displayFilmCharacters(characters = {}) {
   container.innerHTML = "";
-  const title = document.querySelector(".title");
   title.innerText = "Characters";
-
   characters.map((char) => {
     axios.get(char).then((char) => {
-      console.log(char.data);
       characters = char.data;
-
-      const personElement = document.createElement("div");
-      const personIcon = document.createElement("div");
-      personElement.className = "person around";
-      personElement.innerHTML = `
-      <div>
-        <h3> <span> Name: </span> ${characters.name}</h3>
-        <h4> <span> Birthday: </span> ${characters["birth_year"]}</h4>
-        <h4> <span> Gender: </span> ${characters["gender"]}</h4>
-      </div>
-    `;
-      personIcon.className = "icon";
-      container.append(personElement);
-      personElement.appendChild(personIcon);
-      findImg(characters, personIcon);
+      displayCharacterInfo(characters);
     });
   });
 }
-
+// ---
 function displayPlanet(planets = []) {
-  const container = document.querySelector(".people");
   container.innerHTML = "";
-  const title = document.querySelector(".title");
   title.innerText = "Planets";
-
   planets.map((planet) => {
     const personElement = document.createElement("div");
     personElement.className = "person";
@@ -73,9 +69,7 @@ function displayPlanet(planets = []) {
 }
 
 function displayPeopleTranslate(people = []) {
-  const container = document.querySelector(".people");
   container.innerHTML = "";
-  const title = document.querySelector(".title");
   title.innerText = "Characters";
 
   people.map((person) => {
@@ -87,7 +81,7 @@ function displayPeopleTranslate(people = []) {
       <h3> <span> Whrascwo: </span> ${person.whrascwo}</h3>
       <h4> <span> Rhahrcaoac_roworarc: </span> ${person["rhahrcaoac_roworarc"]}</h4>
       <h4> <span> Rrwowhwaworc: </span> ${person["rrwowhwaworc"]}</h4>
-    </div> 
+    </div>
     `;
     container.append(personElement);
     personIcon.className = "icon";
@@ -98,9 +92,7 @@ function displayPeopleTranslate(people = []) {
 }
 
 function displayPlanetsTranslate(planets = []) {
-  const container = document.querySelector(".people");
   container.innerHTML = "";
-  const title = document.querySelector(".title");
   title.innerText = "Planets";
 
   planets.map((planet) => {
@@ -123,31 +115,6 @@ function displayPlanetsTranslate(planets = []) {
   });
 }
 
-function paginationInit() {
-  let valuePage = 1;
-  let currentPage = document.getElementById("filmId");
-  document.getElementById("prev").addEventListener("click", () => {
-    if (+currentPage.value <= 1 || +currentPage.value > 6) {
-      valuePage = +currentPage.value - 1;
-      currentPage.value = `${valuePage}`;
-      return;
-    }
-    valuePage = +currentPage.value - 1;
-    currentPage.value = `${valuePage}`;
-    getPlanets(currentPage.value).then(displayPlanet);
-  });
-  document.getElementById("next").addEventListener("click", () => {
-    if (+currentPage.value >= 6 || +currentPage.value < 1) {
-      valuePage = +currentPage.value + 1;
-      currentPage.value = `${valuePage}`;
-      return;
-    }
-    valuePage = +currentPage.value + 1;
-    currentPage.value = `${valuePage}`;
-    getPlanets(currentPage.value).then(displayPlanet);
-  });
-}
-
 function findImg(characters, personIcon) {
   const image = document.createElement("img");
   image.className = "iconCharacter";
@@ -163,49 +130,68 @@ function findImg(characters, personIcon) {
 function findImgTranslate(person, personIcon) {
   const image = document.createElement("img");
   image.className = "iconCharacter";
-  for (let i = 0; i < Object.keys(translatePhoto).length; i++) {
-    if (person["hurcan"] === Object.keys(translatePhoto)[i]) {
-      image.src = Object.values(translatePhoto)[i];
+  for (let key in wookieePhoto) {
+    if (person["hurcan"] === key) {
+      image.src = wookieePhoto[key];
       personIcon.appendChild(image);
     }
   }
 }
 
-const btnInfo = document.getElementById("btn");
-const btnFilm = document.getElementById("btnFilm");
-const btnPlanet = document.getElementById("btnPlanet");
-const btnTrans = document.getElementById("btnTrans");
-const btnPlanetTrans = document.getElementById("btnPlanetTrans");
-const info = document.querySelector(".container");
+function paginationInit() {
+  let valuePage = 1;
+  let currentPage = document.getElementById("filmId");
+
+  document.getElementById("prev").addEventListener("click", () => {
+    valuePage = +currentPage.value - 1;
+    currentPage.value = `${valuePage}`;
+    if (+currentPage.value <= 1 || +currentPage.value > 6) {
+      return;
+    }
+    getInfo(currentPage.value, planets).then(displayPlanet);
+  });
+
+  document.getElementById("next").addEventListener("click", () => {
+    valuePage = +currentPage.value + 1;
+    currentPage.value = `${valuePage}`;
+    if (+currentPage.value >= 6 || +currentPage.value < 1) {
+      return;
+    }
+    getInfo(currentPage.value, planets).then(displayPlanet);
+  });
+}
+
+/*--------------------------Buttons-----------------------------------------------*/
 
 btnInfo.addEventListener("click", () => {
   const peopleId = document.getElementById("filmId").value;
   if (peopleId < 1 || peopleId > 9) return;
-  getPeople(peopleId).then(displayPeople);
+  getInfo(peopleId, people).then(displayPeople);
 });
 
 btnPlanet.addEventListener("click", () => {
   const planetId = document.getElementById("filmId").value;
   if (planetId < 1 || planetId > 6) return;
-  getPlanets(planetId).then(displayPlanet);
+  getInfo(planetId, planets).then(displayPlanet);
 });
 
 btnFilm.addEventListener("click", () => {
   const filmId = document.getElementById("filmId").value;
   if (filmId < 1 || filmId > 6) return;
-  getFilmsPeople(filmId).then(display);
+  getFilmsPeople(filmId).then(displayFilmCharacters);
 });
 
 btnTrans.addEventListener("click", () => {
   const pageId = document.getElementById("filmId").value;
   if (pageId < 2 || pageId === 4 || pageId === 6 || pageId === 7 || pageId > 8)
     return;
-  getPeopleTranslate(pageId).then(displayPeopleTranslate);
+  getInfoTranslate(pageId, people).then(displayPeopleTranslate);
 });
 
 btnPlanetTrans.addEventListener("click", () => {
   const pageId = document.getElementById("filmId").value;
   if (pageId < 2 || pageId > 5) return;
-  getPlanetsTranslate(pageId).then(displayPlanetsTranslate);
+  getInfoTranslate(pageId, planets).then(displayPlanetsTranslate);
 });
+
 paginationInit();

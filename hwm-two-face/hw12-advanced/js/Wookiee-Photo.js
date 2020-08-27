@@ -1,4 +1,4 @@
-const translatePhoto = {
+const wookieePhoto = {
   "acaoaoak://cohraakah.wawoho/raakah/akwoooakanwo/9/":
     "./img/Biggs_Darklighter.png",
   "acaoaoak://cohraakah.wawoho/raakah/akwoooakanwo/1/":
