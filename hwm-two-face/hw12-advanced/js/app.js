@@ -124,13 +124,13 @@ function findImgTranslate(person, personIcon) {
 }
 
 function paginationInit() {
-  let valuePage = 1;
+  let valuePage = 0;
   let currentPage = document.getElementById("filmId");
 
   document.getElementById("prev").addEventListener("click", () => {
     valuePage = +currentPage.value - 1;
     currentPage.value = `${valuePage}`;
-    if (+currentPage.value <= 1 || +currentPage.value > 6) {
+    if (+currentPage.value < 1 || +currentPage.value > 6) {
       return;
     }
     getInfo(currentPage.value, planets).then(displayPlanet);
@@ -139,7 +139,7 @@ function paginationInit() {
   document.getElementById("next").addEventListener("click", () => {
     valuePage = +currentPage.value + 1;
     currentPage.value = `${valuePage}`;
-    if (+currentPage.value >= 6 || +currentPage.value < 1) {
+    if (+currentPage.value > 6 || +currentPage.value < 1) {
       return;
     }
     getInfo(currentPage.value, planets).then(displayPlanet);
