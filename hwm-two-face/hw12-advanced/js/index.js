@@ -25,12 +25,6 @@ function getFilmsPeople(filmNumber) {
         httpsUrl[i] = data.data["characters"][i].replace("http", "https");
       }
       return httpsUrl;
-      // return data.data["characters"];
-      // characters.map((char, i) =>
-      //      axios.get(char).then((data) => {
-      //        console.log(data.data);
-      // })
-      // );
     })
     .catch((err) => {
       console.log("something wrong", err);
@@ -49,5 +43,4 @@ function getInfoTranslate(numPage = 1, info) {
 }
 
 const request = axios.get("https://swapi.dev/api/films/2/?format=wookiee");
-console.log(request);
-// console.log(data.data["url"].replace("http", "https"));
+// console.log(request);

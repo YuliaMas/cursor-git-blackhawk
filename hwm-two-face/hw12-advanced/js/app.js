@@ -5,14 +5,6 @@ const btnTrans = document.getElementById("btnTrans");
 const btnPlanetTrans = document.getElementById("btnPlanetTrans");
 const container = document.querySelector(".people");
 const title = document.querySelector(".title");
-const data = {
-  name: "whrascwo",
-  birthday: "rhahrcaoac_roworarc",
-  gender: "rrwowhwaworc",
-  climate: "oaanahscraaowo",
-  terrain: "aoworcrcraahwh",
-  population: "akooakhuanraaoahoowh",
-};
 
 function displayCharacterInfo(person) {
   const personElement = document.createElement("div");
@@ -49,7 +41,7 @@ function displayFilmCharacters(characters = {}) {
     });
   });
 }
-// ---
+
 function displayPlanet(planets = []) {
   container.innerHTML = "";
   title.innerText = "Planets";
@@ -71,7 +63,6 @@ function displayPlanet(planets = []) {
 function displayPeopleTranslate(people = []) {
   container.innerHTML = "";
   title.innerText = "Characters";
-
   people.map((person) => {
     const personElement = document.createElement("div");
     const personIcon = document.createElement("div");
@@ -94,10 +85,8 @@ function displayPeopleTranslate(people = []) {
 function displayPlanetsTranslate(planets = []) {
   container.innerHTML = "";
   title.innerText = "Planets";
-
   planets.map((planet) => {
     const personElement = document.createElement("div");
-    // const personIcon = document.createElement("div");
     personElement.className = "person";
     personElement.innerHTML = `
     <div>
@@ -108,10 +97,6 @@ function displayPlanetsTranslate(planets = []) {
     </div> 
     `;
     container.append(personElement);
-    // personIcon.className = "icon";
-    // container.append(personElement);
-    // personElement.appendChild(personIcon);
-    // findImgTranslate(planet, personIcon);
   });
 }
 
