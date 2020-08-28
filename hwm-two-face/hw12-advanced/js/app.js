@@ -6,28 +6,93 @@ const btnPlanetTrans = document.getElementById("btnPlanetTrans");
 const container = document.querySelector(".people");
 const title = document.querySelector(".title");
 
-function displayCharacterInfo(person) {
-  const personElement = document.createElement("div");
-  const personIcon = document.createElement("div");
-  personElement.className = "person around";
-  personIcon.className = "icon";
-  personElement.innerHTML = `
+function createInfoCharWookiee(element, person) {
+  element.innerHTML = `
+    <div>
+      <h3> <span> Whrascwo: </span> ${person.whrascwo}</h3>
+      <h4> <span> Rhahrcaoac_roworarc: </span> ${person["rhahrcaoac_roworarc"]}</h4>
+      <h4> <span> Rrwowhwaworc: </span> ${person["rrwowhwaworc"]}</h4>
+    </div>
+    `;
+}
+function createInfoChar(element, person) {
+  element.innerHTML = `
     <div>
       <h3> <span> Name: </span> ${person.name} </h3>
       <h4> <span> Birthday: </span> ${person["birth_year"]} </h4>
       <h4> <span> Gender: </span> ${person["gender"]} </h4>
      </div>
     `;
+}
+
+function createInfoPlanet(element, planet) {
+  element.innerHTML = `
+    <div>
+      <h3> <span> Name: </span> ${planet.name}</h3>
+      <h4> <span> Climate: </span> ${planet["climate"]}</h4>
+      <h4> <span> Terrain: </span> ${planet["terrain"]}</h4>
+      <h4> <span> Population: </span> ${planet["population"]}</h4>
+     </div>
+    `;
+}
+
+function createInfoPlanetWookiee(element, planet) {
+  element.innerHTML = `
+    <div>
+      <h3> <span> Whrascwo: </span> ${planet.whrascwo}</h3>
+      <h4> <span> Oaanahscraaowo: </span> ${planet["oaanahscraaowo"]}</h4>
+      <h4> <span> Aoworcrcraahwh: </span> ${planet["aoworcrcraahwh"]}</h4>
+      <h4> <span> Akooakhuanraaoahoowh: </span> ${planet["akooakhuanraaoahoowh"]}</h4>
+    </div> 
+    `;
+}
+
+function displayCharacterInfo(person, wookiee) {
+  const personElement = document.createElement("div");
+  personElement.className = "person around";
+  const personIcon = document.createElement("div");
+  personIcon.className = "icon";
+  switch (person.gender || person["rrwowhwaworc"]) {
+    case "male":
+      person.gender += `  ♂`;
+      break;
+    case "female":
+      person.gender += `  ♀`;
+      break;
+    case "scraanwo":
+      person["rrwowhwaworc"] += `  ♂`;
+      break;
+    case "wwwoscraanwo":
+      person["rrwowhwaworc"] += `  ♀`;
+      break;
+  }
+  if (wookiee) {
+    createInfoCharWookiee(personElement, person);
+    findImg(person, personIcon, 1);
+  } else {
+    createInfoChar(personElement, person);
+    findImg(person, personIcon, 0);
+  }
   container.append(personElement);
   personElement.appendChild(personIcon);
-  findImg(person, personIcon);
+}
+
+function displayPlanetInfo(planet, wookiee) {
+  const personElement = document.createElement("div");
+  personElement.className = "person";
+  if (wookiee) {
+    createInfoPlanetWookiee(personElement, planet);
+  } else {
+    createInfoPlanet(personElement, planet);
+  }
+  container.append(personElement);
 }
 
 function displayPeople(people = []) {
   container.innerHTML = "";
   title.innerText = "Characters";
   people.map((person) => {
-    displayCharacterInfo(person);
+    displayCharacterInfo(person, 0);
   });
 }
 
@@ -37,26 +102,8 @@ function displayFilmCharacters(characters = {}) {
   characters.map((char) => {
     axios.get(char).then((char) => {
       characters = char.data;
-      displayCharacterInfo(characters);
+      displayCharacterInfo(characters, 0);
     });
-  });
-}
-
-function displayPlanet(planets = []) {
-  container.innerHTML = "";
-  title.innerText = "Planets";
-  planets.map((planet) => {
-    const personElement = document.createElement("div");
-    personElement.className = "person";
-    personElement.innerHTML = `
-    <div>
-      <h3> <span> Name: </span> ${planet.name}</h3>
-      <h4> <span> Climate: </span> ${planet["climate"]}</h4>
-      <h4> <span> Terrain: </span> ${planet["terrain"]}</h4>
-      <h4> <span> Population: </span> ${planet["population"]}</h4>
-     </div>
-    `;
-    container.append(personElement);
   });
 }
 
@@ -64,21 +111,15 @@ function displayPeopleTranslate(people = []) {
   container.innerHTML = "";
   title.innerText = "Characters";
   people.map((person) => {
-    const personElement = document.createElement("div");
-    const personIcon = document.createElement("div");
-    personElement.className = "person around";
-    personElement.innerHTML = `
-    <div>
-      <h3> <span> Whrascwo: </span> ${person.whrascwo}</h3>
-      <h4> <span> Rhahrcaoac_roworarc: </span> ${person["rhahrcaoac_roworarc"]}</h4>
-      <h4> <span> Rrwowhwaworc: </span> ${person["rrwowhwaworc"]}</h4>
-    </div>
-    `;
-    container.append(personElement);
-    personIcon.className = "icon";
-    container.append(personElement);
-    personElement.appendChild(personIcon);
-    findImgTranslate(person, personIcon);
+    displayCharacterInfo(person, 1);
+  });
+}
+
+function displayPlanet(planets = []) {
+  container.innerHTML = "";
+  title.innerText = "Planets";
+  planets.map((planet) => {
+    displayPlanetInfo(planet, 0);
   });
 }
 
@@ -86,39 +127,27 @@ function displayPlanetsTranslate(planets = []) {
   container.innerHTML = "";
   title.innerText = "Planets";
   planets.map((planet) => {
-    const personElement = document.createElement("div");
-    personElement.className = "person";
-    personElement.innerHTML = `
-    <div>
-      <h3> <span> Whrascwo: </span> ${planet.whrascwo}</h3>
-      <h4> <span> Oaanahscraaowo: </span> ${planet["oaanahscraaowo"]}</h4>
-      <h4> <span> Aoworcrcraahwh: </span> ${planet["aoworcrcraahwh"]}</h4>
-      <h4> <span> Akooakhuanraaoahoowh: </span> ${planet["akooakhuanraaoahoowh"]}</h4>
-    </div> 
-    `;
-    container.append(personElement);
+    displayPlanetInfo(planet, 1);
   });
 }
 
-function findImg(characters, personIcon) {
+function findImg(characters, personIcon, translate) {
   const image = document.createElement("img");
   image.className = "iconCharacter";
-  for (let i = 0; i < Object.keys(photoCharacters).length; i++) {
-    const httpsUrl = characters["url"].replace("http", "https");
-    if (httpsUrl === Object.keys(photoCharacters)[i]) {
-      image.src = Object.values(photoCharacters)[i];
-      personIcon.appendChild(image);
+  if (!translate) {
+    for (let i = 0; i < Object.keys(photoCharacters).length; i++) {
+      const httpsUrl = characters["url"].replace("http", "https");
+      if (httpsUrl === Object.keys(photoCharacters)[i]) {
+        image.src = Object.values(photoCharacters)[i];
+        personIcon.appendChild(image);
+      }
     }
-  }
-}
-
-function findImgTranslate(person, personIcon) {
-  const image = document.createElement("img");
-  image.className = "iconCharacter";
-  for (let key in wookieePhoto) {
-    if (person["hurcan"] === key) {
-      image.src = wookieePhoto[key];
-      personIcon.appendChild(image);
+  } else {
+    for (let key in wookieePhoto) {
+      if (characters["hurcan"] === key) {
+        image.src = wookieePhoto[key];
+        personIcon.appendChild(image);
+      }
     }
   }
 }
@@ -131,6 +160,8 @@ function paginationInit() {
     valuePage = +currentPage.value - 1;
     currentPage.value = `${valuePage}`;
     if (+currentPage.value < 1 || +currentPage.value > 6) {
+      title.innerHTML = "";
+      container.innerHTML = "";
       return;
     }
     getInfo(currentPage.value, planets).then(displayPlanet);
@@ -140,6 +171,8 @@ function paginationInit() {
     valuePage = +currentPage.value + 1;
     currentPage.value = `${valuePage}`;
     if (+currentPage.value > 6 || +currentPage.value < 1) {
+      title.innerHTML = "";
+      container.innerHTML = "";
       return;
     }
     getInfo(currentPage.value, planets).then(displayPlanet);
