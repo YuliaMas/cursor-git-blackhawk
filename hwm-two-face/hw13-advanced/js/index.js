@@ -10,27 +10,21 @@ const idGenerator = createIdGenerator();
 function newFontGenerator(size) {
   const sensitiveKeyCode = {
     next(key) {
-      if (key === "up") {
-        size += 2;
-        return {
-          done: false,
-          value: size,
-        };
+      switch (key) {
+        case "up":
+          size += 2;
+          break;
+        case "down":
+          size -= 2;
+          break;
+        default:
+          size += 0;
+          break;
       }
-      if (key === "down") {
-        size -= 2;
-        return {
-          done: false,
-          value: size,
-        };
-      }
-      if (!key) {
-        i = size;
-        return {
-          done: false,
-          value: size,
-        };
-      }
+      return {
+        done: false,
+        value: size,
+      };
     },
   };
   return sensitiveKeyCode;
