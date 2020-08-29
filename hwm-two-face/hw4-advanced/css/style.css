@@ -1,6 +1,7 @@
 html, body {
 	background-color: #838383;
 	font-size: 20px;
+	overflow-x: hidden;
 	}
 .header {
 	text-align: center;
