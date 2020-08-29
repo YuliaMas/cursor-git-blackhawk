@@ -97,10 +97,7 @@ text-align: start;
 }
 
 main {
-/*position: absolute;*/
 	z-index: 100;
-	/*top: 50px;*/
-	/*left: 50px;*/
 	}
 
 .info {
@@ -172,7 +169,7 @@ input[title]:hover {
 	}
 
 img {
-	width: 100%;
+	max-width: 100%;
 	}
 
 img.iconCharacter {
@@ -184,7 +181,6 @@ img.iconCharacter {
 	background-color: gray;
 	box-sizing: border-box;
 	filter: drop-shadow(2px 4px 6px black);
-	/*width: inherit;*/
 	margin-right: 10px;
 	}
 

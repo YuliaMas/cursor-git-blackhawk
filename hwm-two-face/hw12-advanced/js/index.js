@@ -41,6 +41,3 @@ function getInfoTranslate(numPage = 1, info) {
       console.log("something wrong", err);
     });
 }
-
-const request = axios.get("https://swapi.dev/api/films/2/?format=wookiee");
-// console.log(request);
