@@ -54,8 +54,8 @@ img {
 	background-size: 150% 100%;
 	}
 .layer-1 {
-	background: url("./../images/mountain_PNG2.png") center no-repeat;
-	background-size: 110% 75%;
+	background: url("./../images/mountain_PNG2.png") top no-repeat;
+	background-size: 100% 70%;
 	}
 .layer-2 {
 	background: url("./../images/cloud_PNG24.png") top  left no-repeat;
