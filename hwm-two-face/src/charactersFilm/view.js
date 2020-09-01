@@ -82,11 +82,6 @@ import "./img/Valorum-SWE.png";
 import "./img/wicket_w_warwick.png";
 import "./img/Yarael-Poof.png";
 
-// .replace(
-//     "./",
-//     "../hwm-two-face(-js-)/hw12-advanced/"
-// );
-
 const container = document.querySelector(".people");
 const title = document.querySelector(".title");
 

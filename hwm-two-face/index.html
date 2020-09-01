@@ -9,7 +9,29 @@
 <!--	<link rel="stylesheet" href="./css/style.css">-->
 </head>
 <body>
-<div	class="wrapper">
+<div>
+	<div class="scene">
+		<div data-speed="20" class="layer layer-bg"></div>
+		<div data-speed="30" class="layer layer-1"></div>
+		<div data-speed="50" class="layer layer-2"></div>
+	</div>
+	<header>
+		<h1>HW#13 "Generators"</h1>
+	</header>
+	<main class="generator-wrapper">
+		<div class="id-text">
+			<p class="text">Code ID</p>
+		</div>
+		<div>
+			<div>
+				<button id="id-gen" class="btn" title='press "Enter" or "Space"'>Generator ID</button>
+			</div>
+			<button id="sizeDecrease" class="btn" title='press "Arrow Down" or "Arrow Right"'>Decrease ID</button>
+			<button id="sizeIncrease" class="btn" title='press "Arrow Up" or "Arrow Left"'>Increase ID</button>
+		</div>
+	</main>
+</div>
+<div	class="starwars-wrapper">
 	<div	class="info done">
 		<h1>STAR WARS</h1>
 		<div class="buttons">
@@ -26,6 +48,8 @@
 		<div class="people"></div>
 	</main>
 </div>
+
+
 
 <!--<script src="./node_modules/axios/dist/axios.js"></script>-->
 <!--<script src="./dist/main.js"></script>-->

@@ -2,7 +2,7 @@ const path = require("path");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-// const CopyWebpackPlugin = require("copy-webpack-plugin");
+// const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   mode: "development",
@@ -17,14 +17,16 @@ module.exports = {
       title: "HW#14 - Webpack",
       template: "./index.html",
     }),
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({
+      filename: "[name].styles.css",
+    }),
     // new CopyPlugin({
     //   patterns: [{ from: "img", to: "img" }],
     // }),
   ],
   devtool: "inline-source-map",
   output: {
-    filename: "main.js",
+    filename: "[name].bundle.js",
     path: path.resolve(__dirname, "dist"),
     // publicPath: "./dist",
   },
@@ -36,12 +38,6 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|gif|jfif|webp|jpeg)$/,
-        // use: ["file-loader"],
-        // // use: "file-loader?name=[path][name].[ext]",
-        // options: {
-        //   name: "[name].[ext]",
-        //   outputPath: "img",
-        // },
         use: [
           {
             loader: "file-loader",
