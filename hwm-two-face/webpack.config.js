@@ -18,11 +18,15 @@ module.exports = {
       template: "./index.html",
     }),
     new MiniCssExtractPlugin(),
+    // new CopyPlugin({
+    //   patterns: [{ from: "img", to: "img" }],
+    // }),
   ],
+  devtool: "inline-source-map",
   output: {
     filename: "main.js",
     path: path.resolve(__dirname, "dist"),
-    // publicPath: "./",
+    // publicPath: "./dist",
   },
   module: {
     rules: [
@@ -31,12 +35,23 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
-        use: ["file-loader"],
+        test: /\.(png|svg|jpg|gif|jfif|webp|jpeg)$/,
+        // use: ["file-loader"],
+        // // use: "file-loader?name=[path][name].[ext]",
         // options: {
         //   name: "[name].[ext]",
         //   outputPath: "img",
         // },
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]",
+              outputPath: "img/",
+              publicPath: "./img/",
+            },
+          },
+        ],
       },
     ],
   },
