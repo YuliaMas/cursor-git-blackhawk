@@ -50,15 +50,15 @@ img {
 	height: 150%;
 	}
 .layer-bg {
-	background: url("./../images/FAVPNG_sky-blue-cloud-desktop-wallpaper_ZZhWpfAQ.png") top center no-repeat;
+	background: url("../images/FAVPNG_sky-blue-cloud-desktop-wallpaper_ZZhWpfAQ.png") top center no-repeat;
 	background-size: 150% 100%;
 	}
 .layer-1 {
-	background: url("./../images/mountain_PNG2.png") top no-repeat;
+	background: url("../images/mountain_PNG2.png") top no-repeat;
 	background-size: 100% 70%;
 	}
 .layer-2 {
-	background: url("./../images/cloud_PNG24.png") top  left no-repeat;
+	background: url("../images/cloud_PNG24.png") top  left no-repeat;
 	background-size: 80% 30%;
 	}
 .table {
@@ -106,7 +106,7 @@ img {
 			background-size: 120% 80%;
 		}
 	.layer-1{
-		background: url("./../images/mountain_PNG2.png") center no-repeat;
+		background: url("../images/mountain_PNG2.png") center no-repeat;
 		background-size: 110% 40%;
 		}
 	.layer-2 {
