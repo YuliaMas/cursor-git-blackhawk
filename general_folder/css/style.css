@@ -97,9 +97,9 @@ html,body {
 	color: white;
 	}
 
-@media (max-width: 1020px) and (min-width: 850px) {
+/*@media (max-width: 1020px) and (min-width: 850px) {*/
 
-	}
+/*	}*/
 .dropdown .dropbtn {
 	font-size: 1rem;
 	height: 45px;
@@ -326,11 +326,40 @@ h2 {
 				margin-top: 30px
 				}
 		}
+.about__skills {
+	width: 50%;
+	}
+.about__info-skill {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	padding-top: 30px;
+	}
 
+.about__info-skill2 {
+	display: flex;
+	flex-direction: column;
+	}
+.about__info-skill2 h4 {
+	text-align: center;
+	}
+@media (max-width: 800px){
+	.about__info-skill2 h4 {
+		padding-top: 20px;
+		}
+	}
+.about__info-skill2 .info {
+	width: auto;
+	margin-top: 20px;
+	}
 #about .container{
 	justify-content: space-around;
 	align-items: flex-start;
+	flex-wrap: wrap;
 	}
+	.about__photo {
+		width: 30%;
+		}
 
  .about__info{
 	width: 50%;
@@ -347,6 +376,7 @@ h2 {
 .about__icons i {
 	width: 30px	;
 	margin-right: 10px;
+	margin-top: 10px;
 	}
 
 h3 {
@@ -373,8 +403,12 @@ h3 {
 		padding-bottom:  5px;
 	}
 	@media (max-width: 500px) {
-		.work {
+		.about__info-skill2 h4 {
+			padding-top: 20px;
+			}
+		 #about , .work {
 			height: auto;
+			 padding-bottom: 10px;
 			}
 		.work .d-flex {
 			justify-content: space-around;
@@ -467,7 +501,6 @@ h3 {
 .info a>span, .dropdown-content a>span {
 	vertical-align: top;
 	}
-
 
 #contact {
 	background-image: url("../img/white-wooden-door-1475234.jpg");
