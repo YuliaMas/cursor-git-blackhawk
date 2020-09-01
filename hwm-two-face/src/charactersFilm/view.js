@@ -1,4 +1,5 @@
 import photoCharacters from "./PhotoChar.js";
+// import "./../../hw12-advanced/img";
 
 const container = document.querySelector(".people");
 const title = document.querySelector(".title");
@@ -51,7 +52,7 @@ function findImg(characters, personIcon) {
     if (httpsUrl === Object.keys(photoCharacters)[i]) {
       image.src = Object.values(photoCharacters)[i].replace(
         "./",
-        "./hw12-advanced/"
+        "../../hwm-two-face(-js-)/hw12-advanced/"
       );
       personIcon.appendChild(image);
     }

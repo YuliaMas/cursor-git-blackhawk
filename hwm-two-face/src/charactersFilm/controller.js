@@ -4,7 +4,12 @@ import "./characters.css";
 import "./img/maxresdefault.jpg";
 
 const people = `people/?page=`;
+const btnInfo = document.getElementById("btn");
 
 export default function () {
-  usersModule.getInfo(2, people).then(displayPeople);
+  btnInfo.addEventListener("click", () => {
+    const peopleId = document.getElementById("filmId").value;
+    if (peopleId < 1 || peopleId > 9) return;
+    usersModule.getInfo(peopleId, people).then(displayPeople);
+  });
 }

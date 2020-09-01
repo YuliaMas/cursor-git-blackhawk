@@ -5,6 +5,7 @@ html,	 body {
 	font-size: 18px;
 	font-family: 'Unlock', cursive;
 	color: black;
+	margin: 0 auto;
 	}
 
 h1 {
@@ -29,8 +30,9 @@ h3>span , h4>span {
 
 .wrapper {
 	width: 100vw;
-	margin: auto;
-	background: url(6b81292a5fb2b2a5fa0f3da657766563.jpg)  no-repeat;
+	min-height: 100vh;
+	/*margin: auto;*/
+	background: url(6b81292a5fb2b2a5fa0f3da657766563.jpg) center  no-repeat;
 	background-size: cover;
 	}
 

@@ -16,6 +16,4 @@ function getInfo(numPage, info) {
     });
 }
 
-// export default users;
-
 export default { getInfo };
