@@ -1,7 +1,7 @@
 const setResult = async () => {
-  const length = document.getElementById("length").value;
+  const getLength = document.getElementById("length").value;
   try {
-    const chars = await getChars(+length);
+    const chars = await getChars(+getLength);
     const list = document.getElementById("list");
     const text = document.getElementById("text");
     const time = document.getElementById("time");
