@@ -1,0 +1,54 @@
+.generateBlocks {
+	font-size: 18px;
+	line-height: 1.5;
+	}
+.generateBlocks h1	{
+	color: #1d37e0;
+	margin-top: 5px ;
+	text-align: center;
+	font-size: 1.8em;
+
+	}
+.generateBlocks h2	{
+	color: #c2126c;
+	text-align: center;
+	font-size: 1.6em;
+	}
+.generateBlocks main {
+	margin: 15px 0;
+	}
+.generateBlocks .buttons {
+	padding-bottom: 10px;
+	gap:  10px;
+	justify-content: center;
+	}
+button {
+	cursor: pointer;
+	}
+.generateBlocks button {
+	border-radius: 10px;
+	padding: 15px;
+	width: 180px;
+	}
+.generateBlocks #container {
+	display: grid;
+	grid-template-columns: 100px 100px 100px 100px 100px;
+	grid-template-rows: 100px 100px 100px 100px 100px;
+	gap: 5px;
+	align-content: stretch;
+	justify-content: center;
+	}
+.generateBlocks .square {
+	border: 1px solid white;
+	border-radius: 6px;
+	background-color: #e8b0df;
+	}
+
+@media (max-width: 600px) {
+	.generateBlocks #container {
+		display: grid;
+		grid-template-columns: 50px 50px 50px 50px 50px;
+		grid-template-rows: 50px 50px 50px 50px 50px;
+		gap: 5px;
+		}
+	}

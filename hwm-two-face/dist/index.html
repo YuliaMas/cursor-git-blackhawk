@@ -4,12 +4,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>HW#14 - Webpack</title>
-<!--	<title>Document</title>-->
 <!--	<link rel="stylesheet" href="./../css/reset.css">-->
-<!--	<link rel="stylesheet" href="./css/style.css">-->
 <link href="main.styles.css" rel="stylesheet"></head>
 <body>
-<div>
+<div class="generator">
 	<div class="scene">
 		<div data-speed="20" class="layer layer-bg"></div>
 		<div data-speed="30" class="layer layer-1"></div>
@@ -48,10 +46,119 @@
 		<div class="people"></div>
 	</main>
 </div>
-
-
-
-<!--<script src="./node_modules/axios/dist/axios.js"></script>-->
-<!--<script src="./dist/main.js"></script>-->
+<div class="chain-wrapper">
+	<div>
+		<h1>HW#11 Promises</h1>
+		<label><input type="number" id="length" value="4">
+			<button id="btnChain">click</button></label>
+		<p id="phraseRandom"></p>
+	</div>
+	<div>
+		<p id="time"></p>
+		<p id="list"></p>
+		<p id="text"></p>
+	</div>
+</div>
+<div class="generateBlocks">
+	<h1>HW#9 Generate Color Blocks</h1>
+	<main>
+		<div class="buttons">
+			<button class="newBlocks">Make 25 Blocks</button>
+			<button class="colorBlocks">Generate Random Colors</button>
+			<button class="stop">Stop</button>
+		</div>
+		<div id="container">
+		</div>
+	</main>
+</div>
+<div class="Arrays">
+	<h1>HW#4 Arrays</h1>
+	<main class="main">
+		<button class="btn" id="setCardsBtn">Open cards</button>
+		<div class="container">
+			<div class="js-card">
+				<div class="card">
+					<h3>Пари для проекту:</h3>
+					<div class="card-item">
+						<p class="p1"></p>
+						<p class="p1"></p>
+						<p class="p1"></p>
+					</div>
+				</div>
+			</div>
+			<div class="js-card">
+				<div class="card">
+					<h3>Пари і назва для проекту:</h3>
+					<div class="card-item">
+						<p class="p2"></p>
+						<p class="p2"></p>
+						<p class="p2"></p>
+					</div>
+				</div>
+			</div>
+			<div class="js-card">
+				<div class="card">
+					<h3>Оцінки студентів:</h3>
+					<div class="card-item">
+						<p class="p3"></p>
+						<p class="p3"></p>
+						<p class="p3"></p>
+						<p class="p3"></p>
+						<p class="p3"></p>
+						<p class="p3"></p>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="js-card">
+					<div class="card">
+						<h3>Оцінки за проект:</h3>
+						<div class="card-item">
+							<p class="p4"></p>
+							<p class="p4"></p>
+							<p class="p4"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+</div>
+<div id="contentObj">
+	<main>
+		<h1>HW#6 Objects</h1>
+		<div class="mainObj">
+			<h2>Students subjects</h2>
+			<button class="click-1">Click me</button>
+			<div class="done res-1 subjects"></div>
+		</div>
+		<div class="mainObj">
+			<h2>Students average marks</h2>
+			<button class="click-2">Click me</button>
+			<div class="done res-2 averMarks"></div>
+		</div>
+		<div class="mainObj">
+			<h2>Information about students</h2>
+			<button class="click-3">Click me</button>
+			<div class="done res-3 inform"></div>
+		</div>
+		<div class="mainObj">
+			<h2>Sorted names</h2>
+			<button class="click-4">Click me</button>
+			<div class="done res-4 sortNames"></div>
+		</div>
+		<div class="mainObj">
+			<h2>The best students</h2>
+			<button class="click-5">Click me</button>
+			<div class="done res-5 bestStud"></div>
+		</div>
+		<div class="mainObj">
+			<h2>Counted letters in the word</h2>
+			<label>Put your word: <input id="word" type="text" value="" placeholder="Put your word"></label>
+			<button class="click-6">Click me</button>
+			<div class="done res-6 letters" id="res"></div>
+		</div>
+	</main>
+</div>
 <script src="main.bundle.js"></script></body>
 </html>

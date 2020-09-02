@@ -1,3 +1,5 @@
+import "./genBlocks.css";
+
 const container = document.getElementById("container");
 const randomColorBlocks = document.querySelector(".colorBlocks");
 const stopButton = document.querySelector(".stop");
