@@ -19,7 +19,7 @@ function Card(classCard) {
       (event.offsetX - halfWidth) / 5 +
       "deg)";
   };
-  this.stopRotate = function (event) {
+  this.stopRotate = function () {
     const cardItem = this.querySelector(".card");
     cardItem.style.transform = "rotate(0)";
   };

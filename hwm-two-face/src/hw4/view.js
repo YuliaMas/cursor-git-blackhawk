@@ -9,8 +9,8 @@ const card4 = document.querySelectorAll(".p4");
 function setPairs(pairs) {
   let i = 0;
   for (let pair of pairs) {
-    const pair = `${i + 1} пара: ${pairs[i].join(" , ")}`;
-    card1[i].textContent = `${pair}`;
+    const pairStud = `${i + 1} пара: ${pairs[i].join(" , ")}`;
+    card1[i].textContent = `${pairStud}`;
     i++;
   }
 }

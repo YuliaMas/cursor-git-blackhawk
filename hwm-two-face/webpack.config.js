@@ -11,6 +11,12 @@ module.exports = {
     contentBase: "./",
     hot: true,
   },
+  devtool: "source-map",
+  output: {
+    filename: "[name].bundle.js",
+    path: path.resolve(__dirname, "dist"),
+    // publicPath: "/dist",
+  },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
@@ -24,14 +30,18 @@ module.exports = {
     //   patterns: [{ from: "img", to: "img" }],
     // }),
   ],
-  devtool: "inline-source-map",
-  output: {
-    filename: "[name].bundle.js",
-    path: path.resolve(__dirname, "dist"),
-    // publicPath: "./dist",
-  },
   module: {
     rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"],
+          },
+        },
+      },
       {
         test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, "css-loader"],
