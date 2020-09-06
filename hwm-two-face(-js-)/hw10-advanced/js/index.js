@@ -7,7 +7,13 @@ window.addEventListener("DOMContentLoaded", () => {
   const getLamp = document.getElementById("light");
 
   const setSound = (elem, elemId) => {
-    document.getElementById(elemId).play();
+    // document.getElementById(elemId).play();
+    if (elem.paused === true) {
+      elem.currentTime = 0;
+      document.getElementById(elemId).play();
+    } else if (elem.paused === false) {
+      document.getElementById(elemId).pause();
+    }
   };
 
   /*---------------------------------Colors style-----------------------------------*/

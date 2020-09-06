@@ -4,6 +4,9 @@ html , body {
 	background-color: lightslategray;
 	font-size: 14px;
 	}
+button {
+	outline: none;
+	}
 #container {
 	margin: auto;
 	width: 90vw;
